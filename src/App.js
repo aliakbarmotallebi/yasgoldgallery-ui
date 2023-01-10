@@ -1,8 +1,11 @@
 import Header from "./components/Header";
 
 function App() {
+
+
+
   return (
-    <div className="flex flex-col mx-auto w-full min-h-screen bg-gray-800 text-gray-300">
+    <div className="flex flex-col mx-auto w-full min-h-screen bg-neutral-800 text-neutral-300">
       <Header>
         a
       </Header>
@@ -18,7 +21,7 @@ function App() {
                 </h2>
             </header>
             <div class="grid gap-8 mt-16 md:grid-cols-3">
-                <article class="relative px-8 pt-8 pb-4 transform bg-gray-900 bg-opacity-50 shadow-xl md:translate-y-4 rounded-2xl">
+                <article class="relative px-8 pt-8 pb-4 transform bg-neutral-900 bg-opacity-50 shadow-xl md:translate-y-4 rounded-2xl">
                     <svg class="text-yellow-600 absolute top-0 right-0 hidden w-24 h-24 -mt-12 -mr-12 md:block" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M65.44 153.526V149.526H61.44H20.48C11.3675 149.526 4 142.163 4 133.105V51.4211C4 42.3628 11.3675 35 20.48 35H102.4C111.513 35 118.88 42.3628 118.88 51.4211V166.187C118.88 195.935 95.103 220.165 65.44 220.979V153.526ZM198.56 153.526V149.526H194.56H153.6C144.487 149.526 137.12 142.163 137.12 133.105V51.4211C137.12 42.3628 144.487 35 153.6 35H235.52C244.633 35 252 42.3628 252 51.4211V166.187C252 195.935 228.223 220.165 198.56 220.979V153.526Z" stroke="currentColor" stroke-width="8"></path>
                     </svg>
@@ -30,7 +33,7 @@ function App() {
                         بی نهایت هم از خریدم و کیفیت برخورد اعضا مجموعه راضی هستم
                        </p>
                        <footer class="flex items-center pt-2 mt-7 space-x-2 space-x-reverse border-t border-white/10 mt-1">
-                            <div class="relative w-10 h-10 overflow-hidden bg-gray-700 rounded-full">
+                            <div class="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
                                 <svg class="absolute w-12 h-12 text-yellow-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
                             </div>
                             <div>
@@ -41,7 +44,7 @@ function App() {
                         </footer>
                     </blockquote>
                 </article>
-                <article class="relative px-8 pt-8 pb-4 transform bg-gray-900 bg-opacity-50 shadow-xl md:translate-y-4 rounded-2xl -rotate-3">
+                <article class="relative px-8 pt-8 pb-4 transform bg-neutral-900 bg-opacity-50 shadow-xl md:translate-y-4 rounded-2xl -rotate-3">
                     <blockquote class="space-y-1 text-base text-right">
                         <p>
                         باسلام... من تجربه خرید حضوری واقساطی شما را دارم.
@@ -50,7 +53,7 @@ function App() {
                         بی نهایت هم از خریدم و کیفیت برخورد اعضا مجموعه راضی هستم
                        </p>
                        <footer class="flex items-center pt-2 mt-7 space-x-2 space-x-reverse border-t border-white/10 mt-1">
-                            <div class="relative w-10 h-10 overflow-hidden bg-gray-700 rounded-full">
+                            <div class="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
                                 <svg class="absolute w-12 h-12 text-yellow-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
                             </div>
                             <div>
@@ -61,7 +64,7 @@ function App() {
                         </footer>
                     </blockquote>
                 </article>
-                <article class="relative px-8 pt-8 pb-4 transform bg-gray-900 bg-opacity-50 shadow-xl md:translate-y-4 rounded-2xl rotate-3">
+                <article class="relative px-8 pt-8 pb-4 transform bg-neutral-900 bg-opacity-50 shadow-xl md:translate-y-4 rounded-2xl rotate-3">
 
                     <blockquote class="space-y-1 text-base text-right">
                         <p>
@@ -71,7 +74,7 @@ function App() {
                         بی نهایت هم از خریدم و کیفیت برخورد اعضا مجموعه راضی هستم
                        </p>
                        <footer class="flex items-center pt-2 mt-7 space-x-2 space-x-reverse border-t border-white/10 mt-1">
-                            <div class="relative w-10 h-10 overflow-hidden bg-gray-700 rounded-full">
+                            <div class="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
                                 <svg class="absolute w-12 h-12 text-yellow-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
                             </div>
                             <div>
@@ -94,7 +97,7 @@ function App() {
                 </div>
                 <div class="pt-10">
                     <div
-                        class="flex items-center bg-gray-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
+                        class="flex items-center bg-neutral-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
                         <div className="inline-flex">
                           <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-yellow-600 ml-1" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z"/></svg>
                           لیط چارتر به بلیطی اطلاق می گردد که نرخ تعیین می‌شود
@@ -109,7 +112,7 @@ function App() {
                     </div>
 
                     <div
-                        class="flex items-center bg-gray-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
+                        class="flex items-center bg-neutral-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
                         <div className="inline-flex">
                           <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-yellow-600 ml-1" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z"/></svg>
                             پرواز سیستمی و شرایط جریمه کنسلی و استرداد
@@ -124,7 +127,7 @@ function App() {
                     </div>
 
                     <div
-                        class="flex items-center bg-gray-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
+                        class="flex items-center bg-neutral-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
                         <div className="inline-flex">
                           <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-yellow-600 ml-1" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z"/></svg>
                             پرواز سیستمی و شرایط جریمه کنسلی و استرداد
@@ -139,7 +142,7 @@ function App() {
                     </div>
 
                     <div
-                        class="flex items-center bg-gray-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
+                        class="flex items-center bg-neutral-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
                         <div className="inline-flex">
                           <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-yellow-600 ml-1" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z"/></svg>
                             پرواز سیستمی و شرایط جریمه کنسلی و استرداد
@@ -183,7 +186,7 @@ function App() {
                     <p class="text-justify leading-9 text-lg">جهت مشـورت با همکاران و بخش پشتیبانیِ شبانه‌روزی ما، مـی‌توانید
                         در هر لحظه، با شمـاره تلفن 91094000-۰۲۱ تمـاس بگیرید و یا از طریق فرم تماس با ما، موضوع را با ما
                         در میان بگذارید تا هرچه زودتر به آن رسیدگی کنیم. </p>
-                    <button class="px-3 py-2 rounded text-gray-800 bg-yellow-400 font-semibold">
+                    <button class="px-3 py-2 rounded text-neutral-800 bg-yellow-400 font-semibold">
                         پشتیبان آنلاین
                     </button>
                 </div>
@@ -191,18 +194,72 @@ function App() {
         </div>
     </section>
 
+      <footer>
+            <div className="bg-neutral-900">
+                <div className="md:w-10/12 lg:w-8/12 m-auto py-8">
+                    <ul class="flex flex-wrap items-center justify-between md:flex-nowrap list-disc list-inside">
+                        <li>
+                            <a href="#" class="hover:text-sky-400 transition whitespace-nowrap">صفحه اصلی</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-sky-400 transition whitespace-nowrap">
+                                درباره ما
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-sky-400 transition whitespace-nowrap">
+                                حریم شخصی
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-sky-400 transition whitespace-nowrap">
+                                راهنمایی خرید
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-sky-400 transition whitespace-nowrap">تماس با ما</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-      <footer id="page-footer" class="flex flex-none items-center bg-gray-900 bg-opacity-75">
-        <div class="text-center flex flex-col md:text-left md:flex-row md:justify-between text-sm container xl:max-w-6xl mx-auto px-4 lg:px-8">
-          <div class="pt-4 pb-1 md:pb-4">
-            <span class="font-medium">2023</span>
-          </div>
-          <div class="pb-4 pt-1 md:pt-4 inline-flex items-center justify-center">
-            <span>footer</span>
-            <svg class="hi-solid hi-heart inline-block w-4 h-4 mx-1 text-red-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
-            
-          </div>
-        </div>
+            <div className="bg-neutral-900/50">
+                <div>
+                    <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
+                        <div class="w-full space-x-12 items-center space-x-reverse flex justify-center text-gray-300 py-5">
+                                <div>
+                                 جواهری یاس. آدرس: تهران - شهرری - دولت آباد - فلکه دوم - پاساژ ولیعصر - پلاک 12.
+                                </div>
+
+                            <ul role="list" class="space-y-2">
+                                <li className="bg-neutral-800 rounded-lg px-4 py-1">
+                                    <div className="inline-flex items-center space-x-2 space-x-reverse">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M9.366 10.682a10.556 10.556 0 0 0 3.952 3.952l.884-1.238a1 1 0 0 1 1.294-.296 11.422 11.422 0 0 0 4.583 1.364 1 1 0 0 1 .921.997v4.462a1 1 0 0 1-.898.995c-.53.055-1.064.082-1.602.082C9.94 21 3 14.06 3 5.5c0-.538.027-1.072.082-1.602A1 1 0 0 1 4.077 3h4.462a1 1 0 0 1 .997.921A11.422 11.422 0 0 0 10.9 8.504a1 1 0 0 1-.296 1.294l-1.238.884zm-2.522-.657l1.9-1.357A13.41 13.41 0 0 1 7.647 5H5.01c-.006.166-.009.333-.009.5C5 12.956 11.044 19 18.5 19c.167 0 .334-.003.5-.01v-2.637a13.41 13.41 0 0 1-3.668-1.097l-1.357 1.9a12.442 12.442 0 0 1-1.588-.75l-.058-.033a12.556 12.556 0 0 1-4.702-4.702l-.033-.058a12.442 12.442 0 0 1-.75-1.588z"/></svg>
+                                        <div className="text-xs text-white-200">
+                                            <div className="font-bold mb-2">
+                                            مشاور و راهنمای خرید
+                                            </div>
+                                            012-12345678
+                                        </div>
+                                    </div>
+                                </li>
+                                <li className="bg-neutral-800 rounded-lg px-4 py-1">
+                                    <div className="inline-flex items-center space-x-2 space-x-reverse">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="fill-current"  viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M7 4v16h10V4H7zM6 2h12a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm6 15a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+                                        <div className="text-xs text-white-200">
+                                            <div className="font-bold mb-1">
+                                            شماره همراه مدیریت
+                                            </div>
+                                            012-12345678
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
       </footer>
     </div>
   );

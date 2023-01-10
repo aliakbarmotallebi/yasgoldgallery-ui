@@ -1,7 +1,7 @@
 const Header = ({children}) => {
     return (
         <>
-            <div className="bg-gray-900 w-full">
+            <div className="bg-neutral-900 w-full">
                 <div className="flex justify-between container xl:max-w-6xl mx-auto pt-5 flex-none items-center">
                     <div className="w-8 h-5">
 
@@ -13,20 +13,20 @@ const Header = ({children}) => {
                         </button>
                     </div>
                 </div>
-                <header className="flex flex-none items-center h-16 bg-gray-900 shadow-sm top-0 right-0 left-0 z-30">
+                <header className="flex flex-none items-center h-16 bg-neutral-900 shadow-sm top-0 right-0 left-0 z-30">
                     <div className="flex justify-between container xl:max-w-6xl mx-auto px-4 lg:px-8">
                         <div class="flex items-center space-x-2 space-x-reverse">
                             <nav className="hidden lg:flex lg:items-center lg:space-x-2 text-sm lg:space-x-reverse">
-                                <a href="" className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-gray-300 bg-gray-800">
+                                <a href="" className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800">
                                     صفحه اصلی
                                 </a>
-                                <a href="javascript:void(0)" className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-gray-400 hover:text-gray-300 hover:bg-gray-800">
+                                <a href="javascript:void(0)" className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800">
                                     درباره ما
                                 </a>
-                                <a href="javascript:void(0)" className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-gray-400 hover:text-gray-300 hover:bg-gray-800">
+                                <a href="javascript:void(0)" className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800">
                                     تماس با ما
                                 </a>
-                                <button type="button" class="text-sm font-medium inline-flex justify-center items-center space-x-2 space-x-reverse px-3 py-2 rounded text-gray-400 hover:text-gray-300 hover:bg-gray-800 focus:outline-none focus:ring" id="tk-dropdown-layouts-user" >
+                                <button type="button" class="text-sm font-medium inline-flex justify-center items-center space-x-2 space-x-reverse px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800 focus:outline-none focus:ring" id="tk-dropdown-layouts-user" >
                                     <span>
                                         محصولات
                                     </span>
