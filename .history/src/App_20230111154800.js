@@ -44,44 +44,14 @@ function App() {
                             <img class="transition-all duration-200 group-hover:scale-[1.05] group-hover:relative" src="https://dioragallery.com/images/stories/virtuemart/product/17427.jpg" />
                         </a>
                     </div>
-                    <div className="absolute bottom-5 right-5">
-                        <button class="flex items-center bg-white  pl-2 pr-4 py-1 rounded-lg overflow-hidden shadow-lg w-full text-neutral-900 hover:bg-gray-200 font-medium">
-                            <div className="text-xs ml-4">
-                                200,000,000 تومان
-                            </div>
-                            <div className="font-bold mr-auto text-yellow-500 text-xs">
-                                افزدون 
-                                <svg xmlns="http://www.w3.org/2000/svg" className="inline fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>    
-                            </div>
-                        </button>
-                    </div>
-                </div>
-                <div class="px-5 pt-4">
-                    <a href="#">
-                        <h3 class="text-white font-semibold text-lg tracking-tight text-justify">
-                            دستبند طلا زنانه کارتیه  
-                        </h3>
-                    </a>
-                </div>
-            </div>
-            <div class=" max-w-sm">
-                <div className="relative">
-                    <div className="h-60 overflow-hidden group shadow-md rounded-lg">
-                        <a href="#">
-                            <img class="transition-all duration-200 group-hover:scale-[1.05] group-hover:relative" src="https://dioragallery.com/images/stories/virtuemart/product/17427.jpg" />
+                    <div className="absolute bottom-5 right-5 ">
+                        <a href="#"
+                            class="font-bold text-xs px-3 py-2 rounded text-neutral-800 bg-yellow-400">
+                                خرید
+                          <svg xmlns="http://www.w3.org/2000/svg" className="inline fill-current mr-2" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>
+
                         </a>
                     </div>
-                    <div className="absolute bottom-5 right-5">
-                        <button class="flex items-center bg-white  pl-2 pr-4 py-1 rounded-lg overflow-hidden shadow-lg w-full text-neutral-900 hover:bg-gray-200 font-medium">
-                            <div className="text-xs ml-4">
-                                200,000,000 تومان
-                            </div>
-                            <div className="font-bold mr-auto text-yellow-500 text-xs">
-                                افزدون 
-                                <svg xmlns="http://www.w3.org/2000/svg" className="inline fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>    
-                            </div>
-                        </button>
-                    </div>
                 </div>
                 <div class="px-5 pt-4">
                     <a href="#">
@@ -89,113 +59,9 @@ function App() {
                             دستبند طلا زنانه کارتیه  
                         </h3>
                     </a>
-                </div>
-            </div>
-            <div class=" max-w-sm">
-                <div className="relative">
-                    <div className="h-60 overflow-hidden group shadow-md rounded-lg">
-                        <a href="#">
-                            <img class="transition-all duration-200 group-hover:scale-[1.05] group-hover:relative" src="https://dioragallery.com/images/stories/virtuemart/product/17427.jpg" />
-                        </a>
+                    <div class="text-lg font-bold text-yellow-500 pt-1">
+                        200,000,000 تومان
                     </div>
-                    <div className="absolute bottom-5 right-5">
-                        <button class="flex items-center bg-white  pl-2 pr-4 py-1 rounded-lg overflow-hidden shadow-lg w-full text-neutral-900 hover:bg-gray-200 font-medium">
-                            <div className="text-xs ml-4">
-                                200,000,000 تومان
-                            </div>
-                            <div className="font-bold mr-auto text-yellow-500 text-xs">
-                                افزدون 
-                                <svg xmlns="http://www.w3.org/2000/svg" className="inline fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>    
-                            </div>
-                        </button>
-                    </div>
-                </div>
-                <div class="px-5 pt-4">
-                    <a href="#">
-                        <h3 class="text-white font-semibold text-lg tracking-tight text-justify">
-                            دستبند طلا زنانه کارتیه  
-                        </h3>
-                    </a>
-                </div>
-            </div>
-            <div class=" max-w-sm">
-                <div className="relative">
-                    <div className="h-60 overflow-hidden group shadow-md rounded-lg">
-                        <a href="#">
-                            <img class="transition-all duration-200 group-hover:scale-[1.05] group-hover:relative" src="https://dioragallery.com/images/stories/virtuemart/product/17427.jpg" />
-                        </a>
-                    </div>
-                    <div className="absolute bottom-5 right-5">
-                        <button class="flex items-center bg-white  pl-2 pr-4 py-1 rounded-lg overflow-hidden shadow-lg w-full text-neutral-900 hover:bg-gray-200 font-medium">
-                            <div className="text-xs ml-4">
-                                200,000,000 تومان
-                            </div>
-                            <div className="font-bold mr-auto text-yellow-500 text-xs">
-                                افزدون 
-                                <svg xmlns="http://www.w3.org/2000/svg" className="inline fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>    
-                            </div>
-                        </button>
-                    </div>
-                </div>
-                <div class="px-5 pt-4">
-                    <a href="#">
-                        <h3 class="text-white font-semibold text-lg tracking-tight text-justify">
-                            دستبند طلا زنانه کارتیه  
-                        </h3>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-      </section>
-
-      <div class="grid grid-cols-6 col-span-2 gap-2 pt-10">
-          <div class=" overflow-hidden rounded-xl col-span-3 max-h-[14rem]">
-            <img class="h-full w-full object-cover "
-                 src="https://dioragallery.com/images/1401/03/24/16238-2.jpg"
-                 alt="" />
-          </div>
-          <div class=" overflow-hidden rounded-xl col-span-3 max-h-[14rem]">
-            <img class="h-full w-full object-cover  "
-                 src="https://dioragallery.com/images/1401/03/24/16635-5.jpg"
-                 alt="" />
-          </div>
-          <div class=" overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
-            <img class="h-full w-full object-cover "
-                 src="https://dioragallery.com/images/1401/03/24/16229-2.jpg"
-                 alt="" />
-          </div>
-          <div class=" overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
-            <img class="h-full w-full object-cover "
-                 src="https://dioragallery.com/images/1401/03/02/untitled-design-28.jpg"
-                 alt="" />
-          </div>
-          <div class="relative overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
-            <a
-                href="#"
-                class="text-white text-xl absolute inset-0  bg-slate-900/80 flex justify-center items-center">
-              مشاهده بیشتر
-            </a>
-          </div>
-        </div>
-
-        <section className="bg-neutral-900">
-         <div className="text-center py-10">
-            <h2 className="text-4xl font-bold text-white">
-                محصولات پیشنهادی
-                <span className="text-yellow-400">
-                      یاس  
-                    </span>  
-            </h2>
-         </div>
-
-        <div className="grid grid-cols-5 gap-3 p-5 items-center">
-
-
-            <div class=" max-w-sm">
-                <div className="w-60 h-120 overflow-hidden flex justify-center">
-                    <img class="" 
-                        src={ImageSuggest} />
                 </div>
             </div>
 
@@ -226,6 +92,145 @@ function App() {
                     </div>
                 </div>
             </div>
+            <div class=" max-w-sm">
+                <div className="relative">
+                    <div className="h-60 overflow-hidden group shadow-md rounded-lg">
+                        <a href="#">
+                            <img class="transition-all duration-200 group-hover:scale-[1.05] group-hover:relative" src="https://dioragallery.com/images/stories/virtuemart/product/17427.jpg" />
+                        </a>
+                    </div>
+                    <div className="absolute bottom-5 right-5 ">
+                        <a href="#"
+                            class="font-bold text-xs px-3 py-2 rounded text-neutral-800 bg-yellow-400">
+                                خرید
+                          <svg xmlns="http://www.w3.org/2000/svg" className="inline fill-current mr-2" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="px-5 pt-4">
+                    <a href="#">
+                        <h3 class="text-white font-semibold text-lg tracking-tight text-justify">
+                            دستبند طلا زنانه کارتیه  
+                        </h3>
+                    </a>
+                    <div class="text-lg font-bold text-yellow-500 pt-1">
+                        200,000,000 تومان
+                    </div>
+                </div>
+            </div>
+            <div class=" max-w-sm">
+                <div className="relative">
+                    <div className="h-60 overflow-hidden group shadow-md rounded-lg">
+                        <a href="#">
+                            <img class="transition-all duration-200 group-hover:scale-[1.05] group-hover:relative" src="https://dioragallery.com/images/stories/virtuemart/product/17427.jpg" />
+                        </a>
+                    </div>
+                    <div className="absolute bottom-5 right-5 ">
+                        <a href="#"
+                            class="font-bold text-xs px-3 py-2 rounded text-neutral-800 bg-yellow-400">
+                                خرید
+                          <svg xmlns="http://www.w3.org/2000/svg" className="inline fill-current mr-2" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="px-5 pt-4">
+                    <a href="#">
+                        <h3 class="text-white font-semibold text-lg tracking-tight text-justify">
+                            دستبند طلا زنانه کارتیه  
+                        </h3>
+                    </a>
+                    <div class="text-lg font-bold text-yellow-500 pt-1">
+                        200,000,000 تومان
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </section>
+
+      <div class="grid grid-cols-6 col-span-2 gap-2 pt-10">
+          <div class=" overflow-hidden rounded-xl col-span-3 max-h-[14rem]">
+            <img class="h-full w-full object-cover "
+                 src={Image1}
+                 alt="" />
+          </div>
+          <div class=" overflow-hidden rounded-xl col-span-3 max-h-[14rem]">
+            <img class="h-full w-full object-cover  "
+                 src={Image2}
+                 alt="" />
+          </div>
+          <div class=" overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
+            <img class="h-full w-full object-cover "
+                 src={Image3}
+                 alt="" />
+          </div>
+          <div class=" overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
+            <img class="h-full w-full object-cover "
+                 src={Image4}
+                 alt="" />
+          </div>
+          <div class="relative overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
+            <div
+                class="text-white text-xl absolute inset-0  bg-slate-900/80 flex justify-center items-center">
+              + 23
+            </div>
+            <img class="h-full w-full object-cover "
+                 src={Image1}
+                 alt="" />
+          </div>
+        </div>
+
+        <section className="bg-neutral-900">
+         <div className="text-center py-10">
+            <h2 className="text-4xl font-bold text-white">
+                محصولات پیشنهادی
+                <span className="text-yellow-400">
+                      یاس  
+                    </span>  
+            </h2>
+         </div>
+
+        <div className="grid grid-cols-5 gap-3 p-5 items-center">
+
+
+            <div class=" max-w-sm">
+                <div className="w-60 h-120 overflow-hidden flex justify-center">
+                    <img class="" 
+                        src={ImageSuggest} />
+                </div>
+            </div>
+
+            <div class="max-w-sm">
+                <div className="relative">
+                    <div className="h-60 overflow-hidden group shadow-md rounded-lg">
+                        <a href="#">
+                            <img class="transition-all duration-200 group-hover:scale-[1.05] group-hover:relative" src="https://dioragallery.com/images/stories/virtuemart/product/17427.jpg" />
+                        </a>
+                    </div>
+                    <div className="absolute bottom-5 right-0 w-full mx-auto px-5">
+                        <button class="flex bg-white px-4 py-1 rounded-lg overflow-hidden shadow-lg w-full text-neutral-900 hover:bg-gray-200 font-medium">
+                            <div className="text-xs ml-auto ml-2">
+                                200,000,000 تومان
+                            </div>
+                            خرید
+                            <svg xmlns="http://www.w3.org/2000/svg" className="inline fill-current mr-2" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>    
+			            </button>
+                    </div>
+                </div>
+                <div class="px-5 pt-4">
+                    <a href="#">
+                        <h3 class="text-white font-semibold text-lg tracking-tight text-justify">
+                            دستبند طلا زنانه کارتیه  
+                        </h3>
+                    </a>
+                    <div class="text-lg font-bold text-yellow-500 pt-1">
+                        200,000,000 تومان
+                    </div>
+                </div>
+            </div>
+
             <div class=" max-w-sm">
                 <div className="relative">
                     <div className="h-60 overflow-hidden group shadow-md rounded-lg">
@@ -389,7 +394,7 @@ function App() {
       </div>
 
 
-    <section class="w-full !m-0">
+      <section class="w-full !m-0">
         <div class="grid grid-cols-2 mx-auto max-w-6xl">
             <div class="p-5 py-20">
                 <div class="text-4xl font-extrabold">

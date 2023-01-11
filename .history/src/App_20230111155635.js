@@ -152,30 +152,32 @@ function App() {
       <div class="grid grid-cols-6 col-span-2 gap-2 pt-10">
           <div class=" overflow-hidden rounded-xl col-span-3 max-h-[14rem]">
             <img class="h-full w-full object-cover "
-                 src="https://dioragallery.com/images/1401/03/24/16238-2.jpg"
+                 src={Image1}
                  alt="" />
           </div>
           <div class=" overflow-hidden rounded-xl col-span-3 max-h-[14rem]">
             <img class="h-full w-full object-cover  "
-                 src="https://dioragallery.com/images/1401/03/24/16635-5.jpg"
+                 src={Image2}
                  alt="" />
           </div>
           <div class=" overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
             <img class="h-full w-full object-cover "
-                 src="https://dioragallery.com/images/1401/03/24/16229-2.jpg"
+                 src={Image3}
                  alt="" />
           </div>
           <div class=" overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
             <img class="h-full w-full object-cover "
-                 src="https://dioragallery.com/images/1401/03/02/untitled-design-28.jpg"
+                 src={Image4}
                  alt="" />
           </div>
           <div class="relative overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
-            <a
-                href="#"
+            <div
                 class="text-white text-xl absolute inset-0  bg-slate-900/80 flex justify-center items-center">
-              مشاهده بیشتر
-            </a>
+              + 23
+            </div>
+            <img class="h-full w-full object-cover "
+                 src={Image1}
+                 alt="" />
           </div>
         </div>
 
@@ -389,7 +391,7 @@ function App() {
       </div>
 
 
-    <section class="w-full !m-0">
+      <section class="w-full !m-0">
         <div class="grid grid-cols-2 mx-auto max-w-6xl">
             <div class="p-5 py-20">
                 <div class="text-4xl font-extrabold">

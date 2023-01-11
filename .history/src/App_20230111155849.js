@@ -167,15 +167,17 @@ function App() {
           </div>
           <div class=" overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
             <img class="h-full w-full object-cover "
-                 src="https://dioragallery.com/images/1401/03/02/untitled-design-28.jpg"
+                 src={Image4}
                  alt="" />
           </div>
           <div class="relative overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
-            <a
-                href="#"
+            <div
                 class="text-white text-xl absolute inset-0  bg-slate-900/80 flex justify-center items-center">
-              مشاهده بیشتر
-            </a>
+              + 23
+            </div>
+            <img class="h-full w-full object-cover "
+                 src={Image1}
+                 alt="" />
           </div>
         </div>
 
