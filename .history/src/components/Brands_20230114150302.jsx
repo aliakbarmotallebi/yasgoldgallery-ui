@@ -45,7 +45,7 @@ const Brands = () => {
             <div tabindex="0" class="focus:outline-none h-20 w-20 mb-4 lg:mb-0">
               <img src={Image4} class="h-full w-full rounded-full overflow-hidden shadow" />
             </div>
-            برند چهار
+            برند سه
           </a>
         </div>
         <div className="w-1/3 whitespace-nowrap">
@@ -56,7 +56,7 @@ const Brands = () => {
             <div tabindex="0" class="focus:outline-none h-20 w-20 mb-4 lg:mb-0">
               <img src={Image4} class="h-full w-full rounded-full overflow-hidden shadow" />
             </div>
-            برند پنج
+            برند سه
           </a>
         </div>
         <div className="w-1/3 whitespace-nowrap">
