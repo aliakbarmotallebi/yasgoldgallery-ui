@@ -9,8 +9,6 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 import SpecialProducts from "./components/SpecialProducts";
 import SuggestedProducts from "./components/SuggestedProducts";
-import Brands from "./components/Brands";
-import SpecialComments from "./components/SpecialComments";
 
 
 function App() {
