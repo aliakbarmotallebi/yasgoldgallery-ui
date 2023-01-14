@@ -28,15 +28,14 @@ const CardProduct = () => {
                 </div>
               </button>
             </div>
-            <div className="absolute top-5 right-5">
-              <h5 class="text-xs text-gray-500 py-2">
-                  <a class="bg-indigo-600 py-1 px-2 text-white rounded-lg" href="#">
-                      دسته بندی
-                  </a>
-              </h5>
-            </div>
           </div>
           <div class="px-5 pt-4">
+            <h5 class="text-xs text-gray-500 py-2">
+                <a class="bg-indigo-600 py-1 px-2 text-white rounded-lg" href="#">
+                    <span class="absolute inset-0"></span>
+                    دسته بندی
+                </a>
+            </h5>
             <a href="#">
               <h3 class="text-white font-semibold text-lg tracking-tight text-justify">
                 دستبند طلا زنانه کارتیه

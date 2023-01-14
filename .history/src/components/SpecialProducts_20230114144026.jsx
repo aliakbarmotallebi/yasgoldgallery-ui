@@ -23,8 +23,6 @@ const SpecialProducts = () => {
 
         <CardProduct/>
 
-        <CardProduct/>
-
       </div>
     </section>
   );

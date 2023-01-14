@@ -1,5 +1,3 @@
-import Image4 from "../assets/images/image4.png";
-
 const Header = ({ children }) => {
   return (
     <>
@@ -76,16 +74,15 @@ const Header = ({ children }) => {
           </div>
         </header>
         <div class="flex flex-col justify-center">
-          <div class="relative h-[390px]">
-              <img
-              class="hidden sm:block w-full h-full"
-              src={Image4}
-              />
-
-              <img
-              class="sm:hidden w-full h-full"
-              src={Image4}
-              />
+          <div class="relative">
+            <img
+              class="hidden sm:block w-full"
+              src="https://ganjehgallery.com/wp-content/uploads/2022/04/silvertur-desktop.jpg"
+            />
+            <img
+              class="sm:hidden w-full"
+              src="https://ganjehgallery.com/wp-content/uploads/2022/04/silvertur-desktop.jpg"
+            />
             <div class="absolute sm:bottom-8 bottom-4 pr-10 sm:pr-0 left-4 sm:left-8 flex justify-start items-start">
               <p class="text-3xl sm:text-4xl font-semibold leading-9 text-white">
                 با یاس میتونی بدرخشی 10سال تجربه

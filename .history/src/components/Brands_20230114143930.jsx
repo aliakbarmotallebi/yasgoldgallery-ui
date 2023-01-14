@@ -30,7 +30,7 @@ const Brands = () => {
         <div className="w-1/3 whitespace-nowrap">
           <a
             href="#"
-            class="h-60 text-white text-center text-4xl font-semibold p-20 block"
+            class="h-80 bg-blue-600 text-white text-center text-4xl font-semibold p-36 block"
           >
             برند چهار
           </a>

@@ -21,8 +21,6 @@ const SuggestedProducts = () => {
 
             <CardProduct/>
 
-            <CardProduct/>
-
             <CardProduct/>     
           </div>
       </div>

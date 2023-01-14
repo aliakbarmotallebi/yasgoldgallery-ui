@@ -3,9 +3,9 @@ import ImageSuggest from "../assets/images/box.png";
 
 const SpecialProducts = () => {
   return (
-    <section className="bg-neutral-800 py-20">
+    <section className="bg-neutral-700 py-20">
       <div className="text-center py-10">
-        <h2 className="text-4xl font-bold text-white">
+        <h2 className="text-4xl font-bold text-neutral-900">
           پیشنهاد شگفت انگیز
           <span className="text-yellow-400">یاس</span>
         </h2>
@@ -16,12 +16,6 @@ const SpecialProducts = () => {
             <img class="" src={ImageSuggest} />
           </div>
         </div>
-
-        <CardProduct/>
-
-        <CardProduct/>
-
-        <CardProduct/>
 
         <CardProduct/>
 

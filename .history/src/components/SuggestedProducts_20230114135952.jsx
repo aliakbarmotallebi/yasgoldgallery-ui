@@ -17,13 +17,7 @@ const SuggestedProducts = () => {
               <img class="" src={ImageSuggest} />
             </div>
           </div>
-            <CardProduct/>   
-
-            <CardProduct/>
-
-            <CardProduct/>
-
-            <CardProduct/>     
+            <CardProduct/>        
           </div>
       </div>
     </section>

@@ -76,16 +76,15 @@ const Header = ({ children }) => {
           </div>
         </header>
         <div class="flex flex-col justify-center">
-          <div class="relative h-[390px]">
-              <img
-              class="hidden sm:block w-full h-full"
+          <div class="relative">
+            <img
+              class="hidden sm:block w-full h-1/2"
               src={Image4}
-              />
-
-              <img
-              class="sm:hidden w-full h-full"
+            />
+            <img
+              class="sm:hidden w-full h-1/2"
               src={Image4}
-              />
+            />
             <div class="absolute sm:bottom-8 bottom-4 pr-10 sm:pr-0 left-4 sm:left-8 flex justify-start items-start">
               <p class="text-3xl sm:text-4xl font-semibold leading-9 text-white">
                 با یاس میتونی بدرخشی 10سال تجربه
