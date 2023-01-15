@@ -22,6 +22,7 @@ function App() {
     return (
         <div className="flex flex-col mx-auto w-full min-h-screen bg-[#4d4845] text-neutral-300">
             <Header />
+            <Modal showModal={showModal} setShowModal={setShowModal}/>
             <Main>
                 <SpecialProducts/>
                 <GridImages/>

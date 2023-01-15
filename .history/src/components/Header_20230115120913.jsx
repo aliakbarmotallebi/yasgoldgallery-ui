@@ -1,6 +1,6 @@
 import Image4 from "../assets/images/image4.png";
 import React, { useState } from 'react';
-import Modal from "./Modal";
+import Modal from "./components/Modal";
 
 const Header = ({ children }) => {
 

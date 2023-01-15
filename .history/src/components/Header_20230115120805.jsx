@@ -1,15 +1,6 @@
 import Image4 from "../assets/images/image4.png";
-import React, { useState } from 'react';
-import Modal from "./Modal";
 
 const Header = ({ children }) => {
-
-  const [showModal, setShowModal] = useState(false);
-
-  const openModal = () => {
-    setShowModal(prev => !prev);
-  };
-
   return (
     <>
       <div className="bg-neutral-900 w-full">
