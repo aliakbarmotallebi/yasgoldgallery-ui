@@ -8,7 +8,7 @@ const AboutPage = () => {
                      </h1>
                 </div>
 
-                <div className="text-2xl text-black tracking-wider px-16 py-10">
+                <div className="text-2xl text-black tracking-wider">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere molestiae, nemo dolorem officia necessitatibus porro ut dolore magnam assumenda nesciunt nihil, provident minima inventore sapiente ex vel culpa et fugit.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus incidunt assumenda unde illum adipisci molestiae quia voluptate aliquid, maiores maxime itaque porro corrupti et rerum eos odio architecto ratione sed!
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, incidunt obcaecati illum laboriosam laudantium, quae modi debitis illo aperiam voluptatum officiis ipsam ducimus sit laborum cumque tempore tempora sunt esse!

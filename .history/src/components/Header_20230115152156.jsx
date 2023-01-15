@@ -28,13 +28,13 @@ const Header = ({ children }) => {
             <div class="flex items-center space-x-2 space-x-reverse">
               <nav className="hidden lg:flex lg:items-center lg:space-x-2 text-sm lg:space-x-reverse">
                 <a
-                  href="/"
+                  href=""
                   className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800"
                 >
                   صفحه اصلی
                 </a>
                 <a
-                  href="/about"
+                  to="/about"
                   className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
                 >
                   درباره ما
