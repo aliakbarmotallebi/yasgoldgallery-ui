@@ -3,7 +3,7 @@ const AboutPage = () => {
         <>
             <div className="bg-gray-100 px-4 xl:px-4 py-14">
                 <div className="mx-auto container">
-                     <h2 className="text-4xl font-bold text-gray-900">
+                     <h2 className="text-4xl font-bold text-black">
                          درباره گالری طلا یاس
                      </h2>
                 </div>

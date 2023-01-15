@@ -25,7 +25,8 @@ const SpecialProducts = () => {
           <CardProduct/>
 
           <CardProduct/>
-          
+
+          <CardProduct/>
 
         </div>
       </div>

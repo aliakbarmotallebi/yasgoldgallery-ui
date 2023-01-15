@@ -3,7 +3,6 @@ import Layout from "./components/Layout";
 import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
-import ListProductsPage from "./pages/ListProductsPage";
 
 function RouterFunction() {
     return (
