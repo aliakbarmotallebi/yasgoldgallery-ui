@@ -13,8 +13,7 @@ const ListProductsPage = () => {
           تمامی محصولات
         </h2>
       </div>
-      
-      { loading ? <LoadableLoading/> : <></>}
+      { loading ? <LoadableLoading/> : NULL}
       
       <div class="container mx-auto px-5 py-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-y-20 gap-x-14 mt-10 mb-5">

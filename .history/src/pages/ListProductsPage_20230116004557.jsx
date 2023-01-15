@@ -13,7 +13,6 @@ const ListProductsPage = () => {
           تمامی محصولات
         </h2>
       </div>
-      
       { loading ? <LoadableLoading/> : <></>}
       
       <div class="container mx-auto px-5 py-10">
