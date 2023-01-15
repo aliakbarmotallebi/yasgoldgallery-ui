@@ -1,5 +1,5 @@
+import Image4 from "../assets/images/image4.png";
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import Modal from "./Modal";
 
 const Header = ({ children }) => {
@@ -27,18 +27,18 @@ const Header = ({ children }) => {
           <div className="flex justify-between container xl:max-w-6xl mx-auto px-4 lg:px-8">
             <div class="flex items-center space-x-2 space-x-reverse">
               <nav className="hidden lg:flex lg:items-center lg:space-x-2 text-sm lg:space-x-reverse">
-                <Link
-                  to="/"
+                <a
+                  href=""
                   className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800"
                 >
                   صفحه اصلی
-                </Link>
-                <Link
-                  to="about"
+                </a>
+                <a
+                  href="javascript:void(0)"
                   className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
                 >
                   درباره ما
-                </Link>
+                </a>
                 <a
                   href="javascript:void(0)"
                   className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"

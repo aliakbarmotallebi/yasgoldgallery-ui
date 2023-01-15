@@ -5,9 +5,10 @@ const Layout = ({children}) => {
     return (
         <>
             <div 
-                className="flex flex-col mx-auto w-full min-h-screen bg-[#4d4845] text-neutral-300">
+                className="flex flex-col mx-auto w-full min-h-screen bg-[#4d4845] text-neutral-300  justify-between">
                 <Header />
-                <main className="flex-grow">
+                
+                <main className="min-h-full">
                     {children}
                 </main>
                 <Footer />

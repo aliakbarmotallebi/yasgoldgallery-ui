@@ -34,7 +34,7 @@ const Header = ({ children }) => {
                   صفحه اصلی
                 </Link>
                 <Link
-                  to="about"
+                  to="/about"
                   className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
                 >
                   درباره ما
