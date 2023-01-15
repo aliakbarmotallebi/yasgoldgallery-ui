@@ -19,7 +19,7 @@ const Modal = ({ title, showModal, setShowModal, children }) => {
   return (
     <>
       {showModal ? (
-        <div onClick={() => setShowModal(false) }className="fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full bg-black/90">
+        <div className="fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full bg-black/90">
           <div className="flex justify-center items-center h-full">
             <div className="relative w-full h-full max-w-2xl md:h-auto">
               <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
