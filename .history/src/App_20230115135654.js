@@ -4,24 +4,30 @@ import Image3 from "./assets/images/image3.png";
 import Image4 from "./assets/images/image4.png";
 import ImageSuggest from "./assets/images/box.png";
 
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 import SpecialProducts from "./components/SpecialProducts";
 import SuggestedProducts from "./components/SuggestedProducts";
 import Brands from "./components/Brands";
 import SpecialComments from "./components/SpecialComments";
 import GridImages from "./components/GridImages";
-
+import Modal from "./components/Modal";
 import Layout from "./components/Layout";
 
 
 function App() {
+
+
+
     return (
-    <Layout>
-        <SpecialProducts/>
-        <GridImages/>
-        <SuggestedProducts/>
-        <SpecialComments />
-        <Brands />
-    </Layout>
+            <Layout>
+                <SpecialProducts/>
+                <GridImages/>
+                <SuggestedProducts/>
+                <SpecialComments />
+                <Brands />
+            </Layout>
     );
 }
 

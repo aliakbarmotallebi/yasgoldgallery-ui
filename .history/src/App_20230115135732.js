@@ -15,13 +15,13 @@ import Layout from "./components/Layout";
 
 function App() {
     return (
-    <Layout>
-        <SpecialProducts/>
-        <GridImages/>
-        <SuggestedProducts/>
-        <SpecialComments />
-        <Brands />
-    </Layout>
+            <Layout>
+                <SpecialProducts/>
+                <GridImages/>
+                <SuggestedProducts/>
+                <SpecialComments />
+                <Brands />
+            </Layout>
     );
 }
 
