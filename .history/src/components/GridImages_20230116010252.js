@@ -19,7 +19,8 @@ const GridImages = () => {
                   src="https://picsum.photos/400/400"
                   alt="girl-image"
                 />
-                <button class="dark:bg-gray-800 dark:text-white focus:outline-none rounded focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base leading-none text-gray-800 py-3 w-36 bg-white font-semibold">
+                <button class="dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base leading-none text-gray-800 py-3 w-36 bg-white font-semibold">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="inline-flex w-7 h-7 self-center" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>
                   انگشتر
                 </button>
                 <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
@@ -32,8 +33,9 @@ const GridImages = () => {
                     src="https://picsum.photos/400/400"
                     alt="shoe-image"
                   />
-                  <button class="dark:bg-gray-800 dark:text-white focus:outline-none rounded focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base leading-none text-gray-800 py-3 w-36 bg-white font-semibold">
-                      دستبند
+                  <button class="dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base leading-none text-gray-800 py-3 w-36 bg-white font-semibold">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="inline-flex w-7 h-7 self-center" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>
+                    دستبند
                   </button>
                   <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
                 </div>
@@ -43,8 +45,9 @@ const GridImages = () => {
                     src="https://picsum.photos/400/400"
                     alt="watch-image"
                   />
-                  <button class="dark:bg-gray-800 dark:text-white focus:outline-none rounded focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base leading-none text-gray-800 py-3 w-36 bg-white font-semibold">
-                      گردنبند
+                  <button class="dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base leading-none text-gray-800 py-3 w-36 bg-white font-semibold">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="inline-flex w-7 h-7 self-center" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>
+                    گردنبند
                   </button>
                   <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
                 </div>
@@ -56,7 +59,8 @@ const GridImages = () => {
                   src="https://picsum.photos/400/400"
                   alt="girl-image"
                 />
-                <button class="dark:bg-gray-800 dark:text-white focus:outline-none rounded focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base leading-none text-gray-800 py-3 w-36 bg-white font-semibold">
+                <button class="dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base leading-none text-gray-800 py-3 w-36 bg-white font-semibold">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="inline-flex w-7 h-7 self-center" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>
                   نگین
                 </button>
                 <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>

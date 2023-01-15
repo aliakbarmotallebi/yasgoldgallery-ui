@@ -19,7 +19,7 @@ const GridImages = () => {
                   src="https://picsum.photos/400/400"
                   alt="girl-image"
                 />
-                <button class="dark:bg-gray-800 dark:text-white focus:outline-none rounded focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base leading-none text-gray-800 py-3 w-36 bg-white font-semibold">
+                <button class="dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white">
                   انگشتر
                 </button>
                 <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
@@ -32,8 +32,8 @@ const GridImages = () => {
                     src="https://picsum.photos/400/400"
                     alt="shoe-image"
                   />
-                  <button class="dark:bg-gray-800 dark:text-white focus:outline-none rounded focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base leading-none text-gray-800 py-3 w-36 bg-white font-semibold">
-                      دستبند
+                  <button class="dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white">
+                    دستبند
                   </button>
                   <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
                 </div>
@@ -43,8 +43,8 @@ const GridImages = () => {
                     src="https://picsum.photos/400/400"
                     alt="watch-image"
                   />
-                  <button class="dark:bg-gray-800 dark:text-white focus:outline-none rounded focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base leading-none text-gray-800 py-3 w-36 bg-white font-semibold">
-                      گردنبند
+                  <button class="dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white">
+                    گردنبند
                   </button>
                   <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
                 </div>
@@ -56,7 +56,7 @@ const GridImages = () => {
                   src="https://picsum.photos/400/400"
                   alt="girl-image"
                 />
-                <button class="dark:bg-gray-800 dark:text-white focus:outline-none rounded focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base leading-none text-gray-800 py-3 w-36 bg-white font-semibold">
+                <button class="dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white">
                   نگین
                 </button>
                 <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
