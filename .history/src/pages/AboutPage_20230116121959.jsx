@@ -24,58 +24,19 @@ const AboutPage = () => {
                 </div>
             </div>
 
-            <div class="container flex justify-between px-2 xl:px-16 py-5">
+            <div class="space-y-12 px-2 xl:px-16">
                 <div class="mt-4 flex gap-2">
                     <div>
-                        <div class="flex items-center h-16 border-l-4 border-yellow-400"></div>
+                        <div class="flex items-center h-16 border-l-4 border-blue-900"></div>
                         <div class="flex items-center h-16 border-l-4 border-gray-100"></div>
                     </div>
                     <div>
                         <div class="flex items-center h-16">
-                            <span class="text-lg text-yellow-400 font-bold">
-                                پشتیبانی و خدمت ویژه
-                            </span>
+                            <span class="text-lg text-gray-900 font-bold">Lorem ipsum dolor sit amet?</span>
                         </div>
                         <div class="flex items-center py-2">
-                            <span class="text-gray-100">
-                            تمام قد در خدمت شما هستیم
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-4 flex gap-2">
-                    <div>
-                        <div class="flex items-center h-16 border-l-4 border-yellow-400"></div>
-                        <div class="flex items-center h-16 border-l-4 border-gray-100"></div>
-                    </div>
-                    <div>
-                        <div class="flex items-center h-16">
-                            <span class="text-lg text-yellow-400 font-bold">
-                               ضمانت اصالت کالا و عیار
-                            </span>
-                        </div>
-                        <div class="flex items-center py-2">
-                            <span class="text-gray-100">
-                            کیفیت و اصالت همه چیز است
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-4 flex gap-2">
-                    <div>
-                        <div class="flex items-center h-16 border-l-4 border-yellow-400"></div>
-                        <div class="flex items-center h-16 border-l-4 border-gray-100"></div>
-                    </div>
-                    <div>
-                        <div class="flex items-center h-16">
-                            <span class="text-lg text-yellow-400 font-bold">
-                                طراحی و ساخت
-                            </span>
-                        </div>
-                        <div class="flex items-center py-2">
-                            <span class="text-gray-100">
-                            همه چیز در دستان شماست
-                            </span>
+                            <span class="text-gray-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, dignissimos. Neque eos, dignissimos provident reiciendis debitis repudiandae commodi perferendis et itaque, similique fugiat cumque impedit iusto vitae dolorum. Nostrum, fugit!</span>
+
                         </div>
                     </div>
                 </div>

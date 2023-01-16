@@ -24,7 +24,7 @@ const AboutPage = () => {
                 </div>
             </div>
 
-            <div class="container flex justify-between px-2 xl:px-16 py-5">
+            <div class="flex justify-between px-2 xl:px-16 py-5">
                 <div class="mt-4 flex gap-2">
                     <div>
                         <div class="flex items-center h-16 border-l-4 border-yellow-400"></div>
