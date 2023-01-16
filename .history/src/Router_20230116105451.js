@@ -14,7 +14,7 @@ function RouterFunction() {
                 <Route exact path="/" element={<HomePage />} />
                 <Route path="about" element={<AboutPage />} />
                 <Route path="products" element={<ListProductsPage />} />
-                <Route path="product" element={<ProductPage />} />
+                <Route path="products/:id" element={<ProductPage />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>
