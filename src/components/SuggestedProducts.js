@@ -1,7 +1,10 @@
 import ImageSuggest from "../assets/images/box.png";
 import CardProduct from "./CardProduct";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
+import "swiper/css";
 
-const SuggestedProducts = () => {
+const SuggestedProducts = ({ suggested: suggestedProducts }) => {
   return (
     <section className="bg-neutral-800 py-20">
       <div className="container mx-auto">
@@ -12,19 +15,28 @@ const SuggestedProducts = () => {
           </h2>
         </div>
         <div className="grid grid-cols-5 gap-3 p-5 items-center">
-          <div class=" max-w-sm">
+          <div class="max-w-sm">
             <div className="h-120 overflow-hidden flex justify-center">
               <img class="" src={ImageSuggest} />
             </div>
           </div>
-            <CardProduct/>   
-
-            <CardProduct/>
-
-            <CardProduct/>
-
-            <CardProduct/>     
-          </div>
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={30}
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            className="col-span-4"
+          >
+            {suggestedProducts?.map((product) => (
+              <SwiperSlide key={product.productId}>
+                <CardProduct {...product} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </section>
   );

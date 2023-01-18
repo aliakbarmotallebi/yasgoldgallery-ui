@@ -4,8 +4,24 @@ import SpecialComments from "../components/SpecialComments";
 import SpecialProducts from "../components/SpecialProducts";
 import SuggestedProducts from "../components/SuggestedProducts";
 import Image4 from "../assets/images/image4.png";
+import { useEffect, useState } from "react";
+import { HomePageData } from "../services/main";
+import LoadableLoading from "../components/LoadableLoading";
 
 const HomePage = () => {
+  const [speacial , setSpeacial]=useState([]);
+  const [suggested , setSuggested]=useState([]);
+  const [loading , setLoading] =useState(false);
+    useEffect(()=>{
+      const getData = async()=>{
+        setLoading(true)
+       const {speacialProducts, suggestedProducts} = await HomePageData();
+       if(speacialProducts.status) setSpeacial(speacialProducts.data);
+       if(suggestedProducts.status) setSuggested(suggestedProducts.data);
+       setLoading(false)
+      }
+      getData();
+    } , [])
   return (
     <>
       <div class="flex flex-col justify-center">
@@ -19,9 +35,10 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <SpecialProducts />
+      { loading ? <LoadableLoading/> : <></>}
+      <SpecialProducts speacial={speacial} />
       <GridImages />
-      <SuggestedProducts />
+      <SuggestedProducts suggested={suggested} />
       <SpecialComments />
       <Brands />
     </>

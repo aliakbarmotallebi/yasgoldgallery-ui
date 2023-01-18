@@ -1,7 +1,10 @@
 import CardProduct from "./CardProduct";
 import ImageSuggest from "../assets/images/box.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
+import "swiper/css";
 
-const SpecialProducts = () => {
+const SpecialProducts = ({ speacial: speacialProducts }) => {
   return (
     <section className="bg-neutral-800 py-20">
       <div className="container mx-auto">
@@ -17,15 +20,22 @@ const SpecialProducts = () => {
               <img class="" src={ImageSuggest} />
             </div>
           </div>
-
-          <CardProduct/>
-
-          <CardProduct/>
-
-          <CardProduct/>
-
-          <CardProduct/>
-          
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={30}
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            className="col-span-4"
+          >
+            {speacialProducts?.map((product) => (
+              <SwiperSlide key={product.productId}>
+                <CardProduct {...product} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>
