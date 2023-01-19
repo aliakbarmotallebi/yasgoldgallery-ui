@@ -2,12 +2,16 @@ const CartPage = () => {
   return (
     <div class="container mx-auto mt-10">
       <div class="flex shadow-md my-10">
-        <div class="w-3/4 bg-white rounded-r-lg text-black overflow-hidden">
-          <div class="flex items-center justify-between border-b border-gray-50 bg-gray-50/50 px-4 py-5">
-            <h1 class="font-semibold text-lg">سبد خرید شما</h1>
-            <h2 class="font-semibold text-xs text-gray-800">تعداد 3</h2>
+        <div class="w-3/4 bg-white px-10 py-10 rounded-r-lg text-black">
+          <div class="flex justify-between border-b pb-4">
+            <h1 class="font-semibold text-2xl">
+                سبد خرید شما
+            </h1>
+            <h2 class="font-semibold text-2xl">
+              تعداد 3
+            </h2>
           </div>
-          <div class="flex mt-10 mb-5 px-10">
+          <div class="flex mt-10 mb-5">
             <h3 class="font-semibold text-gray-600 text-xs uppercase w-2/5">
               عنوان محصول
             </h3>
@@ -21,36 +25,28 @@ const CartPage = () => {
               جمع کل
             </h3>
           </div>
-          <div class="flex items-center  hover:bg-gray-100 px-6 py-5">
-            <div class="flex w-2/5 gap-2">
+          <div class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
+            <div class="flex w-2/5">
               <div class="w-20">
                 <img
-                  class="h-24 rounded-lg"
-                  src="https://shop.talaayas.ir/uploads/images/products/1673777617-10000499.jpg"
+                  class="h-24"
+                  src="https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z"
                   alt=""
                 />
               </div>
               <div class="flex flex-col justify-between ml-4 flex-grow">
-                <span class="font-bold text-sm">ستبند-طلا-اسپرت-کارتیه</span>
-                <span class="text-red-500 text-xs">دسته بندی</span>
-                <button
+                <span class="font-bold text-sm">
+                ستبند-طلا-اسپرت-کارتیه
+                </span>
+                <span class="text-red-500 text-xs">
+                    دسته بندی
+                </span>
+                <a
                   href="#"
                   class="font-semibold hover:text-red-500 text-gray-500 text-xs"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-4 h-4 text-rose-500"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="18" y1="6" x2="6" y2="18" />
-                    <line x1="6" y1="6" x2="18" y2="18" />
-                  </svg>
-                </button>
+                  حذف
+                </a>
               </div>
             </div>
             <div class="flex justify-center w-1/5">
@@ -69,17 +65,16 @@ const CartPage = () => {
               </svg>
             </div>
             <span class="text-center w-1/5 font-semibold text-sm">
-              2,000,000 تومان
+                2,000,000
+                تومان
             </span>
             <span class="text-center w-1/5 font-semibold text-sm">
-              2,000,000 تومان
+            2,000,000
+                تومان
             </span>
           </div>
 
-          <a
-            href="/products"
-            class="flex font-semibold text-indigo-600 text-sm mt-10 mr-10"
-          >
+          <a href="/products" class="flex font-semibold text-indigo-600 text-sm mt-10">
             <svg
               class="fill-current ml-2 text-indigo-600 w-4"
               viewBox="0 0 448 512"
@@ -90,36 +85,47 @@ const CartPage = () => {
           </a>
         </div>
 
-        <div
-          id="summary"
-          class="w-1/4 bg-white text-black rounded-l-lg overflow-hidden border-r border-gray-50"
-        >
-          <h1 class="font-semibold text-lg border-b border-gray-50 bg-gray-50/50 px-4 py-5">
+        <div id="summary" class="w-1/4 bg-white text-black rounded-l-lg">
+          <h1 class="font-semibold text-lg border-b bg-gray-50 px-2 py-3">
             خلاصه فاکتور
           </h1>
           <div className="px-8 py-10">
-            <div class="flex justify-between mt-10 mb-5">
-              <span class="font-semibold text-sm uppercase">تعداد سفارش 3</span>
-              <span class="font-semibold text-sm">2,000,000 تومان</span>
+            <div class="flex justify-between mt-10 mb-5 ">
+                <span class="font-semibold text-sm uppercase">
+                    تعداد سفارش
+                    3
+                </span>
+                <span class="font-semibold text-sm">
+                2,000,000
+                    تومان
+                </span>
             </div>
             <div>
-              <label class="font-medium inline-block mb-3 text-sm uppercase">
+                <label class="font-medium inline-block mb-3 text-sm uppercase">
                 روش پرداخت
-              </label>
-              <select class="block p-2 text-gray-600 w-full text-sm">
-                <option>درگاه ملت</option>
-              </select>
+                </label>
+                <select class="block p-2 text-gray-600 w-full text-sm">
+                <option>
+                    درگاه ملت
+                </option>
+                </select>
             </div>
             <div class="border-t mt-8">
-              <div class="flex font-semibold justify-between py-6 text-sm uppercase">
-                <span>جمع کل فاکتور</span>
-                <span>2,000,000 تومان</span>
-              </div>
-              <button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white rounded-lg uppercase w-full">
+                <div class="flex font-semibold justify-between py-6 text-sm uppercase">
+                <span>
+                    جمع کل فاکتور
+                </span>
+                <span>
+                2,000,000
+                    تومان
+                </span>
+                </div>
+                <button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
                 ورود به درگاه
-              </button>
+                </button>
             </div>
           </div>
+
         </div>
       </div>
     </div>
