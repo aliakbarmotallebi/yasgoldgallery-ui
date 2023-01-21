@@ -37,6 +37,7 @@ const CartPage = () => {
             </div>
         </div>
       </div>
+    <a href="http://" download={download}></a>
       <div class="container mt-10">
         <div class="flex justify-center my-10">
           <div class="w-2/4 bg-white rounded-r-lg shadow-md  text-black overflow-hidden">
