@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LoadableLoading from "../components/LoadableLoading";
+import ProductComments from "../components/ProductComments";
 import RelatedProducts from "../components/RelatedProducts";
 import { CartStore } from "../context/CartContext";
 import replaceWithBr from "../helper/replaceWithBr";
@@ -39,7 +40,7 @@ const ProductPage = () => {
     <div class="bg-gray-100 px-4 xl:px-4 py-14">
       {loading && <LoadableLoading />}
       <div className="container mx-auto">
-        <div class="max-w-xl lg:max-w-6xl mx-auto text-neutral-900">
+        <div class="max-w-xl lg:max-w-6xl mx-auto text-neutral-900  bg-white rounded-lg shadow-md  text-black px-5 py-6">
           <div class="flex flex-wrap -mx-4 mb-12">
             <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
               <div class="lg:w-112">
@@ -108,7 +109,7 @@ const ProductPage = () => {
                   </li>
                 </ul>
 
-                <div className="bg-white shadow-lg px-3 rounded-md py-4">
+                <div className="px-3 rounded-md py-4">
                   <div className="text-sm text-blue-700 pb-2">
                     شرایط اقساط در یاس
                   </div>
@@ -154,6 +155,9 @@ const ProductPage = () => {
             dangerouslySetInnerHTML={{ __html: replaceWithBr(description) }}
             className="pb-10 text-lg"
           ></div>
+          <div class="bg-white rounded-lg px-4 pt-2 max-w-3xl mx-auto">
+            <ProductComments />
+          </div>
         </div>
       </div>
       <RelatedProducts />
