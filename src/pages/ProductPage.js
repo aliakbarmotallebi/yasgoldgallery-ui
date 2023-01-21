@@ -14,7 +14,6 @@ const ProductPage = () => {
     coverImage,
     description,
     images,
-    productId,
     installment_terms,
     monthly_installment,
     prepayment,
@@ -139,7 +138,7 @@ const ProductPage = () => {
                     </li>
                   </ul>
                 </div>
-                <HandleCart productId={id} />
+                <HandleCart product={product} />
               </div>
             </div>
           </div>

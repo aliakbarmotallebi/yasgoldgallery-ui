@@ -11,10 +11,10 @@ function addToCart(product) {
     payload: product,
   };
 }
-function increaseProduct(product_id) {
+function increaseProduct(product) {
   return {
     type: INCREASE_PRODUCT,
-    payload: product_id,
+    payload: product,
   };
 }
 function decreaseProduct(product_id) {
@@ -23,10 +23,10 @@ function decreaseProduct(product_id) {
     payload: product_id,
   };
 }
-function removeFromCart(product_id) {
+function removeFromCart(product) {
   return {
     type: REMOVE_FROM_CART,
-    payload: product_id,
+    payload: product,
   };
 }
 
