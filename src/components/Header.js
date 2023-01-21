@@ -108,7 +108,7 @@ const Header = ({ children }) => {
                 </a>
                 <button
                   type="button"
-                  class="text-sm font-medium inline-flex justify-center items-center space-x-2 space-x-reverse px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800 focus:outline-none focus:ring"
+                  class="relative text-sm font-medium inline-flex justify-center items-center space-x-2 space-x-reverse px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800 focus:outline-none focus:ring"
                   id="tk-dropdown-layouts-user"
                 >
                   <span>محصولات</span>
@@ -124,6 +124,31 @@ const Header = ({ children }) => {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
+
+                  <div id="dropdown" class="absolute z-10 bg-white divide-y divide-gray-100 rounded shadow w-44 top-[30px] right-0">
+                    <ul class="py-1 text-sm text-gray-700">
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                          دسته بندی یک
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                          دسته بندی دو
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                          دسته بندی یک
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                          دسته بندی دو
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </button>
               </nav>
             </div>
