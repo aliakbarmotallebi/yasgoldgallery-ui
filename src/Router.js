@@ -18,7 +18,7 @@ function RouterFunction() {
           <Route exact path="/" element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="products" element={<ListProductsPage />} />
-          <Route path="product" element={<ProductPage />} />
+          <Route path="product/:product_id" element={<ProductPage />} />
           <Route path="cart" element={<CartPage />} />
           <Route path="profile" element={<ProfilePage />} />
           <Route path="profile/orders" element={<ListOrdersPage />} />

@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import LoadableLoading from "../components/LoadableLoading";
 import RelatedProducts from "../components/RelatedProducts";
 import replaceWithBr from "../helper/replaceWithBr";
 import { productWithId } from "../services/main";
 
 const ProductPage = () => {
   const [product , setProduct] = useState({});
-  const [loading , setLoading] = useState(false)
+  const [loading , setLoading] = useState(false);
+  const [productCounter , setProductCounter] = useState(0)
   const {product_id} = useParams();
   useEffect(()=>{
     const getProduct =async () =>{
@@ -21,6 +23,7 @@ const ProductPage = () => {
   const {barcode , coverImage , description , images , installment_terms , monthly_installment , prepayment , price , slug , tags , title , wages} = product;
   return (
     <div class="bg-gray-100 px-4 xl:px-4 py-14">
+      { loading && <LoadableLoading/>}
       <div className="container mx-auto">
         <div class="max-w-xl lg:max-w-6xl mx-auto text-neutral-900">
           <div class="flex flex-wrap -mx-4 mb-12">
@@ -39,7 +42,7 @@ const ProductPage = () => {
                   </div>
                 </div>
                 <div class="flex flex-wrap -mx-3 -mb-3 justify-start">
-                  <div class="w-1/6 xs:w-1/4 px-3 mb-3">
+                  {images?.map((image , index) => <div key={index} class="w-1/6 xs:w-1/4 px-3 mb-3">
                     <a
                       class="relative group block h-16 w-full bg-blueGray-900 rounded-md"
                       href="#"
@@ -47,54 +50,12 @@ const ProductPage = () => {
                       <div class="absolute top-0 left-0 h-full w-full transform -translate-y-1 -translate-x-1 group-hover:translate-y-0 group-hover:translate-x-0 transition duration-300">
                         <img
                           class="img-fluid w-full h-full object-cover rounded-md border-2 border-black"
-                          src="https://shop.talaayas.ir/uploads/images/products/1671713940-69967e536ea661ba482a9f10782f03bb-card.webp"
-                          alt=""
+                          src={image}
+                          alt={title}
                         />
                       </div>
                     </a>
-                  </div>
-                  <div class="w-1/6 xs:w-1/4 px-3 mb-3">
-                    <a
-                      class="relative group block h-16 w-full bg-blueGray-900 rounded-md"
-                      href="#"
-                    >
-                      <div class="absolute top-0 left-0 h-full w-full transform -translate-y-1 -translate-x-1 group-hover:translate-y-0 group-hover:translate-x-0 transition duration-300">
-                        <img
-                          class="img-fluid w-full h-full object-cover rounded-md border-2 border-black"
-                          src="https://shop.talaayas.ir/uploads/images/products/1671713940-69967e536ea661ba482a9f10782f03bb-card.webp"
-                          alt=""
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div class="w-1/6 xs:w-1/4 px-3 mb-3">
-                    <a
-                      class="relative group block h-16 w-full bg-blueGray-900 rounded-md"
-                      href="#"
-                    >
-                      <div class="absolute top-0 left-0 h-full w-full transform -translate-y-1 -translate-x-1 group-hover:translate-y-0 group-hover:translate-x-0 transition duration-300">
-                        <img
-                          class="img-fluid w-full h-full object-cover rounded-md border-2 border-black"
-                          src="https://shop.talaayas.ir/uploads/images/products/1671713940-69967e536ea661ba482a9f10782f03bb-card.webp"
-                          alt=""
-                        />
-                      </div>
-                    </a>
-                  </div>
-                  <div class="w-1/6 xs:w-1/4 px-3 mb-3">
-                    <a
-                      class="relative group block h-16 w-full bg-blueGray-900 rounded-md"
-                      href="#"
-                    >
-                      <div class="absolute top-0 left-0 h-full w-full transform -translate-y-1 -translate-x-1 group-hover:translate-y-0 group-hover:translate-x-0 transition duration-300">
-                        <img
-                          class="img-fluid w-full h-full object-cover rounded-md border-2 border-black"
-                          src="https://shop.talaayas.ir/uploads/images/products/1671713940-69967e536ea661ba482a9f10782f03bb-card.webp"
-                          alt=""
-                        />
-                      </div>
-                    </a>
-                  </div>
+                  </div>)}
                 </div>
               </div>
             </div>
@@ -160,9 +121,9 @@ const ProductPage = () => {
 
                 <div class="w-full md:w-auto flex flex-wrap items-center pt-8 gap-5">
                   <div className="bg-white shadow-md rounded-md overflow-hidden">
-                    <button className="px-2.5 py-1">+</button>
-                    <input type="text" />
-                    <button className="px-2.5 py-1">-</button>
+                    <button onClick={()=> setProductCounter(prevConter => prevConter +1)} className="px-2.5 py-1">+</button>
+                    <input type="text" className="text-center" value={productCounter} readOnly/>
+                    <button onClick={()=> setProductCounter(prevConter => prevConter -1)} className="px-2.5 py-1">-</button>
                   </div>
 
                   <button class="shuffle-click hidden sm:flex py-2 px-3 bg-brand-blue hover:opacity-70 bg-blue-700 text-white text-xs font-semibold rounded">

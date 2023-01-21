@@ -35,7 +35,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      { loading ? <LoadableLoading/> : <></>}
+      { loading && <LoadableLoading/>}
       <SpecialProducts speacial={speacial} />
       <GridImages />
       <SuggestedProducts suggested={suggested} />
