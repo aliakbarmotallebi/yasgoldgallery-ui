@@ -2,6 +2,7 @@ import EditProfile from "../components/EditProfile";
 import ListOrders from "../components/ListOrders";
 import ListOrdersPage from "../components/ListOrders";
 import ListPayments from "../components/ListPayments";
+import OrderDetails from "../components/OrderDetails";
 
 const ProfilePage = () => {
   return (
@@ -47,6 +48,7 @@ const ProfilePage = () => {
           <EditProfile />
           <ListOrders />
           <ListPayments />
+          <OrderDetails />
         </div>
       </div>
     </>
