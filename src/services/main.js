@@ -17,9 +17,9 @@ const lastProducts = async (params) => {
   }
 };
 
-const productsWithTag = async (tag_slug) => {
+const productsWithTagId = async (tagId) => {
   try {
-    const response = await axios.get(`/products/tag/${tag_slug}`);
+    const response = await axios.get(`/products/tag/${tagId}`);
     if (response.status === 200) {
       return response.data;
     } else {
@@ -32,8 +32,8 @@ const productsWithTag = async (tag_slug) => {
 const HomePageData = async () => {
   try {
     const [speacialProducts, suggestedProducts] = await axios.all([
-      productsWithTag("فروش-ویژه"),
-      productsWithTag("فرصت+های+طلایی"),
+      productsWithTagId(1),
+      productsWithTagId(3),
     ]);
     return { speacialProducts, suggestedProducts };
   } catch (e) {
@@ -68,7 +68,7 @@ const getCategories = async () => {
 };
 export {
   lastProducts,
-  productsWithTag,
+  productsWithTagId,
   HomePageData,
   productWithId,
   getCategories,

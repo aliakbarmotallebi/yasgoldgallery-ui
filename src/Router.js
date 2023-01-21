@@ -7,8 +7,6 @@ import ListProductsPage from "./pages/ListProductsPage";
 import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
 import ProfilePage from "./pages/ProfilePage";
-import ListPaymentsPage from "./pages/ListPaymentsPage";
-import ListOrdersPage from "./pages/ListOrdersPage";
 
 function RouterFunction() {
   return (
@@ -18,11 +16,9 @@ function RouterFunction() {
           <Route exact path="/" element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="products" element={<ListProductsPage />} />
-          <Route path="product/:product_id" element={<ProductPage />} />
+          <Route path="product/:id/:slug" element={<ProductPage />} />
           <Route path="cart" element={<CartPage />} />
           <Route path="profile" element={<ProfilePage />} />
-          <Route path="profile/orders" element={<ListOrdersPage />} />
-          <Route path="profile/payments" element={<ListPaymentsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

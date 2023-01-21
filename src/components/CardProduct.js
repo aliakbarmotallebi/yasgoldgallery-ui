@@ -24,7 +24,7 @@ const CardProduct = ({ coverImage, title, price, slug, productId }) => {
           <span className="text-gray-400 mr-3 uppercase text-xs">{slug}</span>
         </Link>
         <p className="text-lg font-bold text-black truncate block capitalize">
-          <Link to={`/product/${productId}`}>{title}</Link>
+          <Link to={`/product/${productId}/${slug}`}>{title}</Link>
         </p>
         <div className="flex items-center">
           <p className="text-md font-semibold text-black cursor-auto my-3">
