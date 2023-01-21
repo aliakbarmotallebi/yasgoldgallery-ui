@@ -1,9 +1,11 @@
+import CartContext from "./context/CartContext";
 import RouterFunction from "./Router";
 
 function App() {
-    //cart
-    return (
-        <RouterFunction />
-    );
+  return (
+    <CartContext>
+      <RouterFunction />
+    </CartContext>
+  );
 }
 export default App;

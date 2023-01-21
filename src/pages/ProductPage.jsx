@@ -1,14 +1,19 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LoadableLoading from "../components/LoadableLoading";
 import RelatedProducts from "../components/RelatedProducts";
+import { CartStore } from "../context/CartContext";
 import replaceWithBr from "../helper/replaceWithBr";
+import { addToCart } from "../reducer/cart/actionCreators";
 import { productWithId } from "../services/main";
 
 const ProductPage = () => {
   const [product , setProduct] = useState({});
+  const {barcode , coverImage , description , images , productId , installment_terms , monthly_installment , prepayment , price , tags , title , wages} = product;
   const [loading , setLoading] = useState(false);
-  const [productCounter , setProductCounter] = useState(0)
+  const [isCart , setIsCart]=useState(-1);
+  const [productCounter , setProductCounter] = useState(0);
+  const {state : {cart} , dispatch} = useContext(CartStore);
   const {product_id} = useParams();
   useEffect(()=>{
     const getProduct =async () =>{
@@ -18,9 +23,12 @@ const ProductPage = () => {
       setLoading(false);
     }
     getProduct();
-  } , [product_id])
-  const htmlTest = `<small>test</small> <p>test</p>`;
-  const {barcode , coverImage , description , images , installment_terms , monthly_installment , prepayment , price , slug , tags , title , wages} = product;
+  } , [product_id]);
+  useEffect(()=>{
+    setIsCart(cart.findIndex(product => product.productId===productId));
+  } , [cart])
+  console.log(qty);
+  
   return (
     <div class="bg-gray-100 px-4 xl:px-4 py-14">
       { loading && <LoadableLoading/>}
@@ -122,13 +130,17 @@ const ProductPage = () => {
                 <div class="w-full md:w-auto flex flex-wrap items-center pt-8 gap-5">
                   <div className="bg-white shadow-md rounded-md overflow-hidden">
                     <button onClick={()=> setProductCounter(prevConter => prevConter +1)} className="px-2.5 py-1">+</button>
-                    <input type="text" className="text-center" value={productCounter} readOnly/>
+                    <input type="text" className="text-center" defaultValue={qty ? qty : 0} readOnly/>
                     <button onClick={()=> setProductCounter(prevConter => prevConter -1)} className="px-2.5 py-1">-</button>
                   </div>
-
-                  <button class="shuffle-click hidden sm:flex py-2 px-3 bg-brand-blue hover:opacity-70 bg-blue-700 text-white text-xs font-semibold rounded">
+                  {
+                    isCart ? 
+                    <button onClick={()=>dispatch(addToCart(product))} class="shuffle-click hidden sm:flex py-2 px-3 bg-brand-blue hover:opacity-70 bg-blue-700 text-white text-xs font-semibold rounded">
                      افزودن به سبد خرید
                   </button>
+                  : "المنت جایگزین"
+                  }
+                  
                 </div>
               </div>
             </div>

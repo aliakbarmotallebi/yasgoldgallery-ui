@@ -1,6 +1,7 @@
 import axios from "axios";
 
 axios.defaults.baseURL = "https://shop.talaayas.ir/api/v1";
+
 const lastProducts = async (params) => {
   try {
     const response = await axios.get("/products/last", {
@@ -52,4 +53,23 @@ const productWithId = async (product_id) => {
     console.log(e);
   }
 };
-export { lastProducts, productsWithTag, HomePageData, productWithId };
+
+const getCategories = async () => {
+  try {
+    const response = await axios.get(`/categories`);
+    if (response.status === 200) {
+      return response.data;
+    } else {
+      throw Error();
+    }
+  } catch (e) {
+    console.log(e);
+  }
+};
+export {
+  lastProducts,
+  productsWithTag,
+  HomePageData,
+  productWithId,
+  getCategories,
+};
