@@ -39,4 +39,17 @@ const HomePageData = async () => {
     console.log(e);
   }
 };
-export { lastProducts, productsWithTag, HomePageData };
+
+const productWithId = async (product_id) => {
+  try {
+    const response = await axios.get(`/products/${product_id}`);
+    if (response.status === 200) {
+      return response.data;
+    } else {
+      throw Error();
+    }
+  } catch (e) {
+    console.log(e);
+  }
+};
+export { lastProducts, productsWithTag, HomePageData, productWithId };

@@ -7,19 +7,19 @@ import ListProductsPage from "./pages/ListProductsPage";
 import ProductPage from "./pages/ProductPage";
 
 function RouterFunction() {
-    return (
-      <Layout>
-        <BrowserRouter>
-            <Routes>
-                <Route exact path="/" element={<HomePage />} />
-                <Route path="about" element={<AboutPage />} />
-                <Route path="products" element={<ListProductsPage />} />
-                <Route path="product" element={<ProductPage />} />
-                <Route path="*" element={<NotFound />} />
-            </Routes>
-        </BrowserRouter>
-      </Layout>
-    );
-  }
-  
-  export default RouterFunction;
+  return (
+    <Layout>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="products" element={<ListProductsPage />} />
+          <Route path="product/:product_id" element={<ProductPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </Layout>
+  );
+}
+
+export default RouterFunction;
