@@ -2,7 +2,14 @@ import { Link } from "react-router-dom";
 import HandleCart from "./shared/HandleCart";
 
 const CardProduct = ({ product }) => {
-  const { coverImage, title, price, slug, productId } = product;
+  const {
+    coverImage,
+    title,
+    price,
+    slug,
+    productId,
+    category: { name, id },
+  } = product;
   return (
     <div class="bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl w-full h-full">
       <div className="relative">
@@ -27,7 +34,7 @@ const CardProduct = ({ product }) => {
       </div>
       <div className="px-4 py-3 w-72">
         <Link to={`/products`}>
-          <span className="text-gray-400 mr-3 uppercase text-xs">{slug}</span>
+          <span className="text-gray-400 mr-3 uppercase text-xs">{name}</span>
         </Link>
         <p className="text-lg font-bold text-black truncate block capitalize">
           <Link to={`/product/${productId}/${slug}`}>{title}</Link>
