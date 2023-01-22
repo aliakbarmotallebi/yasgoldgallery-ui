@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartStore } from "../context/CartContext";
 import Modal from "./Modal";
+import Timer from "./Timer";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
@@ -15,16 +16,36 @@ const Header = () => {
   return (
     <>
       <div className="bg-neutral-900 w-full">
-        <div className="flex justify-between container xl:max-w-6xl mx-auto pt-5 flex-none items-center">
+        <div className="flex justify-between container xl:max-w-6xl mx-auto pt-5 flex-none items-center pb-5">
           <div className="w-8 h-5"></div>
 
           <div>
             <button
               onClick={openModal}
-              className="inline-flex rounded-lg bg-blue-800 px-3 py-2"
+              className="hidden inline-flex rounded-lg bg-blue-800 px-3 py-2"
             >
               ورود به حساب کاربری
             </button>
+            <div className="flex items-center space-x-2 space-x-reverse">
+              <div className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                  <svg className="absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+              </div>
+              <div>
+                <div>
+                    <a href="profile" className="text-xs font-bold">
+                      <span className="after:content-[':'] ml-2">
+                        نام کاربری
+                      </span>
+                      09306192010
+                    </a>
+                </div> 
+                <div>
+                  <a href="/" className="text-xs text-rose-500">
+                      خروج از حساب کاربری
+                  </a> 
+                </div>
+              </div>
+            </div>
             <Modal
               showModal={showModal}
               setShowModal={setShowModal}
@@ -46,29 +67,59 @@ const Header = () => {
                 <h3 className="text-2xl font-bold text-center">
                   ورود به حساب کاربری
                 </h3>
-
                 <div className="mt-4">
-                  <div>
-                    <label className="block" for="email">
-                      نام کاربری
+                  <div className="px-5 py-7">
+                    <label className="font-yekan-bold text-sm text-gray-600 pb-1 block">
+                      شماره تلفن همراه
                     </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-                    />
+                    <input type="text" name="phoneNumber"
+                      className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" />
+                    <button type="submit"
+                      className="transition duration-200 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-yekan-bold text-center inline-block">
+                      <span className="inline-block ml-2">در خواست کد یکبار مصرف</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" className="w-4 h-4 inline-block">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                          d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </button>
                   </div>
-
-                  <div className="mt-4">
-                    <label className="block">گذرواژه</label>
-                    <input
-                      type="password"
-                      className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-                    />
+                  <div className="px-5 py-7">
+                    <label className="font-semibold text-sm text-gray-600 pb-1 block">
+                      کد فعال سازی
+                    </label>
+                    <input type="text" name="code" placeholder="کد فعال سازی پیامک شده را وارد کنید"
+                      className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" />
+                    <button type="submit"
+                      className="transition duration-200 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block">
+                      <span className="inline-block ml-2">ورود</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" className="w-4 h-4 inline-block">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                          d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div className="text-center">
+                    <Timer initialMinute={2} initialSeconds={0} />
                   </div>
                   <div className="flex items-baseline justify-between">
-                    <button className="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">
-                      ورود به حساب
-                    </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <button
                       onClick={openModal}
                       className="text-sm text-gray-700 underline"
