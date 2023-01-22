@@ -1,12 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import LoadableLoading from "../components/LoadableLoading";
+import HandleCart from "../components/shared/HandleCart";
+import LoadableLoading from "../components/shared/LoadableLoading";
 import ProductComments from "../components/ProductComments";
 import RelatedProducts from "../components/RelatedProducts";
-import { CartStore } from "../context/CartContext";
 import replaceWithBr from "../helper/replaceWithBr";
-import { productWithId } from "../services/main";
-import HandleCart from "./HandleCart";
+import { productWithId } from "../services/products";
 
 const ProductPage = () => {
   const [product, setProduct] = useState({});
@@ -15,7 +14,6 @@ const ProductPage = () => {
     coverImage,
     description,
     images,
-    productId,
     installment_terms,
     monthly_installment,
     prepayment,
@@ -24,18 +22,19 @@ const ProductPage = () => {
     title,
     wages,
   } = product;
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
   useEffect(() => {
-    const getProduct = async () => {
+    const getData = async () => {
       setLoading(true);
-      const res = await productWithId(id);
-      if (res.status) setProduct(res.data);
-      setLoading(false);
+      const productDetails = await productWithId(id);
+      if (productDetails.status) {
+        setProduct(productDetails.data);
+        setLoading(false);
+      }
     };
-    getProduct();
+    getData();
   }, [id]);
-
   return (
     <div class="bg-gray-100 px-4 xl:px-4 py-14">
       {loading && <LoadableLoading />}
@@ -140,7 +139,13 @@ const ProductPage = () => {
                     </li>
                   </ul>
                 </div>
-                <HandleCart productId={id} />
+                {!loading && (
+                  <HandleCart
+                    product={product}
+                    btnStyle="shuffle-click hidden sm:flex py-2 px-3 bg-brand-blue hover:opacity-70 bg-blue-700 text-white text-xs font-semibold rounded"
+                    btnText="افزودن به سبد خرید"
+                  />
+                )}
               </div>
             </div>
           </div>
@@ -156,11 +161,11 @@ const ProductPage = () => {
             className="pb-10 text-lg"
           ></div>
           <div class="bg-white rounded-lg px-4 pt-2 max-w-3xl mx-auto">
-            <ProductComments />
+            {false && <ProductComments {...product} />}
           </div>
         </div>
       </div>
-      <RelatedProducts />
+      {!loading && <RelatedProducts {...product} />}
     </div>
   );
 };

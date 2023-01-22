@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import CardProduct from "../components/CardProduct";
-import LoadableLoading from "../components/LoadableLoading";
-import { lastProducts } from "../services/main";
+import LoadableLoading from "../components/shared/LoadableLoading";
+import { lastProducts } from "../services/products";
 
 const ListProductsPage = () => {
   const [products , setProducts] = useState([]);
@@ -32,7 +32,7 @@ const ListProductsPage = () => {
       
       <div class="container mx-auto px-5 py-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-y-20 gap-x-14 mt-10 mb-5">
-          {products?.map(product => <CardProduct key={product.productId} {...product} />)}
+          {products?.map(product => <CardProduct key={product.productId} product={product} />)}
         </div>
       </div>
       <div className="flex justify-center items-center">

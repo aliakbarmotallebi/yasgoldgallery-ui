@@ -32,7 +32,7 @@ const SpecialProducts = ({ speacial: speacialProducts }) => {
           >
             {speacialProducts?.map((product) => (
               <SwiperSlide key={product.productId}>
-                <CardProduct {...product} />
+                <CardProduct product={product} />
               </SwiperSlide>
             ))}
           </Swiper>
