@@ -32,7 +32,7 @@ const SuggestedProducts = ({ suggested: suggestedProducts }) => {
           >
             {suggestedProducts?.map((product) => (
               <SwiperSlide key={product.productId}>
-                <CardProduct {...product} />
+                <CardProduct product={product} />
               </SwiperSlide>
             ))}
           </Swiper>

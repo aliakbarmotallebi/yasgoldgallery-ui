@@ -10,8 +10,8 @@ import ProfilePage from "./pages/ProfilePage";
 
 function RouterFunction() {
   return (
-    <Layout>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Layout>
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
@@ -21,8 +21,8 @@ function RouterFunction() {
           <Route path="profile" element={<ProfilePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    </Layout>
+      </Layout>
+    </BrowserRouter>
   );
 }
 

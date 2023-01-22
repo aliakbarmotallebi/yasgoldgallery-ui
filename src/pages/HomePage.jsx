@@ -3,10 +3,9 @@ import GridImages from "../components/GridImages";
 import SpecialComments from "../components/SpecialComments";
 import SpecialProducts from "../components/SpecialProducts";
 import SuggestedProducts from "../components/SuggestedProducts";
-import Image4 from "../assets/images/image4.png";
 import { useEffect, useState } from "react";
-import { HomePageData } from "../services/main";
-import LoadableLoading from "../components/LoadableLoading";
+import { homePageData } from "../services/homePage";
+import LoadableLoading from "../components/shared/LoadableLoading";
 
 const HomePage = () => {
   const [speacial , setSpeacial]=useState([]);
@@ -15,7 +14,7 @@ const HomePage = () => {
     useEffect(()=>{
       const getData = async()=>{
         setLoading(true)
-       const {speacialProducts, suggestedProducts} = await HomePageData();
+       const {speacialProducts, suggestedProducts} = await homePageData();
        if(speacialProducts.status) setSpeacial(speacialProducts.data);
        if(suggestedProducts.status) setSuggested(suggestedProducts.data);
        setLoading(false)

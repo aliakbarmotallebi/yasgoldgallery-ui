@@ -1,3 +1,4 @@
+import { setLS } from "../../helper/handlerLS";
 import {
   ADD_TO_CART,
   DECREASE_PRODUCT,
@@ -6,41 +7,41 @@ import {
 } from "./actionTypes";
 
 const cartReducer = (state, action) => {
+  let newCart = [];
   switch (action.type) {
     case ADD_TO_CART:
-      return {
-        ...state,
-        cart: [...state.cart, { ...action.payload, qty: 1 }],
-      };
+      newCart = [...state.cart, { ...action.payload, qty: 1 }];
+      break;
     case INCREASE_PRODUCT:
-      return {
-        ...state,
-        cart: [
-          ...state.cart.map((product) =>
-            product.productId === action.payload.productId
-              ? { ...product, qty: product.qty + 1 }
-              : { ...product }
-          ),
-        ],
-      };
+      newCart = [
+        ...state.cart.map((product) =>
+          product.productId === action.payload.productId
+            ? { ...product, qty: product.qty + 1 }
+            : { ...product }
+        ),
+      ];
+      break;
+
     case DECREASE_PRODUCT:
-      return {
-        ...state,
-        cart: [
-          ...state.cart.map((product) =>
-            product.productId === action.payload.productId
-              ? { ...product, qty: product.qty - 1 }
-              : { ...product }
-          ),
-        ],
-      };
+      newCart = [
+        ...state.cart.map((product) =>
+          product.productId === action.payload.productId
+            ? { ...product, qty: product.qty - 1 }
+            : { ...product }
+        ),
+      ];
+      break;
     case REMOVE_FROM_CART:
-      return {
-        ...state,
-        cart: [
-          ...state.cart.filter((product) => product.id !== action.payload),
-        ],
-      };
+      newCart = [
+        ...state.cart.filter(
+          (product) => product.productId !== action.payload.productId
+        ),
+      ];
   }
+  setLS(newCart);
+  return {
+    ...state,
+    cart: newCart,
+  };
 };
 export default cartReducer;
