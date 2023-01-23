@@ -38,7 +38,7 @@ const cartReducer = (state, action) => {
         ),
       ];
   }
-  setLS(newCart);
+  setLS("cart", newCart);
   return {
     ...state,
     cart: newCart,

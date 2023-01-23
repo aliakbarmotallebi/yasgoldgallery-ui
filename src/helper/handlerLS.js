@@ -1,14 +1,38 @@
-const checkLS = () => {
-  let cart = [];
-  if (localStorage.getItem("cart") !== null) {
-    cart = JSON.parse(localStorage.getItem("cart"));
-  } else {
-    setLS([]);
+const checkLS = (
+  key,
+  defaultValueType = "object" || "array" || "string" || "number"
+) => {
+  let variable;
+  switch (defaultValueType) {
+    case "object":
+      variable = {};
+      break;
+    case "array":
+      variable = [];
+      break;
+    default:
+      variable = "";
+      break;
   }
-  return cart;
+  if (localStorage.getItem(key) !== null) {
+    variable = JSON.parse(localStorage.getItem(key));
+  } else {
+    setLS(
+      key,
+      defaultValueType === "object"
+        ? {}
+        : defaultValueType === "array"
+        ? []
+        : ""
+    );
+  }
+  return variable;
 };
 
-const setLS = (newCart) =>
-  localStorage.setItem("cart", JSON.stringify(newCart));
+const setLS = (key, value) => localStorage.setItem(key, JSON.stringify(value));
 
-export { checkLS, setLS };
+const getDataLS = (key) => JSON.parse(localStorage.getItem(key));
+
+const removeDataLS = (key) => localStorage.removeItem(key);
+
+export { checkLS, setLS, getDataLS, removeDataLS };

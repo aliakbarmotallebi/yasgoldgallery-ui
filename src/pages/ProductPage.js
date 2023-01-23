@@ -161,7 +161,7 @@ const ProductPage = () => {
             className="pb-10 text-lg"
           ></div>
           <div class="bg-white rounded-lg px-4 pt-2 max-w-3xl mx-auto">
-            {false && <ProductComments {...product} />}
+            {!loading && <ProductComments {...product} />}
           </div>
         </div>
       </div>
