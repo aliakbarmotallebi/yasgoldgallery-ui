@@ -1,10 +1,11 @@
-import { getDataLS } from "./handlerLS";
-import jwt_decode from "jwt-decode";
+import { getDataLS, removeDataLS } from "./handlerLS";
+import decodeToken from "./decodeToken";
 
 const checkExpireUser = () => {
   const date = new Date();
-  const { exp } = jwt_decode(getDataLS("user")?.token);
-  console.log(date, new Date(exp));
+  const exp = getDataLS("user").token && decodeToken("exp") * 1000;
+  const diff = exp - date;
+  diff < 0 && removeDataLS("user");
 };
 
 export default checkExpireUser;

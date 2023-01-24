@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartStore } from "../context/CartContext";
 import checkLoginUser from "../helper/checkLoginUser";
+import decodeToken from "../helper/decodeToken";
 import { getDataLS, removeDataLS, setLS } from "../helper/handlerLS";
 import { login, sendVerifyCodeToPhoneNumber } from "../services/account";
 import Modal from "./Modal";
@@ -13,7 +14,7 @@ const Header = () => {
   const [userPhoneNumber, setPhoneNumber] = useState("");
   const [clickedForGetVerifyCode, setClickedForGetVerifyCode] = useState(false);
   const [verifyCode, setVerifyCode] = useState("");
-  const [user, setUser] = useState(getDataLS("user"));
+  const [user, setUser] = useState(decodeToken("username"));
   const [loading, setLoading] = useState({
     sendVerifyCodeLoading: false,
     loginLoading: false,
@@ -37,7 +38,7 @@ const Header = () => {
     const res = await login(userPhoneNumber, verifyCode);
     if (res.status) {
       setLS("user", res.data);
-      setUser(res.data);
+      setUser(decodeToken("username"));
       setShowModal(false);
       setLoading({ ...loading, loginLoading: false });
       setPhoneNumber("");
@@ -47,9 +48,10 @@ const Header = () => {
   };
 
   const userLogout = () => {
-    setUser({});
     removeDataLS("user");
+    setUser(undefined);
   };
+  console.log(user);
   return (
     <>
       <div className="bg-neutral-900 w-full">
@@ -79,7 +81,7 @@ const Header = () => {
                       <span className="after:content-[':'] ml-2">
                         نام کاربری
                       </span>
-                      {user?.user?.mobile}
+                      {user}
                     </a>
                   </div>
                   <div>
