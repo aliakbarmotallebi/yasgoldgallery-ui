@@ -13,7 +13,9 @@ const CardProduct = ({ product }) => {
   return (
     <div class="bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl w-full h-full">
       <div className="relative">
-        <img src={coverImage} class="h-80 w-full object-cover rounded-t-xl" />
+        <Link to={`/product/${productId}/${slug}`}>
+          <img src={coverImage} class="h-80 w-full object-cover rounded-t-xl" />
+        </Link>
         <div className="absolute bottom-5 right-5">
           <HandleCart
             product={product}
@@ -36,7 +38,7 @@ const CardProduct = ({ product }) => {
         <Link to={`/products`}>
           <span className="text-gray-400 mr-3 uppercase text-xs">{name}</span>
         </Link>
-        <p className="text-lg font-bold text-black truncate block capitalize">
+        <p className="text-lg my-2 font-bold text-black truncate block capitalize">
           <Link to={`/product/${productId}/${slug}`}>{title}</Link>
         </p>
         <div className="flex items-center">
