@@ -46,10 +46,47 @@ const login = async (mobile, code) => {
     console.log(e);
   }
 };
+const editProfile = async (name, family) => {
+  try {
+    const response = await axios.post(
+      "/edit-profile",
+      {
+        name,
+        family,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${getDataLS("user")?.token}`,
+        },
+      }
+    );
+    if (response.status === 200) {
+      return response.data;
+    } else {
+      throw Error();
+    }
+  } catch (e) {
+    console.log(e);
+  }
+};
 
+const profile = async () => {
+  try {
+    const response = await axios.get("/profile", {
+      headers: {
+        Authorization: `Bearer ${getDataLS("user")?.token}`,
+      },
+    });
+    if (response.status === 200) {
+      return response.data;
+    } else {
+      throw Error();
+    }
+  } catch (e) {
+    console.log(e);
+  }
+};
 const refreshToken = async () => {};
-const editProfile = async () => {};
-const profile = async () => {};
 
 export {
   sendVerifyCodeToPhoneNumber,

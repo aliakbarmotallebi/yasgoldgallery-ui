@@ -1,23 +1,23 @@
-import ImageSuggest from "../assets/images/box.png";
-import CardProduct from "./CardProduct";
+import CardProduct from "components/shared/CardProduct";
+import imageGifts from "assets/images/gifts.jpeg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/css";
 
-const SuggestedProducts = ({ suggested: suggestedProducts }) => {
+const SpecialProducts = ({ speacial: speacialProducts }) => {
   return (
     <section className="bg-neutral-800 py-20">
       <div className="container mx-auto">
         <div className="text-center py-10">
-          <h2 className="text-4xl flex justify-center items-center font-bold text-white">
-            <p>محصولات پیشنهادی</p>
+          <h2 className="text-4xl font-bold text-white">
+            پیشنهاد شگفت انگیز
             <span className="text-yellow-400 mr-2">یاس</span>
           </h2>
         </div>
         <div className="grid grid-cols-5 gap-3 p-5 items-center">
-          <div class="max-w-sm">
+          <div class=" max-w-sm">
             <div className="h-120 overflow-hidden flex justify-center">
-              <img class="" src={ImageSuggest} />
+              <img src={imageGifts} alt="gifts" />
             </div>
           </div>
           <Swiper
@@ -30,7 +30,7 @@ const SuggestedProducts = ({ suggested: suggestedProducts }) => {
             }}
             className="col-span-4"
           >
-            {suggestedProducts?.map((product) => (
+            {speacialProducts?.map((product) => (
               <SwiperSlide key={product.productId}>
                 <CardProduct product={product} />
               </SwiperSlide>
@@ -42,4 +42,4 @@ const SuggestedProducts = ({ suggested: suggestedProducts }) => {
   );
 };
 
-export default SuggestedProducts;
+export default SpecialProducts;

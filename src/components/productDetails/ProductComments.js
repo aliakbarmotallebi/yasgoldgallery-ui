@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
-import { comments } from "../services/comment";
-import Spinner from "./shared/Spinner";
+import checkLoginUser from "../../helper/checkLoginUser";
+import { addComment, comments } from "../../services/comment";
+import alert from "../../helper/alert";
+import Alert from "../../helper/alert";
+import Spinner from "../shared/Spinner";
 
 const ProductComments = ({ productId }) => {
   const [productComments, setProductComments] = useState([]);
+  const [newComment, setNewComment] = useState("");
   const [loading, setLoading] = useState(true);
+  const [loadSendComment, setLoadSendComment] = useState(false);
 
   useEffect(() => {
     const getComments = async () => {
@@ -15,7 +20,31 @@ const ProductComments = ({ productId }) => {
     getComments(productId);
   }, [productId]);
 
-  const sendComment = async () => {};
+  const sendComment = async () => {
+    if (checkLoginUser()) {
+      if (newComment.trim() !== "") {
+        setLoadSendComment(true);
+        const response = await addComment(productId, newComment);
+        if (response.status) {
+          alert({
+            text: "کامنت با موفقیت افزوده شد . پس از تایید نمایش داده خواهد شد",
+            status: "success",
+          });
+        } else {
+          alert({
+            text: "ارسال کامنت ناموفق بود",
+            status: "error",
+          });
+        }
+      }
+    } else {
+      alert({
+        text: "لطفا ابتدا وارد حساب کاربری خود شوید",
+        status: "info",
+      });
+    }
+    setLoadSendComment(false);
+  };
   return (
     <>
       <form className="pt-5">
@@ -35,18 +64,22 @@ const ProductComments = ({ productId }) => {
           </h2>
           <div class="w-full md:w-full px-3 mb-2 mt-2">
             <textarea
+              value={newComment}
+              onChange={(e) => setNewComment(e.target.value)}
               class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"
               name="body"
-              required
             ></textarea>
           </div>
           <div class="w-full md:w-full flex items-start md:w-full px-3">
             <div class="-mr-1">
               <button
-                type="submit"
-                class="bg-white text-gray-700 font-medium py-1 px-4 border border-gray-400  text-xs rounded-lg tracking-wide mr-1 hover:bg-gray-100"
+                onClick={sendComment}
+                type="button"
+                class="bg-white flex items-center text-gray-700 font-medium py-1 px-4 border border-gray-400  text-xs rounded-lg tracking-wide mr-1 hover:bg-gray-100"
               >
-                ذخیره نظر
+                {loadSendComment && <Spinner classNameBox="w-6 mr-0 ml-2" />}
+
+                <span>ذخیره نظر</span>
               </button>
             </div>
           </div>
@@ -92,6 +125,10 @@ const ProductComments = ({ productId }) => {
           ))}
         </section>
       )}
+      {/* <Alert
+        text="کامنت با موفقیت ارسال شد . پس از تایید نمایش داده خواهد شد"
+        status="success"
+      /> */}
     </>
   );
 };

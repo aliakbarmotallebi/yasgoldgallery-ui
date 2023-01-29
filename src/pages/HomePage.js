@@ -1,13 +1,13 @@
-import Brands from "../components/Brands";
-import GridImages from "../components/GridImages";
-import SpecialComments from "../components/SpecialComments";
-import SpecialProducts from "../components/SpecialProducts";
-import SuggestedProducts from "../components/SuggestedProducts";
+import Brands from "components/main/Brands";
+import GridImages from "components/main/GridImages";
+import SpecialComments from "components/main/SpecialComments";
+import SpecialProducts from "components/main/SpecialProducts";
+import SuggestedProducts from "components/main/SuggestedProducts";
 import { useEffect, useState } from "react";
-import { homePageData } from "../services/homePage";
-import LoadableLoading from "../components/shared/LoadableLoading";
-import slideImage from "../assets/images/slide.jpg";
-import packingImage from "../assets/images/packing.jpeg";
+import { homePageData } from "services/homePage";
+import LoadableLoading from "components/shared/LoadableLoading";
+import slideImage from "assets/images/slide.jpg";
+import packingImage from "assets/images/packing.jpeg";
 
 const HomePage = () => {
   const [speacial, setSpeacial] = useState([]);

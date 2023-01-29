@@ -1,5 +1,3 @@
-import Image4 from "../assets/images/image4.png";
-
 const GridImages = () => {
   return (
     <section className="container mx-auto">

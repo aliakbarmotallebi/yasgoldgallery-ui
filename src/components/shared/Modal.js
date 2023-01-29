@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from "react";
 
-const Modal = ({ showModal, setShowModal, children }) => {
+const Modal = ({ showModal, setShowModal, children, className }) => {
   const keyPress = useCallback(
     (e) => {
       if (e.key === "Escape" && showModal) {
@@ -28,9 +28,11 @@ const Modal = ({ showModal, setShowModal, children }) => {
           onClick={(e) => clickedOnModal(e)}
           className="fixed flex items-center justify-center top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full bg-black/90"
         >
-          <div className="flex justify-center items-center w-fit h-full">
+          <div className="flex justify-center items-center w-fit h-fit">
             <div className="relative w-full h-full max-w-2xl md:h-auto">
-              <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+              <div
+                className={`relative bg-white rounded-lg shadow dark:bg-gray-700 ${className}`}
+              >
                 <div className="p-6 space-y-6">{children}</div>
               </div>
             </div>

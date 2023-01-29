@@ -1,16 +1,17 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { CartStore } from "../context/CartContext";
-import checkLoginUser from "../helper/checkLoginUser";
-import decodeToken from "../helper/decodeToken";
-import { getDataLS, removeDataLS, setLS } from "../helper/handlerLS";
-import { login, sendVerifyCodeToPhoneNumber } from "../services/account";
-import Modal from "./Modal";
-import Spinner from "./shared/Spinner";
-import Timer from "./Timer";
+import { CartStore } from "context/CartContext";
+import checkLoginUser from "helper/checkLoginUser";
+import decodeToken from "helper/decodeToken";
+import { removeDataLS, setLS } from "helper/handlerLS";
+import { login, sendVerifyCodeToPhoneNumber } from "services/account";
+import Modal from "components/shared/Modal";
+import Spinner from "components/shared/Spinner";
+import Timer from "components/shared/Timer";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
+  const [contactUsModal, setContactUsModal] = useState(false);
   const [userPhoneNumber, setPhoneNumber] = useState("");
   const [clickedForGetVerifyCode, setClickedForGetVerifyCode] = useState(false);
   const [verifyCode, setVerifyCode] = useState("");
@@ -71,7 +72,8 @@ const Header = () => {
                   درباره ما
                 </Link>
                 <Link
-                  to="javascript:void(0)"
+                  type="button"
+                  onClick={() => setContactUsModal(!contactUsModal)}
                   className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
                 >
                   تماس با ما
@@ -149,15 +151,15 @@ const Header = () => {
                     </div>
                     <div>
                       <div>
-                        <a
-                          href="profile"
+                        <Link
+                          to="profile"
                           className="text-xs font-bold text-gray-300"
                         >
                           <span className="after:content-[':'] ml-2">
                             نام کاربری
                           </span>
                           {user}
-                        </a>
+                        </Link>
                       </div>
                       <div>
                         <button
@@ -172,7 +174,7 @@ const Header = () => {
                 ) : (
                   <button
                     onClick={openModal}
-                    className=" inline-flex rounded-lg bg-blue-800 px-3 py-2"
+                    className=" inline-flex rounded-lg bg-blue-800 text-white px-3 py-2"
                   >
                     ورود به حساب کاربری
                   </button>
@@ -309,6 +311,138 @@ const Header = () => {
                           انصراف
                         </button>
                       </div>
+                    </div>
+                  </div>
+                </Modal>
+                <Modal
+                  showModal={contactUsModal}
+                  setShowModal={setContactUsModal}
+                  className="bg-stone-900"
+                >
+                  <div className="text-white text-center">
+                    <h2 className="text-2xl mb-4">تماس با ما</h2>
+                    <p className="text-white/60">
+                      پیشنهادات خود را با ما درمیان بگذارید
+                    </p>
+                  </div>
+                  <div class="block p-6 rounded-lg shadow-lg bg-transparent max-w-[550px]  text-left">
+                    <form className="w-[80%] mx-auto">
+                      <div class="form-group mb-6">
+                        <input
+                          type="text"
+                          class="form-control block
+                                w-full
+                                px-3
+                                py-1.5
+                                text-base
+                                font-normal
+                                text-gray-700
+                                bg-black bg-clip-padding
+                                border border-solid border-yellow-200
+                                rounded-lg
+                                transition
+                                ease-in-out
+                                m-0
+                                focus:text-gray-700 placeholder:text-xs placeholder:text-gray-700 focus:shadow-none focus:border-yellow-700 focus:outline-none"
+                          id="name"
+                          placeholder="نام شما"
+                        />
+                      </div>
+                      <div class="grid grid-cols-2 gap-4">
+                        <div class="form-group mb-6">
+                          <input
+                            type="text"
+                            class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-black bg-clip-padding
+                            border border-solid border-yellow-200
+                            rounded-lg
+                            transition
+                            ease-in-out
+                            m-0
+                            focus:text-gray-700 placeholder:text-xs placeholder:text-gray-700 focus:shadow-none focus:border-yellow-700 focus:outline-none"
+                            id="email"
+                            aria-describedby="email"
+                            placeholder="ایمیل"
+                          />
+                        </div>
+                        <div class="form-group mb-6">
+                          <input
+                            type="text"
+                            class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-black bg-clip-padding
+                            border border-solid border-yellow-200
+                            rounded-lg
+                            transition
+                            ease-in-out
+                            m-0
+                            focus:text-gray-700 placeholder:text-xs placeholder:text-gray-700 focus:shadow-none focus:border-yellow-700 focus:outline-none"
+                            id="phone"
+                            aria-describedby="phone"
+                            placeholder="تلفن تماس"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="form-group mb-6">
+                        <textarea
+                          type="text"
+                          rows={4}
+                          class="form-control block
+                          w-full
+                          px-3
+                          py-1.5
+                          text-base
+                          font-normal
+                          text-gray-700
+                          bg-black bg-clip-padding
+                          border border-solid border-yellow-200
+                          rounded-lg
+                          transition
+                          ease-in-out
+                          m-0
+                          focus:text-gray-700 placeholder:text-xs placeholder:text-gray-700 focus:shadow-none focus:border-yellow-700 focus:outline-none"
+                          id="message"
+                          placeholder="متن پیام"
+                        ></textarea>
+                      </div>
+                    </form>
+                    <div className="">
+                      <button
+                        type="button"
+                        class="
+                            w-fit
+                            px-6
+                            py-2.5
+                            bg-blue-600
+                            text-white
+                            font-medium
+                            text-xs
+                            leading-tight
+                            uppercase
+                            rounded-lg
+                            shadow-md
+                            bg-lime-700
+                            hover:bg-lime-800 hover:shadow-lg
+                            focus:bg-lime-800 focus:shadow-lg focus:outline-none focus:ring-0
+                            active:bg-lime-700 active:shadow-lg
+                            transition
+                            duration-150
+                            ease-in-out"
+                      >
+                        ارسال پیام
+                      </button>
                     </div>
                   </div>
                 </Modal>

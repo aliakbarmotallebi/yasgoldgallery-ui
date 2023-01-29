@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Modal from "./Modal";
+import Modal from "components/shared/Modal";
 import OrderDetails from "./OrderDetails";
 
 const ListOrders = () => {

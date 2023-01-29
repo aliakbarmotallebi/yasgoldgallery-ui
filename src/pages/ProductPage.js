@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import HandleCart from "../components/shared/HandleCart";
-import LoadableLoading from "../components/shared/LoadableLoading";
-import ProductComments from "../components/ProductComments";
-import RelatedProducts from "../components/RelatedProducts";
-import replaceWithBr from "../helper/replaceWithBr";
-import { productWithId } from "../services/products";
+import { Link, useParams } from "react-router-dom";
+import HandleCart from "components/shared/HandleCart";
+import LoadableLoading from "components/shared/LoadableLoading";
+import ProductComments from "components/productDetails/ProductComments";
+import RelatedProducts from "components/productDetails/RelatedProducts";
+import replaceWithBr from "helper/replaceWithBr";
+import { productWithId } from "services/products";
 
 const ProductPage = () => {
   const [product, setProduct] = useState({});
@@ -80,12 +80,13 @@ const ProductPage = () => {
                 <h2 class="text-4xl font-black mb-1">{title}</h2>
                 <div className="flex">
                   {tags?.map((tag) => (
-                    <span
+                    <Link
+                      to={`/products/tag/${tag.id}/${tag.slug}`}
                       key={tag.id}
                       class="block text-sm font-bold mb-5 text-blue-600 ml-4"
                     >
                       {tag.name}
-                    </span>
+                    </Link>
                   ))}
                 </div>
 

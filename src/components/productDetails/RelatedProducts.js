@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { productsWithCategory } from "../services/products";
-import CardProduct from "./CardProduct";
-import Spinner from "./shared/Spinner";
+import { productsWithCategory } from "../../services/products";
+import CardProduct from "../shared/CardProduct";
+import Spinner from "../shared/Spinner";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/css";

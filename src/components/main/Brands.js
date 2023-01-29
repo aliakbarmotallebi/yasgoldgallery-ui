@@ -1,4 +1,4 @@
-import Image4 from "../assets/images/image4.png";
+import Image4 from "assets/images/image4.png";
 
 const Brands = () => {
   return (

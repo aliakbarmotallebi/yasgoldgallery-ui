@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import HandleCart from "./shared/HandleCart";
+import HandleCart from "./HandleCart";
 
 const CardProduct = ({ product }) => {
   const {
@@ -35,7 +35,7 @@ const CardProduct = ({ product }) => {
         </div>
       </div>
       <div className="px-4 py-3 w-72">
-        <Link to={`/products`}>
+        <Link to={`/products/category/${id}/${name}`}>
           <span className="text-gray-400 mr-3 uppercase text-xs">{name}</span>
         </Link>
         <p className="text-lg my-2 font-bold text-black truncate block capitalize">

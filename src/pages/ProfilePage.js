@@ -1,12 +1,26 @@
-import EditProfile from "../components/EditProfile";
-import ListOrders from "../components/ListOrders";
-import ListOrdersPage from "../components/ListOrders";
-import ListPayments from "../components/ListPayments";
-import OrderDetails from "../components/OrderDetails";
+import { useState } from "react";
+import { useEffect } from "react";
+import EditProfile from "components/profile/EditProfile";
+import ListOrders from "components/profile/ListOrders";
+import ListPayments from "components/profile/ListPayments";
+import LoadableLoading from "components/shared/LoadableLoading";
+import { profile } from "services/account";
 
 const ProfilePage = () => {
+  const [usename, setUsername] = useState("");
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    const getProfileData = async () => {
+      setLoading(true);
+      const response = await profile();
+      if (response.status) setUsername(response?.data?.mobile);
+      setLoading(false);
+    };
+    getProfileData();
+  }, []);
   return (
     <>
+      {loading && <LoadableLoading />}
       <div class="sticky top-0 border-b border-gray-200 w-full bg-white text-black">
         <div className="container xl:max-w-6xl mx-auto">
           <ul
@@ -53,7 +67,7 @@ const ProfilePage = () => {
           className="container xl:max-w-6xl mx-auto pt-10 tab-content"
           id="tabs-tabContent"
         >
-          <EditProfile />
+          <EditProfile usename={usename} />
           <ListOrders />
           <ListPayments />
         </div>
