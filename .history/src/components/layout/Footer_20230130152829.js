@@ -2,7 +2,7 @@ const Footer = () => {
     return (
         <>
             <footer>
-                <div className="bg-neutral-900">
+                <div className="bg-white-900">
                     <div className="md:w-10/12 lg:w-8/12 m-auto py-8">
                         <ul class="flex flex-wrap items-center justify-between md:flex-nowrap list-disc list-inside">
                             <li>

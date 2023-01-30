@@ -1,4 +1,4 @@
-import ImageSuggest from "assets/images/box.png";
+import giftsImage from "assets/images/gifts.png";
 import CardProduct from "components/shared/CardProduct";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
@@ -17,7 +17,7 @@ const SuggestedProducts = ({ suggested: suggestedProducts }) => {
         <div className="grid grid-cols-5 gap-3 p-5 items-center">
           <div class="max-w-sm">
             <div className="h-120 overflow-hidden flex justify-center">
-              <img class="" src={ImageSuggest} />
+              <img class="" src={giftsImage} />
             </div>
           </div>
           <Swiper
