@@ -20,7 +20,7 @@ const OrderContext = ({ children }) => {
       ...cart.map((product) => {
         return {
           product_id: product.productId,
-          product_qty: product.qty,
+          quantity: product.qty,
         };
       }),
     ],

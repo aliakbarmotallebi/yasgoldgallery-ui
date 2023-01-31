@@ -5,10 +5,13 @@ import ListOrders from "components/profile/ListOrders";
 import ListPayments from "components/profile/ListPayments";
 import LoadableLoading from "components/shared/LoadableLoading";
 import { profile } from "services/account";
+import checkLoginUser from "helper/checkLoginUser";
+import { useNavigate } from "react-router";
 
 const ProfilePage = () => {
   const [usename, setUsername] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   useEffect(() => {
     const getProfileData = async () => {
       setLoading(true);
@@ -16,7 +19,11 @@ const ProfilePage = () => {
       if (response.status) setUsername(response?.data?.mobile);
       setLoading(false);
     };
-    getProfileData();
+    if (checkLoginUser()) {
+      getProfileData();
+    } else {
+      navigate("/");
+    }
   }, []);
   return (
     <>
@@ -67,9 +74,13 @@ const ProfilePage = () => {
           className="container xl:max-w-6xl mx-auto pt-10 tab-content"
           id="tabs-tabContent"
         >
-          <EditProfile usename={usename} />
-          <ListOrders />
-          <ListPayments />
+          {checkLoginUser() ? (
+            <>
+              <EditProfile usename={usename} />
+              <ListOrders />
+              <ListPayments />
+            </>
+          ) : null}
         </div>
       </div>
     </>

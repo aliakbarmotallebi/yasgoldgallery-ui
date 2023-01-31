@@ -12,13 +12,6 @@ const CartPage = () => {
     state: { cart },
   } = useContext(CartStore);
 
-  const { order } = useContext(Order);
-
-  const handleCreateOrder = async () => {
-    console.log("create order");
-    const response = await createOrder(order);
-    console.log(response);
-  };
   return (
     <>
       {cart.length < 1 ? (
@@ -27,7 +20,7 @@ const CartPage = () => {
         <div class="container mt-10">
           <div class="flex justify-center items-start my-10">
             <Outlet />
-            <OrderSummary cart={cart} handleCreateOrder={handleCreateOrder} />
+            <OrderSummary cart={cart} />
           </div>
         </div>
       )}
