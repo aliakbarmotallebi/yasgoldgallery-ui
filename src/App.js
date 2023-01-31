@@ -1,3 +1,4 @@
+import OrderContext from "context/OrderContext";
 import { useEffect } from "react";
 import CartContext from "./context/CartContext";
 import checkExpireUser from "./helper/checkExpireUser";
@@ -9,7 +10,9 @@ function App() {
   }, []);
   return (
     <CartContext>
-      <RouterFunction />
+      <OrderContext>
+        <RouterFunction />
+      </OrderContext>
     </CartContext>
   );
 }

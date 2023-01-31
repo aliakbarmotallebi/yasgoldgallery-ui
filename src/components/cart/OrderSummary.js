@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const OrderSummary = ({ cart }) => {
+const OrderSummary = ({ cart, handleCreateOrder }) => {
   const { pathname } = useLocation();
   return (
     <div
@@ -48,12 +48,21 @@ const OrderSummary = ({ cart }) => {
               <span className="mr-1">تومان</span>
             </span>
           </div>
-          <Link
-            to="checkout"
-            class="bg-indigo-500 font-semibold block text-center hover:bg-indigo-600 py-3 text-sm text-white rounded-lg uppercase w-full"
-          >
-            {pathname === "/cart/checkout" ? " پرداخت" : "ادامه پرداخت"}
-          </Link>
+          {pathname === "/cart/checkout" ? (
+            <button
+              onClick={handleCreateOrder}
+              className="bg-indigo-500 font-semibold block text-center hover:bg-indigo-600 py-3 text-sm text-white rounded-lg uppercase w-full"
+            >
+              پرداخت
+            </button>
+          ) : (
+            <Link
+              to="/cart/checkout"
+              class="bg-indigo-500 font-semibold block text-center hover:bg-indigo-600 py-3 text-sm text-white rounded-lg uppercase w-full"
+            >
+              تکمیل اطلاعات
+            </Link>
+          )}
         </div>
       </div>
     </div>
