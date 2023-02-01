@@ -1,6 +1,7 @@
 import { setLS } from "../../helper/handlerLS";
 import {
   ADD_TO_CART,
+  CLEAR_CART,
   DECREASE_PRODUCT,
   INCREASE_PRODUCT,
   REMOVE_FROM_CART,
@@ -37,6 +38,8 @@ const cartReducer = (state, action) => {
           (product) => product.productId !== action.payload.productId
         ),
       ];
+    case CLEAR_CART:
+      newCart = [];
   }
   setLS("cart", newCart);
   return {

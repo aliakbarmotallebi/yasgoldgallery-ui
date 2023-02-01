@@ -3,27 +3,40 @@ import Modal from "components/shared/Modal";
 import Spinner from "components/shared/Spinner";
 import { Order } from "context/OrderContext";
 import checkOrderInfo from "helper/checkOrderInfo";
+import redirect from "helper/redirect";
 import React from "react";
 import { useContext } from "react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createOrder } from "services/order";
+import { createPayment } from "services/payments";
 
 const OrderSummary = ({ cart }) => {
   const { pathname } = useLocation();
   const [showModal, setShowModal] = useState(false);
   const { order } = useContext(Order);
   const [loading, setLoading] = useState(false);
+  const [paymentLoading, setPaymentLoading] = useState(false);
   const [orderDetails, setOrderDetails] = useState({});
+
+  console.log(order);
 
   const handleCreateOrder = async () => {
     setLoading(true);
     const response = await createOrder(order);
-    // if (response.status) {
-    setOrderDetails(response.data);
+    if (response?.status) {
+      setOrderDetails(response.data);
+      setShowModal(true);
+    }
     setLoading(false);
-    setShowModal(true);
-    // }
+  };
+
+  const handleCreatePayment = async () => {
+    setPaymentLoading(true);
+    const response = await createPayment(orderDetails.id);
+    if (response.status) redirect(response.data.redirectPaymentUrl);
+
+    setPaymentLoading(false);
   };
   return (
     <>
@@ -95,7 +108,13 @@ const OrderSummary = ({ cart }) => {
       </div>
       <Modal showModal={showModal} setShowModal={setShowModal}>
         <OrderDetails orderDetails={orderDetails} />
-        <button className="bg-indigo-500 flex justify-center items-center font-semibold block text-center hover:bg-indigo-600 py-3 text-sm text-white rounded-lg uppercase w-full">
+        <button
+          onClick={handleCreatePayment}
+          className="bg-indigo-500 flex justify-center items-center font-semibold block text-center hover:bg-indigo-600 py-3 text-sm text-white rounded-lg uppercase w-full"
+        >
+          {paymentLoading && (
+            <Spinner classNameBox="w-fit ml-4" classNameSvg="!w-4" />
+          )}
           پرداخت
         </button>
       </Modal>

@@ -13,7 +13,7 @@ const Order = ({ id, items_count, total, is_paid, created_at }) => {
   const getDetailsOrder = async () => {
     setLoadingDetails(true);
     const response = await detailsOrder(id);
-    if (response.status) {
+    if (response?.status) {
       setDetailsOrder(response.data);
       setShowModal(true);
     }

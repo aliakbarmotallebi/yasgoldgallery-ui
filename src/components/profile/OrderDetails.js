@@ -4,6 +4,7 @@ import { useState } from "react";
 const OrderDetails = ({ orderDetails }) => {
   const [user, setUser] = useState(decodeToken("username"));
   const {
+    id,
     firstname,
     lastname,
     address: { address },
@@ -107,7 +108,10 @@ const OrderDetails = ({ orderDetails }) => {
             </thead>
             <tbody>
               {products.map((product) => (
-                <tr className="bg-white print:border-y border-b hover:bg-gray-100">
+                <tr
+                  key={product.id}
+                  className="bg-white print:border-y border-b hover:bg-gray-100"
+                >
                   <th className="text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                     {product.title}
                   </th>

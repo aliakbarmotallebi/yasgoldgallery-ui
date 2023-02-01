@@ -11,10 +11,10 @@ const ListOrders = () => {
     const getOrders = async () => {
       setLoading(true);
       const response = await getAllOrders();
-      if (response.status) {
+      if (response?.status) {
         setOrders(response.data);
-        setLoading(false);
       }
+      setLoading(false);
     };
     getOrders();
   }, []);

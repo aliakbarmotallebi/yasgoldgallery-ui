@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import checkLoginUser from "../../helper/checkLoginUser";
 import { addComment, comments } from "../../services/comment";
-import alert from "../../helper/alert";
-import Alert from "../../helper/alert";
+import alert from "../shared/alert/Alert";
+import Alert from "../shared/alert/Alert";
 import Spinner from "../shared/Spinner";
 
 const ProductComments = ({ productId }) => {
@@ -14,7 +14,7 @@ const ProductComments = ({ productId }) => {
   useEffect(() => {
     const getComments = async () => {
       const res = await comments(productId);
-      if (res.status) setProductComments(res.data);
+      if (res?.status) setProductComments(res.data);
       setLoading(false);
     };
     getComments(productId);
@@ -25,7 +25,7 @@ const ProductComments = ({ productId }) => {
       if (newComment.trim() !== "") {
         setLoadSendComment(true);
         const response = await addComment(productId, newComment);
-        if (response.status) {
+        if (response?.status) {
           alert({
             text: "کامنت با موفقیت افزوده شد . پس از تایید نمایش داده خواهد شد",
             status: "success",

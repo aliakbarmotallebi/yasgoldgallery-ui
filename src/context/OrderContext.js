@@ -1,5 +1,6 @@
 import React from "react";
 import { useContext } from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { createContext } from "react";
 import { CartStore } from "./CartContext";
@@ -25,6 +26,20 @@ const OrderContext = ({ children }) => {
       }),
     ],
   });
+
+  useEffect(() => {
+    setOrder({
+      ...order,
+      products: [
+        ...cart.map((product) => {
+          return {
+            product_id: product.productId,
+            quantity: product.qty,
+          };
+        }),
+      ],
+    });
+  }, [cart]);
   return (
     <Order.Provider value={{ order, setOrder }}>{children}</Order.Provider>
   );

@@ -1,15 +1,16 @@
 import AddressModal from "components/shared/AddressModal";
 import LoadableLoading from "components/shared/LoadableLoading";
+import Login from "components/shared/Login";
 import Modal from "components/shared/Modal";
-import Spinner from "components/shared/Spinner";
 import { CartStore } from "context/CartContext";
 import { Order } from "context/OrderContext";
-import replaceWithBr from "helper/replaceWithBr";
-import { async } from "q";
+import { UserStore } from "context/UserContext";
+import checkLoginUser from "helper/checkLoginUser";
 import React from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { createNewAddress } from "services/address";
 import { getCheckoutData } from "services/checkout";
 import AddressCard from "./AddressCard";
@@ -18,13 +19,15 @@ const Checkout = () => {
   const {
     state: { cart },
   } = useContext(CartStore);
+  const navigation = useNavigate();
   const { order, setOrder } = useContext(Order);
+  const { user, setUser } = useContext(UserStore);
   const [modalAddress, setModalAddress] = useState(false);
   const [loading, setLoading] = useState(false);
   const [addresses, setAddresses] = useState([]);
   const [mobile, setMobile] = useState("");
   const [loadingAddressModal, setLoadingAddressModal] = useState(false);
-
+  const [showModal, setShowModal] = useState(!checkLoginUser());
   const [newAddress, setNewAddress] = useState({
     postalCode: "",
     address: "",
@@ -42,8 +45,8 @@ const Checkout = () => {
 
       setLoading(false);
     };
-    getProfileInfo();
-  }, []);
+    if (user) getProfileInfo();
+  }, [user]);
 
   const handleCreateAddress = async () => {
     setLoadingAddressModal(true);
@@ -51,7 +54,7 @@ const Checkout = () => {
       newAddress.address,
       newAddress.postalCode
     );
-    if (response.status) {
+    if (response?.status) {
       setAddresses([...addresses, { ...response.data }]);
       setOrder({ ...order, address_id: response.data.id });
       setModalAddress(false);
@@ -63,6 +66,20 @@ const Checkout = () => {
     setLoadingAddressModal(false);
   };
 
+  if (!checkLoginUser())
+    return (
+      <Modal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        title="ورود به حساب کاربری"
+      >
+        <Login
+          setUser={setUser}
+          setShowModal={setShowModal}
+          openModal={() => navigation(-1)}
+        />
+      </Modal>
+    );
   return (
     <>
       {loading && <LoadableLoading />}
@@ -126,7 +143,7 @@ const Checkout = () => {
               id="phone"
               disabled
               readOnly
-              defaultValue={mobile}
+              defaultValue={user}
               class="bg-gray-200  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             />
           </div>

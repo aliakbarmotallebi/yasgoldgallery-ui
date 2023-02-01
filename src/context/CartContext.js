@@ -1,5 +1,6 @@
 import React, { createContext, useReducer } from "react";
-import { checkLS } from "../helper/handlerLS";
+import { useEffect } from "react";
+import { checkLS, setLS } from "../helper/handlerLS";
 import cartReducer from "../reducer/cart/cartReducer";
 
 export const CartStore = createContext();
@@ -8,6 +9,10 @@ const initialState = {
 };
 const CartContext = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
+
+  useEffect(() => {
+    setLS("cart", state.cart);
+  }, [state]);
   return (
     <CartStore.Provider value={{ state, dispatch }}>
       {children}

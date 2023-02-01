@@ -1,3 +1,4 @@
+import alert from "components/shared/alert/Alert";
 import { getDataLS } from "../helper/handlerLS";
 import axios from "./index";
 
@@ -37,13 +38,9 @@ const login = async (mobile, code) => {
         },
       }
     );
-    if (response.status === 200) {
-      return response.data;
-    } else {
-      throw Error();
-    }
+    return response.data;
   } catch (e) {
-    console.log(e);
+    return e.response?.data;
   }
 };
 const editProfile = async (name, family) => {

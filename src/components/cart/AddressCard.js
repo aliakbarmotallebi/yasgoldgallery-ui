@@ -25,7 +25,7 @@ const AddressCard = ({ id, post_code, address, setAddresses, addresses }) => {
       addressEdit.address,
       addressEdit.postalCode
     );
-    if (response.status) {
+    if (response?.status) {
       setAddresses([
         ...addresses.map((address) =>
           address.id === id ? { id, ...addressEdit } : address
@@ -39,7 +39,7 @@ const AddressCard = ({ id, post_code, address, setAddresses, addresses }) => {
   const handleDeleteAddress = async () => {
     setLoadingDeleteAddress(true);
     const response = await deleteAddress(id);
-    if (response.status) {
+    if (response?.status) {
       setOrder({
         ...order,
         address_id:

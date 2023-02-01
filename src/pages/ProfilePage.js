@@ -16,7 +16,7 @@ const ProfilePage = () => {
     const getProfileData = async () => {
       setLoading(true);
       const response = await profile();
-      if (response.status) setUsername(response?.data?.mobile);
+      if (response?.status) setUsername(response?.data?.mobile);
       setLoading(false);
     };
     if (checkLoginUser()) {
