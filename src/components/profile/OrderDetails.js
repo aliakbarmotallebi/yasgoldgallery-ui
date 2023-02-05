@@ -1,4 +1,17 @@
-const OrderDetails = () => {
+import decodeToken from "helper/decodeToken";
+import { useState } from "react";
+
+const OrderDetails = ({ orderDetails }) => {
+  const [user, setUser] = useState(decodeToken("username"));
+  const {
+    id,
+    firstname,
+    lastname,
+    address: { address },
+    total,
+    is_paid,
+    products,
+  } = orderDetails;
   return (
     <div className="flex flex-col justify-between">
       <div className="max-w-sm w-full lg:max-w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
@@ -8,31 +21,25 @@ const OrderDetails = () => {
           </div>
         </div>
         <div className=" flex justify-center flex-col">
-          <div className="print:mb-5 flex items-center">
-            <button
-              type="button"
-              className="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-2 py-1 text-center mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
-            >
-              پرداخت نشده
-            </button>
+          <div className="print:mb-5 flex items-center justify-between">
+            {is_paid ? (
+              <>
+                <div className="text-white border border-green-700 bg-green-800 font-medium rounded-lg text-sm px-2 py-1 text-center mr-2 mb-2 ">
+                  پرداخت شده
+                </div>
+                <div className="py-1 px-2 mr-2 mb-2 text-sm font-medium rounded-lg border border-gray-200 bg-gray-100 text-blue-700">
+                  <span className="text-xs ml-1 font-semibold">کد رهگیری:</span>
+                  235465464758565353344
+                </div>
+              </>
+            ) : (
+              <div className="text-white border border-red-700 bg-red-800 font-medium rounded-lg text-sm px-2 py-1 text-center mb-2">
+                پرداخت نشده
+              </div>
+            )}
 
             <button
-              type="button"
-              className="py-1 px-2 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-            >
-              <span className="text-xs ml-1 font-semibold">کد رهگیری:</span>
-              235465464758565353344
-            </button>
-
-            <button
-              type="button"
-              className="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-2 py-1 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800"
-            >
-              پرداخت شده
-            </button>
-
-            <button
-              onclick="window.print()"
+              // onclick="window.print()"
               className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-1 text-center mr-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
             >
               <div className="flex items-center">
@@ -62,7 +69,7 @@ const OrderDetails = () => {
                   نام و نام خانوادگی
                 </th>
                 <th scope="col" className="text-center font-semibold px-6 py-3">
-                  آدرس محل سکونت
+                  آدرس سفارش
                 </th>
                 <th scope="col" className="text-center font-semibold px-6 py-3">
                   نام کاربری
@@ -72,12 +79,10 @@ const OrderDetails = () => {
             <tbody>
               <tr className="bg-white print:border-y border-b hover:bg-gray-100">
                 <th className="text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  رضا هرمزی
+                  {firstname} {lastname}
                 </th>
-                <td scope="row" className="px-6 py-4 text-center">
-                  اراک - هپکو - خرم - نبش کوچه
-                </td>
-                <td className="px-6 py-4 text-center">09306102013</td>
+                <td className="px-6 py-4 text-center max-w-xs">{address}</td>
+                <td className="px-6 py-4 text-center">{user}</td>
               </tr>
             </tbody>
           </table>
@@ -89,27 +94,49 @@ const OrderDetails = () => {
                   نام محصول
                 </th>
                 <th scope="col" className="text-center font-semibold px-6 py-3">
+                  تعداد
+                </th>
+                <th scope="col" className="text-center font-semibold px-6 py-3">
                   قیمت واحد
+                  <span className="text-gray-400 text-xs">(تومان)</span>
+                </th>
+                <th scope="col" className="text-center font-semibold px-6 py-3">
+                  قیمت کل
                   <span className="text-gray-400 text-xs">(تومان)</span>
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr className="bg-white print:border-y border-b hover:bg-gray-100">
-                <th className="text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  دستبند-طلا-اسپرت-کارتیه
-                </th>
-                <td scope="row" className="px-6 py-4 text-center">
-                  2000000 تومان
-                </td>
-              </tr>
+              {products.map((product) => (
+                <tr
+                  key={product.id}
+                  className="bg-white print:border-y border-b hover:bg-gray-100"
+                >
+                  <th className="text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    {product.title}
+                  </th>
+                  <td scope="row" className="px-6 py-4 text-center">
+                    {product.quantity}
+                  </td>
+                  <td scope="row" className="px-6 py-4 text-center">
+                    {product.amount} تومان
+                  </td>
+                  <td scope="row" className="px-6 py-4 text-center">
+                    {product.total} تومان
+                  </td>
+                </tr>
+              ))}
 
-              <tr className="bg-gray-100">
-                <th className="font-semibold px-6 py-3 text-center">
+              <tr className="bg-white print:border-y hover:bg-gray-100">
+                <th className="text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                   مبلغ قابل پرداخت
                   <span className="text-gray-400 text-xs">(تومان)</span>
                 </th>
-                <th className="px-6 py-3 text-center font-bold">20000 تومان</th>
+                <td scope="row" className="px-6 py-4 text-center"></td>
+                <td scope="row" className="px-6 py-4 text-center"></td>
+                <th className="px-6 py-3 text-center font-bold text-sm">
+                  {total} تومان
+                </th>
               </tr>
             </tbody>
           </table>
