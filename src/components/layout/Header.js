@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartStore } from "context/CartContext";
 import checkLoginUser from "helper/checkLoginUser";
-import decodeToken from "helper/decodeToken";
 import { removeDataLS } from "helper/handlerLS";
 import Modal from "components/shared/Modal";
 import Login from "components/shared/Login";
@@ -63,7 +62,7 @@ const Header = () => {
                   className="relative text-sm font-medium inline-flex justify-center items-center space-x-2 space-x-reverse px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800 focus:outline-none focus:ring"
                   id="tk-dropdown-layouts-user"
                 >
-                  <span>محصولات</span>
+                  <span>دسته بندی</span>
                   <svg
                     className="hi-solid hi-chevron-down inline-block w-4 h-4 opacity-50"
                     fill="currentColor"

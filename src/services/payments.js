@@ -28,10 +28,29 @@ const checkPayment = async (resnumber) => {
     });
     if (response.status === 200) {
       return response.data;
+    } else {
+      throw Error();
     }
   } catch (e) {
     console.log(e);
   }
 };
 
-export { createPayment, checkPayment };
+const allPayments = async () => {
+  try {
+    const response = await axios.get("/payments", {
+      headers: {
+        Authorization: `Bearer ${getDataLS("user")?.token}`,
+      },
+    });
+    if (response.status === 200) {
+      return response.data;
+    } else {
+      throw Error();
+    }
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+export { createPayment, checkPayment, allPayments };
