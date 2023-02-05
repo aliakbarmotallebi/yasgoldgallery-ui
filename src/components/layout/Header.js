@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, memo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CartStore } from "context/CartContext";
 import checkLoginUser from "helper/checkLoginUser";
@@ -6,11 +6,17 @@ import { removeDataLS } from "helper/handlerLS";
 import Modal from "components/shared/Modal";
 import Login from "components/shared/Login";
 import { UserStore } from "context/UserContext";
+import { categories } from "services/products";
+import Dropdown from "components/shared/Dropdown";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
   const [contactUsModal, setContactUsModal] = useState(false);
   const { user, setUser } = useContext(UserStore);
+  const [allCategories, setAllCategories] = useState([]);
+  const [dropdown, setDropdown] = useState({
+    category: false,
+  });
 
   const {
     state: { cart },
@@ -23,6 +29,19 @@ const Header = () => {
   const userLogout = () => {
     removeDataLS("user");
     setUser(undefined);
+  };
+
+  useEffect(() => {
+    const getCategories = async () => {
+      const res = await categories(5);
+      if (res.status) setAllCategories(res.data);
+    };
+    getCategories();
+  }, []);
+
+  const handlerCategoryDropdown = (e) => {
+    e.stopPropagation();
+    setDropdown({ ...dropdown, category: !dropdown.category });
   };
 
   return (
@@ -58,9 +77,10 @@ const Header = () => {
                   محصولات
                 </Link>
                 <button
+                  onClick={handlerCategoryDropdown}
                   type="button"
-                  className="relative text-sm font-medium inline-flex justify-center items-center space-x-2 space-x-reverse px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800 focus:outline-none focus:ring"
-                  id="tk-dropdown-layouts-user"
+                  className="relative dropdown-btn text-sm font-medium inline-flex justify-center items-center space-x-2 space-x-reverse px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800 shadow-none outline-none ring-none"
+                  data-dropdown="dropdown"
                 >
                   <span>دسته بندی</span>
                   <svg
@@ -75,30 +95,28 @@ const Header = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
+                  {dropdown.category && (
+                    <Dropdown dropdown={dropdown} setDropdown={setDropdown}>
+                      <ul className="py-1 text-sm text-gray-700">
+                        {allCategories.map((category) => (
+                          <li key={category.id}>
+                            <Link
+                              to={`/products/category/${category.id}/${category.slug}`}
+                              className="block px-4 py-2 hover:bg-gray-100"
+                            >
+                              {category.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </Dropdown>
+                  )}
 
-                  {/* <div id="dropdown" className="absolute z-10 bg-white divide-y divide-gray-100 rounded shadow w-44 top-[30px] right-0">
-                    <ul className="py-1 text-sm text-gray-700">
-                      <li>
-                        <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                          دسته بندی یک
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                          دسته بندی دو
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                          دسته بندی یک
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                          دسته بندی دو
-                        </a>
-                      </li>
-                    </ul>
+                  {/* <div
+                    id="dropdown"
+                    className="absolute z-30 bg-white divide-y divide-gray-100 rounded shadow w-44 top-[40px] right-0"
+                  >
+                    
                   </div> */}
                 </button>
               </nav>
@@ -326,4 +344,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);
