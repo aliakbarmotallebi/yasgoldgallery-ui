@@ -13,10 +13,10 @@ const RelatedProducts = ({ category: { id } }) => {
     const getData = async () => {
       setLoading(true);
       const res = await productsWithCategory(id);
-      if (res.status) {
+      if (res?.status) {
         setRelatedProducts(res.data);
-        setLoading(false);
       }
+      setLoading(false);
     };
     getData();
   }, []);

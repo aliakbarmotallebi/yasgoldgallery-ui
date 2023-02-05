@@ -1,5 +1,5 @@
 import { useState } from "react";
-import alert from "helper/alert";
+import alert from "components/shared/alert/Alert";
 import { editProfile } from "services/account";
 import Spinner from "components/shared/Spinner";
 
@@ -13,7 +13,7 @@ const EditProfile = ({ usename }) => {
   const handlEditProfile = async () => {
     setLoading(true);
     const response = await editProfile(userInfo.name, userInfo.family);
-    if (response.status) {
+    if (response?.status) {
       alert({ text: "ویرایش با موفقیت انجام شد", status: "success" });
       setUserInfo({
         name: "",

@@ -9,6 +9,7 @@ import CartPage from "./pages/CartPage";
 import ProfilePage from "./pages/ProfilePage";
 import Cart from "components/cart/Cart";
 import Checkout from "components/cart/Checkout";
+import PaymentCallback from "pages/PaymentCallback";
 
 function RouterFunction() {
   return (
@@ -16,6 +17,7 @@ function RouterFunction() {
       <Layout>
         <Routes>
           <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/payment" element={<PaymentCallback />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="products" element={<ListProductsPage />} />
           <Route

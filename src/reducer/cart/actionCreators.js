@@ -1,5 +1,6 @@
 import {
   ADD_TO_CART,
+  CLEAR_CART,
   DECREASE_PRODUCT,
   INCREASE_PRODUCT,
   REMOVE_FROM_CART,
@@ -29,5 +30,16 @@ function removeFromCart(product) {
     payload: product,
   };
 }
+function clearCart() {
+  return {
+    type: CLEAR_CART,
+  };
+}
 
-export { addToCart, increaseProduct, decreaseProduct, removeFromCart };
+export {
+  addToCart,
+  increaseProduct,
+  decreaseProduct,
+  removeFromCart,
+  clearCart,
+};

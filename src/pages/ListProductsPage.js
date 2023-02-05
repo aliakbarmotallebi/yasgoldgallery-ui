@@ -38,7 +38,7 @@ const ListProductsPage = () => {
     const getLastProducts = async () => {
       setLoading(true);
       const response = await lastProducts(params);
-      if (response.status) setProducts(response.data);
+      if (response?.status) setProducts(response.data);
       setLoading(false);
     };
     categoryId
