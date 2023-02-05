@@ -33,7 +33,7 @@ const Header = () => {
 
   useEffect(() => {
     const getCategories = async () => {
-      const res = await categories(5);
+      const res = await categories();
       if (res.status) setAllCategories(res.data);
     };
     getCategories();

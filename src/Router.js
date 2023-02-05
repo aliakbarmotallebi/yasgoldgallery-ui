@@ -36,8 +36,8 @@ function RouterFunction() {
             <Route path="checkout" element={<Checkout />} />
           </Route>
           <Route path="profile" element={<ProfilePage />} />
-          <Route path="page/helper" element={<HelpPage />} />
-          <Route path="page/privacy" element={<PrivacyPage />} />
+          <Route path="helper" element={<HelpPage />} />
+          <Route path="privacy" element={<PrivacyPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
