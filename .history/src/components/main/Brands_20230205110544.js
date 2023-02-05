@@ -7,7 +7,7 @@ import Image5 from "assets/images/brands/brand_5.jpg";
 const Brands = () => {
   return (
     <section className="overflow-y-auto overflow-x-hidden w-full h-60">
-      <div className="flex gap-2 items-center justify-between flex-nowrap">
+      <div className="flex gap-2 items-center  flex-nowrap">
         <div className="whitespace-nowrap p-5">
           <a
             href="#"
@@ -19,7 +19,7 @@ const Brands = () => {
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Chopard 
+            برند یک
           </a>
         </div>
         <div className="whitespace-nowrap p-5">
@@ -33,7 +33,7 @@ const Brands = () => {
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Bvlgari 
+            برند دو
           </a>
         </div>
         <div className="whitespace-nowrap p-5">
@@ -47,7 +47,7 @@ const Brands = () => {
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Chanel
+            برند سه
           </a>
         </div>
         <div className="whitespace-nowrap p-5">
@@ -61,7 +61,7 @@ const Brands = () => {
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Louis Vuitton
+            برند چهار
           </a>
         </div>
         <div className="whitespace-nowrap p-5">
@@ -75,7 +75,7 @@ const Brands = () => {
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Dior
+            برند پنج
           </a>
         </div>
       </div>
