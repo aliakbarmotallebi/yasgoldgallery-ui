@@ -9,7 +9,7 @@ const Footer = () => {
                                 <a href="/" class="hover:text-sky-400 transition whitespace-nowrap text-white">صفحه اصلی</a>
                             </li>
                             <li>
-                                <a href="/about" class="hover:text-sky-400 transition whitespace-nowrap text-white">
+                                <a href="#" class="hover:text-sky-400 transition whitespace-nowrap text-white">
                                     درباره ما
                                 </a>
                             </li>

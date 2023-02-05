@@ -10,7 +10,6 @@ import ProfilePage from "./pages/ProfilePage";
 import Cart from "components/cart/Cart";
 import Checkout from "components/cart/Checkout";
 import HelpPage from "pages/HelpPage";
-import PrivacyPage from "pages/PrivacyPage";
 
 function RouterFunction() {
   return (
@@ -35,7 +34,6 @@ function RouterFunction() {
           </Route>
           <Route path="profile" element={<ProfilePage />} />
           <Route path="page/helper" element={<HelpPage />} />
-          <Route path="page/privacy" element={<PrivacyPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>

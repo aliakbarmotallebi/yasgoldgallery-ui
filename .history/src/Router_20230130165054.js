@@ -10,7 +10,6 @@ import ProfilePage from "./pages/ProfilePage";
 import Cart from "components/cart/Cart";
 import Checkout from "components/cart/Checkout";
 import HelpPage from "pages/HelpPage";
-import PrivacyPage from "pages/PrivacyPage";
 
 function RouterFunction() {
   return (
