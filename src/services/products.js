@@ -27,9 +27,11 @@ const lastProducts = async (params) => {
     console.log(e);
   }
 };
-const categories = async () => {
+const categories = async (limit) => {
   try {
-    const response = await axios.get("/categories");
+    const response = await axios.get("/categories", {
+      params: { limit },
+    });
     if (response.status === 200) {
       return response.data;
     } else {
@@ -39,6 +41,7 @@ const categories = async () => {
     console.log(e);
   }
 };
+
 const tags = async () => {
   try {
     const response = await axios.get("/tags");
