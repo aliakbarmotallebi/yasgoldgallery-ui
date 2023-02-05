@@ -1,5 +1,5 @@
 import CardProduct from "components/shared/CardProduct";
-import imageGifts from "assets/images/gifts.jpeg";
+import giftsImage from "assets/images/gifts.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/css";
@@ -17,7 +17,7 @@ const SpecialProducts = ({ speacial: speacialProducts }) => {
         <div className="grid grid-cols-5 gap-3 p-5 items-center">
           <div class=" max-w-sm">
             <div className="h-120 overflow-hidden flex justify-center">
-              <img src={imageGifts} alt="gifts" />
+              <img src={giftsImage} alt="giftsImage" />
             </div>
           </div>
           <Swiper

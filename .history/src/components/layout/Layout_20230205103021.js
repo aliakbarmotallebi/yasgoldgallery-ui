@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 const Layout = ({ children }) => {
-  const { showAlert, Alert } = useContext(AlertStore);
+  const { showAlert, setShowAlert, Alert } = useContext(AlertStore);
   return (
     <>
       <div className="flex flex-col mx-auto w-full min-h-screen min-h-screen bg-[#4d4845] text-neutral-300">

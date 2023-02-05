@@ -2,29 +2,29 @@ const Footer = () => {
     return (
         <>
             <footer>
-                <div className="bg-neutral-900">
+                <div className="bg-white">
                     <div className="md:w-10/12 lg:w-8/12 m-auto py-8">
                         <ul class="flex flex-wrap items-center justify-between md:flex-nowrap list-disc list-inside">
                             <li>
-                                <a href="/" class="hover:text-sky-400 transition whitespace-nowrap text-white">صفحه اصلی</a>
+                                <a href="#" class="hover:text-sky-400 transition whitespace-nowrap">صفحه اصلی</a>
                             </li>
                             <li>
-                                <a href="/about" class="hover:text-sky-400 transition whitespace-nowrap text-white">
+                                <a href="#" class="hover:text-sky-400 transition whitespace-nowrap">
                                     درباره ما
                                 </a>
                             </li>
                             <li>
-                                <a href="/page/privacy" class="hover:text-sky-400 transition whitespace-nowrap text-white">
+                                <a href="#" class="hover:text-sky-400 transition whitespace-nowrap">
                                     حریم شخصی
                                 </a>
                             </li>
                             <li>
-                                <a href="/page/helper" class="hover:text-sky-400 transition whitespace-nowrap text-white">
+                                <a href="#" class="hover:text-sky-400 transition whitespace-nowrap">
                                     راهنمایی خرید
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="hover:text-sky-400 transition whitespace-nowrap text-white">تماس با ما</a>
+                                <a href="#" class="hover:text-sky-400 transition whitespace-nowrap">تماس با ما</a>
                             </li>
                         </ul>
                     </div>

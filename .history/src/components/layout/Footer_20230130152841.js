@@ -6,20 +6,20 @@ const Footer = () => {
                     <div className="md:w-10/12 lg:w-8/12 m-auto py-8">
                         <ul class="flex flex-wrap items-center justify-between md:flex-nowrap list-disc list-inside">
                             <li>
-                                <a href="/" class="hover:text-sky-400 transition whitespace-nowrap text-white">صفحه اصلی</a>
+                                <a href="#" class="hover:text-sky-400 transition whitespace-nowrap text-white">صفحه اصلی</a>
                             </li>
                             <li>
-                                <a href="/about" class="hover:text-sky-400 transition whitespace-nowrap text-white">
+                                <a href="#" class="hover:text-sky-400 transition whitespace-nowrap text-white">
                                     درباره ما
                                 </a>
                             </li>
                             <li>
-                                <a href="/page/privacy" class="hover:text-sky-400 transition whitespace-nowrap text-white">
+                                <a href="#" class="hover:text-sky-400 transition whitespace-nowrap text-white">
                                     حریم شخصی
                                 </a>
                             </li>
                             <li>
-                                <a href="/page/helper" class="hover:text-sky-400 transition whitespace-nowrap text-white">
+                                <a href="#" class="hover:text-sky-400 transition whitespace-nowrap text-white">
                                     راهنمایی خرید
                                 </a>
                             </li>

@@ -41,7 +41,7 @@ const HomePage = () => {
           />
           <div class="absolute bottom-0 left-0 w-full ">
             <div className="">
-              <div className="flex justify-between mx-auto px-10 translate-y-56 max-w-4xl relative z-50">
+              <div className="flex justify-between mx-auto px-10 translate-y-56 max-w-4xl">
                 <div className="text-center text-white">
                   <div className="w-20 h-20">
                     <img src={createdImage} alt="createdImage" />

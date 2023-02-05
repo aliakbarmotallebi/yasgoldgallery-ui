@@ -8,7 +8,7 @@ const SpecialComments = () => {
         </h2>
       </header>
       <div class="grid gap-8 mt-16 md:grid-cols-3">
-        <article class="backdrop-blur-xl bg-black/70 relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl">
+        <article class="backdrop-blur-xl bg-black/30 relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl">
           <svg
             class="text-yellow-600 absolute top-0 right-0 hidden w-24 h-24 -mt-12 -mr-12 md:block"
             width="256"
@@ -47,7 +47,7 @@ const SpecialComments = () => {
             </footer>
           </blockquote>
         </article>
-        <article class="backdrop-blur-xl bg-black/70 relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl -rotate-3">
+        <article class="backdrop-blur-xl bg-black/30 relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl -rotate-3">
           <blockquote class="space-y-1 text-base text-right">
             <p>باسلام... من تجربه خرید حضوری واقساطی شما را دارم.</p>
             <p>بی نهایت هم از خریدم و کیفیت برخورد اعضا مجموعه راضی هستم</p>
@@ -72,7 +72,7 @@ const SpecialComments = () => {
             </footer>
           </blockquote>
         </article>
-        <article class="backdrop-blur-xl bg-black/70 relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl rotate-3">
+        <article class="backdrop-blur-xl bg-black/30 relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl rotate-3">
           <blockquote class="space-y-1 text-base text-right">
             <p>باسلام... من تجربه خرید حضوری واقساطی شما را دارم.</p>
             <p>بی نهایت هم از خریدم و کیفیت برخورد اعضا مجموعه راضی هستم</p>
