@@ -19,7 +19,7 @@ const Brands = () => {
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Chopard 
+            برند یک
           </a>
         </div>
         <div className="whitespace-nowrap p-5">

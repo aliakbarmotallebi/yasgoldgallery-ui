@@ -11,7 +11,7 @@ const CardProduct = ({ product }) => {
     category: { name, id },
   } = product;
   return (
-    <div class="bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl w-full h-full border border-yellow-600">
+    <div class="bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl w-full h-full">
       <div className="relative">
         <Link to={`/product/${productId}/${slug}`}>
           <img src={coverImage} class="h-80 w-full object-cover rounded-t-xl" />

@@ -7,11 +7,11 @@ import Image5 from "assets/images/brands/brand_5.jpg";
 const Brands = () => {
   return (
     <section className="overflow-y-auto overflow-x-hidden w-full h-60">
-      <div className="flex gap-2 items-center justify-between flex-nowrap">
-        <div className="whitespace-nowrap p-5">
+      <div className="flex flex-nowrap">
+        <div className="w-1/3 whitespace-nowrap">
           <a
             href="#"
-            class="text-center text-2xl font-semibold gap-2 flex flex-col items-center"
+            class="h-60 text-center text-2xl font-semibold p-16 gap-2 flex flex-col items-center"
           >
             <div tabindex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
               <img
@@ -19,13 +19,13 @@ const Brands = () => {
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Chopard 
+            برند یک
           </a>
         </div>
-        <div className="whitespace-nowrap p-5">
+        <div className="w-1/3 whitespace-nowrap">
           <a
             href="#"
-            class="text-center text-2xl font-semibold gap-2 flex flex-col items-center"
+            class="h-60 text-center text-2xl font-semibold p-16 gap-2 flex flex-col items-center"
           >
             <div tabindex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
               <img
@@ -33,13 +33,13 @@ const Brands = () => {
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Bvlgari 
+            برند دو
           </a>
         </div>
-        <div className="whitespace-nowrap p-5">
+        <div className="w-1/3 whitespace-nowrap">
           <a
             href="#"
-            class="text-center text-2xl font-semibold gap-2 flex flex-col items-center"
+            class="h-60 text-center text-2xl font-semibold p-16 gap-2 flex flex-col items-center"
           >
             <div tabindex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
               <img
@@ -47,13 +47,13 @@ const Brands = () => {
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Chanel
+            برند سه
           </a>
         </div>
-        <div className="whitespace-nowrap p-5">
+        <div className="w-1/3 whitespace-nowrap">
           <a
             href="#"
-            class="text-center text-2xl font-semibold gap-2 flex flex-col items-center"
+            class="h-60 text-center text-2xl font-semibold p-16 gap-2 flex flex-col items-center"
           >
             <div tabindex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
               <img
@@ -61,13 +61,13 @@ const Brands = () => {
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Louis Vuitton
+            برند چهار
           </a>
         </div>
-        <div className="whitespace-nowrap p-5">
+        <div className="w-1/3 whitespace-nowrap">
           <a
             href="#"
-            class="text-center text-2xl font-semibold gap-2 flex flex-col items-center"
+            class="h-60 text-center text-2xl font-semibold p-16 gap-2 flex flex-col items-center"
           >
             <div tabindex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
               <img
@@ -75,7 +75,7 @@ const Brands = () => {
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Dior
+            برند پنج
           </a>
         </div>
       </div>

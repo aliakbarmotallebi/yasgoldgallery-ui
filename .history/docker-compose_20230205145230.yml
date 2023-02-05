@@ -1,0 +1,49 @@
+version: "3.9"
+services:
+  article:
+    build:
+      args:
+        user: article
+        uid: 1000
+      context: ./article
+      dockerfile: Dockerfile
+    image: article
+    container_name: article
+    restart: unless-stopped
+    volumes:
+      - ./article:/var/www/html
+#    networks:
+#      - webtsNetwork
+    ports:
+      - 8001:80
+
+  shop:
+    build:
+      args:
+        user: shop
+        uid: 1000
+      context: ./shop
+      dockerfile: Dockerfile
+    image: shop
+    container_name: shop
+    restart: unless-stopped
+    volumes:
+      - ./shop:/var/www/html
+#    networks:
+#      - webtsNetwork
+    ports:
+      - 8003:80
+
+  yasgoldgallery:
+    build:
+      context: ./yasgoldgallery-ui
+      dockerfile: Dockerfile
+    container_name: yasgoldgallery
+    restart: unless-stopped
+    ports:
+      - 80:80
+
+networks:
+  default:
+    external:
+      name: webtsNetwork

@@ -19,7 +19,7 @@ const Brands = () => {
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Chopard 
+            برند یک
           </a>
         </div>
         <div className="whitespace-nowrap p-5">
@@ -61,7 +61,7 @@ const Brands = () => {
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Louis Vuitton
+            برند چهار
           </a>
         </div>
         <div className="whitespace-nowrap p-5">
@@ -75,7 +75,7 @@ const Brands = () => {
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Dior
+            برند پنج
           </a>
         </div>
       </div>
