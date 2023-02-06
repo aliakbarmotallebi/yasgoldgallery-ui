@@ -34,16 +34,15 @@ const CardProduct = ({ product }) => {
           />
         </div>
       </div>
-      <div className="px-4 py-1 w-72">
+      <div className="px-4 py-3 w-72">
         <Link to={`/products/category/${id}/${name}`}>
-          <span class="inline-flex bg-blue-800 w-1 h-1 rounded-full"></span>
-          <span className="text-blue-800 mr-1 uppercase text-xs font-bold hover:underline">{name}</span>
+          <span className="text-gray-400 mr-3 uppercase text-xs">{name}</span>
         </Link>
         <p className="text-lg my-2 font-bold text-black truncate block capitalize">
           <Link to={`/product/${productId}/${slug}`}>{title}</Link>
         </p>
         <div className="flex items-center">
-          <p className="text-md font-semibold text-black cursor-auto mb-3">
+          <p className="text-md font-semibold text-black cursor-auto my-3">
             {Number(price).toLocaleString()} تومان
           </p>
         </div>

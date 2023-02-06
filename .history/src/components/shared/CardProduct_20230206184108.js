@@ -36,8 +36,8 @@ const CardProduct = ({ product }) => {
       </div>
       <div className="px-4 py-1 w-72">
         <Link to={`/products/category/${id}/${name}`}>
-          <span class="inline-flex bg-blue-800 w-1 h-1 rounded-full"></span>
-          <span className="text-blue-800 mr-1 uppercase text-xs font-bold hover:underline">{name}</span>
+          <span class="inline-flex bg-red-500 w-1 h-1 rounded-full"></span>
+          <span className="text-blue-800 mr-1 uppercase text-xs">{name}</span>
         </Link>
         <p className="text-lg my-2 font-bold text-black truncate block capitalize">
           <Link to={`/product/${productId}/${slug}`}>{title}</Link>
