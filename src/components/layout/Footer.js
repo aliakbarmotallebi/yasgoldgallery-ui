@@ -2,6 +2,7 @@ import ContactUs from "components/shared/ContactUs";
 import Modal from "components/shared/Modal";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/images/logo/logo.png";
 
 const Footer = () => {
   const [showModal, setShowModal] = useState(false);
@@ -62,7 +63,7 @@ const Footer = () => {
             <div class="grid gap-y-8 sm:gap-y-16 grid-cols-4 xl:grid-cols-3 container mx-auto py-12">
               <div class="mb-6 col-span-4 xl:col-span-1 md:mb-0">
                 <a href="/" class="flex items-center">
-                  <img src="" class="h-8 ml-3" alt="Logo" />
+                  <img src={Logo} class="h-12 ml-3" alt="Logo" />
                   <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                     فروشگاه یاس
                   </span>
@@ -72,7 +73,6 @@ const Footer = () => {
                   شما حل کنیم، بلکه لذت ویترین گردی مجازی و خرید آنلاین طلا راهم
                   به شما هدیه دهیم.
                 </div>
-
                 <div class="flex flex-wrap justify-center gap-2 pt-4">
                   <button class="bg-[#0088cc] p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:opacity-60">
                     <svg
@@ -86,7 +86,6 @@ const Footer = () => {
                       <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.11-8.83l.013-.007.87 2.87c.112.311.266.367.453.341.188-.025.287-.126.41-.244l1.188-1.148 2.55 1.888c.466.257.801.124.917-.432l1.657-7.822c.183-.728-.137-1.02-.702-.788l-9.733 3.76c-.664.266-.66.638-.12.803l2.497.78z" />
                     </svg>
                   </button>
-
                   <button class="bg-pink-600  p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:opacity-60">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

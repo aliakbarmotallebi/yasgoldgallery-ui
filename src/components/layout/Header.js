@@ -1,5 +1,5 @@
 import React, { useContext, useState, memo, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { CartStore } from "context/CartContext";
 import checkLoginUser from "helper/checkLoginUser";
 import { removeDataLS } from "helper/handlerLS";
@@ -16,6 +16,7 @@ const Header = () => {
   const { user, setUser } = useContext(UserStore);
   const [showHumburgerMenu, setShowHumburgerMenu] = useState(false);
   const [allCategories, setAllCategories] = useState([]);
+  const { pathname } = useLocation();
   const [dropdown, setDropdown] = useState({
     category: false,
   });
@@ -25,7 +26,7 @@ const Header = () => {
   } = useContext(CartStore);
   useEffect(() => {
     const getCategories = async () => {
-      const res = await categories(5);
+      const res = await categories();
       if (res.status) setAllCategories(res.data);
     };
     getCategories();
@@ -43,6 +44,14 @@ const Header = () => {
     e.stopPropagation();
     setDropdown({ ...dropdown, category: !dropdown.category });
   };
+  useEffect(() => {
+    setShowHumburgerMenu(false);
+  }, [pathname]);
+
+  const handleShowHumBurgerMenu = (e) => {
+    e.stopPropagation();
+    setShowHumburgerMenu(!showHumburgerMenu);
+  };
 
   return (
     <>
@@ -51,8 +60,8 @@ const Header = () => {
           <div className="flex justify-between container xl:max-w-6xl mx-auto px-4 xl:px-0">
             <div className="flex items-center space-x-2 space-x-reverse ">
               <button
-                onClick={() => setShowHumburgerMenu(!showHumburgerMenu)}
-                className=" lg:hidden humburger-menu-icon relative w-8 h-5 "
+                onClick={handleShowHumBurgerMenu}
+                className="lg:hidden humburger-menu-icon relative w-8 h-5 "
               >
                 <span
                   className={`transition-all absolute left-0 duration-500  w-full h-[3px] bg-white ${
@@ -71,58 +80,66 @@ const Header = () => {
                 ></span>
               </button>
               <nav
-                className={`fixed top-16 transition-all duration-500 overflow-auto  right-0 bg-neutral-900 w-screen !mr-0 lg:transition-none lg:w-fit lg:bg-transparent lg:top-0 lg:relative lg:flex lg:items-center lg:space-x-2 text-sm lg:space-x-reverse ${
-                  showHumburgerMenu
-                    ? "h-screen p-4"
-                    : "h-0 overflow-hidden lg:h-auto"
+                className={`absolute top-16 transition-all duration-500 overflow-scroll lg:overflow-visible right-0 bg-neutral-900 w-screen !mr-0 lg:transition-none lg:w-fit lg:bg-transparent lg:top-0 lg:relative lg:flex lg:items-center lg:space-x-2 text-sm lg:space-x-reverse ${
+                  showHumburgerMenu ? "h-screen p-4 pb-20" : "h-0 lg:h-auto "
                 }`}
               >
-                <Link
+                <NavLink
                   to="/"
-                  className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800 hover:text-neutral-300 hover:bg-neutral-800"
+                      : "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                  }
                 >
                   صفحه اصلی
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/about"
-                  className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800 hover:text-neutral-300 hover:bg-neutral-800"
+                      : "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                  }
                 >
                   درباره ما
-                </Link>
-                <Link
+                </NavLink>
+                <button
                   type="button"
                   onClick={() => setContactUsModal(!contactUsModal)}
                   className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
                 >
                   تماس با ما
-                </Link>
+                </button>
                 <button
                   onClick={handlerCategoryDropdown}
                   type="button"
-                  className="relative dropdown-btn text-sm font-medium inline-flex justify-center items-center space-x-2 space-x-reverse px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800 shadow-none outline-none ring-none"
+                  className="relative dropdown-btn text-sm font-medium w-full lg:w-fit inline-flex flex-col justify-center items-start space-x-2 space-x-reverse px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800 shadow-none outline-none ring-none"
                   data-dropdown="dropdown"
                 >
-                  <span>دسته بندی</span>
-                  <svg
-                    className="hi-solid hi-chevron-down inline-block w-4 h-4 opacity-50"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
+                  <div className={dropdown.category ? "mb-2 lg:mb-0" : ""}>
+                    <span>دسته بندی</span>
+                    <svg
+                      className="hi-solid hi-chevron-down inline-block w-4 h-4 opacity-50"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
                   {dropdown.category && (
                     <Dropdown dropdown={dropdown} setDropdown={setDropdown}>
-                      <ul className="py-1 text-sm text-gray-700">
+                      <ul className="py-1 text-sm text-white text-right lg:text-center lg:text-gray-700 overflow-hidden p-0">
                         {allCategories.map((category) => (
                           <li key={category.id}>
                             <Link
                               to={`/products/category/${category.id}/${category.slug}`}
-                              className="block px-4 py-2 hover:bg-gray-100"
+                              className="block px-2 lg:px-4 py-2 hover:bg-neutral-900 lg:hover:bg-gray-100"
                             >
                               {category.name}
                             </Link>
@@ -132,12 +149,16 @@ const Header = () => {
                     </Dropdown>
                   )}
                 </button>
-                <Link
+                <NavLink
                   to="/products"
-                  className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800 hover:text-neutral-300 hover:bg-neutral-800"
+                      : "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                  }
                 >
                   شرایط اقساط
-                </Link>
+                </NavLink>
                 {checkLoginUser() && (
                   <button
                     onClick={userLogout}
