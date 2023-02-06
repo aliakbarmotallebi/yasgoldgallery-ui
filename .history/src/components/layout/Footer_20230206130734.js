@@ -110,12 +110,12 @@ const Footer = () => {
                         <div>
 
                             <div className="flex flex-col items-center">
-                                <div id="tooltip3" role="tooltip" class="relative shadow-lg bg-white rounded overflow-hidden">
-                                    <div className="text-sm font-bold text-gray-800 p-2 py-3 inline-flex items-center ">
+                                <div id="tooltip3" role="tooltip" class="relative shadow-lg bg-white/10 rounded overflow-hidden">
+                                    <div className="text-sm font-bold text-white p-2 py-3 inline-flex items-center ">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="animate-bounce w-6 h-6 fill-current ml-2" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0L12 23.728zm4.95-7.778a7 7 0 1 0-9.9 0L12 20.9l4.95-4.95zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" /></svg>
                                         موقعیت فروشگاه یاس
                                     </div>
-                                    <div className="text-center text-black p-2">
+                                    <div className="text-center text-white p-2">
                                         <div dangerouslySetInnerHTML={{ __html: map }} className="max-w-full" />
 
                                         <div className="p-2">
@@ -124,7 +124,7 @@ const Footer = () => {
                                     </div>
 
                                 </div>
-                                <div class="w-4 h-4 -mt-2 rotate-45 bg-gray-50"></div>
+                                <div class="w-4 h-4 -mt-2 rotate-45 bg-white/10"></div>
                             </div>
 
                         </div>
