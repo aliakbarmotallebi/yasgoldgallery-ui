@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
           <Alert text={showAlert.text} status={showAlert.status} />
         )}
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow mt-16 lg:mt-0">{children}</main>
         <Footer />
       </div>
     </>

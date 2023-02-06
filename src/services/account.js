@@ -1,4 +1,3 @@
-import alert from "components/shared/alert/Alert";
 import { getDataLS } from "../helper/handlerLS";
 import axios from "./index";
 
