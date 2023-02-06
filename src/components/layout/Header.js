@@ -13,9 +13,6 @@ const Header = () => {
   const [contactUsModal, setContactUsModal] = useState(false);
   const { user, setUser } = useContext(UserStore);
   const [showHumburgerMenu, setShowHumburgerMenu] = useState(false);
-  const [dropdown, setDropdown] = useState({
-    category: false,
-  });
 
   const {
     state: { cart },
@@ -32,7 +29,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="bg-neutral-900 w-full fixed lg:relative">
+      <div className="bg-neutral-900 w-full fixed lg:relative z-10">
         <header className="flex flex-none items-center h-16 bg-neutral-900 shadow-sm top-0 right-0 left-0 z-30 relative">
           <div className="flex justify-between container xl:max-w-6xl mx-auto px-4 xl:px-0">
             <div className="flex items-center space-x-2 space-x-reverse ">
