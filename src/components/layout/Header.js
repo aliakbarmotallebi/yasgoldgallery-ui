@@ -1,4 +1,4 @@
-import React, { useContext, useState, memo } from "react";
+import React, { useContext, useState, memo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CartStore } from "context/CartContext";
 import checkLoginUser from "helper/checkLoginUser";
@@ -7,16 +7,29 @@ import Modal from "components/shared/Modal";
 import Login from "components/shared/Login";
 import { UserStore } from "context/UserContext";
 import ContactUs from "components/shared/ContactUs";
+import { categories } from "services/products";
+import Dropdown from "components/shared/Dropdown";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
   const [contactUsModal, setContactUsModal] = useState(false);
   const { user, setUser } = useContext(UserStore);
   const [showHumburgerMenu, setShowHumburgerMenu] = useState(false);
+  const [allCategories, setAllCategories] = useState([]);
+  const [dropdown, setDropdown] = useState({
+    category: false,
+  });
 
   const {
     state: { cart },
   } = useContext(CartStore);
+  useEffect(() => {
+    const getCategories = async () => {
+      const res = await categories(5);
+      if (res.status) setAllCategories(res.data);
+    };
+    getCategories();
+  }, []);
 
   const openModal = () => {
     setShowModal((prev) => !prev);
@@ -25,6 +38,10 @@ const Header = () => {
   const userLogout = () => {
     removeDataLS("user");
     setUser(undefined);
+  };
+  const handlerCategoryDropdown = (e) => {
+    e.stopPropagation();
+    setDropdown({ ...dropdown, category: !dropdown.category });
   };
 
   return (
@@ -79,12 +96,42 @@ const Header = () => {
                 >
                   تماس با ما
                 </Link>
-                <Link
-                  to="/products"
-                  className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                <button
+                  onClick={handlerCategoryDropdown}
+                  type="button"
+                  className="relative dropdown-btn text-sm font-medium inline-flex justify-center items-center space-x-2 space-x-reverse px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800 shadow-none outline-none ring-none"
+                  data-dropdown="dropdown"
                 >
-                  دسته بندی ها
-                </Link>
+                  <span>دسته بندی</span>
+                  <svg
+                    className="hi-solid hi-chevron-down inline-block w-4 h-4 opacity-50"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                  {dropdown.category && (
+                    <Dropdown dropdown={dropdown} setDropdown={setDropdown}>
+                      <ul className="py-1 text-sm text-gray-700">
+                        {allCategories.map((category) => (
+                          <li key={category.id}>
+                            <Link
+                              to={`/products/category/${category.id}/${category.slug}`}
+                              className="block px-4 py-2 hover:bg-gray-100"
+                            >
+                              {category.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </Dropdown>
+                  )}
+                </button>
                 <Link
                   to="/products"
                   className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
