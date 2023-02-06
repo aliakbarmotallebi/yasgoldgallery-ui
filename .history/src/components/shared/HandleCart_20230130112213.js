@@ -29,7 +29,7 @@ const HandleCart = ({ product, btnStyle, btnText, btnIcon }) => {
   const addProductInCart = () => dispatch(addToCart(product));
 
   return !!isProductInCart ? (
-    <div class="w-full md:w-auto flex flex-wrap items-center gap-5 text-black ">
+    <div class="w-full md:w-auto flex flex-wrap items-center pt-8 gap-5 text-black ">
       <div className="bg-white shadow-md rounded-md overflow-hidden flex items-center border">
         <button
           onClick={increaseCounterProduct}
@@ -63,7 +63,7 @@ const HandleCart = ({ product, btnStyle, btnText, btnIcon }) => {
       </div>
     </div>
   ) : (
-    <div class="w-full md:w-auto flex flex-wrap items-center gap-5">
+    <div class="w-full md:w-auto flex flex-wrap items-center pt-8 gap-5">
       <span className="w-fit">
         <button onClick={addProductInCart} className={btnStyle}>
           {btnIcon}

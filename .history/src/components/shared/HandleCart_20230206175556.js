@@ -63,7 +63,7 @@ const HandleCart = ({ product, btnStyle, btnText, btnIcon }) => {
       </div>
     </div>
   ) : (
-    <div class="w-full md:w-auto flex flex-wrap items-center gap-5">
+    <div class="w-full md:w-auto flex flex-wrap items-center pt-8 gap-5">
       <span className="w-fit">
         <button onClick={addProductInCart} className={btnStyle}>
           {btnIcon}

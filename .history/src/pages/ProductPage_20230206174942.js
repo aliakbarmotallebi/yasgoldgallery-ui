@@ -43,20 +43,7 @@ const ProductPage = () => {
           <div class="flex flex-wrap -mx-4 mb-12">
             <div class="w-full lg:w-1/2 px-4">
               <div class="max-w-lg">
-                <div className="flex items-center">
-                  <h2 class="text-4xl font-black mb-1 ml-auto">{title}</h2>
-                  {!loading && (
-                    <HandleCart
-                      product={product}
-                      btnIcon={
-                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2a6 6 0 0 1 6 6v1h4v2h-1.167l-.757 9.083a1 1 0 0 1-.996.917H4.92a1 1 0 0 1-.996-.917L3.166 11H2V9h4V8a6 6 0 0 1 6-6zm6.826 9H5.173l.667 8h12.319l.667-8zM13 13v4h-2v-4h2zm-4 0v4H7v-4h2zm8 0v4h-2v-4h2zm-5-9a4 4 0 0 0-3.995 3.8L8 8v1h8V8a4 4 0 0 0-3.8-3.995L12 4z"/></svg>
-                      }
-                      btnStyle="inline-flex items-center shuffle-click hidden sm:flex py-2 px-3 bg-brand-blue hover:opacity-70 bg-blue-700 text-white text-xs font-semibold rounded"
-                      btnText="افزودن به سبد خرید"
-                    />
-                  )}
-                </div>
-
+                <h2 class="text-4xl font-black mb-1">{title}</h2>
                 <div className="flex">
                   {tags?.map((tag) => (
                     <Link
@@ -89,11 +76,10 @@ const ProductPage = () => {
                 </ul>
 
                 <div className="px-3 rounded-md py-4">
-                  <div className="text-base text-yellow-700 pb-4 inline-flex items-center font-bold">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="fill-yellow-600 ml-1" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"/></svg>
+                  <div className="text-sm text-blue-700 pb-2">
                     شرایط اقساط در یاس
                   </div>
-                  <ul class="list-inside font-medium list-disc">
+                  <ul class="list-inside font-medium">
                     <li>
                       <span className="font-bold after:content-[':'] text-neutral-800 ml-2">
                         شرایط اقساط
@@ -121,7 +107,13 @@ const ProductPage = () => {
                     </li>
                   </ul>
                 </div>
-               
+                {!loading && (
+                  <HandleCart
+                    product={product}
+                    btnStyle="shuffle-click hidden sm:flex py-2 px-3 bg-brand-blue hover:opacity-70 bg-blue-700 text-white text-xs font-semibold rounded"
+                    btnText="افزودن به سبد خرید"
+                  />
+                )}
               </div>
             </div>
             <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
