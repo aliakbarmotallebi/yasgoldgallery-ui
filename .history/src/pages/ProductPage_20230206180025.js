@@ -49,9 +49,16 @@ const ProductPage = () => {
                     <HandleCart
                       product={product}
                       btnIcon={
-                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2a6 6 0 0 1 6 6v1h4v2h-1.167l-.757 9.083a1 1 0 0 1-.996.917H4.92a1 1 0 0 1-.996-.917L3.166 11H2V9h4V8a6 6 0 0 1 6-6zm6.826 9H5.173l.667 8h12.319l.667-8zM13 13v4h-2v-4h2zm-4 0v4H7v-4h2zm8 0v4h-2v-4h2zm-5-9a4 4 0 0 0-3.995 3.8L8 8v1h8V8a4 4 0 0 0-3.8-3.995L12 4z"/></svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          className="fill-current w-5 h-5 ml-2"
+                        >
+                          <path fill="none" d="M0 0h24v24H0z" />
+                          <path d="M7 8V6a5 5 0 1 1 10 0v2h3a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h3zm0 2H5v10h14V10h-2v2h-2v-2H9v2H7v-2zm2-2h6V6a3 3 0 0 0-6 0v2z" />
+                        </svg>
                       }
-                      btnStyle="inline-flex items-center shuffle-click hidden sm:flex py-2 px-3 bg-brand-blue hover:opacity-70 bg-blue-700 text-white text-xs font-semibold rounded"
+                      btnStyle="shuffle-click hidden sm:flex py-2 px-3 bg-brand-blue hover:opacity-70 bg-blue-700 text-white text-xs font-semibold rounded"
                       btnText="افزودن به سبد خرید"
                     />
                   )}

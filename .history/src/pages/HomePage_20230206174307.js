@@ -42,25 +42,25 @@ const HomePage = () => {
           <div class="absolute bottom-0 left-0 w-full ">
             <div className="">
               <div className="flex justify-between mx-auto px-10 translate-y-56 max-w-4xl relative z-50">
-                <div className="text-center text-black">
+                <div className="text-center text-white">
                   <div className="w-20 h-20">
                     <img src={createdImage} alt="createdImage" />
                   </div>
                   <p className="mt-4 font-bold">دست ساز</p>
                 </div>
-                <div className="text-center text-black">
+                <div className="text-center text-white">
                   <div className="w-20 h-20">
                     <img src={guaranteeImage} alt="guaranteeImage" />
                   </div>
                   <p className="mt-4 font-bold">ضمانت اصالت</p>
                 </div>
-                <div className="text-center text-black">
+                <div className="text-center text-white">
                   <div className="w-20 h-20">
                     <img src={deliveryImage} alt="deliveryImage" />
                   </div>
                   <p className="mt-4 font-bold">ارسال سریع</p>
                 </div>
-                <div className="-translate-y-4 text-center text-black">
+                <div className="-translate-y-4 text-center text-white">
                   <div className="w-20 h-20">
                     <img src={boxImage} alt="boxImage" />
                   </div>

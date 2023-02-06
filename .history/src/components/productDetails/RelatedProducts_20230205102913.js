@@ -23,7 +23,7 @@ const RelatedProducts = ({ category: { id } }) => {
   return (
     <section className="py-10">
       <div className="text-center py-10">
-        <h2 className="text-4xl font-bold text-white">محصولات مرتبط</h2>
+        <h2 className="text-4xl font-bold text-neutral-800">محصولات مرتبط</h2>
       </div>
       {loading ? (
         <Spinner />
