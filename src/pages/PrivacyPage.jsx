@@ -211,15 +211,15 @@ const PrivacyPage = () => {
       "
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#collapseThree5"
+                data-bs-target="#collapseFour5"
                 aria-expanded="false"
-                aria-controls="collapseThree5"
+                aria-controls="collapseFour5"
               >
                 زمان تحویل و ارسال
               </button>
             </h2>
             <div
-              id="collapseThree5"
+              id="collapseFour5"
               class="accordion-collapse collapse"
               aria-labelledby="headingThree5"
             >

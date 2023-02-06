@@ -1,8 +1,8 @@
+import { AlertStore } from "components/shared/alert/AlertProvider";
+import { useContext } from "react";
 import { useEffect, useState } from "react";
 import checkLoginUser from "../../helper/checkLoginUser";
 import { addComment, comments } from "../../services/comment";
-import alert from "../shared/alert/Alert";
-import Alert from "../shared/alert/Alert";
 import Spinner from "../shared/Spinner";
 
 const ProductComments = ({ productId }) => {
@@ -10,6 +10,7 @@ const ProductComments = ({ productId }) => {
   const [newComment, setNewComment] = useState("");
   const [loading, setLoading] = useState(true);
   const [loadSendComment, setLoadSendComment] = useState(false);
+  const { setShowAlert } = useContext(AlertStore);
 
   useEffect(() => {
     const getComments = async () => {
@@ -26,19 +27,23 @@ const ProductComments = ({ productId }) => {
         setLoadSendComment(true);
         const response = await addComment(productId, newComment);
         if (response?.status) {
-          alert({
+          setNewComment("");
+          setShowAlert({
+            show: true,
             text: "کامنت با موفقیت افزوده شد . پس از تایید نمایش داده خواهد شد",
             status: "success",
           });
         } else {
-          alert({
+          setShowAlert({
+            show: true,
             text: "ارسال کامنت ناموفق بود",
             status: "error",
           });
         }
       }
     } else {
-      alert({
+      setShowAlert({
+        show: true,
         text: "لطفا ابتدا وارد حساب کاربری خود شوید",
         status: "info",
       });
@@ -125,10 +130,6 @@ const ProductComments = ({ productId }) => {
           ))}
         </section>
       )}
-      {/* <Alert
-        text="کامنت با موفقیت ارسال شد . پس از تایید نمایش داده خواهد شد"
-        status="success"
-      /> */}
     </>
   );
 };

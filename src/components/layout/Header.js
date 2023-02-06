@@ -1,11 +1,12 @@
 import React, { useContext, useState, memo, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { CartStore } from "context/CartContext";
 import checkLoginUser from "helper/checkLoginUser";
 import { removeDataLS } from "helper/handlerLS";
 import Modal from "components/shared/Modal";
 import Login from "components/shared/Login";
 import { UserStore } from "context/UserContext";
+import ContactUs from "components/shared/ContactUs";
 import { categories } from "services/products";
 import Dropdown from "components/shared/Dropdown";
 
@@ -13,7 +14,9 @@ const Header = () => {
   const [showModal, setShowModal] = useState(false);
   const [contactUsModal, setContactUsModal] = useState(false);
   const { user, setUser } = useContext(UserStore);
+  const [showHumburgerMenu, setShowHumburgerMenu] = useState(false);
   const [allCategories, setAllCategories] = useState([]);
+  const { pathname } = useLocation();
   const [dropdown, setDropdown] = useState({
     category: false,
   });
@@ -21,6 +24,13 @@ const Header = () => {
   const {
     state: { cart },
   } = useContext(CartStore);
+  useEffect(() => {
+    const getCategories = async () => {
+      const res = await categories();
+      if (res.status) setAllCategories(res.data);
+    };
+    getCategories();
+  }, []);
 
   const openModal = () => {
     setShowModal((prev) => !prev);
@@ -30,79 +40,106 @@ const Header = () => {
     removeDataLS("user");
     setUser(undefined);
   };
-
-  useEffect(() => {
-    const getCategories = async () => {
-      const res = await categories(5);
-      if (res.status) setAllCategories(res.data);
-    };
-    getCategories();
-  }, []);
-
   const handlerCategoryDropdown = (e) => {
     e.stopPropagation();
     setDropdown({ ...dropdown, category: !dropdown.category });
   };
+  useEffect(() => {
+    setShowHumburgerMenu(false);
+  }, [pathname]);
+
+  const handleShowHumBurgerMenu = (e) => {
+    e.stopPropagation();
+    setShowHumburgerMenu(!showHumburgerMenu);
+  };
 
   return (
     <>
-      <div className="bg-neutral-900 w-full">
-        <header className="flex flex-none items-center h-16 bg-neutral-900 shadow-sm top-0 right-0 left-0 z-30">
-          <div className="flex justify-between container xl:max-w-6xl mx-auto">
-            <div className="flex items-center space-x-2 space-x-reverse">
-              <nav className="hidden lg:flex lg:items-center lg:space-x-2 text-sm lg:space-x-reverse">
-                <Link
+      <div className="bg-neutral-900 w-full fixed lg:relative z-10">
+        <header className="flex flex-none items-center h-16 bg-neutral-900 shadow-sm top-0 right-0 left-0 z-30 relative">
+          <div className="flex justify-between container xl:max-w-6xl mx-auto px-4 xl:px-0">
+            <div className="flex items-center space-x-2 space-x-reverse ">
+              <button
+                onClick={handleShowHumBurgerMenu}
+                className="lg:hidden humburger-menu-icon relative w-8 h-5 "
+              >
+                <span
+                  className={`transition-all absolute left-0 duration-500  w-full h-[3px] bg-white ${
+                    showHumburgerMenu ? " top-1/2 rotate-45" : "top-0"
+                  } `}
+                ></span>
+                <span
+                  className={`transition-all absolute left-0 duration-500 top-1/2 w-full h-[3px] bg-white ${
+                    showHumburgerMenu ? "opacity-0" : "opacity-100"
+                  }`}
+                ></span>
+                <span
+                  className={`transition-all absolute left-0 duration-500  w-full h-[3px] bg-white ${
+                    showHumburgerMenu ? "top-1/2 -rotate-45" : "top-full"
+                  } `}
+                ></span>
+              </button>
+              <nav
+                className={`absolute top-16 transition-all duration-500 overflow-scroll lg:overflow-visible right-0 bg-neutral-900 w-screen !mr-0 lg:transition-none lg:w-fit lg:bg-transparent lg:top-0 lg:relative lg:flex lg:items-center lg:space-x-2 text-sm lg:space-x-reverse ${
+                  showHumburgerMenu ? "h-screen p-4 pb-20" : "h-0 lg:h-auto "
+                }`}
+              >
+                <NavLink
                   to="/"
-                  className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800 hover:text-neutral-300 hover:bg-neutral-800"
+                      : "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                  }
                 >
                   صفحه اصلی
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/about"
-                  className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800 hover:text-neutral-300 hover:bg-neutral-800"
+                      : "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                  }
                 >
                   درباره ما
-                </Link>
-                <Link
+                </NavLink>
+                <button
                   type="button"
                   onClick={() => setContactUsModal(!contactUsModal)}
                   className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
                 >
                   تماس با ما
-                </Link>
-                <Link
-                  to="/products"
-                  className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
-                >
-                  محصولات
-                </Link>
+                </button>
                 <button
                   onClick={handlerCategoryDropdown}
                   type="button"
-                  className="relative dropdown-btn text-sm font-medium inline-flex justify-center items-center space-x-2 space-x-reverse px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800 shadow-none outline-none ring-none"
+                  className="relative dropdown-btn text-sm font-medium w-full lg:w-fit inline-flex flex-col justify-center items-start space-x-2 space-x-reverse px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800 shadow-none outline-none ring-none"
                   data-dropdown="dropdown"
                 >
-                  <span>دسته بندی</span>
-                  <svg
-                    className="hi-solid hi-chevron-down inline-block w-4 h-4 opacity-50"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
+                  <div className={dropdown.category ? "mb-2 lg:mb-0" : ""}>
+                    <span>دسته بندی</span>
+                    <svg
+                      className="hi-solid hi-chevron-down inline-block w-4 h-4 opacity-50"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
                   {dropdown.category && (
                     <Dropdown dropdown={dropdown} setDropdown={setDropdown}>
-                      <ul className="py-1 text-sm text-gray-700">
+                      <ul className="py-1 text-sm text-white text-right lg:text-center lg:text-gray-700 overflow-hidden p-0">
                         {allCategories.map((category) => (
                           <li key={category.id}>
                             <Link
                               to={`/products/category/${category.id}/${category.slug}`}
-                              className="block px-4 py-2 hover:bg-gray-100"
+                              className="block px-2 lg:px-4 py-2 hover:bg-neutral-900 lg:hover:bg-gray-100"
                             >
                               {category.name}
                             </Link>
@@ -111,14 +148,25 @@ const Header = () => {
                       </ul>
                     </Dropdown>
                   )}
-
-                  {/* <div
-                    id="dropdown"
-                    className="absolute z-30 bg-white divide-y divide-gray-100 rounded shadow w-44 top-[40px] right-0"
-                  >
-                    
-                  </div> */}
                 </button>
+                <NavLink
+                  to="/products"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800 hover:text-neutral-300 hover:bg-neutral-800"
+                      : "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                  }
+                >
+                  شرایط اقساط
+                </NavLink>
+                {checkLoginUser() && (
+                  <button
+                    onClick={userLogout}
+                    className="block md:hidden text-xs text-rose-500 space-x-2 px-3 py-2"
+                  >
+                    خروج از حساب کاربری
+                  </button>
+                )}
               </nav>
             </div>
 
@@ -127,20 +175,22 @@ const Header = () => {
                 {checkLoginUser() ? (
                   <div className="flex items-center space-x-2 space-x-reverse">
                     <div className="relative  w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
-                      <svg
-                        className="absolute w-12 h-12 text-gray-400 -left-1"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                          clip-rule="evenodd"
-                        ></path>
-                      </svg>
+                      <Link to="profile">
+                        <svg
+                          className="absolute w-12 h-12 text-gray-400 -left-1"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </Link>
                     </div>
-                    <div>
+                    <div className="hidden md:block">
                       <div>
                         <Link
                           to="profile"
@@ -165,7 +215,7 @@ const Header = () => {
                 ) : (
                   <button
                     onClick={openModal}
-                    className=" inline-flex rounded-lg bg-blue-800 text-white px-3 py-2"
+                    className="text-xs sm:text-base inline-flex rounded-lg bg-blue-800 text-white px-3 py-2"
                   >
                     ورود به حساب کاربری
                   </button>
@@ -186,135 +236,10 @@ const Header = () => {
                   setShowModal={setContactUsModal}
                   className="bg-stone-900"
                 >
-                  <div className="text-white text-center">
-                    <h2 className="text-2xl mb-4">تماس با ما</h2>
-                    <p className="text-white/60">
-                      پیشنهادات خود را با ما درمیان بگذارید
-                    </p>
-                  </div>
-                  <div class="block p-6 rounded-lg shadow-lg bg-transparent max-w-[550px]  text-left">
-                    <form className="w-[80%] mx-auto">
-                      <div class="form-group mb-6">
-                        <input
-                          type="text"
-                          class="form-control block
-                                w-full
-                                px-3
-                                py-1.5
-                                text-base
-                                font-normal
-                                text-gray-700
-                                bg-black bg-clip-padding
-                                border border-solid border-yellow-200
-                                rounded-lg
-                                transition
-                                ease-in-out
-                                m-0
-                                focus:text-gray-700 placeholder:text-xs placeholder:text-gray-700 focus:shadow-none focus:border-yellow-700 focus:outline-none"
-                          id="name"
-                          placeholder="نام شما"
-                        />
-                      </div>
-                      <div class="grid grid-cols-2 gap-4">
-                        <div class="form-group mb-6">
-                          <input
-                            type="text"
-                            class="form-control block
-                            w-full
-                            px-3
-                            py-1.5
-                            text-base
-                            font-normal
-                            text-gray-700
-                            bg-black bg-clip-padding
-                            border border-solid border-yellow-200
-                            rounded-lg
-                            transition
-                            ease-in-out
-                            m-0
-                            focus:text-gray-700 placeholder:text-xs placeholder:text-gray-700 focus:shadow-none focus:border-yellow-700 focus:outline-none"
-                            id="email"
-                            aria-describedby="email"
-                            placeholder="ایمیل"
-                          />
-                        </div>
-                        <div class="form-group mb-6">
-                          <input
-                            type="text"
-                            class="form-control block
-                            w-full
-                            px-3
-                            py-1.5
-                            text-base
-                            font-normal
-                            text-gray-700
-                            bg-black bg-clip-padding
-                            border border-solid border-yellow-200
-                            rounded-lg
-                            transition
-                            ease-in-out
-                            m-0
-                            focus:text-gray-700 placeholder:text-xs placeholder:text-gray-700 focus:shadow-none focus:border-yellow-700 focus:outline-none"
-                            id="phone"
-                            aria-describedby="phone"
-                            placeholder="تلفن تماس"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="form-group mb-6">
-                        <textarea
-                          type="text"
-                          rows={4}
-                          class="form-control block
-                          w-full
-                          px-3
-                          py-1.5
-                          text-base
-                          font-normal
-                          text-gray-700
-                          bg-black bg-clip-padding
-                          border border-solid border-yellow-200
-                          rounded-lg
-                          transition
-                          ease-in-out
-                          m-0
-                          focus:text-gray-700 placeholder:text-xs placeholder:text-gray-700 focus:shadow-none focus:border-yellow-700 focus:outline-none"
-                          id="message"
-                          placeholder="متن پیام"
-                        ></textarea>
-                      </div>
-                    </form>
-                    <div className="">
-                      <button
-                        type="button"
-                        class="
-                            w-fit
-                            px-6
-                            py-2.5
-                            bg-blue-600
-                            text-white
-                            font-medium
-                            text-xs
-                            leading-tight
-                            uppercase
-                            rounded-lg
-                            shadow-md
-                            bg-lime-700
-                            hover:bg-lime-800 hover:shadow-lg
-                            focus:bg-lime-800 focus:shadow-lg focus:outline-none focus:ring-0
-                            active:bg-lime-700 active:shadow-lg
-                            transition
-                            duration-150
-                            ease-in-out"
-                      >
-                        ارسال پیام
-                      </button>
-                    </div>
-                  </div>
+                  <ContactUs />
                 </Modal>
               </div>
-              <div className="relative inline-block mr-8">
+              <div className="relative inline-block mr-4 md:mr-8">
                 <Link
                   to="/cart"
                   className="block relative py-2 rounded px-2 hover:bg-white/20 transition duration-200 text-white"

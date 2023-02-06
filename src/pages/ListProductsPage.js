@@ -66,7 +66,7 @@ const ListProductsPage = () => {
                   <Link
                     className={`flex-1 my-1 text-sm ${
                       item.id == (categoryId || tagId) ? "bg-gray-100" : ""
-                    } rounded-sm hover:bg-gray-100 transition-all duration-300 p-3`}
+                    } rounded-sm hover:bg-gray-100 transition-all duration-300 p-3 text-black`}
                     to={`/products/${tagId ? "tag" : "category"}/${item.id}/${
                       item.slug
                     }`}
