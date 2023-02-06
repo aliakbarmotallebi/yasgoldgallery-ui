@@ -37,7 +37,7 @@ const Footer = () => {
                     <div class="grid grid-cols-1 p-4 gap-8 sm:gap-6 sm:grid-cols-3 container mx-auto py-12">
                         <div class="mb-6 md:mb-0">
                             <a href="/" class="flex items-center">
-                                <img src={Logo} class="h-12 ml-3" alt="Logo" />
+                                <img src="{{ Logo }}" class="h-8 ml-3" alt="Logo" />
                                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                                     فروشگاه یاس
                                 </span>

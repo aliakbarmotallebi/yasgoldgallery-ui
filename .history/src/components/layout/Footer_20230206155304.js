@@ -1,4 +1,4 @@
-import Logo from '../../assets/images/logo/logo.png';
+import Logo from 'assets/logo/logo.png';
 
 const Footer = () => {
     const map = '<iframe src="https://balad.ir/embed?p=5359vQlqjxeM3d" title="مشاهده «خودپرداز بانک سپه» روی نقشه بلد" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
@@ -37,7 +37,7 @@ const Footer = () => {
                     <div class="grid grid-cols-1 p-4 gap-8 sm:gap-6 sm:grid-cols-3 container mx-auto py-12">
                         <div class="mb-6 md:mb-0">
                             <a href="/" class="flex items-center">
-                                <img src={Logo} class="h-12 ml-3" alt="Logo" />
+                                <img src="{{ Logo }}" class="h-8 ml-3" alt="Logo" />
                                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                                     فروشگاه یاس
                                 </span>
