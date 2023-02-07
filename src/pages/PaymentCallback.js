@@ -29,7 +29,7 @@ const PaymentCallback = () => {
     <LoadableLoading />
   ) : (
     <div class="max-w-3xl w-full shadow bg-white rounded-lg border mb-4 mt-10 mx-auto">
-      <div class="flex flex-col justify-center items-center my-10">
+      <div class="flex flex-col justify-center items-center m-4 sm:m-10">
         <h1
           className={`mb-6 font-bold text-3xl ${
             payment?.status === "STATUS_PAID"
@@ -79,11 +79,14 @@ const PaymentCallback = () => {
             </svg>
           )}
         </div>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto w-full">
           <table className="mt-5 table-auto overflow-scroll w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <tbody className="divide-y">
               <tr className="print:mt-4 hover:bg-gray-100">
-                <th scope="col" className="text-right font-semibold px-6 py-3">
+                <th
+                  scope="col"
+                  className="text-right font-semibold px-6 py-3 sticky right-0 bg-white"
+                >
                   شماره رهگیری
                 </th>
                 <th
@@ -94,7 +97,10 @@ const PaymentCallback = () => {
                 </th>
               </tr>
               <tr className="print:mt-4 hover:bg-gray-100">
-                <th scope="col" className="text-right font-semibold px-6 py-3">
+                <th
+                  scope="col"
+                  className="text-right font-semibold px-6 py-3 sticky right-0 bg-white"
+                >
                   تراکنش
                 </th>
                 <th scope="col" className="text-left font-semibold px-6 py-3">
@@ -102,7 +108,10 @@ const PaymentCallback = () => {
                 </th>
               </tr>
               <tr className="print:mt-4 hover:bg-gray-100">
-                <th scope="col" className="text-right font-semibold px-6 py-3">
+                <th
+                  scope="col"
+                  className="text-right font-semibold px-6 py-3 sticky right-0 bg-white"
+                >
                   مبلغ پرداختی
                 </th>
                 <th scope="col" className="text-left font-semibold px-6 py-3">
@@ -110,7 +119,10 @@ const PaymentCallback = () => {
                 </th>
               </tr>
               <tr className="print:mt-4 hover:bg-gray-100">
-                <th scope="col" className="text-right font-semibold px-6 py-3">
+                <th
+                  scope="col"
+                  className="text-right font-semibold px-6 py-3 sticky right-0 bg-white"
+                >
                   تاریخ تراکنش
                 </th>
                 <th scope="col" className="text-left font-semibold px-6 py-3">
