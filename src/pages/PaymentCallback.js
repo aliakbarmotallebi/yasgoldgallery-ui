@@ -16,7 +16,7 @@ const PaymentCallback = () => {
   const { dispatch } = useContext(CartStore);
 
   useEffect(() => {
-    dispatch(clearCart());
+    // dispatch(clearCart());
     const getCheckPayment = async () => {
       setLoading(true);
       const response = await checkPayment(searchParams.get("resnumber"));
@@ -79,45 +79,47 @@ const PaymentCallback = () => {
             </svg>
           )}
         </div>
-        <table className="mt-5 w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <tbody className="divide-y">
-            <tr className="print:mt-4 hover:bg-gray-100">
-              <th scope="col" className="text-right font-semibold px-6 py-3">
-                شماره رهگیری
-              </th>
-              <th
-                scope="col"
-                className="text-left font-semibold text-blue-500 px-6 py-3"
-              >
-                {payment?.resnumber}
-              </th>
-            </tr>
-            <tr className="print:mt-4 hover:bg-gray-100">
-              <th scope="col" className="text-right font-semibold px-6 py-3">
-                تراکنش
-              </th>
-              <th scope="col" className="text-left font-semibold px-6 py-3">
-                {payment?.result}
-              </th>
-            </tr>
-            <tr className="print:mt-4 hover:bg-gray-100">
-              <th scope="col" className="text-right font-semibold px-6 py-3">
-                مبلغ پرداختی
-              </th>
-              <th scope="col" className="text-left font-semibold px-6 py-3">
-                {Number(payment?.amount).toLocaleString()}
-              </th>
-            </tr>
-            <tr className="print:mt-4 hover:bg-gray-100">
-              <th scope="col" className="text-right font-semibold px-6 py-3">
-                تاریخ تراکنش
-              </th>
-              <th scope="col" className="text-left font-semibold px-6 py-3">
-                {payment?.created_at}
-              </th>
-            </tr>
-          </tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="mt-5 table-auto overflow-scroll w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <tbody className="divide-y">
+              <tr className="print:mt-4 hover:bg-gray-100">
+                <th scope="col" className="text-right font-semibold px-6 py-3">
+                  شماره رهگیری
+                </th>
+                <th
+                  scope="col"
+                  className="text-left font-semibold text-blue-500 px-6 py-3"
+                >
+                  000000000000000000000000000001040831
+                </th>
+              </tr>
+              <tr className="print:mt-4 hover:bg-gray-100">
+                <th scope="col" className="text-right font-semibold px-6 py-3">
+                  تراکنش
+                </th>
+                <th scope="col" className="text-left font-semibold px-6 py-3">
+                  {payment?.result}
+                </th>
+              </tr>
+              <tr className="print:mt-4 hover:bg-gray-100">
+                <th scope="col" className="text-right font-semibold px-6 py-3">
+                  مبلغ پرداختی
+                </th>
+                <th scope="col" className="text-left font-semibold px-6 py-3">
+                  {Number(payment?.amount).toLocaleString()}
+                </th>
+              </tr>
+              <tr className="print:mt-4 hover:bg-gray-100">
+                <th scope="col" className="text-right font-semibold px-6 py-3">
+                  تاریخ تراکنش
+                </th>
+                <th scope="col" className="text-left font-semibold px-6 py-3">
+                  {payment?.created_at}
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <Link
           to="/"
           className="btn-primary bg-blue-700 text-white p-2 mt-8 rounded-md hover:bg-blue-800"

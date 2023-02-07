@@ -42,7 +42,7 @@ const OrderSummary = ({ cart }) => {
     <>
       <div
         id="summary"
-        class="text-black sticky top-2 border-r border-gray-50 grow rounded-lg overflow-hidden"
+        class="col-span-1 text-black sticky top-2 border-r border-gray-50 grow rounded-lg overflow-hidden"
       >
         <h1 class="font-semibold text-lg border-b border-gray-50 bg-gray-50/50 px-4 py-5">
           خلاصه فاکتور
@@ -107,7 +107,7 @@ const OrderSummary = ({ cart }) => {
         </div>
       </div>
       <Modal showModal={showModal} setShowModal={setShowModal}>
-        <div>
+        <div className="max-w-4xl w-full shadow px-6 py-6 bg-white rounded-lg border">
           <OrderDetails orderDetails={orderDetails} />
           <button
             onClick={handleCreatePayment}

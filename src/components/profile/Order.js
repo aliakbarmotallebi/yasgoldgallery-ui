@@ -21,7 +21,7 @@ const Order = ({ id, items_count, total, is_paid, created_at }) => {
   };
   return (
     <>
-      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 last:border-b-0">
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 last:border-b-0 whitespace-nowrap">
         <th class="w-[20px] text-right px-2 py-1 font-medium text-gray-900 dark:text-white whitespace-nowrap">
           <p className="w-full h-full text-center">{id}</p>
         </th>

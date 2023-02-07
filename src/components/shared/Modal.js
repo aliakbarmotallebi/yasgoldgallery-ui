@@ -1,11 +1,11 @@
+import { lockScroll, unlockScroll } from "helper/controlerScrollbar";
 import React, { useEffect, useCallback } from "react";
 
-const Modal = ({ showModal, setShowModal, children, className = "" }) => {
+const Modal = ({ showModal, setShowModal, children }) => {
   const keyPress = useCallback(
     (e) => {
       if (e.key === "Escape" && showModal) {
         setShowModal(false);
-        console.log("I pressed");
       }
     },
     [setShowModal, showModal]
@@ -20,16 +20,22 @@ const Modal = ({ showModal, setShowModal, children, className = "" }) => {
     return () => document.removeEventListener("keydown", keyPress);
   }, [keyPress]);
 
+  useEffect(() => {
+    showModal ? lockScroll() : unlockScroll();
+  }, [showModal]);
+
   return (
     <>
       {showModal ? (
         <div
-          id="modal"
           onClick={(e) => clickedOnModal(e)}
-          className="fixed flex items-center justify-center top-0 left-0 right-0 z-[100] w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full bg-black/90"
+          className="fixed flex items-center justify-center top-0 left-0 right-0 z-[100] w-full overflow-x-hidden overflow-y-auto md:inset-0 h-modal h-full bg-black/90"
         >
-          <div className="flex justify-center items-center w-full">
-                {children}
+          <div
+            id="modal"
+            className="flex justify-center items-center w-full h-full"
+          >
+            {children}
           </div>
         </div>
       ) : null}

@@ -19,12 +19,12 @@ const ProductInCart = ({ product }) => {
   const handleIncrease = () => dispatch(increaseProduct(product));
   const handleDecrease = () => dispatch(decreaseProduct(product));
   return (
-    <div class="flex items-center  hover:bg-gray-100 px-6 py-5">
-      <div class="flex w-2/5 gap-2">
+    <tr>
+      <td className="flex gap-2 px-6 py-5">
         <div class="w-20">
           <img class="h-24 rounded-lg" src={coverImage} alt={title} />
         </div>
-        <div class="flex flex-col justify-between ml-4 flex-grow">
+        <div class="flex flex-col justify-between ml-4">
           <span class="font-bold text-sm">{title}</span>
           <span class="text-red-500 text-xs">{name}</span>
           <button
@@ -47,27 +47,29 @@ const ProductInCart = ({ product }) => {
             </svg>
           </button>
         </div>
-      </div>
-      <div class="flex justify-center w-1/5">
-        <button onClick={handleIncrease}>
-          <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
-            <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
-          </svg>
-        </button>
-        <div className="mx-2 border text-center w-8">{qty}</div>
-        <button onClick={qty < 2 ? handleRemove : handleDecrease}>
-          <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
-            <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
-          </svg>
-        </button>
-      </div>
-      <span class="text-center w-1/5 font-semibold text-sm">
+      </td>
+      <td className="px-6 py-5">
+        <div className="flex">
+          <button onClick={handleIncrease}>
+            <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
+              <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+            </svg>
+          </button>
+          <div className="mx-2 border text-center w-8">{qty}</div>
+          <button onClick={qty < 2 ? handleRemove : handleDecrease}>
+            <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
+              <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+            </svg>
+          </button>
+        </div>
+      </td>
+      <td className="text-center font-semibold text-sm px-6 py-5">
         {Number(price).toLocaleString()} تومان
-      </span>
-      <span class="text-center w-1/5 font-semibold text-sm">
+      </td>
+      <td className="text-center font-semibold text-sm px-6 py-5">
         {(Number(price) * qty).toLocaleString()} تومان
-      </span>
-    </div>
+      </td>
+    </tr>
   );
 };
 

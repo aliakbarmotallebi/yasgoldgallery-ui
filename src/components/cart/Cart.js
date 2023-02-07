@@ -8,7 +8,7 @@ const Cart = () => {
     state: { cart },
   } = useContext(CartStore);
   return (
-    <div class="overflow-hidden">
+    <div class="col-span-1 lg:col-span-2 overflow-hidden">
       <div class="flex items-center justify-between border-b border-gray-50 px-4 py-5">
         <h1 class="font-semibold text-lg">سبد خرید شما</h1>
         <h2 class="font-semibold text-xs text-gray-800">
@@ -16,23 +16,43 @@ const Cart = () => {
           {cart.reduce((total, product) => total + product.qty, 0)}
         </h2>
       </div>
-      <div class="flex mt-10 mb-5 px-10">
-        <h3 class="font-semibold text-gray-600 text-xs uppercase w-2/5">
-          عنوان محصول
-        </h3>
-        <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">
-          تعداد سفارش
-        </h3>
-        <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">
-          قیمت واحد
-        </h3>
-        <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">
-          جمع کل
-        </h3>
+      <div className="overflow-auto">
+        <table className="table-auto overflow-scroll w-full text-sm text-left ">
+          <thead>
+            <tr>
+              <th
+                scope="col"
+                className="font-semibold text-gray-600 text-xs uppercase text-center"
+              >
+                عنوان محصول
+              </th>
+              <th
+                scope="col"
+                className="font-semibold text-gray-600 text-xs uppercase text-center"
+              >
+                تعداد سفارش
+              </th>
+              <th
+                scope="col"
+                className="font-semibold text-gray-600 text-xs uppercase text-center"
+              >
+                قیمت واحد
+              </th>
+              <th
+                scope="col"
+                className="font-semibold text-gray-600 text-xs uppercase text-center"
+              >
+                جمع کل
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {cart.map((product) => (
+              <ProductInCart key={product.id} product={product} />
+            ))}
+          </tbody>
+        </table>
       </div>
-      {cart.map((product) => (
-        <ProductInCart key={product.id} product={product} />
-      ))}
       <Link
         to="/products"
         class="flex font-semibold text-indigo-600 text-sm mt-10 mb-4 mr-10"
