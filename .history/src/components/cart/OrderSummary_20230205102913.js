@@ -107,18 +107,16 @@ const OrderSummary = ({ cart }) => {
         </div>
       </div>
       <Modal showModal={showModal} setShowModal={setShowModal}>
-        <div>
-          <OrderDetails orderDetails={orderDetails} />
-          <button
-            onClick={handleCreatePayment}
-            className="bg-indigo-500 flex justify-center items-center font-semibold block text-center hover:bg-indigo-600 py-3 text-sm text-white rounded-lg uppercase w-full"
-          >
-            {paymentLoading && (
-              <Spinner classNameBox="w-fit ml-4" classNameSvg="!w-4" />
-            )}
-            پرداخت
-          </button>
-        </div>
+        <OrderDetails orderDetails={orderDetails} />
+        <button
+          onClick={handleCreatePayment}
+          className="bg-indigo-500 flex justify-center items-center font-semibold block text-center hover:bg-indigo-600 py-3 text-sm text-white rounded-lg uppercase w-full"
+        >
+          {paymentLoading && (
+            <Spinner classNameBox="w-fit ml-4" classNameSvg="!w-4" />
+          )}
+          پرداخت
+        </button>
       </Modal>
     </>
   );

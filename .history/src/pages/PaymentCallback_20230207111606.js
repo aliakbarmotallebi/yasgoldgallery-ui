@@ -79,7 +79,7 @@ const PaymentCallback = () => {
             </svg>
           )}
         </div>
-        <table className="mt-5 w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <table className="mt-5 w-1/2 text-sm text-left text-gray-500 dark:text-gray-400">
           <tbody className="divide-y">
             <tr className="print:mt-4 hover:bg-gray-100">
               <th scope="col" className="text-right font-semibold px-6 py-3">

@@ -2,7 +2,7 @@ import React from "react";
 
 const Payment = ({ resnumber, amount, order_id, status, created_at }) => {
   return (
-    <tr class="bg-white">
+    <tr class="bg-white ">
       <td class="text-right px-2 py-1 font-medium text-blue-400 whitespace-nowrap">
         {resnumber}
       </td>
