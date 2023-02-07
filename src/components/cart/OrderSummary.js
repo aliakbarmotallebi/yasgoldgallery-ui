@@ -19,8 +19,6 @@ const OrderSummary = ({ cart }) => {
   const [paymentLoading, setPaymentLoading] = useState(false);
   const [orderDetails, setOrderDetails] = useState({});
 
-  console.log(order);
-
   const handleCreateOrder = async () => {
     setLoading(true);
     const response = await createOrder(order);

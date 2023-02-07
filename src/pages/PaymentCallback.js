@@ -16,12 +16,13 @@ const PaymentCallback = () => {
   const { dispatch } = useContext(CartStore);
 
   useEffect(() => {
-    // dispatch(clearCart());
+    dispatch(clearCart());
     const getCheckPayment = async () => {
       setLoading(true);
       const response = await checkPayment(searchParams.get("resnumber"));
       if (response?.status) setPayment(response.data);
       setLoading(false);
+      console.log(response);
     };
     getCheckPayment();
   }, []);
@@ -93,7 +94,7 @@ const PaymentCallback = () => {
                   scope="col"
                   className="text-left font-semibold text-blue-500 px-6 py-3"
                 >
-                  000000000000000000000000000001040831
+                  {payment?.resnumber}
                 </th>
               </tr>
               <tr className="print:mt-4 hover:bg-gray-100">
