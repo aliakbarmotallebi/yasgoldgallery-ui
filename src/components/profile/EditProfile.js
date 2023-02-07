@@ -27,15 +27,15 @@ const EditProfile = ({ usename }) => {
       class="flex flex-col justify-between tab-pane show active fade"
       id="edit-profile"
     >
-      <div class="max-w-sm w-full lg:max-w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
+      <div class=" w-full max-w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
         <form>
-          <div class="flex items-center justify-between mb-4 pb-4 border-b">
-            <div class="text-left">
+          <div class="flex flex-col sm:flex-row items-center justify-between mb-4 pb-4 border-b">
+            <div class="sm:text-left mb-4 sm:mb-0">
               <h2 class="font-semibold text-gray-900">
                 ویرایش اطلاعات پروفایل
               </h2>
             </div>
-            <div class="text-right">
+            <div class="sm:text-right w-full sm:w-fit">
               <button
                 type="button"
                 onClick={handlEditProfile}
@@ -44,7 +44,7 @@ const EditProfile = ({ usename }) => {
                     ? false
                     : true
                 }
-                class="bg-blue-600 flex items-center hover:bg-blue-700 text-white disabled:bg-gray-300 text-xs py-1.5 px-4 rounded focus:shadow-outline shadow"
+                class="bg-blue-600 w-full sm:w-fit flex items-center hover:bg-blue-700 text-white disabled:bg-gray-300 text-xs py-1.5 px-4 rounded focus:shadow-outline shadow"
               >
                 {loading && <Spinner classNameBox="w-6 ml-2" />}
                 <span>ویرایش تغییرات</span>
@@ -52,7 +52,7 @@ const EditProfile = ({ usename }) => {
             </div>
           </div>
           <div class=" flex justify-center">
-            <div class="w-1/2">
+            <div class="w-full md:w-1/2">
               <div class="mb-6">
                 <label
                   for="username"
