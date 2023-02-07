@@ -43,7 +43,7 @@ const SuggestedProducts = ({ suggested: suggestedProducts }) => {
                 delay: 2500,
                 disableOnInteraction: false,
               }}
-              className="col-span-4"
+              className="col-span-4 !p-4"
             >
               {suggestedProducts?.map((product) => (
                 <SwiperSlide key={product.productId}>

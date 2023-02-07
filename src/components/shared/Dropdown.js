@@ -12,7 +12,7 @@ const Dropdown = ({ dropdown, setDropdown, children }) => {
   return (
     <div
       id="dropdown"
-      className={`lg:absolute z-30 w-full lg:w-44 !mr-0 bg-transparent lg:bg-white divide-y divide-gray-100 rounded lg:shadow  top-[40px] right-0`}
+      className={`lg:absolute z-30 w-full lg:w-60 !mr-0 bg-transparent lg:bg-white divide-y divide-gray-100 rounded lg:shadow  top-[40px] right-0`}
     >
       {children}
     </div>

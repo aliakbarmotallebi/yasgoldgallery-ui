@@ -28,8 +28,25 @@ const RelatedProducts = ({ category: { id } }) => {
       {loading ? (
         <Spinner />
       ) : (
-        <div className="grid grid-cols-5 gap-3 p-5 items-center">
+        <div className="items-center container xl:max-w-6xl mx-auto px-4 xl:px-0">
           <Swiper
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              640: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 3,
+              },
+              1024: {
+                slidesPerView: 4,
+              },
+              1280: {
+                slidesPerView: 5,
+              },
+            }}
             slidesPerView={5}
             spaceBetween={30}
             modules={[Autoplay]}
@@ -37,7 +54,7 @@ const RelatedProducts = ({ category: { id } }) => {
               delay: 2500,
               disableOnInteraction: false,
             }}
-            className="col-span-5"
+            className="col-span-5 !p-4"
           >
             {relatedProducts.map((product) => (
               <SwiperSlide key={product.productId}>

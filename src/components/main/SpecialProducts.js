@@ -43,7 +43,7 @@ const SpecialProducts = ({ speacial: speacialProducts }) => {
                 delay: 2500,
                 disableOnInteraction: false,
               }}
-              className="col-span-4"
+              className="col-span-4 !p-4"
             >
               {speacialProducts?.map((product) => (
                 <SwiperSlide key={product.productId}>
