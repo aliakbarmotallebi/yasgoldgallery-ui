@@ -10,7 +10,7 @@ const ContactUs = () => {
   });
   return (
     <>
-    <div className="max-w-xl w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
+    <div className="max-w-sm w-full lg:max-w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
       <div className="text-black text-center">
         <h2 className="text-2xl mb-4">تماس با ما</h2>
         <p className="text-black/60">پیشنهادات خود را با ما درمیان بگذارید</p>
@@ -28,7 +28,7 @@ const ContactUs = () => {
                                 font-normal
                                 text-gray-700
                                 
-                                border border-solid border-black
+                                border-2 border-solid border-yellow-600
                                 rounded-lg
                                 transition
                                 ease-in-out
@@ -54,7 +54,7 @@ const ContactUs = () => {
                             font-normal
                             text-gray-700
                             
-                            border border-solid border-black
+                            border-2 border-solid border-yellow-600
                             rounded-lg
                             transition
                             ease-in-out
@@ -80,7 +80,7 @@ const ContactUs = () => {
                             font-normal
                             text-gray-700
                             
-                            border border-solid border-black
+                            border-2 border-solid border-yellow-600
                             rounded-lg
                             transition
                             ease-in-out
@@ -109,7 +109,7 @@ const ContactUs = () => {
                           font-normal
                           text-gray-700
                           
-                          border border-solid border-black
+                          border-2 border-solid border-yellow-600
                           rounded-lg
                           transition
                           ease-in-out

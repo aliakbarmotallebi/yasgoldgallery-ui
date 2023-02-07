@@ -55,7 +55,7 @@ const Login = ({ setUser, openModal, setShowModal }) => {
 
   return (
     <>
-      <div className="max-w-lg w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
+      <div className="max-w-2xl shadow px-6 py-6 bg-white rounded-lg border mb-4">
         <div className="px-8 py-5 text-right text-gray-900 ">
           <div className="flex justify-center">
             <img src={Logo} class="h-12 mb-3" alt="Logo" />

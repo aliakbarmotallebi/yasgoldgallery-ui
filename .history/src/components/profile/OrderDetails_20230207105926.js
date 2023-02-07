@@ -13,7 +13,7 @@ const OrderDetails = ({ orderDetails }) => {
     products,
   } = orderDetails;
   return (
-    <div className="max-w-5xl w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
+    <div className="max-w-2xl w-full lg:max-w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
       <div className="flex flex-col justify-between">
         <div className="flex items-center justify-between pb-4">
           <div className="text-left">

@@ -10,12 +10,11 @@ const ContactUs = () => {
   });
   return (
     <>
-    <div className="max-w-xl w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
-      <div className="text-black text-center">
+      <div className="text-white text-center">
         <h2 className="text-2xl mb-4">تماس با ما</h2>
-        <p className="text-black/60">پیشنهادات خود را با ما درمیان بگذارید</p>
+        <p className="text-white/60">پیشنهادات خود را با ما درمیان بگذارید</p>
       </div>
-      <div class="p-6 text-left">
+      <div class="block p-6 rounded-lg shadow-lg bg-transparent max-w-[550px]  text-left">
         <form className="w-[80%] mx-auto">
           <div class="form-group mb-6">
             <input
@@ -27,8 +26,8 @@ const ContactUs = () => {
                                 text-base
                                 font-normal
                                 text-gray-700
-                                
-                                border border-solid border-black
+                                bg-black bg-clip-padding
+                                border border-solid border-yellow-200
                                 rounded-lg
                                 transition
                                 ease-in-out
@@ -53,8 +52,8 @@ const ContactUs = () => {
                             text-base
                             font-normal
                             text-gray-700
-                            
-                            border border-solid border-black
+                            bg-black bg-clip-padding
+                            border border-solid border-yellow-200
                             rounded-lg
                             transition
                             ease-in-out
@@ -79,8 +78,8 @@ const ContactUs = () => {
                             text-base
                             font-normal
                             text-gray-700
-                            
-                            border border-solid border-black
+                            bg-black bg-clip-padding
+                            border border-solid border-yellow-200
                             rounded-lg
                             transition
                             ease-in-out
@@ -108,8 +107,8 @@ const ContactUs = () => {
                           text-base
                           font-normal
                           text-gray-700
-                          
-                          border border-solid border-black
+                          bg-black bg-clip-padding
+                          border border-solid border-yellow-200
                           rounded-lg
                           transition
                           ease-in-out
@@ -150,7 +149,6 @@ const ContactUs = () => {
             ارسال پیام
           </button>
         </div>
-      </div>
       </div>
     </>
   );
