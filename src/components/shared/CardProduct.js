@@ -8,13 +8,16 @@ const CardProduct = ({ product }) => {
     price,
     slug,
     productId,
-    category: { name, id },
+    category: { name, id, slug: slugCategory },
   } = product;
   return (
     <div class="bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl w-full h-full border border-yellow-600">
       <div className="relative">
         <Link to={`/product/${productId}/${slug}`}>
-          <img src={coverImage} class="max-h-60 w-full object-cover rounded-t-xl" />
+          <img
+            src={coverImage}
+            class="max-h-60 w-full object-cover rounded-t-xl"
+          />
         </Link>
         <div className="absolute bottom-5 right-5">
           <HandleCart
@@ -34,10 +37,12 @@ const CardProduct = ({ product }) => {
           />
         </div>
       </div>
-      <div className="px-4 py-1 w-72">
-        <Link to={`/products/category/${id}/${name}`}>
+      <div className="px-4 py-1">
+        <Link to={`/products/category/${id}/${slugCategory}`}>
           <span class="inline-flex bg-blue-800 w-1 h-1 rounded-full"></span>
-          <span className="text-blue-800 mr-1 uppercase text-xs font-bold hover:underline">{name}</span>
+          <span className="text-blue-800 mr-1 uppercase text-xs font-bold hover:underline">
+            {name}
+          </span>
         </Link>
         <p className="text-lg my-2 font-bold text-black truncate block capitalize">
           <Link to={`/product/${productId}/${slug}`}>{title}</Link>
