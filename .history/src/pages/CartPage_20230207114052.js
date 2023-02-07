@@ -17,9 +17,11 @@ const CartPage = () => {
       {cart.length < 1 ? (
         <CartEmpty />
       ) : (
-        <div class="flex items-start mt-10 my-10 bg-white rounded-lg shadow-md text-black w-full max-w-4xl mx-auto">
+        <div class="mt-10 my-10 bg-white rounded-r-lg shadow-md text-black w-full max-w-7xl">
+          <div class="flex justify-center items-start">
             <Outlet />
             <OrderSummary cart={cart} />
+          </div>
         </div>
       )}
     </>

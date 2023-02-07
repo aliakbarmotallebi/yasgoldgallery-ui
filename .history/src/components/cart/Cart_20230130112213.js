@@ -8,8 +8,8 @@ const Cart = () => {
     state: { cart },
   } = useContext(CartStore);
   return (
-    <div class="overflow-hidden">
-      <div class="flex items-center justify-between border-b border-gray-50 px-4 py-5">
+    <div class="w-2/4 bg-white rounded-r-lg shadow-md  text-black overflow-hidden">
+      <div class="flex items-center justify-between border-b border-gray-50 bg-gray-50/50 px-4 py-5">
         <h1 class="font-semibold text-lg">سبد خرید شما</h1>
         <h2 class="font-semibold text-xs text-gray-800">
           <span className="ml-1">تعداد</span>

@@ -42,7 +42,7 @@ const OrderSummary = ({ cart }) => {
     <>
       <div
         id="summary"
-        class="text-black sticky top-2 border-r border-gray-50 grow rounded-lg overflow-hidden"
+        class="bg-white text-black rounded-l-lg sticky top-2 overflow-hidden border-r border-gray-50"
       >
         <h1 class="font-semibold text-lg border-b border-gray-50 bg-gray-50/50 px-4 py-5">
           خلاصه فاکتور
