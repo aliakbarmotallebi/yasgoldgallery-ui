@@ -6,7 +6,6 @@ import { login, sendVerifyCodeToPhoneNumber } from "services/account";
 import { AlertStore } from "./alert/AlertProvider";
 import Spinner from "./Spinner";
 import Timer from "./Timer";
-import Logo from "../../assets/images/logo/logo.png";
 
 const Login = ({ setUser, openModal, setShowModal }) => {
   const [verifyCode, setVerifyCode] = useState("");
@@ -57,14 +56,23 @@ const Login = ({ setUser, openModal, setShowModal }) => {
     <>
       <div className="px-8 py-5 text-right text-gray-900 md:w-[400px]">
         <div className="flex justify-center">
-          <img src={Logo} class="h-12 mb-3" alt="Logo" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-20 h-20 fill-blue-600"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path d="M10 11V8l5 4-5 4v-3H1v-2h9zm-7.542 4h2.124A8.003 8.003 0 0 0 20 12 8 8 0 0 0 4.582 9H2.458C3.732 4.943 7.522 2 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10c-4.478 0-8.268-2.943-9.542-7z" />
+          </svg>
         </div>
         <h3 className="text-2xl font-bold text-center">ورود به حساب کاربری</h3>
         <div className="mt-4">
           {clickedForGetVerifyCode ? (
             <div>
               <div className="px-5 py-7">
-                <label className="font-semibold text-sm text-gray-800 pb-1 block">
+                <label className="font-semibold text-sm text-gray-600 pb-1 block">
                   کد فعال سازی
                 </label>
                 <input
@@ -116,7 +124,7 @@ const Login = ({ setUser, openModal, setShowModal }) => {
             </div>
           ) : (
             <div className="px-5 py-7">
-              <label className="font-yekan-bold text-sm text-gray-800 pb-1 block">
+              <label className="font-yekan-bold text-sm text-gray-600 pb-1 block">
                 شماره تلفن همراه
               </label>
               <input

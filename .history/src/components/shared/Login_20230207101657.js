@@ -57,7 +57,7 @@ const Login = ({ setUser, openModal, setShowModal }) => {
     <>
       <div className="px-8 py-5 text-right text-gray-900 md:w-[400px]">
         <div className="flex justify-center">
-          <img src={Logo} class="h-12 mb-3" alt="Logo" />
+          <img src={Logo} class="h-12 ml-3" alt="Logo" />
         </div>
         <h3 className="text-2xl font-bold text-center">ورود به حساب کاربری</h3>
         <div className="mt-4">
