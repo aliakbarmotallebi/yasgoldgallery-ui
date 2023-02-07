@@ -31,17 +31,10 @@ const HomePage = () => {
     <>
       <div class="flex flex-col justify-center">
         <div class="relative h-screen overflow-hidden">
-          <img
-            class="hidden sm:block w-full h-full object-cover"
-            src={slideImage}
-          />
-          <img
-            class="sm:hidden w-full h-full object-cover"
-            src="https://picsum.photos/1920/400"
-          />
+          <img class="block w-full h-full object-cover" src={slideImage} />
           <div class="absolute bottom-0 left-0 w-full ">
-            <div className="">
-              <div className="flex justify-between mx-auto px-10 translate-y-56 max-w-4xl relative">
+            <div>
+              <div className="flex justify-between mx-auto px-10 translate-y-56 max-w-4xl relative hidden lg:flex">
                 <div className="text-center text-black">
                   <div className="w-20 h-20">
                     <img src={createdImage} alt="createdImage" />
