@@ -20,7 +20,7 @@ const OrderDetails = ({ orderDetails }) => {
             <h2 className="font-semibold text-gray-900">لیست سفارشات شما</h2>
           </div>
         </div>
-        <div className=" flex justify-center flex-col overflow-auto">
+        <div className=" flex justify-center flex-col overflow-hidden">
           <div className="print:mb-5 flex items-center justify-between">
             {is_paid ? (
               <>
@@ -63,7 +63,7 @@ const OrderDetails = ({ orderDetails }) => {
           </div>
 
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead className="text-xs text-gray-700 uppercase bg-gray-50 whitespace-nowrap  dark:bg-gray-700 dark:text-gray-400">
+            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
                 <th scope="col" className="text-center font-semibold px-6 py-3">
                   نام و نام خانوادگی
@@ -76,7 +76,7 @@ const OrderDetails = ({ orderDetails }) => {
                 </th>
               </tr>
             </thead>
-            <tbody className="whitespace-nowrap ">
+            <tbody>
               <tr className="bg-white print:border-y border-b hover:bg-gray-100">
                 <th className="text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                   {firstname} {lastname}
@@ -88,7 +88,7 @@ const OrderDetails = ({ orderDetails }) => {
           </table>
 
           <table className="mt-5 w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 whitespace-nowrap ">
+            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr className="print:mt-4">
                 <th scope="col" className="text-center font-semibold px-6 py-3">
                   نام محصول
@@ -106,7 +106,7 @@ const OrderDetails = ({ orderDetails }) => {
                 </th>
               </tr>
             </thead>
-            <tbody className="whitespace-nowrap">
+            <tbody>
               {products.map((product) => (
                 <tr
                   key={product.id}

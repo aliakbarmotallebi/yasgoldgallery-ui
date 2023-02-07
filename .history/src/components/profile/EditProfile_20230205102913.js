@@ -27,7 +27,7 @@ const EditProfile = ({ usename }) => {
       class="flex flex-col justify-between tab-pane show active fade"
       id="edit-profile"
     >
-      <div class="w-full lg:max-w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
+      <div class="max-w-sm w-full lg:max-w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
         <form>
           <div class="flex items-center justify-between mb-4 pb-4 border-b">
             <div class="text-left">

@@ -76,7 +76,7 @@ const OrderDetails = ({ orderDetails }) => {
                 </th>
               </tr>
             </thead>
-            <tbody className="whitespace-nowrap ">
+            <tbody>
               <tr className="bg-white print:border-y border-b hover:bg-gray-100">
                 <th className="text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                   {firstname} {lastname}

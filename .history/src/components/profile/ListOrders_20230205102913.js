@@ -22,13 +22,13 @@ const ListOrders = () => {
     <>
       {loading && <LoadableLoading />}
       <div class="flex flex-col justify-between tab-pane fade" id="list-orders">
-        <div class="w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
+        <div class="max-w-sm w-full lg:max-w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
           <div class="flex items-center justify-between pb-4">
             <div class="text-left">
               <h2 class="font-semibold text-gray-900">لیست سفارشات شما</h2>
             </div>
           </div>
-          <div class=" flex justify-center overflow-auto">
+          <div class=" flex justify-center">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr class="border border-gray-200">
