@@ -15,9 +15,8 @@ const AddressModal = ({
 }) => {
   return (
     <>
-    <div className="max-w-lg w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
       <h1 className="text-center font-bold border-b pb-4">{title}</h1>
-      <form className="pt-5">
+      <form className="w-[400px]">
         <div class="mb-6 col-span-2">
           <label
             for="username"
@@ -76,7 +75,6 @@ const AddressModal = ({
           </button>
         </div>
       </form>
-      </div>
     </>
   );
 };
