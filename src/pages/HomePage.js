@@ -36,44 +36,33 @@ const HomePage = () => {
       <div class="flex flex-col justify-center">
         <div class="relative h-screen overflow-hidden">
           <img class="block w-full h-full object-cover" src={slideImage} />
-          <div class="absolute bottom-0 left-0 w-full ">
-            <div>
-              <div className="flex justify-between mx-auto px-10 translate-y-56 max-w-4xl relative hidden lg:flex">
-                <div className="text-center text-black">
-                  <div className="w-20 h-20">
-                    <img src={createdImage} alt="createdImage" />
-                  </div>
-                  <p className="mt-4 font-bold">دست ساز</p>
+          <div class="absolute bottom-0 left-0 bg-white h-12 sm:h-20 lg:h-36 w-full ">
+            <div className="bg-white absolute z-[1] w-full -left-1/2 -top-1/2 h-1/2 translate-x-1/2 translate-y-1/2 rounded-[50%]"></div>
+            <div className="justify-evenly relative -top-1/2 hidden lg:flex container xl:max-w-6xl mx-auto">
+              <div className="flex flex-col flex-1 items-center  text-black font-bold justify-center z-[2] relative -top-1/3">
+                <div className="w-20 h-20">
+                  <img src={createdImage} alt="packing" />
                 </div>
-                <div className="text-center text-black">
-                  <div className="w-20 h-20">
-                    <img src={guaranteeImage} alt="guaranteeImage" />
-                  </div>
-                  <p className="mt-4 font-bold">ضمانت اصالت</p>
-                </div>
-                <div className="text-center text-black">
-                  <div className="w-20 h-20">
-                    <img src={deliveryImage} alt="deliveryImage" />
-                  </div>
-                  <p className="mt-4 font-bold">ارسال سریع</p>
-                </div>
-                <div className="-translate-y-4 text-center text-black">
-                  <div className="w-20 h-20">
-                    <img src={boxImage} alt="boxImage" />
-                  </div>
-                  <p className="mt-4 font-bold">بسته بندی ویژه</p>
-                </div>
+                <p className="mt-4 text-center font-bold">دست ساز</p>
               </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="fill-white bg-transparent w-full"
-                viewBox="0 0 1440 320"
-              >
-                <path
-                  fill-opacity="1"
-                  d="M0,128L48,133.3C96,139,192,149,288,154.7C384,160,480,160,576,160C672,160,768,160,864,154.7C960,149,1056,139,1152,149.3C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-                ></path>
-              </svg>
+              <div className="flex flex-col flex-1 items-center  text-black font-bold justify-center z-[2] relative -top-1/2">
+                <div className="w-20 h-20">
+                  <img src={guaranteeImage} alt="packing" />
+                </div>
+                <p className="mt-4 text-center font-bold">ضمانت اصالت</p>
+              </div>
+              <div className="flex flex-col flex-1 items-center  text-black font-bold justify-center z-[2] relative -top-1/2">
+                <div className="w-20 h-20">
+                  <img src={deliveryImage} alt="packing" />
+                </div>
+                <p className="mt-4 text-center font-bold">ارسال سریع</p>
+              </div>
+              <div className="flex flex-col flex-1 items-center  text-black font-bold justify-center z-[2] relative -top-1/3">
+                <div className="w-20 h-20">
+                  <img src={boxImage} alt="packing" />
+                </div>
+                <p className="mt-4 text-center font-bold">بسته بندی ویژه</p>
+              </div>
             </div>
           </div>
         </div>
@@ -89,34 +78,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-{
-  /* <div className="h-20 w-20">
-                <img
-                  className="w-full h-auto object-cover"
-                  src={packingImage}
-                  alt="packing"
-                />
-              </div>
-              <div className="h-20 w-20">
-                <img
-                  className="w-full h-auto object-cover"
-                  src={packingImage}
-                  alt="packing"
-                />
-              </div>
-              <div className="h-20 w-20">
-                <img
-                  className="w-full h-auto object-cover"
-                  src={packingImage}
-                  alt="packing"
-                />
-              </div>
-              <div className="h-20 w-20">
-                <img
-                  className="w-full h-auto object-cover"
-                  src={packingImage}
-                  alt="packing"
-                />
-              </div> */
-}

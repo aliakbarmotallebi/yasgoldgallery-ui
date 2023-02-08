@@ -7,7 +7,7 @@ const SpecialCategories = ({ specialCategories }) => {
   return (
     <section className="container mx-auto">
       <div class="w-full max-w-7xl px-4 mx-auto sm:px-8 my-20 ">
-        <header class="space-y-4 text-center py-10">
+        <header class="space-y-4 text-center pb-10">
           <h2 class="text-3xl flex flex-col sm:flex-row items-center justify-center font-bold tracking-tighter md:text-4xl font-display">
             <p>دسته بندی های ویژه</p>
             <span className="text-yellow-400 mr-2">یاس</span>
@@ -15,11 +15,11 @@ const SpecialCategories = ({ specialCategories }) => {
         </header>
         <div class="2xl:mx-auto 2xl:container py-12 px-4 sm:px-6 xl:px-20 2xl:px-0 w-full">
           <div class="flex flex-col jusitfy-center items-center space-y-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:grid-rows-3 xl:grid-cols-3 xl:grid-rows-2  gap-4 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:grid-rows-2 xl:grid-cols-3 xl:grid-rows-2  gap-4 w-full">
               {primary.slice(0, 1).map((category) => (
                 <div
                   key={category?.id}
-                  class="relative group flex justify-center lg:row-span-2 items-center w-full rounded-lg overflow-hidden"
+                  class="relative group flex justify-center xl:row-span-2 items-center w-full max-h-80 xl:max-h-fit rounded-lg overflow-hidden"
                 >
                   <img
                     class="object-center object-cover rounded-sm h-full w-full"
@@ -37,11 +37,11 @@ const SpecialCategories = ({ specialCategories }) => {
                 </div>
               ))}
 
-              <div class="flex flex-col md:flex-row xl:flex-col col-span-1 md:col-span-2 xl:col-span-1 xl:row-span-2 order-3 xl:order-2  gap-4">
+              <div class="flex flex-col md:flex-row xl:flex-col col-span-1 md:col-span-2 xl:col-span-1 xl:row-span-2 order-3 xl:order-2 xl:justify-between  gap-4">
                 {secondary.map((category) => (
                   <div
                     key={category?.id}
-                    class="relative group flex justify-center items-center max-h-56 w-full rounded-lg overflow-hidden"
+                    class="relative group flex justify-center items-center max-h-80 lg:max-h-60 w-full rounded-lg xl:flex-1 overflow-hidden"
                   >
                     <img
                       class="object-center object-cover rounded-sm h-full w-full"
@@ -63,7 +63,7 @@ const SpecialCategories = ({ specialCategories }) => {
               {primary.slice(1, 2).map((category) => (
                 <div
                   key={category?.id}
-                  class="relative order-2 xl:order-3 group flex justify-center lg:row-span-2 items-center w-full rounded-lg overflow-hidden"
+                  class="relative order-2 xl:order-3 group flex justify-center xl:row-span-2 items-center w-full rounded-lg max-h-80 xl:max-h-fit overflow-hidden"
                 >
                   <img
                     class="object-center object-cover rounded-sm h-full w-full"
