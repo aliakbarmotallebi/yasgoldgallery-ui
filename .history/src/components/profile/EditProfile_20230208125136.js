@@ -8,7 +8,7 @@ const EditProfile = ({ usename }) => {
   const [loading, setLoading] = useState(false);
   const { setShowAlert } = useContext(AlertStore);
   const [userInfo, setUserInfo] = useState({
-    firstname: "",
+    fisrtname: "",
     lastname: "",
   });
 
