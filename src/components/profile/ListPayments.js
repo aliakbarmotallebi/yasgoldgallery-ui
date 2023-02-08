@@ -22,10 +22,10 @@ const ListPayments = () => {
             </h2>
           </div>
         </div>
-        <div class=" flex justify-center overflow-auto">
-          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <div class="overflow-x-auto">
+          <table class="table-auto overflow-scroll w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-              <tr class="border border-gray-200">
+              <tr class="border border-gray-200 whitespace-nowrap">
                 <th scope="col" class="text-right px-6 py-3">
                   شماره تراکنش
                 </th>

@@ -1,10 +1,12 @@
 import { useState } from "react";
-import alert from "components/shared/alert/Alert";
 import { editProfile } from "services/account";
 import Spinner from "components/shared/Spinner";
+import { useContext } from "react";
+import { AlertStore } from "components/shared/alert/AlertProvider";
 
 const EditProfile = ({ usename }) => {
   const [loading, setLoading] = useState(false);
+  const { setShowAlert } = useContext(AlertStore);
   const [userInfo, setUserInfo] = useState({
     name: "",
     family: "",
@@ -14,12 +16,21 @@ const EditProfile = ({ usename }) => {
     setLoading(true);
     const response = await editProfile(userInfo.name, userInfo.family);
     if (response?.status) {
-      alert({ text: "ویرایش با موفقیت انجام شد", status: "success" });
+      setShowAlert({
+        show: true,
+        text: "ویرایش با موفقیت انجام شد",
+        status: "success",
+      });
       setUserInfo({
         name: "",
         family: "",
       });
-    } else alert({ text: "ویرایش انجام نشد", status: "error" });
+    } else
+      setShowAlert({
+        show: true,
+        text: "ویرایش انجام نشد",
+        status: "error",
+      });
     setLoading(false);
   };
   return (
@@ -44,7 +55,7 @@ const EditProfile = ({ usename }) => {
                     ? false
                     : true
                 }
-                class="bg-blue-600 w-full sm:w-fit flex items-center hover:bg-blue-700 text-white disabled:bg-gray-300 text-xs py-1.5 px-4 rounded focus:shadow-outline shadow"
+                class="bg-blue-600 w-full sm:w-fit flex items-center justify-center hover:bg-blue-700 text-white disabled:bg-gray-300 text-xs py-1.5 px-4 rounded focus:shadow-outline shadow"
               >
                 {loading && <Spinner classNameBox="w-6 ml-2" />}
                 <span>ویرایش تغییرات</span>

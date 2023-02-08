@@ -13,14 +13,14 @@ const OrderDetails = ({ orderDetails }) => {
     products,
   } = orderDetails;
   return (
-    <div className="max-w-5xl w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
+    <div className="max-w-4xl w-full h-full sm:h-auto shadow px-6 py-6 bg-white rounded-lg border mb-4">
       <div className="flex flex-col justify-between">
         <div className="flex items-center justify-between pb-4">
           <div className="text-left">
             <h2 className="font-semibold text-gray-900">لیست سفارشات شما</h2>
           </div>
         </div>
-        <div className=" flex justify-center flex-col overflow-auto">
+        <div className=" flex justify-center flex-col">
           <div className="print:mb-5 flex items-center justify-between">
             {is_paid ? (
               <>
@@ -62,84 +62,109 @@ const OrderDetails = ({ orderDetails }) => {
             </button>
           </div>
 
-          <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead className="text-xs text-gray-700 uppercase bg-gray-50 whitespace-nowrap  dark:bg-gray-700 dark:text-gray-400">
-              <tr>
-                <th scope="col" className="text-center font-semibold px-6 py-3">
-                  نام و نام خانوادگی
-                </th>
-                <th scope="col" className="text-center font-semibold px-6 py-3">
-                  آدرس سفارش
-                </th>
-                <th scope="col" className="text-center font-semibold px-6 py-3">
-                  نام کاربری
-                </th>
-              </tr>
-            </thead>
-            <tbody className="whitespace-nowrap ">
-              <tr className="bg-white print:border-y border-b hover:bg-gray-100">
-                <th className="text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  {firstname} {lastname}
-                </th>
-                <td className="px-6 py-4 text-center">{address}</td>
-                <td className="px-6 py-4 text-center">{user}</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table className="mt-5 w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 whitespace-nowrap ">
-              <tr className="print:mt-4">
-                <th scope="col" className="text-center font-semibold px-6 py-3">
-                  نام محصول
-                </th>
-                <th scope="col" className="text-center font-semibold px-6 py-3">
-                  تعداد
-                </th>
-                <th scope="col" className="text-center font-semibold px-6 py-3">
-                  قیمت واحد
-                  <span className="text-gray-400 text-xs">(تومان)</span>
-                </th>
-                <th scope="col" className="text-center font-semibold px-6 py-3">
-                  قیمت کل
-                  <span className="text-gray-400 text-xs">(تومان)</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody className="whitespace-nowrap">
-              {products.map((product) => (
-                <tr
-                  key={product.id}
-                  className="bg-white print:border-y border-b hover:bg-gray-100"
-                >
-                  <th className="text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    {product.title}
+          <div className="overflow-x-auto">
+            <table className="table-auto overflow-scroll w-full text-sm text-left text-gray-500 dark:text-gray-400">
+              <thead className="text-xs text-gray-700 uppercase bg-gray-50 whitespace-nowrap  dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                  <th
+                    scope="col"
+                    className="text-center font-semibold px-6 py-3"
+                  >
+                    نام و نام خانوادگی
                   </th>
-                  <td scope="row" className="px-6 py-4 text-center">
-                    {product.quantity}
-                  </td>
-                  <td scope="row" className="px-6 py-4 text-center">
-                    {product.amount} تومان
-                  </td>
-                  <td scope="row" className="px-6 py-4 text-center">
-                    {product.total} تومان
-                  </td>
+                  <th
+                    scope="col"
+                    className="text-center font-semibold px-6 py-3"
+                  >
+                    آدرس سفارش
+                  </th>
+                  <th
+                    scope="col"
+                    className="text-center font-semibold px-6 py-3"
+                  >
+                    نام کاربری
+                  </th>
                 </tr>
-              ))}
+              </thead>
+              <tbody className="whitespace-nowrap ">
+                <tr className="bg-white print:border-y border-b hover:bg-gray-100">
+                  <th className="text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    {firstname} {lastname}
+                  </th>
+                  <td className="px-6 py-4 text-center">{address}</td>
+                  <td className="px-6 py-4 text-center">{user}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-              <tr className="bg-white print:border-y hover:bg-gray-100">
-                <th className="text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  مبلغ قابل پرداخت
-                  <span className="text-gray-400 text-xs">(تومان)</span>
-                </th>
-                <td scope="row" className="px-6 py-4 text-center"></td>
-                <td scope="row" className="px-6 py-4 text-center"></td>
-                <th className="px-6 py-3 text-center font-bold text-sm">
-                  {total} تومان
-                </th>
-              </tr>
-            </tbody>
-          </table>
+          <div className="overflow-auto max-h-[250px]">
+            <table className="mt-5 table-auto overflow-scroll w-full text-sm text-left text-gray-500 dark:text-gray-400">
+              <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 whitespace-nowrap relative ">
+                <tr className="print:mt-4 sticky top-0 bg-gray-50">
+                  <th
+                    scope="col"
+                    className="text-center font-semibold px-6 py-3"
+                  >
+                    نام محصول
+                  </th>
+                  <th
+                    scope="col"
+                    className="text-center font-semibold px-6 py-3"
+                  >
+                    تعداد
+                  </th>
+                  <th
+                    scope="col"
+                    className="text-center font-semibold px-6 py-3"
+                  >
+                    قیمت واحد
+                    <span className="text-gray-400 text-xs">(تومان)</span>
+                  </th>
+                  <th
+                    scope="col"
+                    className="text-center font-semibold px-6 py-3"
+                  >
+                    قیمت کل
+                    <span className="text-gray-400 text-xs">(تومان)</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="whitespace-nowrap">
+                {products.map((product) => (
+                  <tr
+                    key={product.id}
+                    className="bg-white print:border-y border-b hover:bg-gray-100"
+                  >
+                    <th className="text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                      {product.title}
+                    </th>
+                    <td scope="row" className="px-6 py-4 text-center">
+                      {product.quantity}
+                    </td>
+                    <td scope="row" className="px-6 py-4 text-center">
+                      {product.amount} تومان
+                    </td>
+                    <td scope="row" className="px-6 py-4 text-center">
+                      {product.total} تومان
+                    </td>
+                  </tr>
+                ))}
+
+                <tr className="bg-white print:border-y hover:bg-gray-100">
+                  <th className="text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    مبلغ قابل پرداخت
+                    <span className="text-gray-400 text-xs">(تومان)</span>
+                  </th>
+                  <td scope="row" className="px-6 py-4 text-center"></td>
+                  <td scope="row" className="px-6 py-4 text-center"></td>
+                  <th className="px-6 py-3 text-center font-bold text-sm">
+                    {total} تومان
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
