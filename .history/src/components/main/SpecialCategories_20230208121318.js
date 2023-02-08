@@ -32,7 +32,7 @@ const SpecialCategories = ({ specialCategories }) => {
                   >
                     {category?.name}
                   </Link>
-                  <div class="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-yellow-300 opacity-60"></div>
+                  <div class="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-yellow-200 opacity-60"></div>
                   <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
                 </div>
               ))}
@@ -54,7 +54,7 @@ const SpecialCategories = ({ specialCategories }) => {
                     >
                       {category?.name}
                     </Link>
-                    <div class="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-yellow-300 opacity-60"></div>
+                    <div class="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-yellow-200 opacity-60"></div>
                     <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
                   </div>
                 ))}
@@ -76,7 +76,7 @@ const SpecialCategories = ({ specialCategories }) => {
                   >
                     {category?.name}
                   </Link>
-                  <div class="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-yellow-300 opacity-60"></div>
+                  <div class="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-yellow-200 opacity-60"></div>
                   <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
                 </div>
               ))}

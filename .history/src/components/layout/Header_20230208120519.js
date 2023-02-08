@@ -61,9 +61,9 @@ const Header = () => {
           <div className="flex justify-between container xl:max-w-6xl mx-auto px-4 xl:px-0">
             <div className="flex items-center space-x-2 space-x-reverse ">
             <div className="hidden md:block">
-              <Link to="/" class="flex items-center">
+              <a href="/" class="flex items-center">
                   <img src={Logo} class="h-12 ml-3" alt="Logo" />
-                </Link>
+                </a>
             </div>
               <button
                 onClick={handleShowHumBurgerMenu}

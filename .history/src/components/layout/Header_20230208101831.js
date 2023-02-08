@@ -9,7 +9,6 @@ import { UserStore } from "context/UserContext";
 import ContactUs from "components/shared/ContactUs";
 import { categories } from "services/products";
 import Dropdown from "components/shared/Dropdown";
-import Logo from "../../assets/images/logo/logo.png";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
@@ -60,11 +59,6 @@ const Header = () => {
         <header className="flex flex-none items-center h-16 bg-neutral-900 shadow-sm top-0 right-0 left-0 z-30 relative">
           <div className="flex justify-between container xl:max-w-6xl mx-auto px-4 xl:px-0">
             <div className="flex items-center space-x-2 space-x-reverse ">
-            <div className="hidden md:block">
-              <Link to="/" class="flex items-center">
-                  <img src={Logo} class="h-12 ml-3" alt="Logo" />
-                </Link>
-            </div>
               <button
                 onClick={handleShowHumBurgerMenu}
                 className="lg:hidden humburger-menu-icon relative w-8 h-5 "
