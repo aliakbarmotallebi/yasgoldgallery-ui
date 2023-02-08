@@ -178,7 +178,7 @@ const Header = () => {
                 {checkLoginUser() && (
                   <button
                     onClick={userLogout}
-                    className="block md:hidden text-xs text-rose-500 space-x-2 px-3 py-2 hover:opacity-50 hover:underline"
+                    className="block md:hidden text-xs text-rose-500 space-x-2 px-3 py-2 hover:opacity-50 underline"
                   >
                     خروج از حساب کاربری
                   </button>
@@ -221,7 +221,7 @@ const Header = () => {
                       <div>
                         <button
                           onClick={userLogout}
-                          className="text-xs text-rose-500 hover:opacity-50 hover:underline"
+                          className="text-xs text-rose-500"
                         >
                           خروج از حساب کاربری
                         </button>

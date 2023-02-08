@@ -221,7 +221,7 @@ const Header = () => {
                       <div>
                         <button
                           onClick={userLogout}
-                          className="text-xs text-rose-500 hover:opacity-50 hover:underline"
+                          className="text-xs text-rose-500"
                         >
                           خروج از حساب کاربری
                         </button>
