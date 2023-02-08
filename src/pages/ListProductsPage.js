@@ -5,7 +5,6 @@ import LoadableLoading from "components/shared/LoadableLoading";
 import {
   getAllDataWithCategory,
   getAllDataWithTag,
-  lastProducts,
 } from "../services/products";
 
 const ListProductsPage = () => {
@@ -35,17 +34,9 @@ const ListProductsPage = () => {
       if (allTags.status) setSideBarItems(allTags.data);
       setLoading(false);
     };
-    const getLastProducts = async () => {
-      setLoading(true);
-      const response = await lastProducts(params);
-      if (response?.status) setProducts(response.data);
-      setLoading(false);
-    };
     categoryId
       ? getProductsWithCategory(categoryId)
-      : tagId
-      ? getProductsWithTag(tagId)
-      : getLastProducts();
+      : getProductsWithTag(tagId);
   }, [categoryId, tagId, params]);
 
   useEffect(() => {

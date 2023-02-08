@@ -1,5 +1,5 @@
 import Brands from "components/main/Brands";
-import GridImages from "components/main/GridImages";
+import SpecialCategories from "components/main/SpecialCategories";
 import SpecialComments from "components/main/SpecialComments";
 import SpecialProducts from "components/main/SpecialProducts";
 import SuggestedProducts from "components/main/SuggestedProducts";
@@ -16,13 +16,17 @@ import guaranteeImage from "assets/images/guarantee.png";
 const HomePage = () => {
   const [speacial, setSpeacial] = useState([]);
   const [suggested, setSuggested] = useState([]);
+  const [specialCategories, setSpecialCategories] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     const getData = async () => {
       setLoading(true);
-      const { speacialProducts, suggestedProducts } = await homePageData();
+      const { speacialProducts, suggestedProducts, specialCategoriesData } =
+        await homePageData();
       if (speacialProducts.status) setSpeacial(speacialProducts.data);
       if (suggestedProducts.status) setSuggested(suggestedProducts.data);
+      if (specialCategoriesData.status)
+        setSpecialCategories(specialCategoriesData.data);
       setLoading(false);
     };
     getData();
@@ -76,7 +80,7 @@ const HomePage = () => {
       </div>
       {loading && <LoadableLoading />}
       <SpecialProducts speacial={speacial} />
-      <GridImages />
+      <SpecialCategories specialCategories={specialCategories} />
       <SuggestedProducts suggested={suggested} />
       <SpecialComments />
       <Brands />

@@ -13,20 +13,6 @@ const productWithId = async (product_id) => {
   }
 };
 
-const lastProducts = async (params) => {
-  try {
-    const response = await axios.get("/products/last", {
-      params,
-    });
-    if (response.status === 200) {
-      return response.data;
-    } else {
-      throw Error();
-    }
-  } catch (e) {
-    console.log(e);
-  }
-};
 const categories = async (limit) => {
   try {
     const response = await axios.get("/categories", {
@@ -104,15 +90,25 @@ const getAllDataWithCategory = async (categoryId) => {
   }
 };
 
-const categoriesForShowInHome = async () => {};
+const specialCategories = async () => {
+  try {
+    const response = await axios.get(`/categories/special`);
+    if (response.status === 200) {
+      return response.data;
+    } else {
+      throw Error();
+    }
+  } catch (e) {
+    console.log(e);
+  }
+};
 export {
   productWithId,
-  lastProducts,
   productsWithTag,
   productsWithCategory,
   tags,
   categories,
-  categoriesForShowInHome,
+  specialCategories,
   getAllDataWithTag,
   getAllDataWithCategory,
 };
