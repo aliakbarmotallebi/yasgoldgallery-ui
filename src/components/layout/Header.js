@@ -93,7 +93,9 @@ const Header = () => {
               </button>
               <nav
                 className={`absolute top-16 transition-all duration-500 overflow-scroll lg:overflow-visible right-0 bg-neutral-900 w-screen !mr-0 lg:transition-none lg:w-fit lg:bg-transparent lg:top-0 lg:relative lg:flex lg:items-center lg:space-x-2 text-sm lg:space-x-reverse ${
-                  showHumburgerMenu ? "h-screen p-4 pb-20" : "h-0 lg:h-auto "
+                  showHumburgerMenu
+                    ? "h-[calc(100vh-4rem)]  "
+                    : "h-0 lg:h-auto "
                 }`}
               >
                 <NavLink
@@ -145,7 +147,11 @@ const Header = () => {
                     </svg>
                   </div>
                   {dropdown.category && (
-                    <Dropdown dropdown={dropdown} setDropdown={setDropdown}>
+                    <Dropdown
+                      dropdown={dropdown}
+                      setDropdown={setDropdown}
+                      showHumburgerMenu={showHumburgerMenu}
+                    >
                       <ul className="py-1 text-sm text-white text-right lg:text-gray-600 overflow-hidden p-0">
                         {allCategories.map((category) => (
                           <li key={category.id}>
@@ -171,16 +177,6 @@ const Header = () => {
                     </Dropdown>
                   )}
                 </button>
-                <NavLink
-                  to="/products"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800 hover:text-neutral-300 hover:bg-neutral-800"
-                      : "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
-                  }
-                >
-                  شرایط اقساط
-                </NavLink>
                 {checkLoginUser() && (
                   <button
                     onClick={userLogout}
