@@ -171,16 +171,7 @@ const Header = () => {
                     </Dropdown>
                   )}
                 </button>
-                <NavLink
-                  to="/products"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800 hover:text-neutral-300 hover:bg-neutral-800"
-                      : "font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
-                  }
-                >
-                  شرایط اقساط
-                </NavLink>
+
                 {checkLoginUser() && (
                   <button
                     onClick={userLogout}
