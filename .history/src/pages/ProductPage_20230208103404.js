@@ -40,7 +40,7 @@ const ProductPage = () => {
       {loading && <LoadableLoading />}
       <div className="container mx-auto">
         <div class="max-w-xl lg:max-w-6xl mx-auto text-neutral-900  bg-neutral-900 rounded-lg shadow-md  text-black px-5 py-6">
-          <div class="flex flex-wrap -mx-4 mb-12 px-10 pt-10">
+          <div class="flex flex-wrap -mx-4 mb-12 p-10">
             <div class="w-full lg:w-1/2 px-4">
               <div class="max-w-lg">
                 <div className="flex items-center">
@@ -49,7 +49,7 @@ const ProductPage = () => {
                     <HandleCart
                       product={product}
                       btnIcon={
-                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M12 2a6 6 0 0 1 6 6v1h4v2h-1.167l-.757 9.083a1 1 0 0 1-.996.917H4.92a1 1 0 0 1-.996-.917L3.166 11H2V9h4V8a6 6 0 0 1 6-6zm6.826 9H5.173l.667 8h12.319l.667-8zM13 13v4h-2v-4h2zm-4 0v4H7v-4h2zm8 0v4h-2v-4h2zm-5-9a4 4 0 0 0-3.995 3.8L8 8v1h8V8a4 4 0 0 0-3.8-3.995L12 4z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2a6 6 0 0 1 6 6v1h4v2h-1.167l-.757 9.083a1 1 0 0 1-.996.917H4.92a1 1 0 0 1-.996-.917L3.166 11H2V9h4V8a6 6 0 0 1 6-6zm6.826 9H5.173l.667 8h12.319l.667-8zM13 13v4h-2v-4h2zm-4 0v4H7v-4h2zm8 0v4h-2v-4h2zm-5-9a4 4 0 0 0-3.995 3.8L8 8v1h8V8a4 4 0 0 0-3.8-3.995L12 4z"/></svg>
                       }
                       btnStyle="inline-flex items-center shuffle-click hidden sm:flex py-2 px-3 bg-brand-blue hover:opacity-70 bg-yellow-500 text-black text-xs font-semibold rounded"
                       btnText="افزودن به سبد خرید"
@@ -89,38 +89,39 @@ const ProductPage = () => {
                 </ul>
 
                 <div className="px-3 rounded-md py-4 border border-yellow-600">
-                  <div className="text-base text-yellow-500 pb-4 inline-flex items-center font-bold">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="fill-current ml-1" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" /></svg>
+                  <div className="text-base text-yellow-700 pb-4 inline-flex items-center font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="fill-yellow-600 ml-1" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"/></svg>
                     شرایط اقساط در یاس
                   </div>
-                  <ul class="space-y-3 ">
+                  <ul class="list-disc">
                     <li>
                       <span className="font-bold after:content-[':'] text-white ml-2">
                         شرایط اقساط
                       </span>
                       <br />
                       <div
-                        className="leading-7 text-white"
+                      className="leading-7 text-white"
                         dangerouslySetInnerHTML={{
                           __html: replaceWithBr(installment_terms),
                         }}
                       ></div>
                     </li>
-                    <li className="text-white">
-                      <span className="font-bold after:content-[':']  ml-2">
+                    <li>
+                      <span className="font-bold after:content-[':'] text-white ml-2">
                         پیش قسط
                       </span>
                       {Number(prepayment).toLocaleString()}
                     </li>
 
-                    <li className="text-white">
-                      <span className="font-bold after:content-[':'] ml-2">
+                    <li>
+                      <span className="font-bold after:content-[':'] text-white ml-2">
                         قسط ماهانه
                       </span>
                       {Number(monthly_installment).toLocaleString()}
                     </li>
                   </ul>
                 </div>
+               
               </div>
             </div>
             <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
@@ -158,27 +159,25 @@ const ProductPage = () => {
               </div>
             </div>
           </div>
-          <div className="px-10">
-              <div>
-                <div class="border-b-2 border-yellow-400 text-lg text-yellow-500 pb-2 inline-flex items-center font-bold">
-                  توضیحات
-                </div>
-                <div
-                  dangerouslySetInnerHTML={{ __html: replaceWithBr(description) }}
-                  className="pb-10 text-lg leading-7 text-white pt-4 px-4"
-                ></div>
-              </div>
-              <div className="pt-5">
-                <div class="border-b-2 border-yellow-400 text-lg text-yellow-500 pb-2 inline-flex items-center font-bold">
-                  دیدگاه مشتریان یاس
-                </div>
-                <div class="px-4 pt-2">
-                  {!loading && <ProductComments {...product} />}
-                </div>
+          <div class="mb-8 border-b border-blue-600">
+            <div class="flex flex-col md:flex-row -mb-px">
+              <div class="inline-block px-2 pb-2 mb-3 md:mb-0 text-lg font-black text-blue-600 border-b-2 border-blue-600">
+                توضیحات
               </div>
             </div>
+          </div>
+          <div
+            dangerouslySetInnerHTML={{ __html: replaceWithBr(description) }}
+            className="pb-10 text-lg leading-7"
+          ></div>
+         
         </div>
       </div>
+
+      <div class="bg-white rounded-lg px-4 pt-2 max-w-3xl mx-auto mt-5">
+            {!loading && <ProductComments {...product} />}
+      </div>
+
       {!loading && <RelatedProducts {...product} />}
     </div>
   );

@@ -52,7 +52,7 @@ const ProductComments = ({ productId }) => {
   };
   return (
     <>
-      <form className="">
+      <form className="pt-5">
         <div class="flex flex-wrap -mx-3 mb-6">
           <h2 class="px-4 pt-3 pb-2 text-white text-lg font-bold">
             <svg
@@ -96,7 +96,7 @@ const ProductComments = ({ productId }) => {
       ) : (
         <section className="pb-3 space-y-2">
           {productComments.length > 0 && (
-            <h2 class="px-4 pt-3 pb-2 text-white text-lg font-bold">
+            <h2 class="px-4 pt-3 pb-2 text-gray-800 text-lg font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="inline ml-1 fill-current"
