@@ -8,7 +8,7 @@ const SpecialProducts = ({ speacial: speacialProducts }) => {
   return (
     <section className="bg-neutral-800 py-20">
       <div className="container mx-auto">
-        <div className="text-center py-10">
+        <div className="text-center pb-10">
           <h2 className="text-4xl font-bold text-white">
             پیشنهاد شگفت انگیز
             <span className="text-yellow-400 mr-2">یاس</span>
