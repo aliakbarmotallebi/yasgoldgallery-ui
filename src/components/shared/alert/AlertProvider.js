@@ -1,7 +1,6 @@
 import React, { createContext } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import Alert from "./Alert";
 
 export const AlertStore = createContext();
 const AlertProvider = ({ children, time }) => {
@@ -12,7 +11,7 @@ const AlertProvider = ({ children, time }) => {
   });
 
   useEffect(() => {
-    if (showAlert)
+    if (showAlert.show)
       setTimeout(() => {
         setShowAlert({
           show: false,
@@ -23,7 +22,7 @@ const AlertProvider = ({ children, time }) => {
   }, [showAlert]);
 
   return (
-    <AlertStore.Provider value={{ showAlert, setShowAlert, Alert }}>
+    <AlertStore.Provider value={{ showAlert, setShowAlert }}>
       {children}
     </AlertStore.Provider>
   );
