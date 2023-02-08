@@ -1,11 +1,7 @@
-import ContactUs from "components/shared/ContactUs";
-import Modal from "components/shared/Modal";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo/logo.png";
 
 const Footer = () => {
-  const [showModal, setShowModal] = useState(false);
   const map =
     '<iframe class="w-full" src="https://balad.ir/embed?p=5359vQlqjxeM3d" title="مشاهده «خودپرداز بانک سپه» روی نقشه بلد" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>';
   return (
@@ -47,12 +43,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <button
-                  onClick={() => setShowModal(true)}
+                <Link
+                  to="/terms"
                   class="hover:text-sky-400 transition whitespace-nowrap text-white"
                 >
-                  تماس با ما
-                </button>
+                  قوانین و مقررات
+                </Link>
               </li>
             </ul>
           </div>
@@ -74,7 +70,11 @@ const Footer = () => {
                   به شما هدیه دهیم.
                 </div>
                 <div class="flex flex-wrap justify-center gap-2 pt-4">
-                  <a target="_blank" href="https://t.me/talaayas" class="bg-[#0088cc] p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:opacity-60">
+                  <a
+                    target="_blank"
+                    href="https://t.me/talaayas"
+                    class="bg-[#0088cc] p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:opacity-60"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="w-6 h-6 fill-current"
@@ -86,7 +86,11 @@ const Footer = () => {
                       <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.11-8.83l.013-.007.87 2.87c.112.311.266.367.453.341.188-.025.287-.126.41-.244l1.188-1.148 2.55 1.888c.466.257.801.124.917-.432l1.657-7.822c.183-.728-.137-1.02-.702-.788l-9.733 3.76c-.664.266-.66.638-.12.803l2.497.78z" />
                     </svg>
                   </a>
-                  <a target="_blank" href="https://instagram.com/tala._yas" class="bg-pink-600  p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:opacity-60">
+                  <a
+                    target="_blank"
+                    href="https://instagram.com/tala._yas"
+                    class="bg-pink-600  p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:opacity-60"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="w-6 h-6 fill-current"
@@ -99,7 +103,11 @@ const Footer = () => {
                     </svg>
                   </a>
 
-                  <a target="_blank" href="https://eitaa.com/talaayas" class="bg-[#25d365] p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:opacity-60">
+                  <a
+                    target="_blank"
+                    href="https://eitaa.com/talaayas"
+                    class="bg-[#25d365] p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:opacity-60"
+                  >
                     <svg
                       class="w-6 h-6 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
@@ -215,13 +223,6 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <Modal
-        showModal={showModal}
-        setShowModal={setShowModal}
-        className="bg-stone-900"
-      >
-        <ContactUs />
-      </Modal>
     </>
   );
 };

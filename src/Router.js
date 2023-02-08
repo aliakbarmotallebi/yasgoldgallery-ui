@@ -12,6 +12,7 @@ import Checkout from "components/cart/Checkout";
 import HelpPage from "pages/HelpPage";
 import PrivacyPage from "pages/PrivacyPage";
 import PaymentCallback from "pages/PaymentCallback";
+import TermsAndConditions from "pages/TermsAndConditions";
 
 function RouterFunction() {
   return (
@@ -38,6 +39,7 @@ function RouterFunction() {
           <Route path="profile" element={<ProfilePage />} />
           <Route path="helper" element={<HelpPage />} />
           <Route path="privacy" element={<PrivacyPage />} />
+          <Route path="terms" element={<TermsAndConditions />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
