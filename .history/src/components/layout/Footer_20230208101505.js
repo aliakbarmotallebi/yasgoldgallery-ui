@@ -135,7 +135,7 @@ const Footer = () => {
                         </span>
                         مشاور خرید
                       </a>
-                      <span className="mr-3">09197794756</span>
+                      <span className="mr-3">09121990160</span>
                     </li>
                     <li class="mb-4 flex items-center">
                       <a class="hover:underline after:content-[':'] flex items-center">
@@ -153,7 +153,7 @@ const Footer = () => {
                         </span>
                         تلفن مدیریت
                       </a>
-                      <span className="mr-3">09121990160</span>
+                      <span className="mr-3">02155959517</span>
                     </li>
                     <li class="mb-4 flex items-center">
                       <a class="hover:underline after:content-[':'] flex items-center">
