@@ -38,7 +38,7 @@ const HomePage = () => {
           <img class="block w-full h-full object-cover" src={slideImage} />
           <div class="absolute bottom-0 left-0 bg-white h-12 sm:h-20 lg:h-36 w-full ">
             <div className="bg-white absolute z-[1] w-full -left-1/2 -top-1/2 h-1/2 translate-x-1/2 translate-y-1/2 rounded-[50%]"></div>
-            <div className="justify-evenly relative -top-1/2 hidden lg:flex">
+            <div className="justify-evenly relative -top-1/2 hidden lg:flex container xl:max-w-6xl mx-auto">
               <div className="flex flex-col flex-1 items-center  text-black font-bold justify-center z-[2] relative -top-1/3">
                 <div className="w-20 h-20">
                   <img src={createdImage} alt="packing" />

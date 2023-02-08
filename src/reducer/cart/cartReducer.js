@@ -38,8 +38,10 @@ const cartReducer = (state, action) => {
           (product) => product.productId !== action.payload.productId
         ),
       ];
+      break;
     case CLEAR_CART:
       newCart = [];
+      break;
   }
   setLS("cart", newCart);
   return {

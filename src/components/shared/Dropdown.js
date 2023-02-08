@@ -9,12 +9,15 @@ const Dropdown = ({ dropdown, setDropdown, children }) => {
 
     return () => window.removeEventListener("click", handler);
   }, []);
+
   return (
-    <div
-      id="dropdown"
-      className={`lg:absolute z-30 w-full lg:w-60 !mr-0 bg-transparent lg:bg-white divide-y divide-gray-100 rounded lg:shadow  top-[40px] right-0`}
-    >
-      {children}
+    <div className="fixed flex items-center justify-center top-0 left-0 right-0 z-[100] w-full overflow-x-hidden overflow-y-auto md:inset-0 h-modal h-full bg-black/90">
+      <div
+        id="dropdown"
+        className={`lg:absolute z-30 w-full lg:w-60 !mr-0 bg-transparent lg:bg-white divide-y divide-gray-100 rounded lg:shadow  top-[40px]`}
+      >
+        {children}
+      </div>
     </div>
   );
 };
