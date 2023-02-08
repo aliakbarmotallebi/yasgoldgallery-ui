@@ -7,7 +7,7 @@ const SpecialCategories = ({ specialCategories }) => {
   return (
     <section className="container mx-auto">
       <div class="w-full max-w-7xl px-4 mx-auto sm:px-8 my-20 ">
-        <header class="space-y-4 text-center py-10">
+        <header class="space-y-4 text-center pb-10">
           <h2 class="text-3xl flex flex-col sm:flex-row items-center justify-center font-bold tracking-tighter md:text-4xl font-display">
             <p>دسته بندی های ویژه</p>
             <span className="text-yellow-400 mr-2">یاس</span>

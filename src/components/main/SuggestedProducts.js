@@ -8,7 +8,7 @@ const SuggestedProducts = ({ suggested: suggestedProducts }) => {
   return (
     <section className="bg-neutral-800 py-20">
       <div className="container mx-auto">
-        <div className="text-center py-10">
+        <div className="text-center pb-10">
           <h2 className="text-4xl flex  flex-col sm:flex-row justify-center items-center font-bold text-white">
             <p>محصولات پیشنهادی</p>
             <span className="text-yellow-400 sm:mr-2">یاس</span>
