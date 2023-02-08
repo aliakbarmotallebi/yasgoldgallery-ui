@@ -40,7 +40,7 @@ const ProductPage = () => {
       {loading && <LoadableLoading />}
       <div className="container mx-auto">
         <div class="max-w-xl lg:max-w-6xl mx-auto text-neutral-900  bg-neutral-900 rounded-lg shadow-md  text-black px-5 py-6">
-          <div class="flex flex-wrap -mx-4 mb-12 px-10 pt-10">
+          <div class="flex flex-wrap -mx-4 mb-12 p-10">
             <div class="w-full lg:w-1/2 px-4">
               <div class="max-w-lg">
                 <div className="flex items-center">
@@ -89,8 +89,8 @@ const ProductPage = () => {
                 </ul>
 
                 <div className="px-3 rounded-md py-4 border border-yellow-600">
-                  <div className="text-base text-yellow-500 pb-4 inline-flex items-center font-bold">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="fill-current ml-1" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" /></svg>
+                  <div className="text-base text-yellow-700 pb-4 inline-flex items-center font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="fill-yellow-600 ml-1" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" /></svg>
                     شرایط اقساط در یاس
                   </div>
                   <ul class="space-y-3 ">
@@ -157,28 +157,31 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="px-10">
-              <div>
-                <div class="border-b-2 border-yellow-400 text-lg text-yellow-500 pb-2 inline-flex items-center font-bold">
+            <div>
+              <div className="pt-5">
+                <div class="text-lg text-yellow-500 pb-4 inline-flex items-center font-bold">
                   توضیحات
                 </div>
                 <div
                   dangerouslySetInnerHTML={{ __html: replaceWithBr(description) }}
-                  className="pb-10 text-lg leading-7 text-white pt-4 px-4"
+                  className="pb-10 text-lg leading-7 text-white"
                 ></div>
               </div>
               <div className="pt-5">
-                <div class="border-b-2 border-yellow-400 text-lg text-yellow-500 pb-2 inline-flex items-center font-bold">
+                <div class="text-lg text-yellow-500 pb-4 inline-flex items-center font-bold">
                   دیدگاه مشتریان یاس
                 </div>
-                <div class="px-4 pt-2">
+                <div class="bg-white rounded-lg px-4 pt-2 mt-5">
                   {!loading && <ProductComments {...product} />}
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
+
+
+
       {!loading && <RelatedProducts {...product} />}
     </div>
   );
