@@ -1,37 +1,65 @@
-import { useState } from "react";
-import { editProfile } from "services/account";
+import { useState, memo, useEffect } from "react";
+import { editProfile, profile, refreshToken } from "services/account";
 import Spinner from "components/shared/Spinner";
 import { useContext } from "react";
 import { AlertStore } from "components/shared/alert/AlertProvider";
+import { UserStore } from "context/UserContext";
+import { setLS } from "helper/handlerLS";
+import decodeToken from "helper/decodeToken";
+import { useNavigate } from "react-router-dom";
+import checkLoginUser from "helper/checkLoginUser";
 
-const EditProfile = ({ usename }) => {
-  const [loading, setLoading] = useState(false);
+const EditProfile = ({ setLoading }) => {
+  const [loadingEdit, setLoadingEdit] = useState(false);
   const { setShowAlert } = useContext(AlertStore);
+  const { setUser } = useContext(UserStore);
+  const navigate = useNavigate();
   const [userInfo, setUserInfo] = useState({
+    mobiel: "",
     firstname: "",
     lastname: "",
   });
 
+  useEffect(() => {
+    const getProfileData = async () => {
+      setLoading(true);
+      const response = await profile();
+      if (response?.status) setUserInfo(response?.data);
+      setLoading(false);
+    };
+    if (checkLoginUser()) {
+      getProfileData();
+    } else {
+      navigate("/");
+    }
+  }, []);
+
+  const handleRefreshToken = async () => {
+    const res = await refreshToken();
+    if (res?.status) {
+      setLS("user", res.data);
+      setUser(decodeToken("username"));
+    }
+  };
   const handlEditProfile = async () => {
-    setLoading(true);
-    const response = await editProfile(userInfo.name, userInfo.family);
+    setLoadingEdit(true);
+    const response = await editProfile(userInfo.firstname, userInfo.lastname);
     if (response?.status) {
+      handleRefreshToken();
       setShowAlert({
         show: true,
         text: "ویرایش با موفقیت انجام شد",
         status: "success",
       });
-      setUserInfo({
-        name: "",
-        family: "",
-      });
-    } else
+    } else {
       setShowAlert({
         show: true,
         text: "ویرایش انجام نشد",
         status: "error",
       });
-    setLoading(false);
+    }
+
+    setLoadingEdit(false);
   };
   return (
     <div
@@ -51,13 +79,14 @@ const EditProfile = ({ usename }) => {
                 type="button"
                 onClick={handlEditProfile}
                 disabled={
-                  userInfo.firstname.trim() !== "" && userInfo.lastname.trim() !== ""
+                  userInfo.firstname.trim() !== "" &&
+                  userInfo.lastname.trim() !== ""
                     ? false
                     : true
                 }
                 class="bg-blue-600 w-full sm:w-fit flex items-center justify-center hover:bg-blue-700 text-white disabled:bg-gray-300 text-xs py-1.5 px-4 rounded focus:shadow-outline shadow"
               >
-                {loading && <Spinner classNameBox="w-6 ml-2" />}
+                {loadingEdit && <Spinner classNameBox="w-6 ml-2" />}
                 <span>ویرایش تغییرات</span>
               </button>
             </div>
@@ -70,12 +99,11 @@ const EditProfile = ({ usename }) => {
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
                   نام کاربری
-                  <span class="inline-flex bg-red-500 w-1 h-1 rounded-full mr-1"></span>
                 </label>
                 <input
                   type="username"
                   id="username"
-                  defaultValue={usename}
+                  defaultValue={userInfo.mobile}
                   disabled
                   readonly
                   class="bg-gray-200  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
@@ -95,7 +123,7 @@ const EditProfile = ({ usename }) => {
                   id="name"
                   value={userInfo.firstname}
                   onChange={(e) =>
-                    setUserInfo({ ...userInfo, name: e.target.value })
+                    setUserInfo({ ...userInfo, firstname: e.target.value })
                   }
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 />
@@ -114,7 +142,7 @@ const EditProfile = ({ usename }) => {
                   id="family"
                   value={userInfo.lastname}
                   onChange={(e) =>
-                    setUserInfo({ ...userInfo, family: e.target.value })
+                    setUserInfo({ ...userInfo, lastname: e.target.value })
                   }
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 />
@@ -127,4 +155,4 @@ const EditProfile = ({ usename }) => {
   );
 };
 
-export default EditProfile;
+export default memo(EditProfile);

@@ -1,3 +1,4 @@
+import Alert from "components/shared/alert/Alert";
 import { AlertStore } from "components/shared/alert/AlertProvider";
 import ScrollToTop from "components/shared/ScrollToTop";
 import { useContext } from "react";
@@ -5,7 +6,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 const Layout = ({ children }) => {
-  const { showAlert, Alert } = useContext(AlertStore);
+  const { showAlert } = useContext(AlertStore);
   return (
     <>
       <ScrollToTop />

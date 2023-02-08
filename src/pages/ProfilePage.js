@@ -1,30 +1,13 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, memo } from "react";
 import EditProfile from "components/profile/EditProfile";
 import ListOrders from "components/profile/ListOrders";
 import ListPayments from "components/profile/ListPayments";
 import LoadableLoading from "components/shared/LoadableLoading";
-import { profile } from "services/account";
 import checkLoginUser from "helper/checkLoginUser";
-import { useNavigate } from "react-router";
 
 const ProfilePage = () => {
-  const [usename, setUsername] = useState("");
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
-  useEffect(() => {
-    const getProfileData = async () => {
-      setLoading(true);
-      const response = await profile();
-      if (response?.status) setUsername(response?.data?.mobile);
-      setLoading(false);
-    };
-    if (checkLoginUser()) {
-      getProfileData();
-    } else {
-      navigate("/");
-    }
-  }, []);
+
   return (
     <>
       {loading && <LoadableLoading />}
@@ -76,7 +59,7 @@ const ProfilePage = () => {
         >
           {checkLoginUser() ? (
             <>
-              <EditProfile usename={usename} />
+              <EditProfile setLoading={setLoading} />
               <ListOrders />
               <ListPayments />
             </>
@@ -86,4 +69,4 @@ const ProfilePage = () => {
     </>
   );
 };
-export default ProfilePage;
+export default memo(ProfilePage);

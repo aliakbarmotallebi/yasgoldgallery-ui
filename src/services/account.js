@@ -42,13 +42,13 @@ const login = async (mobile, code) => {
     return e.response?.data;
   }
 };
-const editProfile = async (name, family) => {
+const editProfile = async (firstname, lastname) => {
   try {
     const response = await axios.post(
       "/edit-profile",
       {
-        name,
-        family,
+        firstname,
+        lastname,
       },
       {
         headers: {
@@ -82,7 +82,22 @@ const profile = async () => {
     console.log(e);
   }
 };
-const refreshToken = async () => {};
+const refreshToken = async () => {
+  try {
+    const response = await axios.get("/refreshToken", {
+      headers: {
+        Authorization: `Bearer ${getDataLS("user")?.token}`,
+      },
+    });
+    if (response.status === 200) {
+      return response.data;
+    } else {
+      throw Error();
+    }
+  } catch (e) {
+    console.log(e);
+  }
+};
 
 export {
   sendVerifyCodeToPhoneNumber,

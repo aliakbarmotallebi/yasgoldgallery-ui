@@ -11,7 +11,6 @@ const ProductComments = ({ productId }) => {
   const [loading, setLoading] = useState(true);
   const [loadSendComment, setLoadSendComment] = useState(false);
   const { setShowAlert } = useContext(AlertStore);
-
   useEffect(() => {
     const getComments = async () => {
       const res = await comments(productId);

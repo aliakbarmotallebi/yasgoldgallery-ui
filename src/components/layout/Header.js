@@ -1,5 +1,5 @@
 import React, { useContext, useState, memo, useEffect } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { CartStore } from "context/CartContext";
 import checkLoginUser from "helper/checkLoginUser";
 import { removeDataLS } from "helper/handlerLS";
@@ -19,6 +19,7 @@ const Header = () => {
   const [showHumburgerMenu, setShowHumburgerMenu] = useState(false);
   const [allCategories, setAllCategories] = useState([]);
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   const [dropdown, setDropdown] = useState({
     category: false,
   });
@@ -48,6 +49,7 @@ const Header = () => {
   const userLogout = () => {
     removeDataLS("user");
     setUser(undefined);
+    navigate("/", { replace: true });
   };
   const handlerCategoryDropdown = (e) => {
     e.stopPropagation();
@@ -57,6 +59,7 @@ const Header = () => {
     e.stopPropagation();
     setShowHumburgerMenu(!showHumburgerMenu);
   };
+
   return (
     <>
       <div className="bg-neutral-900 w-full fixed lg:relative z-10">
@@ -181,7 +184,7 @@ const Header = () => {
                 {checkLoginUser() && (
                   <button
                     onClick={userLogout}
-                    className="block md:hidden text-xs text-rose-500 space-x-2 px-3 py-2 hover:opacity-50 hover:underline"
+                    className="block md:hidden text-xs text-rose-500 space-x-2 px-3 py-2 hover:underline"
                   >
                     خروج از حساب کاربری
                   </button>
@@ -224,7 +227,7 @@ const Header = () => {
                       <div>
                         <button
                           onClick={userLogout}
-                          className="text-xs text-rose-500 hover:opacity-50 hover:underline"
+                          className="text-xs text-rose-500 hover:underline"
                         >
                           خروج از حساب کاربری
                         </button>
