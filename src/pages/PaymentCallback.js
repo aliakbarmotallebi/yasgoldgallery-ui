@@ -22,15 +22,14 @@ const PaymentCallback = () => {
       const response = await checkPayment(searchParams.get("resnumber"));
       if (response?.status) setPayment(response.data);
       setLoading(false);
-      console.log(response);
     };
     getCheckPayment();
   }, []);
   return loading ? (
     <LoadableLoading />
   ) : (
-    <div class="max-w-3xl w-full shadow bg-white rounded-lg border mb-4 mt-10 mx-auto">
-      <div class="flex flex-col justify-center items-center m-4 sm:m-10">
+    <div className="max-w-3xl w-full shadow bg-white rounded-lg border mb-4 mt-10 mx-auto">
+      <div className="flex flex-col justify-center items-center m-4 sm:m-10">
         <h1
           className={`mb-6 font-bold text-3xl ${
             payment?.status === "STATUS_PAID"
@@ -54,9 +53,9 @@ const PaymentCallback = () => {
               fill="none"
               stroke="green"
               stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-check-circle"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="feather feather-check-circle"
             >
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
@@ -70,9 +69,9 @@ const PaymentCallback = () => {
               fill="none"
               stroke="red"
               stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-x-circle"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="feather feather-x-circle"
             >
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="15" y1="9" x2="9" y2="15"></line>
@@ -135,7 +134,7 @@ const PaymentCallback = () => {
         </div>
         <Link
           to="/"
-          className="btn-primary bg-blue-700 text-white p-2 mt-8 rounded-md hover:bg-blue-800"
+          className="btn-primary bg-yellow-500 p-2 mt-8 rounded-md hover:bg-yellow-600 text-black"
         >
           بازگشت به صفحه اصلی
         </Link>

@@ -4,12 +4,8 @@ const CartPage = () => {
       <div class="flex shadow-md my-10">
         <div class="w-3/4 bg-white px-10 py-10 rounded-lg text-black">
           <div class="flex justify-between border-b pb-4">
-            <h1 class="font-semibold text-2xl">
-                سبد خرید شما
-            </h1>
-            <h2 class="font-semibold text-2xl">
-              تعداد 3
-            </h2>
+            <h1 class="font-semibold text-2xl">سبد خرید شما</h1>
+            <h2 class="font-semibold text-2xl">تعداد 3</h2>
           </div>
           <div class="flex mt-10 mb-5">
             <h3 class="font-semibold text-gray-600 text-xs uppercase w-2/5">
@@ -35,12 +31,8 @@ const CartPage = () => {
                 />
               </div>
               <div class="flex flex-col justify-between ml-4 flex-grow">
-                <span class="font-bold text-sm">
-                ستبند-طلا-اسپرت-کارتیه
-                </span>
-                <span class="text-red-500 text-xs">
-                    دسته بندی
-                </span>
+                <span class="font-bold text-sm">ستبند-طلا-اسپرت-کارتیه</span>
+                <span class="text-red-500 text-xs">دسته بندی</span>
                 <a
                   href="#"
                   class="font-semibold hover:text-red-500 text-gray-500 text-xs"
@@ -65,16 +57,17 @@ const CartPage = () => {
               </svg>
             </div>
             <span class="text-center w-1/5 font-semibold text-sm">
-                2,000,000
-                تومان
+              2,000,000 تومان
             </span>
             <span class="text-center w-1/5 font-semibold text-sm">
-            2,000,000
-                تومان
+              2,000,000 تومان
             </span>
           </div>
 
-          <a href="/products" class="flex font-semibold text-indigo-600 text-sm mt-10">
+          <a
+            href="/products"
+            class="flex font-semibold text-indigo-600 text-sm mt-10"
+          >
             <svg
               class="fill-current ml-2 text-indigo-600 w-4"
               viewBox="0 0 448 512"
@@ -86,18 +79,10 @@ const CartPage = () => {
         </div>
 
         <div id="summary" class="w-1/4 px-8 py-10 bg-white text-black">
-          <h1 class="font-semibold text-2xl border-b pb-8">
-            خلاصه فاکتور
-          </h1>
+          <h1 class="font-semibold text-2xl border-b pb-8">خلاصه فاکتور</h1>
           <div class="flex justify-between mt-10 mb-5">
-            <span class="font-semibold text-sm uppercase">
-                تعداد سفارش
-                3
-            </span>
-            <span class="font-semibold text-sm">
-            2,000,000
-                تومان
-            </span>
+            <span class="font-semibold text-sm uppercase">تعداد سفارش 3</span>
+            <span class="font-semibold text-sm">2,000,000 تومان</span>
           </div>
           <div>
             <label class="font-medium inline-block mb-3 text-sm uppercase">
@@ -109,7 +94,7 @@ const CartPage = () => {
           </div>
           <div class="py-10">
             <label
-              for="promo"
+              htmlFor="promo"
               class="font-semibold inline-block mb-3 text-sm uppercase"
             >
               Promo Code

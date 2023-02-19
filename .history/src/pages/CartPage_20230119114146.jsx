@@ -4,12 +4,8 @@ const CartPage = () => {
       <div class="flex shadow-md my-10">
         <div class="w-3/4 bg-white px-10 py-10 rounded text-black">
           <div class="flex justify-between border-b pb-8">
-            <h1 class="font-semibold text-2xl">
-                سبد خرید شما
-            </h1>
-            <h2 class="font-semibold text-2xl">
-              تعداد 3
-            </h2>
+            <h1 class="font-semibold text-2xl">سبد خرید شما</h1>
+            <h2 class="font-semibold text-2xl">تعداد 3</h2>
           </div>
           <div class="flex mt-10 mb-5">
             <h3 class="font-semibold text-gray-600 text-xs uppercase w-2/5">
@@ -168,7 +164,7 @@ const CartPage = () => {
           </div>
           <div class="py-10">
             <label
-              for="promo"
+              htmlFor="promo"
               class="font-semibold inline-block mb-3 text-sm uppercase"
             >
               Promo Code

@@ -11,14 +11,14 @@ const Header = ({ children }) => {
 
   return (
     <>
-      <div className="bg-neutral-900 w-full">
-        <div className="flex justify-between container xl:max-w-6xl mx-auto pt-5 flex-none items-center">
-          <div className="w-8 h-5"></div>
+      <div class="bg-neutral-900 w-full">
+        <div class="flex justify-between container xl:max-w-6xl mx-auto pt-5 flex-none items-center">
+          <div class="w-8 h-5"></div>
 
           <div>
             <button
               onClick={openModal}
-              className="inline-flex rounded-lg bg-blue-800 px-3 py-2"
+              class="inline-flex rounded-lg bg-blue-800 px-3 py-2"
             >
               ورود به حساب کاربری
             </button>
@@ -28,18 +28,25 @@ const Header = ({ children }) => {
               title="ورود به حساب کاربری"
             >
               <div class="px-8 py-5 text-right text-gray-900">
-              <div class="flex justify-center">
-
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 fill-blue-600" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10 11V8l5 4-5 4v-3H1v-2h9zm-7.542 4h2.124A8.003 8.003 0 0 0 20 12 8 8 0 0 0 4.582 9H2.458C3.732 4.943 7.522 2 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10c-4.478 0-8.268-2.943-9.542-7z"/></svg>
-
-        </div>
+                <div class="flex justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-20 h-20 fill-blue-600"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path d="M10 11V8l5 4-5 4v-3H1v-2h9zm-7.542 4h2.124A8.003 8.003 0 0 0 20 12 8 8 0 0 0 4.582 9H2.458C3.732 4.943 7.522 2 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10c-4.478 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                </div>
                 <h3 class="text-2xl font-bold text-center">
-                ورود به حساب کاربری
+                  ورود به حساب کاربری
                 </h3>
 
                 <div class="mt-4">
                   <div>
-                    <label class="block" for="email">
+                    <label class="block" htmlFor="email">
                       نام کاربری
                     </label>
                     <input
@@ -48,9 +55,7 @@ const Header = ({ children }) => {
                     />
                   </div>
                   <div class="mt-4">
-                    <label class="block">
-                      گذرواژه
-                    </label>
+                    <label class="block">گذرواژه</label>
                     <input
                       type="password"
                       class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
@@ -60,7 +65,10 @@ const Header = ({ children }) => {
                     <button class="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">
                       ورود به حساب
                     </button>
-                    <button onClick={openModal} class="text-sm text-gray-700 underline">
+                    <button
+                      onClick={openModal}
+                      class="text-sm text-gray-700 underline"
+                    >
                       انصراف
                     </button>
                   </div>
@@ -69,31 +77,31 @@ const Header = ({ children }) => {
             </Modal>
           </div>
         </div>
-        <header className="flex flex-none items-center h-16 bg-neutral-900 shadow-sm top-0 right-0 left-0 z-30">
-          <div className="flex justify-between container xl:max-w-6xl mx-auto px-4 lg:px-8">
+        <header class="flex flex-none items-center h-16 bg-neutral-900 shadow-sm top-0 right-0 left-0 z-30">
+          <div class="flex justify-between container xl:max-w-6xl mx-auto px-4 lg:px-8">
             <div class="flex items-center space-x-2 space-x-reverse">
-              <nav className="hidden lg:flex lg:items-center lg:space-x-2 text-sm lg:space-x-reverse">
+              <nav class="hidden lg:flex lg:items-center lg:space-x-2 text-sm lg:space-x-reverse">
                 <a
                   href="/"
-                  className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800"
+                  class="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800"
                 >
                   صفحه اصلی
                 </a>
                 <a
                   href="/about"
-                  className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                  class="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
                 >
                   درباره ما
                 </a>
                 <a
                   href="javascript:void(0)"
-                  className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                  class="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
                 >
                   تماس با ما
                 </a>
                 <a
                   href="/products"
-                  className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                  class="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
                 >
                   محصولات
                 </a>
@@ -112,7 +120,7 @@ const Header = ({ children }) => {
                     <path
                       fill-rule="evenodd"
                       d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                 </button>

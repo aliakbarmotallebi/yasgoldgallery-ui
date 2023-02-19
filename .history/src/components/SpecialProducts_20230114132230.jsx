@@ -2,22 +2,21 @@ import CardProduct from "./CardProduct";
 
 const SpecialProducts = () => {
   return (
-    <section className="bg-neutral-100 py-10">
-      <div className="text-center py-10">
-        <h2 className="text-4xl font-bold text-neutral-900">
+    <section class="bg-neutral-100 py-10">
+      <div class="text-center py-10">
+        <h2 class="text-4xl font-bold text-neutral-900">
           پیشنهاد شگفت انگیز
-          <span className="text-yellow-400">یاس</span>
+          <span class="text-yellow-400">یاس</span>
         </h2>
       </div>
-      <div className="grid grid-cols-5 gap-3 p-5 items-center">
+      <div class="grid grid-cols-5 gap-3 p-5 items-center">
         <div class=" max-w-sm">
-          <div className="h-120 overflow-hidden flex justify-center">
+          <div class="h-120 overflow-hidden flex justify-center">
             <img class="" src={ImageSuggest} />
           </div>
         </div>
 
-        <CardProduct/>
-
+        <CardProduct />
       </div>
     </section>
   );

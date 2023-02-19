@@ -51,13 +51,14 @@ const EditProfile = ({ usename }) => {
                 type="button"
                 onClick={handlEditProfile}
                 disabled={
-                  userInfo.firstname.trim() !== "" && userInfo.lastname.trim() !== ""
+                  userInfo.firstname.trim() !== "" &&
+                  userInfo.lastname.trim() !== ""
                     ? false
                     : true
                 }
                 class="bg-blue-600 w-full sm:w-fit flex items-center justify-center hover:bg-blue-700 text-white disabled:bg-gray-300 text-xs py-1.5 px-4 rounded focus:shadow-outline shadow"
               >
-                {loading && <Spinner classNameBox="w-6 ml-2" />}
+                {loading && <Spinner classBox="w-6 ml-2" />}
                 <span>ویرایش تغییرات</span>
               </button>
             </div>
@@ -66,7 +67,7 @@ const EditProfile = ({ usename }) => {
             <div class="w-full md:w-1/2">
               <div class="mb-6">
                 <label
-                  for="username"
+                  htmlFor="username"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
                   نام کاربری
@@ -83,7 +84,7 @@ const EditProfile = ({ usename }) => {
               </div>
               <div class="mb-6">
                 <label
-                  for="fullname"
+                  htmlFor="fullname"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
                   نام
@@ -102,7 +103,7 @@ const EditProfile = ({ usename }) => {
               </div>
               <div class="mb-6">
                 <label
-                  for="fullname"
+                  htmlFor="fullname"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
                   نام خانوادگی

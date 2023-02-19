@@ -2,12 +2,12 @@ import Image4 from "../assets/images/image4.png";
 
 const GridImages = () => {
   return (
-    <section className="container mx-auto">
+    <section class="container mx-auto">
       <div class="w-full max-w-7xl px-4 mx-auto sm:px-8 my-20 ">
         <header class="space-y-4 text-center py-10">
           <h2 class="text-3xl font-bold tracking-tighter md:text-4xl font-display">
             دسته بندی محصولات
-            <span className="text-yellow-400">یاس</span>
+            <span class="text-yellow-400">یاس</span>
           </h2>
         </header>
         <div class="2xl:mx-auto 2xl:container py-12 px-4 sm:px-6 xl:px-20 2xl:px-0 w-full">

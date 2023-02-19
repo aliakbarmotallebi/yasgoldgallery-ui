@@ -1,23 +1,20 @@
 const CartPage = () => {
   return (
     <div class="container mx-auto mt-10">
-    <div class="flex mx-auto my-10">
+      <div class="flex mx-auto my-10">
         <div className="max-w-xl bg-white rounded-lg shadow-md  text-black">
-            <div className="text-center">
-                <div className="text-lg font-semibold text-gray-900">
-                سبد خرید شما خالی است!
-                </div>
-                <div className="text-gray-700">
-                    می‌توانید برای مشاهده محصولات بیشتر به صفحات زیر بروید:
-                </div>
+          <div className="text-center">
+            <div className="text-lg font-semibold text-gray-900">
+              سبد خرید شما خالی است!
             </div>
+            <div className="text-gray-700">
+              می‌توانید برای مشاهده محصولات بیشتر به صفحات زیر بروید:
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
       <div class="flex justify-center my-10">
-
-
-
         <div class="w-2/4 bg-white rounded-r-lg shadow-md  text-black overflow-hidden">
           <div class="flex items-center justify-between border-b border-gray-50 bg-gray-50/50 px-4 py-5">
             <h1 class="font-semibold text-lg">سبد خرید شما</h1>
@@ -61,7 +58,7 @@ const CartPage = () => {
                     stroke="currentColor"
                     stroke-width="2"
                     stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                   >
                     <line x1="18" y1="6" x2="6" y2="18" />
                     <line x1="6" y1="6" x2="18" y2="18" />
@@ -137,7 +134,6 @@ const CartPage = () => {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

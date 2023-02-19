@@ -40,7 +40,7 @@ const ProductInCart = ({ product }) => {
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinejoin="round"
             >
               <line x1="18" y1="6" x2="6" y2="18" />
               <line x1="6" y1="6" x2="18" y2="18" />
@@ -54,7 +54,7 @@ const ProductInCart = ({ product }) => {
             <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
           </svg>
         </button>
-        <div className="mx-2 border text-center w-8">{qty}</div>
+        <div class="mx-2 border text-center w-8">{qty}</div>
         <button onClick={qty < 2 ? handleRemove : handleDecrease}>
           <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
             <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />

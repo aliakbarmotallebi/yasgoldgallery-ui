@@ -45,7 +45,7 @@ const CartPage = () => {
                     stroke="currentColor"
                     stroke-width="2"
                     stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                   >
                     <line x1="18" y1="6" x2="6" y2="18" />
                     <line x1="6" y1="6" x2="18" y2="18" />
@@ -97,7 +97,7 @@ const CartPage = () => {
           <h1 class="font-semibold text-lg border-b border-gray-50 bg-gray-50/50 px-4 py-5">
             خلاصه فاکتور
           </h1>
-          <div className="px-8 py-10">
+          <div class="px-8 py-10">
             <div class="flex justify-between mt-10 mb-5">
               <span class="font-semibold text-sm uppercase">تعداد سفارش 3</span>
               <span class="font-semibold text-sm">2,000,000 تومان</span>

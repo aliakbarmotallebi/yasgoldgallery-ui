@@ -32,7 +32,6 @@ const Checkout = () => {
     postalCode: "",
     address: "",
   });
-
   useEffect(() => {
     const getProfileInfo = async () => {
       setLoading(true);
@@ -83,18 +82,18 @@ const Checkout = () => {
   return (
     <>
       {loading && <LoadableLoading />}
-      <div class="col-span-1 lg:col-span-2 bg-white rounded-r-lg shadow-md  text-black overflow-hidden">
+      <div className="col-span-1 lg:col-span-2 bg-white rounded-r-lg shadow-md  text-black overflow-hidden">
         <form className="grid grid-cols-1 sm:grid-cols-2  gap-6 p-4">
           <h1 className="text-lg font-bold col-span-1 sm:col-span-2">
             اطلاعات کاربر
           </h1>
-          <div class="mb-6 col-span-1">
+          <div className="mb-6 col-span-1">
             <label
-              for="name"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              htmlFor="name"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
             >
               نام
-              <span class="inline-flex bg-red-500 w-1 h-1 rounded-full mr-1"></span>
+              <span className="inline-flex bg-red-500 w-1 h-1 rounded-full mr-1"></span>
             </label>
             <input
               id="name"
@@ -107,16 +106,16 @@ const Checkout = () => {
                   userInfo: { ...order.userInfo, firstname: e.target.value },
                 })
               }
-              class="bg-gray-50  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              className="bg-gray-50  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             />
           </div>
-          <div class="mb-6 col-span-1">
+          <div className="mb-6 col-span-1">
             <label
-              for="family"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              htmlFor="family"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
             >
               نام خانوادگی
-              <span class="inline-flex bg-red-500 w-1 h-1 rounded-full mr-1"></span>
+              <span className="inline-flex bg-red-500 w-1 h-1 rounded-full mr-1"></span>
             </label>
             <input
               value={order.userInfo.lastname}
@@ -129,24 +128,24 @@ const Checkout = () => {
               id="family"
               type="text"
               placeholder="نام خانوادگی"
-              class="bg-gray-50  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              className="bg-gray-50  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             />
           </div>
-          <div class="mb-6 col-span-1 sm:col-span-2">
+          <div className="mb-6 col-span-1 sm:col-span-2">
             <label
-              for="phone"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              htmlFor="phone"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
             >
               تلفن همراه
-              <span class="inline-flex bg-red-500 w-1 h-1 rounded-full mr-1"></span>
+              <span className="inline-flex bg-red-500 w-1 h-1 rounded-full mr-1"></span>
             </label>
             <input
               type="text"
               id="phone"
               disabled
               readOnly
-              defaultValue={user}
-              class="bg-gray-200  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              defaultValue={mobile}
+              className="bg-gray-200  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             />
           </div>
           <div className="grid col-span-1 sm:col-span-2 grid-cols-1 sm:grid-cols-2 gap-6">

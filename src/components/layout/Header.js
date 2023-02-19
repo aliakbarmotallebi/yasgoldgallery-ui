@@ -22,7 +22,6 @@ const Header = () => {
   const [dropdown, setDropdown] = useState({
     category: false,
   });
-  console.log(allCategories);
 
   const {
     state: { cart },
@@ -64,8 +63,8 @@ const Header = () => {
           <div className="flex justify-between container xl:max-w-6xl mx-auto px-4 xl:px-0">
             <div className="flex items-center space-x-2 space-x-reverse ">
               <div className="hidden md:block">
-                <Link to="/" class="flex items-center">
-                  <img src={Logo} class="h-12 ml-3" alt="Logo" />
+                <Link to="/" className="flex items-center">
+                  <img src={Logo} className="h-12 ml-3" alt="Logo" />
                 </Link>
               </div>
               <button
@@ -174,7 +173,7 @@ const Header = () => {
                               )}
                             </Link>
                             {category.children.length > 0 && (
-                              <ul className="py-1 absolute right-full w-full top-4 invisible group-hover:visible text-sm text-white text-right overflow-hidden p-0 bg-neutral-900 border-yellow-400">
+                              <ul className="py-1 pr-3 lg:pr-0 lg:m-0 m-2 relative lg:absolute right-0 lg:right-full w-full lg:top-4 hidden group-hover:block text-sm text-white text-right overflow-hidden p-0 bg-neutral-800 lg:bg-neutral-900 border-yellow-400">
                                 {category.children.map((category) => (
                                   <li>
                                     <Link
@@ -217,9 +216,9 @@ const Header = () => {
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            fill-rule="evenodd"
+                            fillRule="evenodd"
                             d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                            clip-rule="evenodd"
+                            clipRule="evenodd"
                           ></path>
                         </svg>
                       </Link>

@@ -55,7 +55,7 @@ const EditProfile = ({ usename }) => {
             <div class="w-1/2">
               <div class="mb-6">
                 <label
-                  for="username"
+                  htmlFor="username"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
                   نام کاربری
@@ -72,7 +72,7 @@ const EditProfile = ({ usename }) => {
               </div>
               <div class="mb-6">
                 <label
-                  for="fullname"
+                  htmlFor="fullname"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
                   نام
@@ -91,7 +91,7 @@ const EditProfile = ({ usename }) => {
               </div>
               <div class="mb-6">
                 <label
-                  for="fullname"
+                  htmlFor="fullname"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
                   نام خانوادگی

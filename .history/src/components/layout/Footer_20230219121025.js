@@ -3,12 +3,12 @@ import Logo from "../../assets/images/logo/logo.png";
 
 const Footer = () => {
   const map =
-    '<iframe class="w-full" src="https://balad.ir/embed?p=5359vQlqjxeM3d" title="مشاهده «خودپرداز بانک سپه» روی نقشه بلد" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>';
+    '<iframe class="w-full" src="https://balad.ir/embed?p=5359vQlqjxeM3d" title="مشاهده «خودپرداز بانک سپه» روی نقشه بلد" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabIndex="0"></iframe>';
   return (
     <>
       <footer>
-        <div className="bg-neutral-900">
-          <div className="py-8 container xl:max-w-6xl mx-auto px-4 xl:px-0">
+        <div class="bg-neutral-900">
+          <div class="py-8 container xl:max-w-6xl mx-auto px-4 xl:px-0">
             <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-center justify-between flex-wrap list-disc list-inside">
               <li>
                 <Link
@@ -54,8 +54,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="bg-neutral-900/50">
-          <div className="container container xl:max-w-6xl mx-auto px-4 xl:px-0">
+        <div class="bg-neutral-900/50">
+          <div class="container container xl:max-w-6xl mx-auto px-4 xl:px-0">
             <div class="grid gap-y-8 sm:gap-y-16 grid-cols-4 xl:grid-cols-3 container mx-auto py-12">
               <div class="mb-6 col-span-4 xl:col-span-1 md:mb-0">
                 <a href="/" class="flex items-center">
@@ -64,7 +64,7 @@ const Footer = () => {
                     فروشگاه یاس
                   </span>
                 </a>
-                <div className="text-justify pt-4 leading-6">
+                <div class="text-justify pt-4 leading-6">
                   با سخت کوشی کار کردیم، که نه تنها دغدغه های خرید طلا را برای
                   شما حل کنیم، بلکه لذت ویترین گردی مجازی و خرید آنلاین طلا راهم
                   به شما هدیه دهیم.
@@ -109,29 +109,38 @@ const Footer = () => {
                     class="bg-[#25d365] p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:opacity-60"
                   >
                     <svg
-                        class="w-6 h-6 fill-current"
-                        width="24"
-                        height="24"
-                        xmlns="http://www.w3.org/2000/svg" xml:space="preserve"  version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 300000 133000"><script xmlns=""/>
+                      class="w-6 h-6 fill-current"
+                      width="24"
+                      height="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xml:space="preserve"
+                      version="1.1"
+                      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clipRule:evenodd"
+                      viewBox="0 0 300000 133000"
+                    >
+                      <script xmlns="" />
                       <g>
-                        <path fill="#EF7F1A" d="M37096.47 4.39l55624.18 0c20395.81,0 37082.9,16661.88 37082.9,37057.36l0 17884.55c-18284.34,8220.89 -36730.61,48812.96 -63615.28,39992.34 -2214.56,1573.65 -7318.2,8058.06 -7677.6,12978.25 -9309.43,-1239.76 -20041.9,-11908.47 -18753.95,-23413.06 -15492.55,-11207.9 -2698.07,-31897.82 9589.32,-40225.36 26334.91,-17848.35 62895.52,-2498.01 42558.86,10263.51 -12365.92,7759.68 -38809.75,12885.62 -36060.3,-6164.38 -7253.88,2092.39 -11897.28,15618.27 -3163.47,22665.63 -8090.64,7949.08 -6535.41,22560.27 2113.08,27357.84 8746.41,-22661.43 39188.54,-19699.96 51489.49,-46752.05 9253.84,-20350.23 -4465.64,-43535.57 -31896.19,-39973.27 -20703.17,2688.7 -40107.72,20151.47 -49812.26,40863.04 -9846.72,21015.05 -8381.2,49152.99 11837.65,63334.75 23793.92,16689.18 49126.59,1235.84 64469.5,-18961.45 9043.43,-11904.72 16945.65,-25094.15 28921.15,-32709.37l0 31708.1c0,20395.38 -16687.42,37108.3 -37082.9,37108.3l-55624.18 0c-20395.81,0 -37083.09,-16687.29 -37083.09,-37083.09l0 -58848.75c0,-20395.8 16687.28,-37082.89 37083.09,-37082.89z"/>
+                        <path
+                          fill="#EF7F1A"
+                          d="M37096.47 4.39l55624.18 0c20395.81,0 37082.9,16661.88 37082.9,37057.36l0 17884.55c-18284.34,8220.89 -36730.61,48812.96 -63615.28,39992.34 -2214.56,1573.65 -7318.2,8058.06 -7677.6,12978.25 -9309.43,-1239.76 -20041.9,-11908.47 -18753.95,-23413.06 -15492.55,-11207.9 -2698.07,-31897.82 9589.32,-40225.36 26334.91,-17848.35 62895.52,-2498.01 42558.86,10263.51 -12365.92,7759.68 -38809.75,12885.62 -36060.3,-6164.38 -7253.88,2092.39 -11897.28,15618.27 -3163.47,22665.63 -8090.64,7949.08 -6535.41,22560.27 2113.08,27357.84 8746.41,-22661.43 39188.54,-19699.96 51489.49,-46752.05 9253.84,-20350.23 -4465.64,-43535.57 -31896.19,-39973.27 -20703.17,2688.7 -40107.72,20151.47 -49812.26,40863.04 -9846.72,21015.05 -8381.2,49152.99 11837.65,63334.75 23793.92,16689.18 49126.59,1235.84 64469.5,-18961.45 9043.43,-11904.72 16945.65,-25094.15 28921.15,-32709.37l0 31708.1c0,20395.38 -16687.42,37108.3 -37082.9,37108.3l-55624.18 0c-20395.81,0 -37083.09,-16687.29 -37083.09,-37083.09l0 -58848.75c0,-20395.8 16687.28,-37082.89 37083.09,-37082.89z"
+                        />
                       </g>
-                      </svg>
+                    </svg>
                   </a>
                 </div>
               </div>
               <div class="xl:pr-5 col-span-4 md:col-span-2 xl:col-span-1">
-                <div className="font-thin">
+                <div class="font-thin">
                   <h2 class="mb-6 text-sm font-semibold text-white uppercase">
                     ارتباط با ما
                   </h2>
                   <ul class="text-white">
                     <li class="mb-4 flex items-center">
                       <a class="hover:underline after:content-[':'] flex items-center">
-                        <span className="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white rounded-lg border border-yellow-600">
+                        <span class="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white rounded-lg border border-yellow-600">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="fill-current"
+                            class="fill-current"
                             viewBox="0 0 24 24"
                             width="24"
                             height="24"
@@ -142,14 +151,14 @@ const Footer = () => {
                         </span>
                         مشاور خرید
                       </a>
-                      <span className="mr-3">09197794756</span>
+                      <span class="mr-3">09197794756</span>
                     </li>
                     <li class="mb-4 flex items-center">
                       <a class="hover:underline after:content-[':'] flex items-center">
-                        <span className="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white rounded-lg border border-yellow-600">
+                        <span class="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white rounded-lg border border-yellow-600">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="fill-current"
+                            class="fill-current"
                             viewBox="0 0 24 24"
                             width="24"
                             height="24"
@@ -160,14 +169,14 @@ const Footer = () => {
                         </span>
                         تلفن مدیریت
                       </a>
-                      <span className="mr-3">09121990160</span>
+                      <span class="mr-3">09121990160</span>
                     </li>
                     <li class="mb-4 flex items-center">
                       <a class="hover:underline after:content-[':'] flex items-center">
-                        <span className="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white rounded-lg border border-yellow-600">
+                        <span class="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white rounded-lg border border-yellow-600">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="fill-current"
+                            class="fill-current"
                             viewBox="0 0 24 24"
                             width="24"
                             height="24"
@@ -178,22 +187,22 @@ const Footer = () => {
                         </span>
                         تلفن ثابت فروشگاه یاس
                       </a>
-                      <span className="mr-3">02155959517</span>
+                      <span class="mr-3">02155959517</span>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="col-span-4 md:col-span-2 xl:col-span-1">
-                <div className="flex flex-col items-center">
+              <div class="col-span-4 md:col-span-2 xl:col-span-1">
+                <div class="flex flex-col items-center">
                   <div
                     id="tooltip3"
                     role="tooltip"
                     class="relative shadow-lg bg-white rounded overflow-hidden"
                   >
-                    <div className="text-sm font-bold text-gray-800 p-2 py-3 inline-flex items-center ">
+                    <div class="text-sm font-bold text-gray-800 p-2 py-3 inline-flex items-center ">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="animate-bounce w-6 h-6 fill-current ml-2"
+                        class="animate-bounce w-6 h-6 fill-current ml-2"
                         viewBox="0 0 24 24"
                         width="24"
                         height="24"
@@ -203,13 +212,13 @@ const Footer = () => {
                       </svg>
                       موقعیت فروشگاه یاس
                     </div>
-                    <div className="text-center text-black">
+                    <div class="text-center text-black">
                       <div
                         dangerouslySetInnerHTML={{ __html: map }}
-                        className="w-full"
+                        class="w-full"
                       />
 
-                      <div className="p-2">
+                      <div class="p-2">
                         تهران - شهرری - دولت آباد - فلکه دوم - پاساژ ولیعصر -
                         پلاک 12
                       </div>

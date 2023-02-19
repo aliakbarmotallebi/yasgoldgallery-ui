@@ -37,31 +37,31 @@ const HomePage = () => {
         <div class="relative max-h-screen overflow-hidden">
           <img class="block w-full h-full object-cover" src={slideImage} />
           <div class="absolute bottom-0 left-0 bg-white hidden md:block md:h-32 lg:h-36 w-full ">
-            <div className="bg-white absolute z-[1] w-full -left-1/2 -top-1/2 h-1/2 translate-x-1/2 translate-y-1/2 rounded-[50%]"></div>
-            <div className="justify-evenly relative -top-1/2 hidden md:flex container xl:max-w-6xl mx-auto">
-              <div className="flex flex-col flex-1 items-center  text-black font-bold justify-center z-[2] relative -top-1/3">
-                <div className="w-20 h-20">
+            <div class="bg-white absolute z-[1] w-full -left-1/2 -top-1/2 h-1/2 translate-x-1/2 translate-y-1/2 rounded-[50%]"></div>
+            <div class="justify-evenly relative -top-1/2 hidden md:flex container xl:max-w-6xl mx-auto">
+              <div class="flex flex-col flex-1 items-center  text-black font-bold justify-center z-[2] relative -top-1/3">
+                <div class="w-20 h-20">
                   <img src={createdImage} alt="packing" />
                 </div>
-                <p className="mt-4 text-center font-bold">دست ساز</p>
+                <p class="mt-4 text-center font-bold">دست ساز</p>
               </div>
-              <div className="flex flex-col flex-1 items-center  text-black font-bold justify-center z-[2] relative -top-1/2">
-                <div className="w-20 h-20">
+              <div class="flex flex-col flex-1 items-center  text-black font-bold justify-center z-[2] relative -top-1/2">
+                <div class="w-20 h-20">
                   <img src={guaranteeImage} alt="packing" />
                 </div>
-                <p className="mt-4 text-center font-bold">ضمانت اصالت</p>
+                <p class="mt-4 text-center font-bold">ضمانت اصالت</p>
               </div>
-              <div className="flex flex-col flex-1 items-center  text-black font-bold justify-center z-[2] relative -top-1/2">
-                <div className="w-20 h-20">
+              <div class="flex flex-col flex-1 items-center  text-black font-bold justify-center z-[2] relative -top-1/2">
+                <div class="w-20 h-20">
                   <img src={deliveryImage} alt="packing" />
                 </div>
-                <p className="mt-4 text-center font-bold">ارسال سریع</p>
+                <p class="mt-4 text-center font-bold">ارسال سریع</p>
               </div>
-              <div className="flex flex-col flex-1 items-center  text-black font-bold justify-center z-[2] relative -top-1/3">
-                <div className="w-20 h-20">
+              <div class="flex flex-col flex-1 items-center  text-black font-bold justify-center z-[2] relative -top-1/3">
+                <div class="w-20 h-20">
                   <img src={boxImage} alt="packing" />
                 </div>
-                <p className="mt-4 text-center font-bold">بسته بندی ویژه</p>
+                <p class="mt-4 text-center font-bold">بسته بندی ویژه</p>
               </div>
             </div>
           </div>

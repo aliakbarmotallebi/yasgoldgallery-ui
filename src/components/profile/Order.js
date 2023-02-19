@@ -21,39 +21,39 @@ const Order = ({ id, items_count, total, is_paid, created_at }) => {
   };
   return (
     <>
-      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 last:border-b-0 whitespace-nowrap">
-        <th class="w-[20px] text-right px-2 py-1 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+      <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 last:border-b-0 whitespace-nowrap">
+        <th className="w-[20px] text-right px-2 py-1 font-medium text-gray-900 dark:text-white whitespace-nowrap">
           <p className="w-full h-full text-center">{id}</p>
         </th>
-        <td class="px-6 py-4 text-center">
+        <td className="px-6 py-4 text-center">
           <p className="w-full h-full text-center">{items_count}</p>
         </td>
-        <td class="px-6 py-4 text-center">
+        <td className="px-6 py-4 text-center">
           <p className="w-full h-full text-center">{total} تومان</p>
         </td>
-        <td class="px-6 py-4 text-center">
+        <td className="px-6 py-4 text-center">
           {is_paid ? (
-            <span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
+            <span className="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
               پرداخت شده
             </span>
           ) : (
-            <span class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
+            <span className="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
               پرداخت نشده
             </span>
           )}
         </td>
-        <td class="px-6 py-4 text-center">{created_at}</td>
-        <td class="px-6 py-4 text-center">
+        <td className="px-6 py-4 text-center">{created_at}</td>
+        <td className="px-6 py-4 text-center">
           <button
             onClick={getDetailsOrder}
-            class="inline-flex items-center p-2 text-xs font-medium text-gray-700 bg-white rounded-lg border border-gray-200 toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 focus:outline-none"
+            className="inline-flex items-center p-2 text-xs font-medium text-gray-700 bg-white rounded-lg border border-gray-200 toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 focus:outline-none"
           >
             {loadingDetails ? (
               <Spinner classNameSvg="mr-0 !w-4 !h-4" />
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="w-4 h-4"
+                className="w-4 h-4"
                 viewBox="0 0 24 24"
                 width="24"
                 height="24"

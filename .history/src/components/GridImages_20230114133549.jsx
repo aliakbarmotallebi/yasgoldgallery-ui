@@ -1,6 +1,6 @@
 const GridImages = () => {
   return (
-    <section className="container mx-auto">
+    <section class="container mx-auto">
       <div class="grid grid-cols-6 col-span-2 gap-2 py-20">
         <div class=" overflow-hidden rounded-xl col-span-3 max-h-[14rem]">
           <img

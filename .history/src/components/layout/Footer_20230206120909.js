@@ -2,8 +2,8 @@ const Footer = () => {
     return (
         <>
             <footer>
-                <div className="bg-neutral-900">
-                    <div className="md:w-10/12 lg:w-8/12 m-auto py-8">
+                <div class="bg-neutral-900">
+                    <div class="md:w-10/12 lg:w-8/12 m-auto py-8">
                         <ul class="flex flex-wrap items-center justify-between md:flex-nowrap list-disc list-inside">
                             <li>
                                 <a href="/" class="hover:text-sky-400 transition whitespace-nowrap text-white">صفحه اصلی</a>
@@ -30,7 +30,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="bg-neutral-900/50">
+                <div class="bg-neutral-900/50">
                     <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 container mx-auto py-12">
                         <div class="mb-6 md:mb-0">
                             <a href="/" class="flex items-center">
@@ -39,7 +39,7 @@ const Footer = () => {
                                     فروشگاه یاس
                                 </span>
                             </a>
-                            <div className="text-justify pt-4 leading-6">
+                            <div class="text-justify pt-4 leading-6">
                                 با سخت کوشی کار کردیم، که نه تنها دغدغه های خرید طلا را برای
                                 شما حل کنیم، بلکه لذت ویترین گردی مجازی و خرید
                                 آنلاین طلا راهم به شما هدیه دهیم.
@@ -63,42 +63,42 @@ const Footer = () => {
                         </div>
                         <div class="pr-5">
                           
-                            <div className="font-thin">
+                            <div class="font-thin">
                                 <h2 class="mb-6 text-sm font-semibold text-white uppercase">
                                     ارتباط با ما
                                 </h2>
                                 <ul class="text-white">
                                     <li class="mb-4 flex items-center">
                                         <a class="hover:underline after:content-[':'] flex items-center">
-                                            <span className="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white bg-yellow-100/10 rounded-lg border border-yellow-200">
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 4a8 8 0 0 0-8 8h3a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7C2 6.477 6.477 2 12 2s10 4.477 10 10v7a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h3a8 8 0 0 0-8-8zM4 14v5h3v-5H4zm13 0v5h3v-5h-3z"/></svg>
+                                            <span class="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white bg-yellow-100/10 rounded-lg border border-yellow-200">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 4a8 8 0 0 0-8 8h3a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7C2 6.477 6.477 2 12 2s10 4.477 10 10v7a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h3a8 8 0 0 0-8-8zM4 14v5h3v-5H4zm13 0v5h3v-5h-3z"/></svg>
                                             </span>
                                             مشاور خرید
                                         </a>
-                                        <span className="mr-3">
+                                        <span class="mr-3">
                                             09121990160
                                         </span>
                                     </li>
                                     <li class="mb-4 flex items-center">
                                         <a class="hover:underline after:content-[':'] flex items-center">
-                                            <span className="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white bg-yellow-100/10 rounded-lg border border-yellow-200">
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M9.366 10.682a10.556 10.556 0 0 0 3.952 3.952l.884-1.238a1 1 0 0 1 1.294-.296 11.422 11.422 0 0 0 4.583 1.364 1 1 0 0 1 .921.997v4.462a1 1 0 0 1-.898.995c-.53.055-1.064.082-1.602.082C9.94 21 3 14.06 3 5.5c0-.538.027-1.072.082-1.602A1 1 0 0 1 4.077 3h4.462a1 1 0 0 1 .997.921A11.422 11.422 0 0 0 10.9 8.504a1 1 0 0 1-.296 1.294l-1.238.884zm-2.522-.657l1.9-1.357A13.41 13.41 0 0 1 7.647 5H5.01c-.006.166-.009.333-.009.5C5 12.956 11.044 19 18.5 19c.167 0 .334-.003.5-.01v-2.637a13.41 13.41 0 0 1-3.668-1.097l-1.357 1.9a12.442 12.442 0 0 1-1.588-.75l-.058-.033a12.556 12.556 0 0 1-4.702-4.702l-.033-.058a12.442 12.442 0 0 1-.75-1.588z"/></svg>
+                                            <span class="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white bg-yellow-100/10 rounded-lg border border-yellow-200">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M9.366 10.682a10.556 10.556 0 0 0 3.952 3.952l.884-1.238a1 1 0 0 1 1.294-.296 11.422 11.422 0 0 0 4.583 1.364 1 1 0 0 1 .921.997v4.462a1 1 0 0 1-.898.995c-.53.055-1.064.082-1.602.082C9.94 21 3 14.06 3 5.5c0-.538.027-1.072.082-1.602A1 1 0 0 1 4.077 3h4.462a1 1 0 0 1 .997.921A11.422 11.422 0 0 0 10.9 8.504a1 1 0 0 1-.296 1.294l-1.238.884zm-2.522-.657l1.9-1.357A13.41 13.41 0 0 1 7.647 5H5.01c-.006.166-.009.333-.009.5C5 12.956 11.044 19 18.5 19c.167 0 .334-.003.5-.01v-2.637a13.41 13.41 0 0 1-3.668-1.097l-1.357 1.9a12.442 12.442 0 0 1-1.588-.75l-.058-.033a12.556 12.556 0 0 1-4.702-4.702l-.033-.058a12.442 12.442 0 0 1-.75-1.588z"/></svg>
                                             </span>
                                             تلفن مدیریت
                                         </a>
-                                        <span className="mr-3">
+                                        <span class="mr-3">
                                             02155959517
                                         </span>
                                         
                                     </li>
                                     <li class="mb-4 flex items-center">
                                         <a class="hover:underline after:content-[':'] flex items-center">
-                                            <span className="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white bg-yellow-100/10 rounded-lg border border-yellow-200">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M21 13.242V20h1v2H2v-2h1v-6.758A4.496 4.496 0 0 1 1 9.5c0-.827.224-1.624.633-2.303L4.345 2.5a1 1 0 0 1 .866-.5H18.79a1 1 0 0 1 .866.5l2.702 4.682A4.496 4.496 0 0 1 21 13.242zm-2 .73a4.496 4.496 0 0 1-3.75-1.36A4.496 4.496 0 0 1 12 14.001a4.496 4.496 0 0 1-3.25-1.387A4.496 4.496 0 0 1 5 13.973V20h14v-6.027zM5.789 4L3.356 8.213a2.5 2.5 0 0 0 4.466 2.216c.335-.837 1.52-.837 1.856 0a2.5 2.5 0 0 0 4.644 0c.335-.837 1.52-.837 1.856 0a2.5 2.5 0 1 0 4.457-2.232L18.21 4H5.79z"/></svg>
+                                            <span class="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white bg-yellow-100/10 rounded-lg border border-yellow-200">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M21 13.242V20h1v2H2v-2h1v-6.758A4.496 4.496 0 0 1 1 9.5c0-.827.224-1.624.633-2.303L4.345 2.5a1 1 0 0 1 .866-.5H18.79a1 1 0 0 1 .866.5l2.702 4.682A4.496 4.496 0 0 1 21 13.242zm-2 .73a4.496 4.496 0 0 1-3.75-1.36A4.496 4.496 0 0 1 12 14.001a4.496 4.496 0 0 1-3.25-1.387A4.496 4.496 0 0 1 5 13.973V20h14v-6.027zM5.789 4L3.356 8.213a2.5 2.5 0 0 0 4.466 2.216c.335-.837 1.52-.837 1.856 0a2.5 2.5 0 0 0 4.644 0c.335-.837 1.52-.837 1.856 0a2.5 2.5 0 1 0 4.457-2.232L18.21 4H5.79z"/></svg>
                                             </span>
                                             تلفن ثابت فروشگاه یاس
                                         </a>
-                                        <span className="mr-3">
+                                        <span class="mr-3">
                                         02155959517
                                         </span>
                                     </li>

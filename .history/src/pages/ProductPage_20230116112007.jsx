@@ -1,7 +1,7 @@
 const ProductPage = () => {
   return (
     <div class="bg-gray-100 px-4 xl:px-4 py-14">
-      <div className="container mx-auto">
+      <div class="container mx-auto">
         <div class="max-w-xl lg:max-w-6xl mx-auto text-neutral-900">
           <div class="flex flex-wrap -mx-4 mb-12">
             <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
@@ -79,44 +79,36 @@ const ProductPage = () => {
               </div>
             </div>
             <div class="w-full lg:w-1/2 px-4">
-            <div class="max-w-lg">
-              <h2 class="text-4xl font-black mb-1">
-              دستبند طلا زنانه کارتیه
-              </h2>
-              <span class="bg-indigo-600 py-1 px-2 text-white rounded-lg block text-sm font-bold mb-5">
-                دسته بندی
-              </span>
-              <span class="block text-2xl font-black text-green-500 mb-4">
-              20000
-              <span className="mr-1">
-                تومان
-              </span>
-              </span>
-              <ul class="list-disc list-inside font-medium mb-6">
-                <li>
-                  
-                </li>
-                <li>
-                  
-                </li>
-                <li>
-                  
-                </li>
-              </ul>
+              <div class="max-w-lg">
+                <h2 class="text-4xl font-black mb-1">
+                  دستبند طلا زنانه کارتیه
+                </h2>
+                <span class="bg-indigo-600 py-1 px-2 text-white rounded-lg block text-sm font-bold mb-5">
+                  دسته بندی
+                </span>
+                <span class="block text-2xl font-black text-green-500 mb-4">
+                  20000
+                  <span class="mr-1">تومان</span>
+                </span>
+                <ul class="list-disc list-inside font-medium mb-6">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
             </div>
-          </div>
           </div>
           <div class="mb-8 border-b border-white">
             <div class="flex flex-col md:flex-row -mb-px">
-              <div
-                class="inline-block px-2 pb-2 mb-3 md:mb-0 text-lg font-black text-yellow-400 border-b-4 border-yellow-400"
-              >
+              <div class="inline-block px-2 pb-2 mb-3 md:mb-0 text-lg font-black text-yellow-400 border-b-4 border-yellow-400">
                 توضیحات
               </div>
             </div>
           </div>
-          <div className="pb-10 text-lg">
-          نوع و عیار فلز : طلای 18 عیار\r\nاجرت (درصد) : 25\r\nفاکتور رسمی + بسته بندی مناسب هدیه : دارد\r\nگارانتی اصالت و سلامت فیزیکی کالا\r\nارسال مطمئن و بیمه شده به سراسر کشور
+          <div class="pb-10 text-lg">
+            نوع و عیار فلز : طلای 18 عیار\r\nاجرت (درصد) : 25\r\nفاکتور رسمی +
+            بسته بندی مناسب هدیه : دارد\r\nگارانتی اصالت و سلامت فیزیکی
+            کالا\r\nارسال مطمئن و بیمه شده به سراسر کشور
           </div>
         </div>
       </div>

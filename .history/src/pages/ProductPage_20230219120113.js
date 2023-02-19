@@ -38,12 +38,12 @@ const ProductPage = () => {
   return (
     <div class="bg-neutral-900 px-4 xl:px-4 py-14">
       {loading && <LoadableLoading />}
-      <div className="container mx-auto">
+      <div class="container mx-auto">
         <div class="max-w-xl lg:max-w-6xl mx-auto text-neutral-900  bg-neutral-900 rounded-lg shadow-md  text-black px-5 py-6">
           <div class="flex flex-wrap -mx-4 mb-12 md:px-10 pt-10">
             <div class="w-full lg:w-1/2 px-4">
               <div class="max-w-lg">
-                <div className="flex items-center">
+                <div class="flex items-center">
                   <h2 class="text-4xl text-white mb-1 ml-auto">{title}</h2>
                   {!loading && (
                     <HandleCart
@@ -66,7 +66,7 @@ const ProductPage = () => {
                   )}
                 </div>
 
-                <div className="flex">
+                <div class="flex">
                   {tags?.map((tag) => (
                     <Link
                       to={`/products/tag/${tag.id}/${tag.slug}`}
@@ -80,28 +80,26 @@ const ProductPage = () => {
 
                 <span class="block text-2xl font-black text-green-500 mb-4">
                   {Number(price).toLocaleString()}
-                  <span className="mr-1">تومان</span>
+                  <span class="mr-1">تومان</span>
                 </span>
                 <ul class="list-inside font-medium mb-6 text-white">
                   <li>
-                    <span className="text-bold after:content-[':'] ml-2">
+                    <span class="text-bold after:content-[':'] ml-2">
                       بارکد
                     </span>
                     {barcode}
                   </li>
                   <li>
-                    <span className="text-bold after:content-[':'] ml-2">
-                      اجرت
-                    </span>
+                    <span class="text-bold after:content-[':'] ml-2">اجرت</span>
                     {Number(wages).toLocaleString()}
                   </li>
                 </ul>
 
-                <div className="px-3 rounded-md py-4 border border-yellow-600">
-                  <div className="text-base text-yellow-500 pb-4 inline-flex items-center font-bold">
+                <div class="px-3 rounded-md py-4 border border-yellow-600">
+                  <div class="text-base text-yellow-500 pb-4 inline-flex items-center font-bold">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="fill-current ml-1"
+                      class="fill-current ml-1"
                       viewBox="0 0 24 24"
                       width="24"
                       height="24"
@@ -113,26 +111,26 @@ const ProductPage = () => {
                   </div>
                   <ul class="space-y-3 ">
                     <li>
-                      <span className="font-bold after:content-[':'] text-white ml-2">
+                      <span class="font-bold after:content-[':'] text-white ml-2">
                         شرایط اقساط
                       </span>
                       <br />
                       <div
-                        className="leading-7 text-white"
+                        class="leading-7 text-white"
                         dangerouslySetInnerHTML={{
                           __html: replaceWithBr(installment_terms),
                         }}
                       ></div>
                     </li>
-                    <li className="text-white">
-                      <span className="font-bold after:content-[':']  ml-2">
+                    <li class="text-white">
+                      <span class="font-bold after:content-[':']  ml-2">
                         پیش قسط
                       </span>
                       {Number(prepayment).toLocaleString()}
                     </li>
 
-                    <li className="text-white">
-                      <span className="font-bold after:content-[':'] ml-2">
+                    <li class="text-white">
+                      <span class="font-bold after:content-[':'] ml-2">
                         قسط ماهانه
                       </span>
                       {Number(monthly_installment).toLocaleString()}
@@ -176,17 +174,17 @@ const ProductPage = () => {
               </div>
             </div>
           </div>
-          <div className="md:px-10">
+          <div class="md:px-10">
             <div>
               <div class="border-b-2 border-yellow-400 text-lg text-yellow-500 pb-2 inline-flex items-center font-bold">
                 توضیحات
               </div>
               <div
                 dangerouslySetInnerHTML={{ __html: replaceWithBr(description) }}
-                className="pb-10 text-lg leading-7 text-white pt-4 px-4"
+                class="pb-10 text-lg leading-7 text-white pt-4 px-4"
               ></div>
             </div>
-            <div className="pt-5">
+            <div class="pt-5">
               <div class="border-b-2 border-yellow-400 text-lg text-yellow-500 pb-2 inline-flex items-center font-bold">
                 دیدگاه مشتریان یاس
               </div>

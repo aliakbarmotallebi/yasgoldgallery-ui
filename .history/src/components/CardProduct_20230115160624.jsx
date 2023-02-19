@@ -1,7 +1,7 @@
 const CardProduct = () => {
   return (
     <div class="max-w-sm">
-      <div className="relative">
+      <div class="relative">
         <div class="flex flex-wrap gap-5">
           <div class="bg-white rounded-xl overflow-hidden shadow-xl hover:scale-105 hover:shadow-2xl transform duration-500 cursor-pointer">
             <div class="p-4">
@@ -14,7 +14,10 @@ const CardProduct = () => {
               <p class="mt-2 font-sans text-gray-700">by Diseño Constructivo</p>
             </div>
             <div class="relative">
-              <img class="w-80" src="https://dioragallery.com/images/stories/virtuemart/product/17427.jpg" />
+              <img
+                class="w-80"
+                src="https://dioragallery.com/images/stories/virtuemart/product/17427.jpg"
+              />
               <p class="absolute text-lg transform translate-x-20 -translate-y-24 bg-blue-600 text-white py-3 px-6 rounded-full cursor-pointer hover:scale-105 duration-500">
                 Comprar ahora
               </p>

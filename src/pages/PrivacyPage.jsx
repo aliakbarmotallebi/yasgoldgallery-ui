@@ -1,12 +1,10 @@
 const PrivacyPage = () => {
   return (
     <>
-      <div className="bg-gray-100 xl:px-4 py-14 text-black">
-        <div className="mx-auto container text-center xl:max-w-6xl mx-auto px-4 xl:px-0">
-          <h2 className="text-4xl font-bold text-gray-900">
-            درباره گالری طلا یاس
-          </h2>
-          <div className="pt-5">
+      <div class="bg-gray-100 xl:px-4 py-14 text-black">
+        <div class="mx-auto container text-center xl:max-w-6xl mx-auto px-4 xl:px-0">
+          <h2 class="text-4xl font-bold text-gray-900">درباره گالری طلا یاس</h2>
+          <div class="pt-5">
             کاربر گرامی با توجه به اینکه با ورود به وب‌سایت گالری یاس و استفاده
             از خدمات آن به معنای قبول و آگاهی کامل از قوانین از سوی شما می‌باشد،
             بنابراین خواهشمندیم موارد زیر را با دقت مطالعه بفرمایید.

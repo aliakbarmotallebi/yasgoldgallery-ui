@@ -11,14 +11,14 @@ const ProfilePage = () => {
   return (
     <>
       {loading && <LoadableLoading />}
-      <div class="sticky top-0 border-b border-gray-200 w-full bg-white text-black">
+      <div className="sticky top-0 border-b border-gray-200 w-full bg-white text-black">
         <div className="container xl:max-w-6xl mx-auto">
           <ul
-            class="flex nav nav-tabs whitespace-nowrap -mb-px text-sm font-medium text-center overflow-x-auto overflow-y-hidden"
+            className="flex nav nav-tabs whitespace-nowrap -mb-px text-sm font-medium text-center overflow-x-auto overflow-y-hidden"
             id="tabs-tab"
             role="tablist"
           >
-            <li class="mr-2 nav-item" role="presentation">
+            <li className="mr-2 nav-item" role="presentation">
               <a
                 href="#edit-profile"
                 data-bs-toggle="pill"
@@ -28,7 +28,7 @@ const ProfilePage = () => {
                 ویرایش اطلاعات کاربر
               </a>
             </li>
-            <li class="mr-2 nav-item" role="presentation">
+            <li className="mr-2 nav-item" role="presentation">
               <a
                 href="#list-orders"
                 data-bs-toggle="pill"
@@ -38,7 +38,7 @@ const ProfilePage = () => {
                 لیست سفارشات
               </a>
             </li>
-            <li class="mr-2 nav-item" role="presentation">
+            <li className="mr-2 nav-item" role="presentation">
               <a
                 href="#list-payments"
                 data-bs-toggle="pill"
@@ -52,7 +52,7 @@ const ProfilePage = () => {
         </div>
       </div>
 
-      <div class="border-b border-gray-200 w-full bg-white text-black">
+      <div className="border-b border-gray-200 w-full bg-white text-black">
         <div
           className="container xl:max-w-6xl mx-auto px-4 xl:px-0 pt-10 tab-content"
           id="tabs-tabContent"

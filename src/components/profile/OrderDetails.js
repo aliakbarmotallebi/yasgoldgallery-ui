@@ -12,6 +12,8 @@ const OrderDetails = ({ orderDetails }) => {
     is_paid,
     products,
   } = orderDetails;
+
+  const print = () => window.print();
   return (
     <div className="max-w-4xl w-full h-full sm:h-auto shadow px-6 py-6 bg-white rounded-lg border mb-4">
       <div className="flex flex-col justify-between">
@@ -24,7 +26,7 @@ const OrderDetails = ({ orderDetails }) => {
           <div className="print:mb-5 flex items-center justify-between">
             {is_paid ? (
               <>
-                <div className="text-white border border-green-700 bg-green-800 font-medium rounded-lg text-sm px-2 py-1 text-center mr-2 mb-2 ">
+                <div className="text-white border border-green-700 bg-green-800 print:text-green-800 font-medium rounded-lg text-sm px-2 py-1 text-center mr-2 mb-2 ">
                   پرداخت شده
                 </div>
                 <div className="py-1 px-2 mr-2 mb-2 text-sm font-medium rounded-lg border border-gray-200 bg-gray-100 text-blue-700">
@@ -33,14 +35,14 @@ const OrderDetails = ({ orderDetails }) => {
                 </div>
               </>
             ) : (
-              <div className="text-white border border-red-700 bg-red-800 font-medium rounded-lg text-sm px-2 py-1 text-center mb-2">
+              <div className="text-white border border-red-700 bg-red-800 print:text-red-800 font-medium rounded-lg text-sm px-2 py-1 text-center mb-2">
                 پرداخت نشده
               </div>
             )}
 
             <button
-              // onclick="window.print()"
-              className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-1 text-center mr-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+              onClick={print}
+              className="text-gray-900 print:hidden hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-1 text-center mr-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
             >
               <div className="flex items-center">
                 <svg
@@ -49,8 +51,8 @@ const OrderDetails = ({ orderDetails }) => {
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="feather feather-printer w-6 h-6"
                 >
                   <polyline points="6 9 6 2 18 2 18 9"></polyline>

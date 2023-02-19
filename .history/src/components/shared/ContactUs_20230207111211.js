@@ -10,13 +10,13 @@ const ContactUs = () => {
   });
   return (
     <>
-    <div className="max-w-xl w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
-      <div className="text-black text-center">
-        <h2 className="text-2xl mb-4">تماس با ما</h2>
-        <p className="text-black/60">پیشنهادات خود را با ما درمیان بگذارید</p>
+    <div class="max-w-xl w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
+      <div class="text-black text-center">
+        <h2 class="text-2xl mb-4">تماس با ما</h2>
+        <p class="text-black/60">پیشنهادات خود را با ما درمیان بگذارید</p>
       </div>
       <div class="p-6 text-left">
-        <form className="w-[80%] mx-auto">
+        <form class="w-[80%] mx-auto">
           <div class="form-group mb-6">
             <input
               type="text"
@@ -124,7 +124,7 @@ const ContactUs = () => {
             ></textarea>
           </div>
         </form>
-        <div className="">
+        <div class="">
           <button
             type="button"
             class="

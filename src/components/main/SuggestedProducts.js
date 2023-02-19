@@ -16,9 +16,9 @@ const SuggestedProducts = ({ suggested: suggestedProducts }) => {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3 p-5 items-center">
-          <div class="col-span-1  hidden lg:block">
+          <div className="col-span-1  hidden lg:block">
             <div className="h-120 overflow-hidden flex justify-center">
-              <img class="" src={giftsImage} />
+              <img className="" src={giftsImage} />
             </div>
           </div>
           <div className="col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-4">

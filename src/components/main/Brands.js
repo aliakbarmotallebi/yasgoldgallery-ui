@@ -37,14 +37,14 @@ const Brands = () => {
         >
           <SwiperSlide>
             <div className="whitespace-nowrap p-5">
-              <div class="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
+              <div className="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
                 <div
-                  tabindex="0"
-                  class="focus:outline-none h-40 w-40 mb-4 lg:mb-0"
+                  tabIndex="0"
+                  className="focus:outline-none h-40 w-40 mb-4 lg:mb-0"
                 >
                   <img
                     src={Image1}
-                    class="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
+                    className="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
                   />
                 </div>
                 Chopard
@@ -53,14 +53,14 @@ const Brands = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="whitespace-nowrap p-5">
-              <div class="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
+              <div className="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
                 <div
-                  tabindex="0"
-                  class="focus:outline-none h-40 w-40 mb-4 lg:mb-0"
+                  tabIndex="0"
+                  className="focus:outline-none h-40 w-40 mb-4 lg:mb-0"
                 >
                   <img
                     src={Image2}
-                    class="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
+                    className="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
                   />
                 </div>
                 Bvlgari
@@ -69,14 +69,14 @@ const Brands = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="whitespace-nowrap p-5">
-              <div class="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
+              <div className="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
                 <div
-                  tabindex="0"
-                  class="focus:outline-none h-40 w-40 mb-4 lg:mb-0"
+                  tabIndex="0"
+                  className="focus:outline-none h-40 w-40 mb-4 lg:mb-0"
                 >
                   <img
                     src={Image3}
-                    class="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
+                    className="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
                   />
                 </div>
                 Chanel
@@ -85,14 +85,14 @@ const Brands = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="whitespace-nowrap p-5">
-              <div class="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
+              <div className="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
                 <div
-                  tabindex="0"
-                  class="focus:outline-none h-40 w-40 mb-4 lg:mb-0"
+                  tabIndex="0"
+                  className="focus:outline-none h-40 w-40 mb-4 lg:mb-0"
                 >
                   <img
                     src={Image4}
-                    class="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
+                    className="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
                   />
                 </div>
                 Louis Vuitton
@@ -101,14 +101,14 @@ const Brands = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="whitespace-nowrap p-5">
-              <div class="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
+              <div className="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
                 <div
-                  tabindex="0"
-                  class="focus:outline-none h-40 w-40 mb-4 lg:mb-0"
+                  tabIndex="0"
+                  className="focus:outline-none h-40 w-40 mb-4 lg:mb-0"
                 >
                   <img
                     src={Image5}
-                    class="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
+                    className="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
                   />
                 </div>
                 Dior

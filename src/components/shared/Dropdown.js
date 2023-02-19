@@ -13,14 +13,14 @@ const Dropdown = ({ dropdown, setDropdown, children, showHumburgerMenu }) => {
   return showHumburgerMenu ? (
     <div
       id="dropdown"
-      className={`lg:absolute z-30 w-full lg:w-60 !mr-0 bg-transparent lg:bg-white divide-y divide-gray-100 rounded lg:shadow  top-[40px]`}
+      className={` z-30 w-full !mr-0 bg-transparent divide-y divide-gray-100 rounded top-[40px]`}
     >
       {children}
     </div>
   ) : (
     <div
       id="dropdown"
-      className={`lg:absolute z-30 w-full lg:w-60 !mr-0 bg-transparent lg:bg-white divide-y divide-gray-100 rounded lg:shadow  top-[40px]`}
+      className={`absolute z-30 w-60 !mr-0 bg-transparent divide-y divide-gray-100 rounded shadow  top-[40px]`}
     >
       {children}
     </div>

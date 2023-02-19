@@ -58,7 +58,7 @@ const Login = ({ setUser, openModal, setShowModal }) => {
       <div className="max-w-lg w-full shadow px-6 py-6 bg-white rounded-lg border mb-4">
         <div className="sm:px-8 py-5 text-right text-gray-900 ">
           <div className="flex justify-center">
-            <img src={Logo} class="h-12 mb-3" alt="Logo" />
+            <img src={Logo} className="h-12 mb-3" alt="Logo" />
           </div>
           <h3 className="text-2xl font-bold text-center">
             ورود به حساب کاربری
@@ -82,7 +82,7 @@ const Login = ({ setUser, openModal, setShowModal }) => {
                     type="button"
                     onClick={userLogin}
                     disabled={verifyCode.trim() === "" ? true : false}
-                    className="transition flex items-center justify-center duration-200 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-yekan-bold text-center inline-block disabled:bg-gray-500 disabled:opacity-20 disabled:hover:bg-gray-500"
+                    className="transition flex items-center justify-center duration-200 bg-yellow-500 hover:bg-yellow-600 text-black focus:bg-yellow-600 focus:shadow-sm focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50  w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-yekan-bold text-center disabled:bg-gray-500 disabled:opacity-20 disabled:hover:bg-gray-500"
                   >
                     {loading.loginLoading && (
                       <Spinner
@@ -97,7 +97,7 @@ const Login = ({ setUser, openModal, setShowModal }) => {
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
-                        className="w-4 h-4 inline-block"
+                        className="w-4 h-4 inline-block rotate-180"
                       >
                         <path
                           strokeLinecap="round"
@@ -134,7 +134,7 @@ const Login = ({ setUser, openModal, setShowModal }) => {
                   type="button"
                   disabled={userPhoneNumber.trim() === "" ? true : false}
                   onClick={sendVerifyCode}
-                  className="transition flex items-center justify-center duration-200 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 px-4 rounded-lg text-sm shadow-sm hover:shadow-md font-yekan-bold text-center inline-block disabled:bg-gray-500 disabled:opacity-20 disabled:hover:bg-gray-500"
+                  className="transition flex items-center justify-center duration-200 bg-yellow-500 hover:bg-yellow-600 focus:bg-yellow-600 focus:shadow-sm focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50 text-black w-full py-2.5 px-4 rounded-lg text-sm shadow-sm hover:shadow-md font-yekan-bold text-center disabled:bg-gray-500 disabled:opacity-20 disabled:hover:bg-gray-500"
                 >
                   {loading.sendVerifyCodeLoading && (
                     <Spinner
@@ -151,7 +151,7 @@ const Login = ({ setUser, openModal, setShowModal }) => {
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
-                      className="w-4 h-4 inline-block"
+                      className="w-4 h-4 inline-block rotate-180"
                     >
                       <path
                         strokeLinecap="round"

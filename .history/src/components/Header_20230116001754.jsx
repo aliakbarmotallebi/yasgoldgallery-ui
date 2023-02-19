@@ -11,14 +11,14 @@ const Header = ({ children }) => {
 
   return (
     <>
-      <div className="bg-neutral-900 w-full">
-        <div className="flex justify-between container xl:max-w-6xl mx-auto pt-5 flex-none items-center">
-          <div className="w-8 h-5"></div>
+      <div class="bg-neutral-900 w-full">
+        <div class="flex justify-between container xl:max-w-6xl mx-auto pt-5 flex-none items-center">
+          <div class="w-8 h-5"></div>
 
           <div>
             <button
               onClick={openModal}
-              className="inline-flex rounded-lg bg-blue-800 px-3 py-2"
+              class="inline-flex rounded-lg bg-blue-800 px-3 py-2"
             >
               ورود به حساب کاربری
             </button>
@@ -29,12 +29,12 @@ const Header = ({ children }) => {
             >
               <div class="px-8 py-6 mt-4 text-right text-gray-900">
                 <h3 class="text-2xl font-bold text-center">
-                ورود به حساب کاربری
+                  ورود به حساب کاربری
                 </h3>
 
                 <div class="mt-4">
                   <div>
-                    <label class="block" for="email">
+                    <label class="block" htmlFor="email">
                       نام کاربری
                     </label>
                     <input
@@ -44,9 +44,7 @@ const Header = ({ children }) => {
                     />
                   </div>
                   <div class="mt-4">
-                    <label class="block">
-                      گذرواژه
-                    </label>
+                    <label class="block">گذرواژه</label>
                     <input
                       type="password"
                       placeholder="Password"
@@ -66,31 +64,31 @@ const Header = ({ children }) => {
             </Modal>
           </div>
         </div>
-        <header className="flex flex-none items-center h-16 bg-neutral-900 shadow-sm top-0 right-0 left-0 z-30">
-          <div className="flex justify-between container xl:max-w-6xl mx-auto px-4 lg:px-8">
+        <header class="flex flex-none items-center h-16 bg-neutral-900 shadow-sm top-0 right-0 left-0 z-30">
+          <div class="flex justify-between container xl:max-w-6xl mx-auto px-4 lg:px-8">
             <div class="flex items-center space-x-2 space-x-reverse">
-              <nav className="hidden lg:flex lg:items-center lg:space-x-2 text-sm lg:space-x-reverse">
+              <nav class="hidden lg:flex lg:items-center lg:space-x-2 text-sm lg:space-x-reverse">
                 <a
                   href="/"
-                  className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800"
+                  class="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-300 bg-neutral-800"
                 >
                   صفحه اصلی
                 </a>
                 <a
                   href="/about"
-                  className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                  class="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
                 >
                   درباره ما
                 </a>
                 <a
                   href="javascript:void(0)"
-                  className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                  class="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
                 >
                   تماس با ما
                 </a>
                 <a
                   href="/products"
-                  className="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
+                  class="font-medium flex items-center space-x-2 px-3 py-2 rounded text-neutral-400 hover:text-neutral-300 hover:bg-neutral-800"
                 >
                   محصولات
                 </a>
@@ -109,7 +107,7 @@ const Header = ({ children }) => {
                     <path
                       fill-rule="evenodd"
                       d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                 </button>

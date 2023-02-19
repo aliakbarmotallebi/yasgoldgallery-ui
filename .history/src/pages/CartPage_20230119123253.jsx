@@ -1,8 +1,8 @@
 const CartPage = () => {
   return (
     <>
-      <div className="mx-auto my-10 max-w-xl bg-white rounded-lg shadow-md  text-black">
-        <div className="text-center px-5 py-6 flex gap-5">
+      <div class="mx-auto my-10 max-w-xl bg-white rounded-lg shadow-md  text-black">
+        <div class="text-center px-5 py-6 flex gap-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="w-16 h-16 fill-current"
@@ -14,10 +14,10 @@ const CartPage = () => {
             <path d="M4 16V4H2V2h3a1 1 0 0 1 1 1v12h12.438l2-8H8V5h13.72a1 1 0 0 1 .97 1.243l-2.5 10a1 1 0 0 1-.97.757H5a1 1 0 0 1-1-1zm2 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm12 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path>
           </svg>
           <div>
-            <div className="text-lg font-semibold text-gray-900">
+            <div class="text-lg font-semibold text-gray-900">
               سبد خرید شما خالی است!
             </div>
-            <div className="text-gray-700 text-center">
+            <div class="text-gray-700 text-center">
               می‌توانید برای مشاهده محصولات بیشتر به صفحات زیر بروید:
               <a
                 href="/products"
@@ -81,7 +81,7 @@ const CartPage = () => {
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinejoin="round"
                     >
                       <line x1="18" y1="6" x2="6" y2="18" />
                       <line x1="6" y1="6" x2="18" y2="18" />
@@ -139,7 +139,7 @@ const CartPage = () => {
             <h1 class="font-semibold text-lg border-b border-gray-50 bg-gray-50/50 px-4 py-5">
               خلاصه فاکتور
             </h1>
-            <div className="px-8 py-10">
+            <div class="px-8 py-10">
               <div class="flex justify-between mt-10 mb-5">
                 <span class="font-semibold text-sm uppercase">
                   تعداد سفارش 3

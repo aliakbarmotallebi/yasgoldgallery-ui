@@ -1,7 +1,7 @@
 const CardProduct = () => {
   return (
     <div class="max-w-sm">
-      <div className="relative">
+      <div class="relative">
         <div class="flex flex-wrap gap-5">
           <div class="bg-white rounded-xl overflow-hidden shadow-xl hover:scale-105 hover:shadow-2xl transform duration-500 cursor-pointer">
             <div class="p-4">

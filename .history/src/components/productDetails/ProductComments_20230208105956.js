@@ -52,8 +52,8 @@ const ProductComments = ({ productId }) => {
   };
   return (
     <>
-      <div className="grid grid-cols-2 gap-2">
-        <form className="">
+      <div class="grid grid-cols-2 gap-2">
+        <form class="">
           <div class="flex flex-wrap -mx-3 mb-6">
             <h2 class="px-4 pt-3 pb-2 text-white text-lg font-bold">
               <svg
@@ -83,7 +83,7 @@ const ProductComments = ({ productId }) => {
                   type="button"
                   class="bg-white flex items-center text-gray-700 font-medium py-1 px-4 border border-gray-400  text-xs rounded-lg tracking-wide mr-1 hover:bg-gray-100"
                 >
-                  {loadSendComment && <Spinner classNameBox="w-6 mr-0 ml-2" />}
+                  {loadSendComment && <Spinner classBox="w-6 mr-0 ml-2" />}
 
                   <span>ذخیره نظر</span>
                 </button>
@@ -95,7 +95,7 @@ const ProductComments = ({ productId }) => {
         {loading ? (
           <Spinner />
         ) : (
-          <section className="pb-3 space-y-2">
+          <section class="pb-3 space-y-2">
             {productComments.length > 0 && (
               <h2 class="px-4 pt-3 pb-2 text-white text-lg font-bold">
                 <svg

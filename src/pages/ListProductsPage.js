@@ -57,16 +57,14 @@ const ListProductsPage = () => {
 
       {loading ? <LoadableLoading /> : <></>}
 
-      <div class="container xl:max-w-6xl mx-auto px-4 xl:px-0 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 md:grid-cols-3 gap-y-20 gap-x-14 mt-10 mb-5 items-start">
+      <div className="container xl:max-w-6xl mx-auto px-4 xl:px-0 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-y-20 gap-x-14 mt-10 mb-5 items-start">
           <div className="col-span-1">
-            <ul className="bg-white shadow-lg rounded-md divide-y p-2">
+            <ul className="shadow-lg rounded-md divide-y p-2 bg-neutral-900">
               {sideBarItems.map((item) => (
                 <li key={item.id} className="flex relative">
                   <Link
-                    className={`flex-1 my-1 text-sm ${
-                      item.id == (categoryId || tagId) ? "bg-gray-100" : ""
-                    } rounded-sm hover:bg-gray-100 transition-all duration-300 p-3 text-black`}
+                    className={`flex-1 my-1 text-sm  rounded-sm hover:bg-black hover:text-yellow-500 transition-all duration-300 p-3 text-white`}
                     to={`/products/${tagId ? "tag" : "category"}/${item.id}/${
                       item.slug
                     }`}

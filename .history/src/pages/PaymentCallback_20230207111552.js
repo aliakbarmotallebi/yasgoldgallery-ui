@@ -31,7 +31,7 @@ const PaymentCallback = () => {
     <div class="max-w-3xl w-full shadow px-6 py-6 bg-white rounded-lg border mb-4 mt-10 mx-auto">
       <div class="flex flex-col justify-center items-center my-10">
         <h1
-          className={`mb-6 font-bold text-3xl ${
+          class={`mb-6 font-bold text-3xl ${
             payment?.status === "STATUS_PAID"
               ? "text-[#007F00]"
               : "text-[#FF0000]"
@@ -40,7 +40,7 @@ const PaymentCallback = () => {
           {payment?.result}
         </h1>
         <div
-          className={`bg-${
+          class={`bg-${
             payment?.status === "STATUS_PAID" ? "green" : "red"
           }-100 p-8 rounded-full`}
         >
@@ -54,7 +54,7 @@ const PaymentCallback = () => {
               stroke="green"
               stroke-width="2"
               stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinejoin="round"
               class="feather feather-check-circle"
             >
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
@@ -70,7 +70,7 @@ const PaymentCallback = () => {
               stroke="red"
               stroke-width="2"
               stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinejoin="round"
               class="feather feather-x-circle"
             >
               <circle cx="12" cy="12" r="10"></circle>
@@ -79,40 +79,40 @@ const PaymentCallback = () => {
             </svg>
           )}
         </div>
-        <table className="mt-5 w-1/2 text-sm text-left text-gray-500 dark:text-gray-400">
-          <tbody className="divide-y">
-            <tr className="print:mt-4 hover:bg-gray-100">
-              <th scope="col" className="text-right font-semibold px-6 py-3">
+        <table class="mt-5 w-1/2 text-sm text-left text-gray-500 dark:text-gray-400">
+          <tbody class="divide-y">
+            <tr class="print:mt-4 hover:bg-gray-100">
+              <th scope="col" class="text-right font-semibold px-6 py-3">
                 شماره رهگیری
               </th>
               <th
                 scope="col"
-                className="text-left font-semibold text-blue-500 px-6 py-3"
+                class="text-left font-semibold text-blue-500 px-6 py-3"
               >
                 {payment?.resnumber}
               </th>
             </tr>
-            <tr className="print:mt-4 hover:bg-gray-100">
-              <th scope="col" className="text-right font-semibold px-6 py-3">
+            <tr class="print:mt-4 hover:bg-gray-100">
+              <th scope="col" class="text-right font-semibold px-6 py-3">
                 تراکنش
               </th>
-              <th scope="col" className="text-left font-semibold px-6 py-3">
+              <th scope="col" class="text-left font-semibold px-6 py-3">
                 {payment?.result}
               </th>
             </tr>
-            <tr className="print:mt-4 hover:bg-gray-100">
-              <th scope="col" className="text-right font-semibold px-6 py-3">
+            <tr class="print:mt-4 hover:bg-gray-100">
+              <th scope="col" class="text-right font-semibold px-6 py-3">
                 مبلغ پرداختی
               </th>
-              <th scope="col" className="text-left font-semibold px-6 py-3">
+              <th scope="col" class="text-left font-semibold px-6 py-3">
                 {Number(payment?.amount).toLocaleString()}
               </th>
             </tr>
-            <tr className="print:mt-4 hover:bg-gray-100">
-              <th scope="col" className="text-right font-semibold px-6 py-3">
+            <tr class="print:mt-4 hover:bg-gray-100">
+              <th scope="col" class="text-right font-semibold px-6 py-3">
                 تاریخ تراکنش
               </th>
-              <th scope="col" className="text-left font-semibold px-6 py-3">
+              <th scope="col" class="text-left font-semibold px-6 py-3">
                 {payment?.created_at}
               </th>
             </tr>
@@ -120,7 +120,7 @@ const PaymentCallback = () => {
         </table>
         <Link
           to="/"
-          className="btn-primary bg-blue-700 text-white p-2 mt-8 rounded-md hover:bg-blue-800"
+          class="btn-primary bg-blue-700 text-white p-2 mt-8 rounded-md hover:bg-blue-800"
         >
           بازگشت به صفحه اصلی
         </Link>

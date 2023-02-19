@@ -8,11 +8,11 @@ const Cart = () => {
     state: { cart },
   } = useContext(CartStore);
   return (
-<div>
+    <div>
       <div class="flex items-center justify-between border-b border-gray-50 bg-gray-50/50 px-4 py-5 overflow-hidden">
         <h1 class="font-semibold text-lg">سبد خرید شما</h1>
         <h2 class="font-semibold text-xs text-gray-800">
-          <span className="ml-1">تعداد</span>
+          <span class="ml-1">تعداد</span>
           {cart.reduce((total, product) => total + product.qty, 0)}
         </h2>
       </div>

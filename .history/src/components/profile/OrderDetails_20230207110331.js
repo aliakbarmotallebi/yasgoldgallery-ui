@@ -50,7 +50,7 @@ const OrderDetails = ({ orderDetails }) => {
                   stroke="currentColor"
                   stroke-width="1"
                   stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinejoin="round"
                   className="feather feather-printer w-6 h-6"
                 >
                   <polyline points="6 9 6 2 18 2 18 9"></polyline>

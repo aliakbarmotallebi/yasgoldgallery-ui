@@ -13,13 +13,13 @@ const Brands = () => {
             href="#"
             class="text-center text-2xl font-semibold gap-2 flex flex-col items-center"
           >
-            <div tabindex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
+            <div tabIndex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
               <img
                 src={Image1}
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Chopard 
+            Chopard
           </a>
         </div>
         <div className="whitespace-nowrap p-5">
@@ -27,13 +27,13 @@ const Brands = () => {
             href="#"
             class="text-center text-2xl font-semibold gap-2 flex flex-col items-center"
           >
-            <div tabindex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
+            <div tabIndex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
               <img
                 src={Image2}
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Bvlgari 
+            Bvlgari
           </a>
         </div>
         <div className="whitespace-nowrap p-5">
@@ -41,7 +41,7 @@ const Brands = () => {
             href="#"
             class="text-center text-2xl font-semibold gap-2 flex flex-col items-center"
           >
-            <div tabindex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
+            <div tabIndex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
               <img
                 src={Image3}
                 class="h-full w-full rounded-full overflow-hidden shadow"
@@ -55,7 +55,7 @@ const Brands = () => {
             href="#"
             class="text-center text-2xl font-semibold gap-2 flex flex-col items-center"
           >
-            <div tabindex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
+            <div tabIndex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
               <img
                 src={Image4}
                 class="h-full w-full rounded-full overflow-hidden shadow"
@@ -69,7 +69,7 @@ const Brands = () => {
             href="#"
             class="text-center text-2xl font-semibold gap-2 flex flex-col items-center"
           >
-            <div tabindex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
+            <div tabIndex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
               <img
                 src={Image5}
                 class="h-full w-full rounded-full overflow-hidden shadow"

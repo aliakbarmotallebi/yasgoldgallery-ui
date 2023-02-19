@@ -15,11 +15,11 @@ const AddressModal = ({
 }) => {
   return (
     <>
-      <h1 className="text-center font-bold border-b pb-4">{title}</h1>
-      <form className="w-[400px]">
+      <h1 class="text-center font-bold border-b pb-4">{title}</h1>
+      <form class="w-[400px]">
         <div class="mb-6 col-span-2">
           <label
-            for="username"
+            htmlFor="username"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
           >
             کد پستی
@@ -35,7 +35,7 @@ const AddressModal = ({
         </div>
         <div class="mb-6 col-span-2">
           <label
-            for="username"
+            htmlFor="username"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
           >
             آدرس
@@ -50,7 +50,7 @@ const AddressModal = ({
             class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           ></textarea>
         </div>
-        <div className="flex items-center justify-between">
+        <div class="flex items-center justify-between">
           <button
             type="button"
             disabled={
@@ -59,17 +59,17 @@ const AddressModal = ({
                 : false
             }
             onClick={handleButton}
-            className="bg-blue-600 flex items-center justify-center hover:bg-blue-700 disabled:bg-gray-300 text-white p-2 rounded-lg text-sm"
+            class="bg-blue-600 flex items-center justify-center hover:bg-blue-700 disabled:bg-gray-300 text-white p-2 rounded-lg text-sm"
           >
             {loadingAddressModal && (
-              <Spinner classNameBox="w-fit ml-2" classNameSvg="!w-4" />
+              <Spinner classBox="w-fit ml-2" classSvg="!w-4" />
             )}
             {textButton}
           </button>
           <button
             type="button"
             onClick={() => setShowModal(false)}
-            className="text-red-500 p-2 text-sm"
+            class="text-red-500 p-2 text-sm"
           >
             انصراف
           </button>

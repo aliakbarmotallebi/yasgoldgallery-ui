@@ -9,36 +9,30 @@ const Brands = () => {
     <section className="overflow-y-auto overflow-x-hidden w-full h-60">
       <div className="flex gap-2 items-center justify-between flex-nowrap">
         <div className="whitespace-nowrap p-5">
-          <div
-            class="text-center text-2xl font-semibold gap-2 flex flex-col items-center"
-          >
-            <div tabindex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
+          <div class="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
+            <div tabIndex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
               <img
                 src={Image1}
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Chopard 
+            Chopard
           </div>
         </div>
         <div className="whitespace-nowrap p-5">
-          <div
-            class="text-center text-2xl font-semibold gap-2 flex flex-col items-center"
-          >
-            <div tabindex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
+          <div class="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
+            <div tabIndex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
               <img
                 src={Image2}
                 class="h-full w-full rounded-full overflow-hidden shadow"
               />
             </div>
-            Bvlgari 
+            Bvlgari
           </div>
         </div>
         <div className="whitespace-nowrap p-5">
-          <div
-            class="text-center text-2xl font-semibold gap-2 flex flex-col items-center"
-          >
-            <div tabindex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
+          <div class="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
+            <div tabIndex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
               <img
                 src={Image3}
                 class="h-full w-full rounded-full overflow-hidden shadow"
@@ -48,10 +42,8 @@ const Brands = () => {
           </div>
         </div>
         <div className="whitespace-nowrap p-5">
-          <div
-            class="text-center text-2xl font-semibold gap-2 flex flex-col items-center"
-          >
-            <div tabindex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
+          <div class="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
+            <div tabIndex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
               <img
                 src={Image4}
                 class="h-full w-full rounded-full overflow-hidden shadow"
@@ -61,10 +53,8 @@ const Brands = () => {
           </div>
         </div>
         <div className="whitespace-nowrap p-5">
-          <div
-            class="text-center text-2xl font-semibold gap-2 flex flex-col items-center"
-          >
-            <div tabindex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
+          <div class="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
+            <div tabIndex="0" class="focus:outline-none h-40 w-40 mb-4 lg:mb-0">
               <img
                 src={Image5}
                 class="h-full w-full rounded-full overflow-hidden shadow"

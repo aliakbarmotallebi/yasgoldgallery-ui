@@ -1,20 +1,20 @@
 const PrivacyPage = () => {
   return (
     <>
-      <div className="bg-gray-100 px-4 xl:px-4 py-14 text-black">
-        <div className="mx-auto container text-center">
-          <h2 className="text-4xl font-bold text-gray-900">
+      <div class="bg-gray-100 px-4 xl:px-4 py-14 text-black">
+        <div class="mx-auto container text-center">
+          <h2 class="text-4xl font-bold text-gray-900">
             درباره گالری طلا یاس
           </h2>
-          <div className="pt-5">
+          <div class="pt-5">
             کاربر گرامی با توجه به اینکه با ورود به وب‌سایت گالری یاس و استفاده
             از خدمات آن به معنای قبول و آگاهی کامل از قوانین از سوی شما می‌باشد،
             بنابراین خواهشمندیم موارد زیر را با دقت مطالعه بفرمایید.
           </div>
         </div>
 
-        <div className="text-2xl text-black tracking-normal px-16 py-10 font-medium leading-loose">
-          <div className="text-2xl text-black tracking-normal px-16 py-10 font-medium leading-loose">
+        <div class="text-2xl text-black tracking-normal px-16 py-10 font-medium leading-loose">
+          <div class="text-2xl text-black tracking-normal px-16 py-10 font-medium leading-loose">
             <div
               id="accordion-flush"
               data-accordion="collapse"
@@ -40,7 +40,7 @@ const PrivacyPage = () => {
                     <path
                       fill-rule="evenodd"
                       d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                 </button>
@@ -92,7 +92,7 @@ const PrivacyPage = () => {
                     <path
                       fill-rule="evenodd"
                       d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                 </button>
@@ -149,7 +149,7 @@ const PrivacyPage = () => {
                     <path
                       fill-rule="evenodd"
                       d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                 </button>
@@ -193,7 +193,7 @@ const PrivacyPage = () => {
                     <path
                       fill-rule="evenodd"
                       d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                 </button>

@@ -50,3 +50,9 @@ body.remove-scroll::-webkit-scrollbar {
 .special-comments .swiper-button-prev:after {
   color: #000 !important;
 }
+
+@media print {
+  @page {
+    size: landscape;
+  }
+}

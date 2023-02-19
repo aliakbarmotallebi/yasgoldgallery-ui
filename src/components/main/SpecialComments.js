@@ -5,16 +5,16 @@ import "swiper/css/navigation";
 
 const SpecialComments = () => {
   return (
-    <div class="w-full max-w-7xl px-4 mx-auto sm:px-8 my-20 special-comments">
-      <header class="space-y-4 text-center">
-        <h2 class="text-3xl flex flex-col sm:flex-row items-center justify-center font-bold tracking-tighter md:text-4xl font-display">
+    <div className="w-full max-w-7xl px-4 mx-auto sm:px-8 my-20 special-comments">
+      <header className="space-y-4 text-center">
+        <h2 className="text-3xl flex flex-col sm:flex-row items-center justify-center font-bold tracking-tighter md:text-4xl font-display">
           <p>چند کلمه ای از مشتریان</p>
           <span className="text-yellow-400 mr-2 mt-2 sm:mt-0">یاس</span>
         </h2>
       </header>
-      <div class="grid relative gap-8 mt-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid relative gap-8 mt-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         <svg
-          class="text-yellow-600 absolute top-4 z-10 right-12 hidden w-24 h-24 -mt-12 -mr-12 md:block"
+          className="text-yellow-600 absolute top-4 z-10 right-12 hidden w-24 h-24 -mt-12 -mr-12 md:block"
           width="256"
           height="256"
           viewBox="0 0 256 256"
@@ -50,16 +50,16 @@ const SpecialComments = () => {
           className="col-span-4 !p-4 !px-8"
         >
           <SwiperSlide>
-            <article class="backdrop-blur-xl bg-white relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl border-2 border-black">
-              <blockquote class="space-y-1 text-base text-right">
+            <article className="backdrop-blur-xl bg-white relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl border-2 border-black">
+              <blockquote className="space-y-1 text-base text-right">
                 <p className="leading-7">
                   سلام، من از مجموعه طلای یاس گوشواره خریدم وراضی بود ممنون
                   منتظر آویز الیزابت و گردنی تیفانی موجود بشه
                 </p>
-                <footer class="flex items-center pt-2 space-x-2 space-x-reverse border-t border-white/10 mt-1">
-                  <div class="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
+                <footer className="flex items-center pt-2 space-x-2 space-x-reverse border-t border-white/10 mt-1">
+                  <div className="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
                     <svg
-                      class="absolute w-12 h-12 text-yellow-400 -left-1"
+                      className="absolute w-12 h-12 text-yellow-400 -left-1"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ const SpecialComments = () => {
                     </svg>
                   </div>
                   <div>
-                    <p class="text-lg font-bold font-display">
+                    <p className="text-lg font-bold font-display">
                       کاربر اینستاگرام #1
                     </p>
                   </div>
@@ -81,16 +81,16 @@ const SpecialComments = () => {
             </article>
           </SwiperSlide>
           <SwiperSlide>
-            <article class="backdrop-blur-xl bg-white relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl border-2 border-black">
-              <blockquote class="space-y-1 text-base text-right">
+            <article className="backdrop-blur-xl bg-white relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl border-2 border-black">
+              <blockquote className="space-y-1 text-base text-right">
                 <p className="leading-7">
                   سلام، من تجربه ی خرید حضوری و اقساط رو از گالری شما دارم
                   بینهایت هم از خریدم وکیفیت و برخورد اعضا مجموعه رضایت دارم
                 </p>
-                <footer class="flex items-center pt-2 space-x-2 space-x-reverse border-t border-white/10 mt-1">
-                  <div class="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
+                <footer className="flex items-center pt-2 space-x-2 space-x-reverse border-t border-white/10 mt-1">
+                  <div className="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
                     <svg
-                      class="absolute w-12 h-12 text-yellow-400 -left-1"
+                      className="absolute w-12 h-12 text-yellow-400 -left-1"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +103,7 @@ const SpecialComments = () => {
                     </svg>
                   </div>
                   <div>
-                    <p class="text-lg font-bold font-display">
+                    <p className="text-lg font-bold font-display">
                       کاربر اینستاگرام #2
                     </p>
                   </div>
@@ -112,16 +112,16 @@ const SpecialComments = () => {
             </article>
           </SwiperSlide>
           <SwiperSlide>
-            <article class="backdrop-blur-xl bg-white relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl border-2 border-black">
-              <blockquote class="space-y-1 text-base text-right">
+            <article className="backdrop-blur-xl bg-white relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl border-2 border-black">
+              <blockquote className="space-y-1 text-base text-right">
                 <p className="leading-7">
                   خرید حضوری داشتم و واقعا برخورد خوبی داشتید و مجددا دلم میخواد
                   برای خرید از فرشگاهتونو داشته باشم
                 </p>
-                <footer class="flex items-center pt-2 space-x-2 space-x-reverse border-t border-white/10">
-                  <div class="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
+                <footer className="flex items-center pt-2 space-x-2 space-x-reverse border-t border-white/10">
+                  <div className="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
                     <svg
-                      class="absolute w-12 h-12 text-yellow-400 -left-1"
+                      className="absolute w-12 h-12 text-yellow-400 -left-1"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +134,7 @@ const SpecialComments = () => {
                     </svg>
                   </div>
                   <div>
-                    <p class="text-lg font-bold font-display">
+                    <p className="text-lg font-bold font-display">
                       کاربر اینستاگرام #3
                     </p>
                   </div>
@@ -143,16 +143,16 @@ const SpecialComments = () => {
             </article>
           </SwiperSlide>
           <SwiperSlide>
-            <article class="backdrop-blur-xl bg-white relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl border-2 border-black">
-              <blockquote class="space-y-1 text-base text-right">
+            <article className="backdrop-blur-xl bg-white relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl border-2 border-black">
+              <blockquote className="space-y-1 text-base text-right">
                 <p className="leading-7">
                   سلام، من از مجموعه طلای یاس گوشواره خریدم وراضی بود ممنون
                   منتظر آویز الیزابت و گردنی تیفانی موجود بشه
                 </p>
-                <footer class="flex items-center pt-2 space-x-2 space-x-reverse border-t border-white/10 mt-1">
-                  <div class="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
+                <footer className="flex items-center pt-2 space-x-2 space-x-reverse border-t border-white/10 mt-1">
+                  <div className="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
                     <svg
-                      class="absolute w-12 h-12 text-yellow-400 -left-1"
+                      className="absolute w-12 h-12 text-yellow-400 -left-1"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +165,7 @@ const SpecialComments = () => {
                     </svg>
                   </div>
                   <div>
-                    <p class="text-lg font-bold font-display">
+                    <p className="text-lg font-bold font-display">
                       کاربر اینستاگرام #4
                     </p>
                   </div>

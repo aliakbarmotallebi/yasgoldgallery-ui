@@ -38,18 +38,27 @@ const ProductPage = () => {
   return (
     <div class="bg-[#4d4845] px-4 xl:px-4 py-14">
       {loading && <LoadableLoading />}
-      <div className="container mx-auto">
+      <div class="container mx-auto">
         <div class="max-w-xl lg:max-w-6xl mx-auto text-neutral-900  bg-neutral-900 rounded-lg shadow-md  text-black px-5 py-6">
           <div class="flex flex-wrap -mx-4 mb-12 p-10">
             <div class="w-full lg:w-1/2 px-4">
               <div class="max-w-lg">
-                <div className="flex items-center">
+                <div class="flex items-center">
                   <h2 class="text-4xl text-white mb-1 ml-auto">{title}</h2>
                   {!loading && (
                     <HandleCart
                       product={product}
                       btnIcon={
-                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 fill-current" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M12 2a6 6 0 0 1 6 6v1h4v2h-1.167l-.757 9.083a1 1 0 0 1-.996.917H4.92a1 1 0 0 1-.996-.917L3.166 11H2V9h4V8a6 6 0 0 1 6-6zm6.826 9H5.173l.667 8h12.319l.667-8zM13 13v4h-2v-4h2zm-4 0v4H7v-4h2zm8 0v4h-2v-4h2zm-5-9a4 4 0 0 0-3.995 3.8L8 8v1h8V8a4 4 0 0 0-3.8-3.995L12 4z" /></svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="ml-1 fill-current"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          height="24"
+                        >
+                          <path fill="none" d="M0 0h24v24H0z" />
+                          <path d="M12 2a6 6 0 0 1 6 6v1h4v2h-1.167l-.757 9.083a1 1 0 0 1-.996.917H4.92a1 1 0 0 1-.996-.917L3.166 11H2V9h4V8a6 6 0 0 1 6-6zm6.826 9H5.173l.667 8h12.319l.667-8zM13 13v4h-2v-4h2zm-4 0v4H7v-4h2zm8 0v4h-2v-4h2zm-5-9a4 4 0 0 0-3.995 3.8L8 8v1h8V8a4 4 0 0 0-3.8-3.995L12 4z" />
+                        </svg>
                       }
                       btnStyle="inline-flex items-center shuffle-click hidden sm:flex py-2 px-3 bg-brand-blue hover:opacity-70 bg-yellow-500 text-black text-xs font-semibold rounded"
                       btnText="افزودن به سبد خرید"
@@ -57,7 +66,7 @@ const ProductPage = () => {
                   )}
                 </div>
 
-                <div className="flex">
+                <div class="flex">
                   {tags?.map((tag) => (
                     <Link
                       to={`/products/tag/${tag.id}/${tag.slug}`}
@@ -71,50 +80,57 @@ const ProductPage = () => {
 
                 <span class="block text-2xl font-black text-green-500 mb-4">
                   {Number(price).toLocaleString()}
-                  <span className="mr-1">تومان</span>
+                  <span class="mr-1">تومان</span>
                 </span>
                 <ul class="list-inside font-medium mb-6 text-white">
                   <li>
-                    <span className="text-bold after:content-[':'] ml-2">
+                    <span class="text-bold after:content-[':'] ml-2">
                       بارکد
                     </span>
                     {barcode}
                   </li>
                   <li>
-                    <span className="text-bold after:content-[':'] ml-2">
-                      اجرت
-                    </span>
+                    <span class="text-bold after:content-[':'] ml-2">اجرت</span>
                     {Number(wages).toLocaleString()}
                   </li>
                 </ul>
 
-                <div className="px-3 rounded-md py-4 border border-yellow-600">
-                  <div className="text-base text-yellow-700 pb-4 inline-flex items-center font-bold">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="fill-yellow-600 ml-1" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" /></svg>
+                <div class="px-3 rounded-md py-4 border border-yellow-600">
+                  <div class="text-base text-yellow-700 pb-4 inline-flex items-center font-bold">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="fill-yellow-600 ml-1"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" />
+                    </svg>
                     شرایط اقساط در یاس
                   </div>
                   <ul class="list-disc space-y-3 ">
                     <li>
-                      <span className="font-bold after:content-[':'] text-white ml-2">
+                      <span class="font-bold after:content-[':'] text-white ml-2">
                         شرایط اقساط
                       </span>
                       <br />
                       <div
-                        className="leading-7 text-white"
+                        class="leading-7 text-white"
                         dangerouslySetInnerHTML={{
                           __html: replaceWithBr(installment_terms),
                         }}
                       ></div>
                     </li>
-                    <li className="text-white">
-                      <span className="font-bold after:content-[':']  ml-2">
+                    <li class="text-white">
+                      <span class="font-bold after:content-[':']  ml-2">
                         پیش قسط
                       </span>
                       {Number(prepayment).toLocaleString()}
                     </li>
 
-                    <li className="text-white">
-                      <span className="font-bold after:content-[':'] ml-2">
+                    <li class="text-white">
+                      <span class="font-bold after:content-[':'] ml-2">
                         قسط ماهانه
                       </span>
                       {Number(monthly_installment).toLocaleString()}
@@ -158,16 +174,18 @@ const ProductPage = () => {
               </div>
             </div>
             <div>
-              <div className="pt-5">
+              <div class="pt-5">
                 <div class="text-lg text-yellow-500 pb-4 inline-flex items-center font-bold">
                   توضیحات
                 </div>
                 <div
-                  dangerouslySetInnerHTML={{ __html: replaceWithBr(description) }}
-                  className="pb-10 text-lg leading-7 text-white"
+                  dangerouslySetInnerHTML={{
+                    __html: replaceWithBr(description),
+                  }}
+                  class="pb-10 text-lg leading-7 text-white"
                 ></div>
               </div>
-              <div className="pt-5">
+              <div class="pt-5">
                 <div class="text-lg text-yellow-500 pb-4 inline-flex items-center font-bold">
                   دیدگاه مشتریان یاس
                 </div>
@@ -179,8 +197,6 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
-
-
 
       {!loading && <RelatedProducts {...product} />}
     </div>

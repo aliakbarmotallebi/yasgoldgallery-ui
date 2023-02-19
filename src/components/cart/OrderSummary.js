@@ -40,18 +40,18 @@ const OrderSummary = ({ cart }) => {
     <>
       <div
         id="summary"
-        class="col-span-1 text-black sticky top-2 border-r border-gray-50 grow rounded-lg overflow-hidden"
+        className="col-span-1 text-black sticky top-2 border-r border-gray-50 grow rounded-lg overflow-hidden"
       >
-        <h1 class="font-semibold text-lg border-b border-gray-50 bg-gray-50/50 px-4 py-5">
+        <h1 className="font-semibold text-lg border-b border-gray-50 bg-gray-50/50 px-4 py-5">
           خلاصه فاکتور
         </h1>
         <div className="px-8 py-10">
-          <div class="flex justify-between mb-5">
-            <span class="font-semibold text-sm uppercase">
+          <div className="flex justify-between mb-5">
+            <span className="font-semibold text-sm uppercase">
               <span className="ml-1">تعداد سفارش</span>
               {cart.reduce((total, product) => total + product.qty, 0)}
             </span>
-            <span class="font-semibold text-sm">
+            <span className="font-semibold text-sm">
               {Number(
                 cart.reduce(
                   (total, product) => total + product.qty * product.price,
@@ -62,15 +62,15 @@ const OrderSummary = ({ cart }) => {
             </span>
           </div>
           <div>
-            <label class="font-medium inline-block mb-3 text-sm uppercase">
+            <label className="font-medium inline-block mb-3 text-sm uppercase">
               روش پرداخت
             </label>
-            <select class="block p-2 text-gray-600 w-full text-sm">
+            <select className="block p-2 text-gray-600 w-full text-sm">
               <option>درگاه زرین پال</option>
             </select>
           </div>
-          <div class="border-t mt-8">
-            <div class="flex font-semibold justify-between py-6 text-sm uppercase">
+          <div className="border-t mt-8">
+            <div className="flex font-semibold justify-between py-6 text-sm uppercase">
               <span>جمع کل فاکتور</span>
               <span>
                 {Number(
@@ -86,7 +86,7 @@ const OrderSummary = ({ cart }) => {
               <button
                 disabled={checkOrderInfo(order) ? false : true}
                 onClick={handleCreateOrder}
-                className="bg-indigo-500 flex justify-center items-center disabled:bg-gray-300 font-semibold block text-center hover:bg-indigo-600 py-3 text-sm text-white rounded-lg uppercase w-full"
+                className="bg-yellow-500 flex justify-center items-center disabled:bg-gray-300 font-semibold text-center hover:bg-yellow-600 py-3 text-sm text-black rounded-lg uppercase w-full"
               >
                 {loading && (
                   <Spinner classNameBox="w-fit ml-4" classNameSvg="!w-4" />
@@ -96,7 +96,7 @@ const OrderSummary = ({ cart }) => {
             ) : (
               <Link
                 to="/cart/checkout"
-                class="bg-indigo-500 font-semibold block text-center hover:bg-indigo-600 py-3 text-sm text-white rounded-lg uppercase w-full"
+                className="bg-yellow-500 font-semibold block text-center hover:bg-yellow-600 py-3 text-sm text-black rounded-lg uppercase w-full"
               >
                 تکمیل اطلاعات
               </Link>
@@ -109,7 +109,7 @@ const OrderSummary = ({ cart }) => {
           <OrderDetails orderDetails={orderDetails} />
           <button
             onClick={handleCreatePayment}
-            className="bg-indigo-500 flex justify-center items-center font-semibold block text-center hover:bg-indigo-600 py-3 text-sm text-white rounded-lg uppercase w-full"
+            className="bg-yellow-500 flex justify-center items-center font-semibold text-center hover:bg-yellow-600 py-3 text-sm text-black rounded-lg uppercase w-full print:hidden"
           >
             {paymentLoading && (
               <Spinner classNameBox="w-fit ml-4" classNameSvg="!w-4" />

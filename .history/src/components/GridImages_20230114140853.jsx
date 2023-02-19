@@ -1,19 +1,19 @@
 const GridImages = () => {
   return (
-    <section  className="bg-[#433D37]"> 
-        <div className="container mx-auto">
+    <section  class="bg-[#433D37]"> 
+        <div class="container mx-auto">
             <div class="flex justify-center items-center">
                 <div class="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9 px-4 w-96 sm:w-auto">
                     <div role="main" class="flex flex-col items-center justify-center">
-                        <h2 className="text-4xl font-bold text-white">
+                        <h2 class="text-4xl font-bold text-white">
                             دسته بندی محصولات
-                            <span className="text-yellow-400">یاس</span>
+                            <span class="text-yellow-400">یاس</span>
                         </h2>
                     </div>
                     <div class="w-full relative flex items-center justify-center">
     <button aria-label="slide backward" class="absolute z-30 left-0 ml-10 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer" id="prev">
       <svg class="dark:text-gray-900" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" strokeLinejoin="round" />
       </svg>
     </button>
     <div class="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">

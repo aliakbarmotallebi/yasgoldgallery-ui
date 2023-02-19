@@ -10,7 +10,6 @@ const AddressModal = ({
   addressValue,
   loadingAddressModal,
   title,
-  setLoadingAddressModal,
   setShowModal,
 }) => {
   return (
@@ -20,29 +19,29 @@ const AddressModal = ({
           {title}
         </h1>
         <form className="w-full">
-          <div class="mb-6 col-span-2">
+          <div className="mb-6 col-span-2">
             <label
-              for="username"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              htmlFor="username"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
             >
               کد پستی
-              <span class="inline-flex bg-red-500 w-1 h-1 rounded-full mr-1"></span>
+              <span className="inline-flex bg-red-500 w-1 h-1 rounded-full mr-1"></span>
             </label>
             <input
               type="text"
               placeholder="کد پستی"
               value={postalCodeValue}
               onChange={onChangePostalCode}
-              class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             />
           </div>
-          <div class="mb-6 col-span-2">
+          <div className="mb-6 col-span-2">
             <label
-              for="username"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              htmlFor="username"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
             >
               آدرس
-              <span class="inline-flex bg-red-500 w-1 h-1 rounded-full mr-1"></span>
+              <span className="inline-flex bg-red-500 w-1 h-1 rounded-full mr-1"></span>
             </label>
             <textarea
               rows={4}
@@ -50,7 +49,7 @@ const AddressModal = ({
               placeholder="آدرس"
               value={addressValue}
               onChange={onChangeAddress}
-              class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             ></textarea>
           </div>
           <div className="flex items-center justify-between">
@@ -62,7 +61,7 @@ const AddressModal = ({
                   : false
               }
               onClick={handleButton}
-              className="bg-blue-600 flex items-center justify-center hover:bg-blue-700 disabled:bg-gray-300 text-white p-2 rounded-lg text-sm"
+              className="bg-yellow-500 flex items-center justify-center hover:bg-yellow-600 disabled:bg-gray-300 text-black p-2 rounded-lg text-sm"
             >
               {loadingAddressModal && (
                 <Spinner classNameBox="w-fit ml-2" classNameSvg="!w-4" />

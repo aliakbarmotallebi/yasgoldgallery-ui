@@ -1,15 +1,9 @@
 const CartPage = () => {
   return (
     <div class="container mx-auto mt-10">
+      <div className="bg-white rounded-lg text-black">ff</div>
 
-<div className="bg-white rounded-lg text-black">
-ff
-        </div>
-        
       <div class="flex justify-center shadow-md my-10">
-
-
-
         <div class="w-2/4 bg-white rounded-r-lg text-black overflow-hidden">
           <div class="flex items-center justify-between border-b border-gray-50 bg-gray-50/50 px-4 py-5">
             <h1 class="font-semibold text-lg">سبد خرید شما</h1>
@@ -53,7 +47,7 @@ ff
                     stroke="currentColor"
                     stroke-width="2"
                     stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                   >
                     <line x1="18" y1="6" x2="6" y2="18" />
                     <line x1="6" y1="6" x2="18" y2="18" />
@@ -129,7 +123,6 @@ ff
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

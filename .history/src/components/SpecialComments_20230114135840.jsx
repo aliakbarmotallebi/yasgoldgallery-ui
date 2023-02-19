@@ -4,7 +4,7 @@ const SpecialComments = () => {
       <header class="space-y-4 text-center">
         <h2 class="text-3xl font-bold tracking-tighter md:text-4xl font-display">
           چند کلمه ای از مشتریان
-          <span className="text-yellow-400">یاس</span>
+          <span class="text-yellow-400">یاس</span>
         </h2>
       </header>
       <div class="grid gap-8 mt-16 md:grid-cols-3">
@@ -37,7 +37,7 @@ const SpecialComments = () => {
                   <path
                     fill-rule="evenodd"
                     d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                 </svg>
               </div>
@@ -62,7 +62,7 @@ const SpecialComments = () => {
                   <path
                     fill-rule="evenodd"
                     d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                 </svg>
               </div>
@@ -87,7 +87,7 @@ const SpecialComments = () => {
                   <path
                     fill-rule="evenodd"
                     d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                 </svg>
               </div>

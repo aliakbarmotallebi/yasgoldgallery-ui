@@ -1,8 +1,8 @@
 const Brands = () => {
   return (
-    <section className="overflow-y-auto overflow-x-hidden w-full h-60">
-      <div className="flex flex-nowrap">
-        <div className="w-1/3 whitespace-nowrap">
+    <section class="overflow-y-auto overflow-x-hidden w-full h-60">
+      <div class="flex flex-nowrap">
+        <div class="w-1/3 whitespace-nowrap">
           <a
             href="#"
             class="h-60 p-20 text-white text-center text-4xl font-semibold block"
@@ -11,7 +11,7 @@ const Brands = () => {
             برند یک
           </a>
         </div>
-        <div className="w-1/3 whitespace-nowrap">
+        <div class="w-1/3 whitespace-nowrap">
           <a
             href="#"
             class="h-60 text-white text-center text-4xl font-semibold p-20 block"
@@ -19,7 +19,7 @@ const Brands = () => {
             برند دو
           </a>
         </div>
-        <div className="w-1/3 whitespace-nowrap">
+        <div class="w-1/3 whitespace-nowrap">
           <a
             href="#"
             class="h-60 text-white text-center text-4xl font-semibold p-20 block"
@@ -27,7 +27,7 @@ const Brands = () => {
             برند سه
           </a>
         </div>
-        <div className="w-1/3 whitespace-nowrap">
+        <div class="w-1/3 whitespace-nowrap">
           <a
             href="#"
             class="h-80 bg-blue-600 text-white text-center text-4xl font-semibold p-36 block"

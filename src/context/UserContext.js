@@ -5,7 +5,6 @@ import { createContext } from "react";
 export const UserStore = createContext();
 const UserContext = ({ children }) => {
   const [user, setUser] = useState(decodeToken("username"));
-  console.log(user);
   return (
     <UserStore.Provider value={{ user, setUser }}>
       {children}
