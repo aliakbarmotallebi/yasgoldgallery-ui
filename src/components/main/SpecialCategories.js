@@ -19,7 +19,7 @@ const SpecialCategories = ({ specialCategories }) => {
               {primary.slice(0, 1).map((category) => (
                 <div
                   key={category?.id}
-                  class="relative group flex justify-center xl:row-span-2 items-center w-full max-h-80 xl:max-h-fit rounded-lg overflow-hidden"
+                  class="relative group flex justify-center xl:row-span-2 items-center w-full max-h-80 xl:max-h-fit rounded-lg overflow-hidden border border-yellow-500"
                 >
                   <img
                     class="object-center object-cover rounded-sm h-full w-full"
@@ -32,7 +32,6 @@ const SpecialCategories = ({ specialCategories }) => {
                   >
                     {category?.name}
                   </Link>
-                  <div class="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-yellow-300 opacity-60"></div>
                   <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
                 </div>
               ))}
@@ -41,7 +40,7 @@ const SpecialCategories = ({ specialCategories }) => {
                 {secondary.map((category) => (
                   <div
                     key={category?.id}
-                    class="relative group flex justify-center items-center max-h-80 lg:max-h-60 w-full rounded-lg xl:flex-1 overflow-hidden"
+                    class="relative group flex justify-center items-center max-h-80 lg:max-h-60 w-full rounded-lg xl:flex-1 overflow-hidden border border-yellow-500"
                   >
                     <img
                       class="object-center object-cover rounded-sm h-full w-full"
@@ -54,7 +53,6 @@ const SpecialCategories = ({ specialCategories }) => {
                     >
                       {category?.name}
                     </Link>
-                    <div class="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-yellow-300 opacity-60"></div>
                     <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
                   </div>
                 ))}
@@ -63,7 +61,7 @@ const SpecialCategories = ({ specialCategories }) => {
               {primary.slice(1, 2).map((category) => (
                 <div
                   key={category?.id}
-                  class="relative order-2 xl:order-3 group flex justify-center xl:row-span-2 items-center w-full rounded-lg max-h-80 xl:max-h-fit overflow-hidden"
+                  class="relative order-2 xl:order-3 group flex justify-center xl:row-span-2 items-center w-full rounded-lg max-h-80 xl:max-h-fit overflow-hidden border border-yellow-500"
                 >
                   <img
                     class="object-center object-cover rounded-sm h-full w-full"
@@ -76,7 +74,6 @@ const SpecialCategories = ({ specialCategories }) => {
                   >
                     {category?.name}
                   </Link>
-                  <div class="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-yellow-300 opacity-60"></div>
                   <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
                 </div>
               ))}

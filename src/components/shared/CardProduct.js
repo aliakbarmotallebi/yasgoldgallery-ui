@@ -19,10 +19,12 @@ const CardProduct = ({ product }) => {
             class="max-h-60 w-full object-cover rounded-t-xl"
           />
         </Link>
-        <div className="absolute bottom-5 right-5">
+      </div>
+      <div className="px-4 py-1">
+        <div className="flex items-center justify-between flex-row-reverse bottom-5 right-5">
           <HandleCart
             product={product}
-            btnStyle="py-1 px-4 bg-white text-gray-600 rounded hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center"
+            btnStyle="py-1 px-2 bg-yellow-300 hover:bg-yellow-400 text-black text-xs rounded active:bg-yellow-400 disabled:opacity-50 inline-flex items-center"
             btnText="افزودن به سبد"
             btnIcon={
               <svg
@@ -35,20 +37,18 @@ const CardProduct = ({ product }) => {
               </svg>
             }
           />
+          <Link to={`/products/category/${id}/${slugCategory}`}>
+            <span className="text-gray-400 uppercase text-xs hover:underline">
+              {name}
+            </span>
+          </Link>
         </div>
-      </div>
-      <div className="px-4 py-1">
-        <Link to={`/products/category/${id}/${slugCategory}`}>
-          <span class="inline-flex bg-blue-800 w-1 h-1 rounded-full"></span>
-          <span className="text-blue-800 mr-1 uppercase text-xs font-bold hover:underline">
-            {name}
-          </span>
-        </Link>
+
         <p className="text-lg my-2 font-bold text-black truncate block capitalize">
           <Link to={`/product/${productId}/${slug}`}>{title}</Link>
         </p>
         <div className="flex items-center">
-          <p className="text-md font-semibold text-black cursor-auto mb-3">
+          <p className="text-sm font-semibold text-black  cursor-auto mb-3">
             {Number(price).toLocaleString()} تومان
           </p>
         </div>

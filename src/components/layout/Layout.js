@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <ScrollToTop />
-      <div className="flex flex-col mx-auto w-full min-h-screen min-h-screen bg-[#4d4845] text-neutral-300">
+      <div className="flex flex-col mx-auto w-full min-h-screen bg-white text-black">
         {showAlert.show && (
           <Alert text={showAlert.text} status={showAlert.status} />
         )}

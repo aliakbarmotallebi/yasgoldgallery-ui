@@ -9,11 +9,11 @@ const Footer = () => {
       <footer>
         <div className="bg-neutral-900">
           <div className="py-8 container xl:max-w-6xl mx-auto px-4 xl:px-0">
-            <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-center justify-between flex-wrap list-disc list-inside">
+            <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-center justify-between flex-wrap text-center">
               <li>
                 <Link
                   to="/"
-                  class="hover:text-sky-400 transition whitespace-nowrap text-white"
+                  class="hover:text-yellow-400 transition whitespace-nowrap text-white"
                 >
                   صفحه اصلی
                 </Link>
@@ -21,7 +21,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/about"
-                  class="hover:text-sky-400 transition whitespace-nowrap text-white"
+                  class="hover:text-yellow-400 transition whitespace-nowrap text-white"
                 >
                   درباره ما
                 </Link>
@@ -29,7 +29,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/privacy"
-                  class="hover:text-sky-400 transition whitespace-nowrap text-white"
+                  class="hover:text-yellow-400 transition whitespace-nowrap text-white"
                 >
                   حریم شخصی
                 </Link>
@@ -37,7 +37,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/helper"
-                  class="hover:text-sky-400 transition whitespace-nowrap text-white"
+                  class="hover:text-yellow-400 transition whitespace-nowrap text-white"
                 >
                   راهنمایی خرید
                 </Link>
@@ -45,7 +45,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/terms"
-                  class="hover:text-sky-400 transition whitespace-nowrap text-white"
+                  class="hover:text-yellow-400 transition whitespace-nowrap text-white"
                 >
                   قوانین و مقررات
                 </Link>
@@ -54,17 +54,17 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="bg-neutral-900/50">
-          <div className="container container xl:max-w-6xl mx-auto px-4 xl:px-0">
+        <div className="bg-neutral-900">
+          <div className="container xl:max-w-6xl mx-auto px-4 xl:px-0">
             <div class="grid gap-y-8 sm:gap-y-16 grid-cols-4 xl:grid-cols-3 container mx-auto py-12">
               <div class="mb-6 col-span-4 xl:col-span-1 md:mb-0">
                 <a href="/" class="flex items-center">
                   <img src={Logo} class="h-12 ml-3" alt="Logo" />
-                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">
                     فروشگاه یاس
                   </span>
                 </a>
-                <div className="text-justify pt-4 leading-6">
+                <div className="text-justify pt-4 leading-6 text-white">
                   با سخت کوشی کار کردیم، که نه تنها دغدغه های خرید طلا را برای
                   شما حل کنیم، بلکه لذت ویترین گردی مجازی و خرید آنلاین طلا راهم
                   به شما هدیه دهیم.

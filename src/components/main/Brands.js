@@ -44,7 +44,7 @@ const Brands = () => {
                 >
                   <img
                     src={Image1}
-                    class="h-full w-full rounded-full overflow-hidden shadow"
+                    class="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
                   />
                 </div>
                 Chopard
@@ -60,7 +60,7 @@ const Brands = () => {
                 >
                   <img
                     src={Image2}
-                    class="h-full w-full rounded-full overflow-hidden shadow"
+                    class="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
                   />
                 </div>
                 Bvlgari
@@ -76,7 +76,7 @@ const Brands = () => {
                 >
                   <img
                     src={Image3}
-                    class="h-full w-full rounded-full overflow-hidden shadow"
+                    class="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
                   />
                 </div>
                 Chanel
@@ -92,7 +92,7 @@ const Brands = () => {
                 >
                   <img
                     src={Image4}
-                    class="h-full w-full rounded-full overflow-hidden shadow"
+                    class="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
                   />
                 </div>
                 Louis Vuitton
@@ -108,7 +108,7 @@ const Brands = () => {
                 >
                   <img
                     src={Image5}
-                    class="h-full w-full rounded-full overflow-hidden shadow"
+                    class="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
                   />
                 </div>
                 Dior

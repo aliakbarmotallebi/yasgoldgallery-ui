@@ -1,8 +1,9 @@
 import CardProduct from "components/shared/CardProduct";
 import giftsImage from "assets/images/gifts.png";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 import "swiper/css";
+import "swiper/css/navigation";
 
 const SpecialProducts = ({ speacial: speacialProducts }) => {
   return (
@@ -36,14 +37,15 @@ const SpecialProducts = ({ speacial: speacialProducts }) => {
                   slidesPerView: 4,
                 },
               }}
+              navigation
               slidesPerView={4}
               spaceBetween={30}
-              modules={[Autoplay]}
+              modules={[Autoplay, Navigation]}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
               }}
-              className="col-span-4 !p-4"
+              className="col-span-4 !p-4 !px-6"
             >
               {speacialProducts?.map((product) => (
                 <SwiperSlide key={product.productId}>

@@ -1,8 +1,9 @@
 import giftsImage from "assets/images/gifts.png";
 import CardProduct from "components/shared/CardProduct";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 import "swiper/css";
+import "swiper/css/navigation";
 
 const SuggestedProducts = ({ suggested: suggestedProducts }) => {
   return (
@@ -38,12 +39,13 @@ const SuggestedProducts = ({ suggested: suggestedProducts }) => {
               }}
               slidesPerView={4}
               spaceBetween={30}
-              modules={[Autoplay]}
+              modules={[Autoplay, Navigation]}
+              navigation
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
               }}
-              className="col-span-4 !p-4"
+              className="col-span-4 !p-4 !px-6"
             >
               {suggestedProducts?.map((product) => (
                 <SwiperSlide key={product.productId}>

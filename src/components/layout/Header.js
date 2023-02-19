@@ -10,7 +10,6 @@ import ContactUs from "components/shared/ContactUs";
 import { categories } from "services/products";
 import Dropdown from "components/shared/Dropdown";
 import Logo from "../../assets/images/logo/logo.png";
-import { lockScroll, unlockScroll } from "helper/controlerScrollbar";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
@@ -23,6 +22,7 @@ const Header = () => {
   const [dropdown, setDropdown] = useState({
     category: false,
   });
+  console.log(allCategories);
 
   const {
     state: { cart },
@@ -38,9 +38,6 @@ const Header = () => {
   useEffect(() => {
     setShowHumburgerMenu(false);
   }, [pathname]);
-  useEffect(() => {
-    Object.values(dropdown).includes(true) ? lockScroll() : unlockScroll();
-  }, [dropdown]);
 
   const openModal = () => {
     setShowModal((prev) => !prev);
@@ -152,25 +149,44 @@ const Header = () => {
                       setDropdown={setDropdown}
                       showHumburgerMenu={showHumburgerMenu}
                     >
-                      <ul className="py-1 text-sm text-white text-right lg:text-gray-600 overflow-hidden p-0">
+                      <ul className="py-1 text-sm text-white text-right overflow-hidden p-0 bg-neutral-900 border-yellow-400">
                         {allCategories.map((category) => (
-                          <li key={category.id}>
+                          <li className="group" key={category.id}>
                             <Link
                               to={`/products/category/${category.id}/${category.slug}`}
-                              className="block px-2 lg:px-6 py-2 hover:bg-neutral-900 lg:hover:bg-gray-100 lg:hover:text-black lg:hover:text-dark lg:flex lg:justify-between lg:items-center group"
+                              className="block px-2 lg:px-6 py-2 hover:bg-neutral-900 group-hover:text-yellow-500 lg:flex lg:justify-between lg:items-center group"
                             >
                               {category.name}
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                width="24"
-                                height="24"
-                                className="hidden lg:block translate-x-8 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
-                              >
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z" />
-                              </svg>
+                              {category.children.length > 0 && (
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  width="24"
+                                  height="24"
+                                  className="hidden text-yellow-500 lg:block translate-x-8 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+                                >
+                                  <path fill="none" d="M0 0h24v24H0z" />
+                                  <path
+                                    fill="#fff"
+                                    d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"
+                                  />
+                                </svg>
+                              )}
                             </Link>
+                            {category.children.length > 0 && (
+                              <ul className="py-1 absolute right-full w-full top-4 invisible group-hover:visible text-sm text-white text-right overflow-hidden p-0 bg-neutral-900 border-yellow-400">
+                                {category.children.map((category) => (
+                                  <li>
+                                    <Link
+                                      to={`/products/category/${category.id}/${category.slug}`}
+                                      className="block px-2 lg:px-6 py-2 hover:bg-neutral-900 hover:text-yellow-500 lg:flex lg:justify-between lg:items-center group"
+                                    >
+                                      {category.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
                           </li>
                         ))}
                       </ul>
@@ -233,7 +249,7 @@ const Header = () => {
                 ) : (
                   <button
                     onClick={openModal}
-                    className="text-xs sm:text-base inline-flex rounded-lg bg-blue-800 text-white px-3 py-2"
+                    className="text-xs sm:text-base inline-flex rounded-lg bg-yellow-300 hover:bg-yellow-400 text-black px-3 py-2"
                   >
                     ورود به حساب کاربری
                   </button>

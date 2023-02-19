@@ -32,3 +32,21 @@ body.remove-scroll {
 body.remove-scroll::-webkit-scrollbar {
   display: none;
 }
+.swiper-button-next {
+  left: 0px !important;
+  right: auto !important;
+}
+.swiper-button-prev {
+  right: 0px !important;
+  left: auto !important;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 30px !important;
+  color: #fff !important;
+}
+
+.special-comments .swiper-button-next:after,
+.special-comments .swiper-button-prev:after {
+  color: #000 !important;
+}
