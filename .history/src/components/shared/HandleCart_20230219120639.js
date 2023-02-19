@@ -29,11 +29,11 @@ const HandleCart = ({ product, btnStyle, btnText, btnIcon }) => {
   const addProductInCart = () => dispatch(addToCart(product));
 
   return !!isProductInCart ? (
-    <div class="w-auto flex flex-wrap items-center gap-5 text-black ">
-      <div className="bg-yellow-300 rounded overflow-hidden flex items-center">
+    <div class="w-full md:w-auto flex flex-wrap items-center gap-5 text-black ">
+      <div className="bg-white shadow-md rounded-md overflow-hidden flex items-center border">
         <button
           onClick={increaseCounterProduct}
-          className="px-2 py-1 hover:bg-yellow-400"
+          className="px-3 py-2 hover:bg-gray-100 hover:opacity-50"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ const HandleCart = ({ product, btnStyle, btnText, btnIcon }) => {
         <div className="px-4 text-bold text-xs">{isProductInCart.qty}</div>
         <button
           onClick={decreaseCounterProduct}
-          className="px-2 py-1 hover:bg-yellow-400"
+          className="px-3 py-2 hover:bg-gray-100 hover:opacity-50"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -64,10 +64,10 @@ const HandleCart = ({ product, btnStyle, btnText, btnIcon }) => {
     </div>
   ) : (
     <div class="w-full md:w-auto flex flex-wrap items-center gap-5">
-      <button onClick={addProductInCart} className={btnStyle}>
-        {btnIcon}
-        {btnText}
-      </button>
+        <button onClick={addProductInCart} className={btnStyle}>
+          {btnIcon}
+          {btnText}
+        </button>
     </div>
   );
 };

@@ -39,10 +39,10 @@ const SpecialComments = () => {
               slidesPerView: 3,
             },
           }}
+          navigation
           slidesPerView={4}
           spaceBetween={35}
           modules={[Autoplay, Navigation]}
-          navigation
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -81,7 +81,7 @@ const SpecialComments = () => {
             </article>
           </SwiperSlide>
           <SwiperSlide>
-            <article class="backdrop-blur-xl bg-white hidden sm:block relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl border-2 border-black">
+            <article class="backdrop-blur-xl bg-white relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl border-2 border-black">
               <blockquote class="space-y-1 text-base text-right">
                 <p className="leading-7">
                   سلام، من تجربه ی خرید حضوری و اقساط رو از گالری شما دارم
@@ -112,7 +112,7 @@ const SpecialComments = () => {
             </article>
           </SwiperSlide>
           <SwiperSlide>
-            <article class="backdrop-blur-xl bg-white hidden md:block relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl border-2 border-black">
+            <article class="backdrop-blur-xl bg-white relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl border-2 border-black">
               <blockquote class="space-y-1 text-base text-right">
                 <p className="leading-7">
                   خرید حضوری داشتم و واقعا برخورد خوبی داشتید و مجددا دلم میخواد

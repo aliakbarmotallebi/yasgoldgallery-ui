@@ -21,7 +21,7 @@ const CardProduct = ({ product }) => {
         </Link>
       </div>
       <div className="px-4 py-1">
-        <div className="flex items-center justify-between flex-row-reverse bottom-5 right-5">
+        <div className="flex w-full items-center justify-between flex-row-reverse bottom-5 right-5">
           <HandleCart
             product={product}
             btnStyle="py-1 px-2 bg-yellow-300 hover:bg-yellow-400 text-black text-xs rounded active:bg-yellow-400 disabled:opacity-50 inline-flex items-center"
