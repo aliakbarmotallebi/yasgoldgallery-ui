@@ -106,7 +106,7 @@ const Footer = () => {
                   <a
                     target="_blank"
                     href="https://eitaa.com/talaayas"
-                    class="bg-[#ef7f1aff] p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:opacity-60"
+                    class="bg-yellow-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:opacity-60"
                   >
                       <svg  
                         class="w-6 h-6 fill-current"
