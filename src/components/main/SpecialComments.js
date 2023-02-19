@@ -24,8 +24,10 @@ const SpecialComments = () => {
             ></path>
           </svg>
           <blockquote class="space-y-1 text-base text-right">
-            <p>باسلام... من تجربه خرید حضوری واقساطی شما را دارم.</p>
-            <p>بی نهایت هم از خریدم و کیفیت برخورد اعضا مجموعه راضی هستم</p>
+            <p className="leading-7">
+				سلام، من از مجموعه طلای یاس گوشواره خریدم وراضی بود
+				ممنون منتظر آویز الیزابت و گردنی تیفانی موجود بشه
+			</p>
             <footer class="flex items-center pt-2 mt-7 space-x-2 space-x-reverse border-t border-white/10 mt-1">
               <div class="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
                 <svg
@@ -42,15 +44,19 @@ const SpecialComments = () => {
                 </svg>
               </div>
               <div>
-                <p class="text-lg font-bold font-display">بهنام اکبری</p>
+                <p class="text-lg font-bold font-display">
+					کاربر اینستاگرام #1
+				</p>
               </div>
             </footer>
           </blockquote>
         </article>
         <article class="backdrop-blur-xl bg-black/70 hidden sm:block relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl border-2 border-yellow-600 -rotate-3">
           <blockquote class="space-y-1 text-base text-right">
-            <p>باسلام... من تجربه خرید حضوری واقساطی شما را دارم.</p>
-            <p>بی نهایت هم از خریدم و کیفیت برخورد اعضا مجموعه راضی هستم</p>
+            <p className="leading-7">
+				سلام، من تجربه ی خرید حضوری و اقساط رو از گالری شما دارم
+				بینهایت هم از خریدم وکیفیت و برخورد اعضا مجموعه رضایت دارم
+			</p>
             <footer class="flex items-center pt-2 mt-7 space-x-2 space-x-reverse border-t border-white/10 mt-1">
               <div class="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
                 <svg
@@ -67,15 +73,19 @@ const SpecialComments = () => {
                 </svg>
               </div>
               <div>
-                <p class="text-lg font-bold font-display">بهنام اکبری</p>
+                <p class="text-lg font-bold font-display">
+				کاربر اینستاگرام #2
+				</p>
               </div>
             </footer>
           </blockquote>
         </article>
         <article class="backdrop-blur-xl bg-black/70 hidden md:block relative px-8 pt-8 pb-4 transform shadow-xl md:translate-y-4 rounded-2xl border-2 border-yellow-600 rotate-3">
           <blockquote class="space-y-1 text-base text-right">
-            <p>باسلام... من تجربه خرید حضوری واقساطی شما را دارم.</p>
-            <p>بی نهایت هم از خریدم و کیفیت برخورد اعضا مجموعه راضی هستم</p>
+            <p className="leading-7">
+			خرید حضوری داشتم و واقعا برخورد خوبی داشتید
+			و مجددا دلم میخواد برای خرید از فرشگاهتونو داشته باشم
+			</p>
             <footer class="flex items-center pt-2 mt-7 space-x-2 space-x-reverse border-t border-white/10 mt-1">
               <div class="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
                 <svg
@@ -92,7 +102,9 @@ const SpecialComments = () => {
                 </svg>
               </div>
               <div>
-                <p class="text-lg font-bold font-display">بهنام اکبری</p>
+                <p class="text-lg font-bold font-display">
+				کاربر اینستاگرام #3
+				</p>
               </div>
             </footer>
           </blockquote>
