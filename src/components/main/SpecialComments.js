@@ -2,9 +2,9 @@ const SpecialComments = () => {
   return (
     <div class="w-full max-w-7xl px-4 mx-auto sm:px-8 my-20 ">
       <header class="space-y-4 text-center">
-        <h2 class="text-3xl flex items-center justify-center font-bold tracking-tighter md:text-4xl font-display">
+        <h2 class="text-3xl flex flex-col sm:flex-row items-center justify-center font-bold tracking-tighter md:text-4xl font-display">
           <p>چند کلمه ای از مشتریان</p>
-          <span className="text-yellow-400 mr-2">یاس</span>
+          <span className="text-yellow-400 mr-2 mt-2 sm:mt-0">یاس</span>
         </h2>
       </header>
       <div class="grid gap-8 mt-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
