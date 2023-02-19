@@ -2,8 +2,8 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <div className="bg-neutral-900">
-          <div className="md:w-10/12 lg:w-8/12 m-auto py-8">
+        <div class="bg-neutral-900">
+          <div class="md:w-10/12 lg:w-8/12 m-auto py-8">
             <ul class="flex flex-col md:flex-row flex-wrap items-center justify-between md:flex-nowrap list-disc list-inside">
               <li>
                 <a
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="bg-neutral-900/50">
+        <div class="bg-neutral-900/50">
           <div class="grid grid-cols-1 p-4 gap-8 sm:gap-6 sm:grid-cols-3 container mx-auto py-12">
             <div class="mb-6 md:mb-0">
               <a href="/" class="flex items-center">
@@ -62,7 +62,7 @@ const Footer = () => {
                   فروشگاه یاس
                 </span>
               </a>
-              <div className="text-justify pt-4 leading-6">
+              <div class="text-justify pt-4 leading-6">
                 با سخت کوشی کار کردیم، که نه تنها دغدغه های خرید طلا را برای شما
                 حل کنیم، بلکه لذت ویترین گردی مجازی و خرید آنلاین طلا راهم به
                 شما هدیه دهیم.
@@ -110,17 +110,17 @@ const Footer = () => {
               </div>
             </div>
             <div class="pr-5">
-              <div className="font-thin">
+              <div class="font-thin">
                 <h2 class="mb-6 text-sm font-semibold text-white uppercase">
                   ارتباط با ما
                 </h2>
                 <ul class="text-white">
                   <li class="mb-4 flex items-center">
                     <a class="hover:underline after:content-[':'] flex items-center">
-                      <span className="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white rounded-lg border border-yellow-600">
+                      <span class="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white rounded-lg border border-yellow-600">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="fill-current"
+                          class="fill-current"
                           viewBox="0 0 24 24"
                           width="24"
                           height="24"
@@ -131,14 +131,14 @@ const Footer = () => {
                       </span>
                       مشاور خرید
                     </a>
-                    <span className="mr-3">09121990160</span>
+                    <span class="mr-3">09121990160</span>
                   </li>
                   <li class="mb-4 flex items-center">
                     <a class="hover:underline after:content-[':'] flex items-center">
-                      <span className="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white rounded-lg border border-yellow-600">
+                      <span class="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white rounded-lg border border-yellow-600">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="fill-current"
+                          class="fill-current"
                           viewBox="0 0 24 24"
                           width="24"
                           height="24"
@@ -149,14 +149,14 @@ const Footer = () => {
                       </span>
                       تلفن مدیریت
                     </a>
-                    <span className="mr-3">02155959517</span>
+                    <span class="mr-3">02155959517</span>
                   </li>
                   <li class="mb-4 flex items-center">
                     <a class="hover:underline after:content-[':'] flex items-center">
-                      <span className="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white rounded-lg border border-yellow-600">
+                      <span class="ml-1 inline-flex p-1 ml-3 text-xs font-medium text-white rounded-lg border border-yellow-600">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="fill-current"
+                          class="fill-current"
                           viewBox="0 0 24 24"
                           width="24"
                           height="24"
@@ -167,7 +167,7 @@ const Footer = () => {
                       </span>
                       تلفن ثابت فروشگاه یاس
                     </a>
-                    <span className="mr-3">02155959517</span>
+                    <span class="mr-3">02155959517</span>
                   </li>
                 </ul>
               </div>

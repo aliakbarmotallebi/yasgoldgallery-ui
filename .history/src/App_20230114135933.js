@@ -13,24 +13,20 @@ import Brands from "./components/Brands";
 import SpecialComments from "./components/SpecialComments";
 import GridImages from "./components/GridImages";
 
-
 function App() {
-
-
-
-    return (
-        <div className="flex flex-col mx-auto w-full min-h-screen bg-[#4d4845] text-neutral-300">
-            <Header />
-            <Main>
-                <SpecialProducts/>
-                <GridImages/>
-                <SuggestedProducts/>
-                <SpecialComments />
-                <Brands />
-            </Main>
-            <Footer />
-        </div>
-    );
+  return (
+    <div class="flex flex-col mx-auto w-full min-h-screen bg-[#4d4845] text-neutral-300">
+      <Header />
+      <Main>
+        <SpecialProducts />
+        <GridImages />
+        <SuggestedProducts />
+        <SpecialComments />
+        <Brands />
+      </Main>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

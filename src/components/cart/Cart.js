@@ -54,7 +54,7 @@ const Cart = () => {
         </table>
       </div>
       <Link
-        to="/products"
+        to="/"
         className="flex font-semibold text-indigo-600 text-sm mt-10 mb-4 mr-10"
       >
         <svg

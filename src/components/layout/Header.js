@@ -148,7 +148,7 @@ const Header = () => {
                       setDropdown={setDropdown}
                       showHumburgerMenu={showHumburgerMenu}
                     >
-                      <ul className="py-1 text-sm text-white text-right overflow-hidden p-0 bg-neutral-900 border-yellow-400">
+                      <ul className="py-1 text-sm text-white text-right overflow-hidden p-0 bg-neutral-900 border border-yellow-500 rounded">
                         {allCategories.map((category) => (
                           <li className="group" key={category.id}>
                             <Link
@@ -173,9 +173,9 @@ const Header = () => {
                               )}
                             </Link>
                             {category.children.length > 0 && (
-                              <ul className="py-1 pr-3 lg:pr-0 lg:m-0 m-2 relative lg:absolute right-0 lg:right-full w-full lg:top-4 hidden group-hover:block text-sm text-white text-right overflow-hidden p-0 bg-neutral-800 lg:bg-neutral-900 border-yellow-400">
-                                {category.children.map((category) => (
-                                  <li>
+                              <ul className="py-1 pr-3 rounded border border-yellow-500 lg:pr-0 lg:m-0 m-2 relative lg:absolute right-0 lg:right-[90%] w-full lg:top-4 hidden group-hover:block text-sm text-white text-right overflow-hidden p-0 bg-neutral-800 lg:bg-neutral-900">
+                                {category.children.map((category, index) => (
+                                  <li key={index}>
                                     <Link
                                       to={`/products/category/${category.id}/${category.slug}`}
                                       className="block px-2 lg:px-6 py-2 hover:bg-neutral-900 hover:text-yellow-500 lg:flex lg:justify-between lg:items-center group"

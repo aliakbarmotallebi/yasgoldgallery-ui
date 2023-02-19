@@ -49,7 +49,7 @@ const Order = ({ id, items_count, total, is_paid, created_at }) => {
             className="inline-flex items-center p-2 text-xs font-medium text-gray-700 bg-white rounded-lg border border-gray-200 toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 focus:outline-none"
           >
             {loadingDetails ? (
-              <Spinner classNameSvg="mr-0 !w-4 !h-4" />
+              <Spinner classSvg="mr-0 !w-4 !h-4" />
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"

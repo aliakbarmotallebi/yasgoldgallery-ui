@@ -68,7 +68,7 @@ const AddressCard = ({ id, post_code, address, setAddresses, addresses }) => {
             className="bg-indigo-500 text-white opacity-0 inline-flex p-1 mr-1 rounded group-hover:opacity-100 transition-all"
           >
             {loadingDeleteAddress ? (
-              <Spinner classNameSvg="mr-0 !w-4 !h-4" />
+              <Spinner classSvg="mr-0 !w-4 !h-4" />
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ const AddressCard = ({ id, post_code, address, setAddresses, addresses }) => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 className="feather feather-trash-2"
@@ -101,7 +101,7 @@ const AddressCard = ({ id, post_code, address, setAddresses, addresses }) => {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
+              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="feather feather-edit"
@@ -126,7 +126,7 @@ const AddressCard = ({ id, post_code, address, setAddresses, addresses }) => {
               viewBox="0 0 24 24"
               fill="none"
               stroke="white"
-              stroke-width="2"
+              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="feather feather-check"

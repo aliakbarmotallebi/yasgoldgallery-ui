@@ -2,7 +2,7 @@ const CartPage = () => {
   return (
     <div class="container mx-auto mt-10">
       <div class="flex justify-center shadow-md my-10">
-        <div className="max-w-xl bg-white rounded-lg text-black"></div>
+        <div class="max-w-xl bg-white rounded-lg text-black"></div>
       </div>
 
       <div class="flex justify-center shadow-md my-10">
@@ -101,7 +101,7 @@ const CartPage = () => {
           <h1 class="font-semibold text-lg border-b border-gray-50 bg-gray-50/50 px-4 py-5">
             خلاصه فاکتور
           </h1>
-          <div className="px-8 py-10">
+          <div class="px-8 py-10">
             <div class="flex justify-between mt-10 mb-5">
               <span class="font-semibold text-sm uppercase">تعداد سفارش 3</span>
               <span class="font-semibold text-sm">2,000,000 تومان</span>

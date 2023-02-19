@@ -1,7 +1,7 @@
 const CardProduct = () => {
     return (
         <div class="max-w-sm">
-          <div className="relative">
+          <div class="relative">
 
             
       <div class="container mx-auto px-5 py-10">

@@ -1,7 +1,7 @@
 const GridImages = () => {
   return (
-    <section className="bg-[#433D37]">
-      <div className="container mx-auto">
+    <section class="bg-[#433D37]">
+      <div class="container mx-auto">
         <div class="flex justify-center items-center">
           <div class="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9 px-4 w-96 sm:w-auto">
             <div role="main" class="flex flex-col items-center justify-center">

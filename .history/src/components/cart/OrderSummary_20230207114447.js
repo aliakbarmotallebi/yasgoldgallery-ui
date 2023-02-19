@@ -47,10 +47,10 @@ const OrderSummary = ({ cart }) => {
         <h1 class="font-semibold text-lg border-b border-gray-50 bg-gray-50/50 px-4 py-5">
           خلاصه فاکتور
         </h1>
-        <div className="px-8 py-10">
+        <div class="px-8 py-10">
           <div class="flex justify-between mb-5">
             <span class="font-semibold text-sm uppercase">
-              <span className="ml-1">تعداد سفارش</span>
+              <span class="ml-1">تعداد سفارش</span>
               {cart.reduce((total, product) => total + product.qty, 0)}
             </span>
             <span class="font-semibold text-sm">
@@ -60,7 +60,7 @@ const OrderSummary = ({ cart }) => {
                   0
                 )
               ).toLocaleString()}
-              <span className="mr-1">تومان</span>
+              <span class="mr-1">تومان</span>
             </span>
           </div>
           <div>
@@ -81,18 +81,16 @@ const OrderSummary = ({ cart }) => {
                     0
                   )
                 ).toLocaleString()}
-                <span className="mr-1">تومان</span>
+                <span class="mr-1">تومان</span>
               </span>
             </div>
             {pathname === "/cart/checkout" ? (
               <button
                 disabled={checkOrderInfo(order) ? false : true}
                 onClick={handleCreateOrder}
-                className="bg-indigo-500 flex justify-center items-center disabled:bg-gray-300 font-semibold block text-center hover:bg-indigo-600 py-3 text-sm text-white rounded-lg uppercase w-full"
+                class="bg-indigo-500 flex justify-center items-center disabled:bg-gray-300 font-semibold block text-center hover:bg-indigo-600 py-3 text-sm text-white rounded-lg uppercase w-full"
               >
-                {loading && (
-                  <Spinner classNameBox="w-fit ml-4" classNameSvg="!w-4" />
-                )}
+                {loading && <Spinner classBox="w-fit ml-4" classSvg="!w-4" />}
                 <span>ادامه پرداخت</span>
               </button>
             ) : (
@@ -111,10 +109,10 @@ const OrderSummary = ({ cart }) => {
           <OrderDetails orderDetails={orderDetails} />
           <button
             onClick={handleCreatePayment}
-            className="bg-indigo-500 flex justify-center items-center font-semibold block text-center hover:bg-indigo-600 py-3 text-sm text-white rounded-lg uppercase w-full"
+            class="bg-indigo-500 flex justify-center items-center font-semibold block text-center hover:bg-indigo-600 py-3 text-sm text-white rounded-lg uppercase w-full"
           >
             {paymentLoading && (
-              <Spinner classNameBox="w-fit ml-4" classNameSvg="!w-4" />
+              <Spinner classBox="w-fit ml-4" classSvg="!w-4" />
             )}
             پرداخت
           </button>

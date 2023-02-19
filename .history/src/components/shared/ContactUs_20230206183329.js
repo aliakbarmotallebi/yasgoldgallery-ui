@@ -10,12 +10,12 @@ const ContactUs = () => {
   });
   return (
     <>
-      <div className="text-white text-center">
-        <h2 className="text-2xl mb-4">تماس با ما</h2>
-        <p className="text-white/60">پیشنهادات خود را با ما درمیان بگذارید</p>
+      <div class="text-white text-center">
+        <h2 class="text-2xl mb-4">تماس با ما</h2>
+        <p class="text-white/60">پیشنهادات خود را با ما درمیان بگذارید</p>
       </div>
       <div class="block p-6 rounded-lg shadow-lg bg-transparent max-w-[550px]  text-left">
-        <form className="w-[80%] mx-auto">
+        <form class="w-[80%] mx-auto">
           <div class="form-group mb-6">
             <input
               type="text"
@@ -123,7 +123,7 @@ const ContactUs = () => {
             ></textarea>
           </div>
         </form>
-        <div className="">
+        <div class="">
           <button
             type="button"
             class="

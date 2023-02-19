@@ -36,22 +36,22 @@ const ProductPage = () => {
     getData();
   }, [id]);
   return (
-    <div class="bg-neutral-900 px-4 xl:px-4 py-14">
+    <div className="bg-neutral-900 px-4 xl:px-4 py-14">
       {loading && <LoadableLoading />}
-      <div class="container mx-auto">
-        <div class="max-w-xl lg:max-w-6xl mx-auto text-neutral-900  bg-neutral-900 rounded-lg shadow-md  text-black px-5 py-6">
-          <div class="flex flex-wrap -mx-4 mb-12 md:px-10 pt-10">
-            <div class="w-full lg:w-1/2 px-4">
-              <div class="max-w-lg">
-                <div class="flex items-center">
-                  <h2 class="text-4xl text-white mb-1 ml-auto">{title}</h2>
+      <div className="container mx-auto">
+        <div className="max-w-xl lg:max-w-6xl mx-auto text-neutral-900  bg-neutral-900 rounded-lg shadow-md  text-black px-5 py-6">
+          <div className="flex flex-wrap -mx-4 mb-12 md:px-10 pt-10">
+            <div className="w-full lg:w-1/2 px-4">
+              <div className="max-w-lg">
+                <div className="flex items-center">
+                  <h2 className="text-4xl text-white mb-1 ml-auto">{title}</h2>
                   {!loading && (
                     <HandleCart
                       product={product}
                       btnIcon={
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          class="ml-1 fill-current"
+                          className="ml-1 fill-current"
                           viewBox="0 0 24 24"
                           width="24"
                           height="24"
@@ -66,40 +66,42 @@ const ProductPage = () => {
                   )}
                 </div>
 
-                <div class="flex">
+                <div className="flex">
                   {tags?.map((tag) => (
                     <Link
                       to={`/products/tag/${tag.id}/${tag.slug}`}
                       key={tag.id}
-                      class="block text-sm font-bold mb-5 text-blue-600 ml-4"
+                      className="block text-sm font-bold mb-5 text-blue-600 ml-4"
                     >
                       {tag.name}
                     </Link>
                   ))}
                 </div>
 
-                <span class="block text-2xl font-black text-green-500 mb-4">
+                <span className="block text-2xl font-black text-green-500 mb-4">
                   {Number(price).toLocaleString()}
-                  <span class="mr-1">تومان</span>
+                  <span className="mr-1">تومان</span>
                 </span>
-                <ul class="list-inside font-medium mb-6 text-white">
+                <ul className="list-inside font-medium mb-6 text-white">
                   <li>
-                    <span class="text-bold after:content-[':'] ml-2">
+                    <span className="text-bold after:content-[':'] ml-2">
                       بارکد
                     </span>
                     {barcode}
                   </li>
                   <li>
-                    <span class="text-bold after:content-[':'] ml-2">اجرت</span>
+                    <span className="text-bold after:content-[':'] ml-2">
+                      اجرت
+                    </span>
                     {Number(wages).toLocaleString()}
                   </li>
                 </ul>
 
-                <div class="px-3 rounded-md py-4 border border-yellow-600">
-                  <div class="text-base text-yellow-500 pb-4 inline-flex items-center font-bold">
+                <div className="px-3 rounded-md py-4 border border-yellow-600">
+                  <div className="text-base text-yellow-500 pb-4 inline-flex items-center font-bold">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="fill-current ml-1"
+                      className="fill-current ml-1"
                       viewBox="0 0 24 24"
                       width="24"
                       height="24"
@@ -109,28 +111,28 @@ const ProductPage = () => {
                     </svg>
                     شرایط اقساط در یاس
                   </div>
-                  <ul class="space-y-3 ">
+                  <ul className="space-y-3 ">
                     <li>
-                      <span class="font-bold after:content-[':'] text-white ml-2">
+                      <span className="font-bold after:content-[':'] text-white ml-2">
                         شرایط اقساط
                       </span>
                       <br />
                       <div
-                        class="leading-7 text-white"
+                        className="leading-7 text-white"
                         dangerouslySetInnerHTML={{
                           __html: replaceWithBr(installment_terms),
                         }}
                       ></div>
                     </li>
-                    <li class="text-white">
-                      <span class="font-bold after:content-[':']  ml-2">
+                    <li className="text-white">
+                      <span className="font-bold after:content-[':']  ml-2">
                         پیش قسط
                       </span>
                       {Number(prepayment).toLocaleString()}
                     </li>
 
-                    <li class="text-white">
-                      <span class="font-bold after:content-[':'] ml-2">
+                    <li className="text-white">
+                      <span className="font-bold after:content-[':'] ml-2">
                         قسط ماهانه
                       </span>
                       {Number(monthly_installment).toLocaleString()}
@@ -139,15 +141,15 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-            <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
-              <div class="lg:w-112">
+            <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+              <div className="lg:w-112">
                 <div
-                  class="relative group block mb-6 h-96 w-full bg-blueGray-900 rounded-md mt-4 lg:mt-0"
+                  className="relative group block mb-6 h-96 w-full bg-blueGray-900 rounded-md mt-4 lg:mt-0"
                   href="#"
                 >
-                  <div class="absolute top-0 left-0 h-full w-full transform -translate-y-1 -translate-x-1 group-hover:translate-y-0 group-hover:translate-x-0 transition duration-300">
+                  <div className="absolute top-0 left-0 h-full w-full transform -translate-y-1 -translate-x-1 group-hover:translate-y-0 group-hover:translate-x-0 transition duration-300">
                     <img
-                      class="img-fluid w-full h-full object-cover rounded-md border-2 border-black"
+                      className="img-fluid w-full h-full object-cover rounded-md border-2 border-black"
                       src={coverImage}
                       alt={title}
                     />
@@ -156,21 +158,21 @@ const ProductPage = () => {
               </div>
             </div>
           </div>
-          <div class="md:px-10">
+          <div className="md:px-10">
             <div>
-              <div class="border-b-2 border-yellow-400 text-lg text-yellow-500 pb-2 inline-flex items-center font-bold">
+              <div className="border-b-2 border-yellow-400 text-lg text-yellow-500 pb-2 inline-flex items-center font-bold">
                 توضیحات
               </div>
               <div
                 dangerouslySetInnerHTML={{ __html: replaceWithBr(description) }}
-                class="pb-10 text-lg leading-7 text-white pt-4 px-4"
+                className="pb-10 text-lg leading-7 text-white pt-4 px-4"
               ></div>
             </div>
-            <div class="pt-5">
-              <div class="border-b-2 border-yellow-400 text-lg text-yellow-500 pb-2 inline-flex items-center font-bold">
+            <div className="pt-5">
+              <div className="border-b-2 border-yellow-400 text-lg text-yellow-500 pb-2 inline-flex items-center font-bold">
                 دیدگاه مشتریان یاس
               </div>
-              <div class="px-4 pt-2">
+              <div className="px-4 pt-2">
                 {!loading && <ProductComments {...product} />}
               </div>
             </div>

@@ -1,10 +1,8 @@
-const Main = ({children}) => {
-    return (
-        <>
-            <main className="container mx-auto">
-                {children}
-            </main>
-        </>
-    );
-}
+const Main = ({ children }) => {
+  return (
+    <>
+      <main class="container mx-auto">{children}</main>
+    </>
+  );
+};
 export default Main;

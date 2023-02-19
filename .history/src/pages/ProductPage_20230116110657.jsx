@@ -80,24 +80,21 @@ const ProductPage = () => {
         </div>
         <div class="mb-8 border-b-2 border-white">
           <div class="flex flex-col md:flex-row -mb-px">
-            <div
-              class="inline-block px-2 pb-2 mb-3 md:mb-0 text-lg font-black text-indigo-500 border-b-4 border-indigo-500"
-            >
+            <div class="inline-block px-2 pb-2 mb-3 md:mb-0 text-lg font-black text-indigo-500 border-b-4 border-indigo-500">
               توضیحات
             </div>
           </div>
         </div>
-        <div className="pb-10 text-lg">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard dummy
-            text ever since the 1500s, when an unknown printer took a galley
-            of type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of
-            Lorem Ipsum.
+        <div class="pb-10 text-lg">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
+          ever since the 1500s, when an unknown printer took a galley of type
+          and scrambled it to make a type specimen book. It has survived not
+          only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
         </div>
       </div>
     </div>

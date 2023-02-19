@@ -1,13 +1,13 @@
 const GridImages = () => {
   return (
-    <section className="bg-[#433D37]">
-      <div className="container mx-auto">
+    <section class="bg-[#433D37]">
+      <div class="container mx-auto">
         <div class="flex justify-center items-center">
           <div class="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9 px-4 w-96 sm:w-auto">
             <div role="main" class="flex flex-col items-center justify-center">
-              <h2 className="text-4xl font-bold text-white">
+              <h2 class="text-4xl font-bold text-white">
                 دسته بندی محصولات
-                <span className="text-yellow-400">یاس</span>
+                <span class="text-yellow-400">یاس</span>
               </h2>
             </div>
             <div class="lg:flex items-stretch md:mt-12 mt-8">

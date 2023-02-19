@@ -33,11 +33,11 @@ const Timer = (props) => {
   return (
     <div>
       {minutes === 0 && seconds === 0 ? (
-        <button onClick={resendVerifyCode} class="text-lg text-cyan-600">
+        <button onClick={resendVerifyCode} className="text-lg text-cyan-600">
           <p>درخواست مجدد کد</p>
         </button>
       ) : (
-        <p class="text-lg text-cyan-600">
+        <p className="text-lg text-cyan-600">
           {" "}
           {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
         </p>

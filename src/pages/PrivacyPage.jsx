@@ -1,20 +1,22 @@
 const PrivacyPage = () => {
   return (
     <>
-      <div class="bg-gray-100 xl:px-4 py-14 text-black">
-        <div class="mx-auto container text-center xl:max-w-6xl mx-auto px-4 xl:px-0">
-          <h2 class="text-4xl font-bold text-gray-900">درباره گالری طلا یاس</h2>
-          <div class="pt-5">
+      <div className="bg-gray-100 xl:px-4 py-14 text-black">
+        <div className="mx-auto container text-center xl:max-w-6xl mx-auto px-4 xl:px-0">
+          <h2 className="text-4xl font-bold text-gray-900">
+            درباره گالری طلا یاس
+          </h2>
+          <div className="pt-5">
             کاربر گرامی با توجه به اینکه با ورود به وب‌سایت گالری یاس و استفاده
             از خدمات آن به معنای قبول و آگاهی کامل از قوانین از سوی شما می‌باشد،
             بنابراین خواهشمندیم موارد زیر را با دقت مطالعه بفرمایید.
           </div>
 
-          <div class="accordion py-10" id="accordionExample5">
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingOne5">
+          <div className="accordion py-10" id="accordionExample5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingOne5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -42,10 +44,10 @@ const PrivacyPage = () => {
               </h2>
               <div
                 id="collapseOne5"
-                class="accordion-collapse collapse show"
+                className="accordion-collapse collapse show"
                 aria-labelledby="headingOne5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5">
+                <div className="accordion-body text-justify leading-8 py-4 px-5">
                   مشتری مشتری یا کاربر به شخص با هویت حقیقی یا حقوقی گفته می‌شود
                   که با اطلاعات کاربری خود که در فرم ثبت نام درج کرده است. گالری
                   یاس وب‌سایت طلا و جواهرات گالری یاس که به منظور خدمات رسانی به
@@ -69,10 +71,10 @@ const PrivacyPage = () => {
                 </div>
               </div>
             </div>
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingTwo5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingTwo5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -101,10 +103,10 @@ const PrivacyPage = () => {
               </h2>
               <div
                 id="collapseTwo5"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingTwo5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5">
+                <div className="accordion-body text-justify leading-8 py-4 px-5">
                   گالری یاس به اطلاعات خصوصی اشخاصى که از خدمات سایت استفاده
                   می‏‌کنند، احترام گذاشته و از آن محافظت می‏‌کند. گالری یاس
                   متعهد می‏‌شود در حد توان از حریم شخصی شما دفاع کند و در این
@@ -133,10 +135,10 @@ const PrivacyPage = () => {
                 </div>
               </div>
             </div>
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingThree5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingThree5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -165,10 +167,10 @@ const PrivacyPage = () => {
               </h2>
               <div
                 id="collapseThree5"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingThree5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5">
+                <div className="accordion-body text-justify leading-8 py-4 px-5">
                   هدف از ایجاد بخش نظرات در فروشگاه اینترنتی گالری یاس ،
                   اشتراک‌گذاری تجربه خرید و کاربری محصولات توسط مشتریان می‌باشد.
                   در این بخش، هر کاربر مجاز است در چهارچوب شرایط و قوانین گالری
@@ -185,10 +187,10 @@ const PrivacyPage = () => {
               </div>
             </div>
 
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingThree5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingThree5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -217,10 +219,10 @@ const PrivacyPage = () => {
               </h2>
               <div
                 id="collapseFour5"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingThree5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5">
+                <div className="accordion-body text-justify leading-8 py-4 px-5">
                   در صورت خرید کالای موجود در انبار ارسال زیر 24 ساعت (روز کاری)
                   برای مشتری انجام خواهد شد. ایام تعطیل رسمی و جمعه‌ها ارسال
                   انجام نخواهد شد. نحوه ارسال: ارسال محصولات ما در داخل مشهد

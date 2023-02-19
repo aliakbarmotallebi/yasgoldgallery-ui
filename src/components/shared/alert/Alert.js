@@ -32,7 +32,7 @@ const Alert = ({ text, status }) => {
       <span className={`text-${style}-800`}>{text}</span>
       <button
         type="button"
-        class={`btn-close box-content w-4 h-4 p-1 mr-auto text-${style}-900 border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-yellow-900 hover:opacity-75 hover:no-underline`}
+        className={`btn-close box-content w-4 h-4 p-1 mr-auto text-${style}-900 border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-yellow-900 hover:opacity-75 hover:no-underline`}
         data-bs-dismiss="alert"
         aria-label="Close"
         onClick={() =>

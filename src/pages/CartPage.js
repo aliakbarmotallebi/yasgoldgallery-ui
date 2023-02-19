@@ -17,7 +17,7 @@ const CartPage = () => {
       {cart.length < 1 ? (
         <CartEmpty />
       ) : (
-        <div class="grid grid-cols-1 lg:grid-cols-3 items-start mt-10 my-10 bg-white rounded-lg shadow-md text-black w-full max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 items-start mt-10 my-10 bg-white rounded-lg shadow-md text-black w-full max-w-4xl mx-auto">
           <Outlet />
           <OrderSummary cart={cart} />
         </div>

@@ -153,7 +153,7 @@ const Checkout = () => {
             <button
               type="button"
               onClick={() => setModalAddress(true)}
-              className="bg-black/90 flex items-center justify-center text-sm inline text-white rounded-lg p-2 w-fit mr-auto hover:bg-black"
+              className="bg-black/90 flex items-center justify-center text-sm text-white rounded-lg p-2 w-fit mr-auto hover:bg-black"
             >
               افزودن آدرس جدید
             </button>

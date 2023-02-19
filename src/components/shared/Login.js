@@ -86,8 +86,8 @@ const Login = ({ setUser, openModal, setShowModal }) => {
                   >
                     {loading.loginLoading && (
                       <Spinner
-                        classNameBox="w-auto"
-                        classNameSvg="!w-4 !h-4 fill-white text-gray-50/50 mr-0"
+                        classBox="w-auto"
+                        classSvg="!w-4 !h-4 fill-white text-gray-50/50 mr-0"
                       />
                     )}
                     <div>
@@ -138,8 +138,8 @@ const Login = ({ setUser, openModal, setShowModal }) => {
                 >
                   {loading.sendVerifyCodeLoading && (
                     <Spinner
-                      classNameBox="w-auto"
-                      classNameSvg="!w-4 !h-4 fill-white text-gray-50/50 mr-0"
+                      classBox="w-auto"
+                      classSvg="!w-4 !h-4 fill-white text-gray-50/50 mr-0"
                     />
                   )}
                   <div>

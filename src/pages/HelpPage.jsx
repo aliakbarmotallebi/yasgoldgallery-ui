@@ -1,17 +1,17 @@
 const HelpPage = () => {
   return (
     <>
-      <div class="bg-gray-100 xl:px-4 py-14 text-black">
-        <div class="mx-auto container text-center xl:max-w-6xl mx-auto px-4 xl:px-0">
-          <h2 class="text-4xl font-bold text-gray-900">
+      <div className="bg-gray-100 xl:px-4 py-14 text-black">
+        <div className="mx-auto container text-center xl:max-w-6xl mx-auto px-4 xl:px-0">
+          <h2 className="text-4xl font-bold text-gray-900">
             راهنمای خرید آنلاین از وبسایت یاس
           </h2>
 
-          <div class="accordion py-10" id="accordionExample5">
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingOne5">
+          <div className="accordion py-10" id="accordionExample5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingOne5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -39,16 +39,16 @@ const HelpPage = () => {
               </h2>
               <div
                 id="collapseOne5"
-                class="accordion-collapse collapse show"
+                className="accordion-collapse collapse show"
                 aria-labelledby="headingOne5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5"></div>
+                <div className="accordion-body text-justify leading-8 py-4 px-5"></div>
               </div>
             </div>
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingTwo5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingTwo5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -77,16 +77,16 @@ const HelpPage = () => {
               </h2>
               <div
                 id="collapseTwo5"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingTwo5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5"></div>
+                <div className="accordion-body text-justify leading-8 py-4 px-5"></div>
               </div>
             </div>
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingThree5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingThree5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -116,17 +116,17 @@ const HelpPage = () => {
               </h2>
               <div
                 id="collapseThree5"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingThree5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5"></div>
+                <div className="accordion-body text-justify leading-8 py-4 px-5"></div>
               </div>
             </div>
 
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingThree5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingThree5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -155,17 +155,17 @@ const HelpPage = () => {
               </h2>
               <div
                 id="collapseThree5"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingThree5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5"></div>
+                <div className="accordion-body text-justify leading-8 py-4 px-5"></div>
               </div>
             </div>
 
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingThree5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingThree5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -195,17 +195,17 @@ const HelpPage = () => {
               </h2>
               <div
                 id="collapseThree5"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingThree5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5"></div>
+                <div className="accordion-body text-justify leading-8 py-4 px-5"></div>
               </div>
             </div>
 
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingThree5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingThree5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -235,17 +235,17 @@ const HelpPage = () => {
               </h2>
               <div
                 id="collapseThree5"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingThree5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5"></div>
+                <div className="accordion-body text-justify leading-8 py-4 px-5"></div>
               </div>
             </div>
 
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingThree5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingThree5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -275,17 +275,17 @@ const HelpPage = () => {
               </h2>
               <div
                 id="collapseThree5"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingThree5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5"></div>
+                <div className="accordion-body text-justify leading-8 py-4 px-5"></div>
               </div>
             </div>
 
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingThree5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingThree5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -315,17 +315,17 @@ const HelpPage = () => {
               </h2>
               <div
                 id="collapseThree5"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingThree5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5"></div>
+                <div className="accordion-body text-justify leading-8 py-4 px-5"></div>
               </div>
             </div>
 
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingThree5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingThree5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -354,17 +354,17 @@ const HelpPage = () => {
               </h2>
               <div
                 id="collapseThree5"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingThree5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5"></div>
+                <div className="accordion-body text-justify leading-8 py-4 px-5"></div>
               </div>
             </div>
 
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingThree5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingThree5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -394,17 +394,17 @@ const HelpPage = () => {
               </h2>
               <div
                 id="collapseThree5"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingThree5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5"></div>
+                <div className="accordion-body text-justify leading-8 py-4 px-5"></div>
               </div>
             </div>
 
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingThree5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingThree5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -434,17 +434,17 @@ const HelpPage = () => {
               </h2>
               <div
                 id="collapseThree5"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingThree5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5"></div>
+                <div className="accordion-body text-justify leading-8 py-4 px-5"></div>
               </div>
             </div>
 
-            <div class="accordion-item bg-white border border-gray-200">
-              <h2 class="accordion-header text-2xl mb-0" id="headingThree5">
+            <div className="accordion-item bg-white border border-gray-200">
+              <h2 className="accordion-header text-2xl mb-0" id="headingThree5">
                 <button
-                  class="
+                  className="
         accordion-button
                 after:mr-auto
         after:ml-0
@@ -475,10 +475,10 @@ const HelpPage = () => {
               </h2>
               <div
                 id="collapseThree5"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingThree5"
               >
-                <div class="accordion-body text-justify leading-8 py-4 px-5"></div>
+                <div className="accordion-body text-justify leading-8 py-4 px-5"></div>
               </div>
             </div>
           </div>

@@ -21,14 +21,14 @@ const RelatedProducts = ({ category: { id } }) => {
     getData();
   }, []);
   return (
-    <section class="py-10">
-      <div class="text-center py-10">
-        <h2 class="text-4xl font-bold text-white">محصولات مرتبط</h2>
+    <section className="py-10">
+      <div className="text-center py-10">
+        <h2 className="text-4xl font-bold text-white">محصولات مرتبط</h2>
       </div>
       {loading ? (
         <Spinner />
       ) : (
-        <div class="items-center container xl:max-w-6xl mx-auto px-4 xl:px-0">
+        <div className="items-center container xl:max-w-6xl mx-auto px-4 xl:px-0">
           <Swiper
             breakpoints={{
               0: {
@@ -54,7 +54,7 @@ const RelatedProducts = ({ category: { id } }) => {
               delay: 2500,
               disableOnInteraction: false,
             }}
-            class="col-span-5 !p-4"
+            className="col-span-5 !p-4"
           >
             {relatedProducts.map((product) => (
               <SwiperSlide key={product.productId}>

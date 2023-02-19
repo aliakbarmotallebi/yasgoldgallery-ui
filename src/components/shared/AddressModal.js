@@ -64,7 +64,7 @@ const AddressModal = ({
               className="bg-yellow-500 flex items-center justify-center hover:bg-yellow-600 disabled:bg-gray-300 text-black p-2 rounded-lg text-sm"
             >
               {loadingAddressModal && (
-                <Spinner classNameBox="w-fit ml-2" classNameSvg="!w-4" />
+                <Spinner classBox="w-fit ml-2" classSvg="!w-4" />
               )}
               {textButton}
             </button>

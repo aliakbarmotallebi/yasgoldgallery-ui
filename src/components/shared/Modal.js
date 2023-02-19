@@ -29,11 +29,11 @@ const Modal = ({ showModal, setShowModal, children }) => {
       {showModal ? (
         <div
           onClick={(e) => clickedOnModal(e)}
-          class="fixed flex items-center justify-center top-0 left-0 right-0 z-[100] w-full overflow-x-hidden overflow-y-auto md:inset-0 h-modal h-full bg-black/90"
+          className="fixed flex items-center justify-center top-0 left-0 right-0 z-[100] w-full overflow-x-hidden overflow-y-auto md:inset-0 h-modal h-full bg-black/90"
         >
           <div
             id="modal"
-            class="flex justify-center items-center w-full h-full"
+            className="flex justify-center items-center w-full h-full"
           >
             {children}
           </div>

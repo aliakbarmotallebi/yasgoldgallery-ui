@@ -38,7 +38,7 @@ const ProductPage = () => {
   return (
     <div class="bg-gray-100 px-4 xl:px-4 py-14">
       {loading && <LoadableLoading />}
-      <div className="container mx-auto">
+      <div class="container mx-auto">
         <div class="max-w-xl lg:max-w-6xl mx-auto text-neutral-900  bg-white rounded-lg shadow-md  text-black px-5 py-6">
           <div class="flex flex-wrap -mx-4 mb-12">
             <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
@@ -78,7 +78,7 @@ const ProductPage = () => {
             <div class="w-full lg:w-1/2 px-4">
               <div class="max-w-lg">
                 <h2 class="text-4xl font-black mb-1">{title}</h2>
-                <div className="flex">
+                <div class="flex">
                   {tags?.map((tag) => (
                     <Link
                       to={`/products/tag/${tag.id}/${tag.slug}`}
@@ -92,30 +92,30 @@ const ProductPage = () => {
 
                 <span class="block text-2xl font-black text-green-500 mb-4">
                   {Number(price).toLocaleString()}
-                  <span className="mr-1">تومان</span>
+                  <span class="mr-1">تومان</span>
                 </span>
                 <ul class="list-inside font-medium mb-6">
                   <li>
-                    <span className="text-bold after:content-[':'] text-neutral-800 ml-2">
+                    <span class="text-bold after:content-[':'] text-neutral-800 ml-2">
                       بارکد
                     </span>
                     {barcode}
                   </li>
                   <li>
-                    <span className="text-bold after:content-[':'] text-neutral-800 ml-2">
+                    <span class="text-bold after:content-[':'] text-neutral-800 ml-2">
                       اجرت
                     </span>
                     {Number(wages).toLocaleString()}
                   </li>
                 </ul>
 
-                <div className="px-3 rounded-md py-4">
-                  <div className="text-sm text-blue-700 pb-2">
+                <div class="px-3 rounded-md py-4">
+                  <div class="text-sm text-blue-700 pb-2">
                     شرایط اقساط در یاس
                   </div>
                   <ul class="list-inside font-medium">
                     <li>
-                      <span className="font-bold after:content-[':'] text-neutral-800 ml-2">
+                      <span class="font-bold after:content-[':'] text-neutral-800 ml-2">
                         شرایط اقساط
                       </span>
                       <br />
@@ -126,14 +126,14 @@ const ProductPage = () => {
                       ></div>
                     </li>
                     <li>
-                      <span className="font-bold after:content-[':'] text-neutral-800 ml-2">
+                      <span class="font-bold after:content-[':'] text-neutral-800 ml-2">
                         پیش قسط
                       </span>
                       {Number(prepayment).toLocaleString()}
                     </li>
 
                     <li>
-                      <span className="font-bold after:content-[':'] text-neutral-800 ml-2">
+                      <span class="font-bold after:content-[':'] text-neutral-800 ml-2">
                         قسط ماهانه
                       </span>
                       {Number(monthly_installment).toLocaleString()}
@@ -159,7 +159,7 @@ const ProductPage = () => {
           </div>
           <div
             dangerouslySetInnerHTML={{ __html: replaceWithBr(description) }}
-            className="pb-10 text-lg"
+            class="pb-10 text-lg"
           ></div>
           <div class="bg-white rounded-lg px-4 pt-2 max-w-3xl mx-auto">
             {!loading && <ProductComments {...product} />}

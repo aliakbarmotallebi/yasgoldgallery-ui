@@ -21,14 +21,14 @@ const RelatedProducts = ({ category: { id } }) => {
     getData();
   }, []);
   return (
-    <section className="py-10">
-      <div className="text-center py-10">
-        <h2 className="text-4xl font-bold text-white">محصولات مرتبط</h2>
+    <section class="py-10">
+      <div class="text-center py-10">
+        <h2 class="text-4xl font-bold text-white">محصولات مرتبط</h2>
       </div>
       {loading ? (
         <Spinner />
       ) : (
-        <div className="grid grid-cols-5 gap-3 p-5 items-center">
+        <div class="grid grid-cols-5 gap-3 p-5 items-center">
           <Swiper
             slidesPerView={5}
             spaceBetween={30}
@@ -37,7 +37,7 @@ const RelatedProducts = ({ category: { id } }) => {
               delay: 2500,
               disableOnInteraction: false,
             }}
-            className="col-span-5"
+            class="col-span-5"
           >
             {relatedProducts.map((product) => (
               <SwiperSlide key={product.productId}>

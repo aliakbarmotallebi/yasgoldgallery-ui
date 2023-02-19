@@ -18,14 +18,14 @@ function App() {
         </div>
 
         <div className="grid grid-cols-5 gap-3 p-5">
-          <div class=" max-w-sm"></div>
+          <div className=" max-w-sm"></div>
 
-          <div class=" max-w-sm">
+          <div className=" max-w-sm">
             <div className="relative">
               <div className="w-60 h-60 overflow-hidden group shadow-md rounded-lg">
                 <a href="#">
                   <img
-                    class="transition-all duration-200 group-hover:rotate-2 group-hover:relative"
+                    className="transition-all duration-200 group-hover:rotate-2 group-hover:relative"
                     src="https://dioragallery.com/images/stories/virtuemart/product/17427.jpg"
                   />
                 </a>
@@ -33,7 +33,7 @@ function App() {
               <div className="absolute bottom-5 right-5 ">
                 <a
                   href="#"
-                  class="font-bold text-xs px-3 py-2 rounded text-neutral-800 bg-yellow-400"
+                  className="font-bold text-xs px-3 py-2 rounded text-neutral-800 bg-yellow-400"
                 >
                   خرید
                   <svg
@@ -49,24 +49,24 @@ function App() {
                 </a>
               </div>
             </div>
-            <div class="px-5 pt-4">
+            <div className="px-5 pt-4">
               <a href="#">
-                <h3 class="text-white font-semibold text-lg tracking-tight text-justify">
+                <h3 className="text-white font-semibold text-lg tracking-tight text-justify">
                   دستبند طلا زنانه کارتیه
                 </h3>
               </a>
-              <div class="text-lg font-bold text-yellow-500 pt-1">
+              <div className="text-lg font-bold text-yellow-500 pt-1">
                 200,000,000 تومان
               </div>
             </div>
           </div>
 
-          <div class=" max-w-sm">
+          <div className=" max-w-sm">
             <div className="relative">
               <div className="w-50">
                 <a href="#">
                   <img
-                    class="shadow-md rounded-lg"
+                    className="shadow-md rounded-lg"
                     src="https://dioragallery.com/images/stories/virtuemart/product/1370.jpg"
                   />
                 </a>
@@ -74,7 +74,7 @@ function App() {
               <div className="absolute bottom-5 right-5 ">
                 <a
                   href="#"
-                  class="font-bold text-xs pr-3 py-2 rounded text-neutral-800 bg-yellow-400"
+                  className="font-bold text-xs pr-3 py-2 rounded text-neutral-800 bg-yellow-400"
                 >
                   خرید
                   <svg
@@ -90,24 +90,24 @@ function App() {
                 </a>
               </div>
             </div>
-            <div class="px-5 pt-4">
+            <div className="px-5 pt-4">
               <a href="#">
-                <h3 class="text-white font-semibold text-lg tracking-tight text-justify">
+                <h3 className="text-white font-semibold text-lg tracking-tight text-justify">
                   دستبند طلا زنانه کارتیه
                 </h3>
               </a>
-              <div class="text-lg font-bold text-yellow-500 pt-1">
+              <div className="text-lg font-bold text-yellow-500 pt-1">
                 200,000,000 تومان
               </div>
             </div>
           </div>
 
-          <div class=" max-w-sm">
+          <div className=" max-w-sm">
             <div className="relative">
               <div className="w-50 h-50 transition-all duration-200 hover:scale-[1.02] hover:rounded-sm hover:shadow-md hover:relative">
                 <a href="#">
                   <img
-                    class="shadow-md rounded-lg"
+                    className="shadow-md rounded-lg"
                     src="https://dioragallery.com/images/stories/virtuemart/product/17427.jpg"
                   />
                 </a>
@@ -115,7 +115,7 @@ function App() {
               <div className="absolute bottom-5 right-5 ">
                 <a
                   href="#"
-                  class="font-bold text-xs px-3 py-2 rounded text-neutral-800 bg-yellow-400"
+                  className="font-bold text-xs px-3 py-2 rounded text-neutral-800 bg-yellow-400"
                 >
                   خرید
                   <svg
@@ -131,27 +131,27 @@ function App() {
                 </a>
               </div>
             </div>
-            <div class="px-5 pt-4">
+            <div className="px-5 pt-4">
               <a
                 className="w-50 h-50 transition-all duration-200 hover:scale-[1.02] hover:rounded-sm hover:shadow-md hover:relative"
                 href="#"
               >
-                <h3 class="text-white font-semibold text-lg tracking-tight text-justify">
+                <h3 className="text-white font-semibold text-lg tracking-tight text-justify">
                   دستبند طلا زنانه کارتیه
                 </h3>
               </a>
-              <div class="text-lg font-bold text-yellow-500 pt-1">
+              <div className="text-lg font-bold text-yellow-500 pt-1">
                 200,000,000 تومان
               </div>
             </div>
           </div>
 
-          <div class=" max-w-sm">
+          <div className=" max-w-sm">
             <div className="relative">
               <div className="w-50">
                 <a href="#">
                   <img
-                    class="shadow-md rounded-lg"
+                    className="shadow-md rounded-lg"
                     src="https://dioragallery.com/images/stories/virtuemart/product/17427.jpg"
                   />
                 </a>
@@ -159,7 +159,7 @@ function App() {
               <div className="absolute bottom-5 right-5 ">
                 <a
                   href="#"
-                  class="font-bold text-xs px-3 py-2 rounded text-neutral-800 bg-yellow-400"
+                  className="font-bold text-xs px-3 py-2 rounded text-neutral-800 bg-yellow-400"
                 >
                   خرید
                   <svg
@@ -175,24 +175,24 @@ function App() {
                 </a>
               </div>
             </div>
-            <div class="px-5 pt-4">
+            <div className="px-5 pt-4">
               <a href="#">
-                <h3 class="text-white font-semibold text-lg tracking-tight text-justify">
+                <h3 className="text-white font-semibold text-lg tracking-tight text-justify">
                   دستبند طلا زنانه کارتیه
                 </h3>
               </a>
-              <div class="text-lg font-bold text-yellow-500 pt-1">
+              <div className="text-lg font-bold text-yellow-500 pt-1">
                 200,000,000 تومان
               </div>
             </div>
           </div>
 
-          <div class=" max-w-sm">
+          <div className=" max-w-sm">
             <div className="relative">
               <div className="w-50">
                 <a href="#">
                   <img
-                    class="shadow-md rounded-lg"
+                    className="shadow-md rounded-lg"
                     src="https://dioragallery.com/images/stories/virtuemart/product/17427.jpg"
                   />
                 </a>
@@ -200,7 +200,7 @@ function App() {
               <div className="absolute bottom-5 right-5 ">
                 <a
                   href="#"
-                  class="font-bold text-xs px-3 py-2 rounded text-neutral-800 bg-yellow-400"
+                  className="font-bold text-xs px-3 py-2 rounded text-neutral-800 bg-yellow-400"
                 >
                   خرید
                   <svg
@@ -216,13 +216,13 @@ function App() {
                 </a>
               </div>
             </div>
-            <div class="px-5 pt-4">
+            <div className="px-5 pt-4">
               <a href="#">
-                <h3 class="text-white font-semibold text-lg tracking-tight text-justify">
+                <h3 className="text-white font-semibold text-lg tracking-tight text-justify">
                   دستبند طلا زنانه کارتیه
                 </h3>
               </a>
-              <div class="text-lg font-bold text-yellow-500 pt-1">
+              <div className="text-lg font-bold text-yellow-500 pt-1">
                 200,000,000 تومان
               </div>
             </div>
@@ -230,38 +230,38 @@ function App() {
         </div>
       </section>
 
-      <div class="grid grid-cols-6 col-span-2 gap-2 pt-10">
-        <div class=" overflow-hidden rounded-xl col-span-3 max-h-[14rem]">
-          <img class="h-full w-full object-cover " src={Image1} alt="" />
+      <div className="grid grid-cols-6 col-span-2 gap-2 pt-10">
+        <div className=" overflow-hidden rounded-xl col-span-3 max-h-[14rem]">
+          <img className="h-full w-full object-cover " src={Image1} alt="" />
         </div>
-        <div class=" overflow-hidden rounded-xl col-span-3 max-h-[14rem]">
-          <img class="h-full w-full object-cover  " src={Image2} alt="" />
+        <div className=" overflow-hidden rounded-xl col-span-3 max-h-[14rem]">
+          <img className="h-full w-full object-cover  " src={Image2} alt="" />
         </div>
-        <div class=" overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
-          <img class="h-full w-full object-cover " src={Image3} alt="" />
+        <div className=" overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
+          <img className="h-full w-full object-cover " src={Image3} alt="" />
         </div>
-        <div class=" overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
-          <img class="h-full w-full object-cover " src={Image4} alt="" />
+        <div className=" overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
+          <img className="h-full w-full object-cover " src={Image4} alt="" />
         </div>
-        <div class="relative overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
-          <div class="text-white text-xl absolute inset-0  bg-slate-900/80 flex justify-center items-center">
+        <div className="relative overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
+          <div className="text-white text-xl absolute inset-0  bg-slate-900/80 flex justify-center items-center">
             + 23
           </div>
-          <img class="h-full w-full object-cover " src={Image1} alt="" />
+          <img className="h-full w-full object-cover " src={Image1} alt="" />
         </div>
       </div>
 
-      <div class="w-full max-w-7xl px-4 mx-auto sm:px-8 my-20 ">
-        <header class="space-y-4 text-center">
-          <h2 class="text-3xl font-bold tracking-tighter md:text-4xl font-display">
+      <div className="w-full max-w-7xl px-4 mx-auto sm:px-8 my-20 ">
+        <header className="space-y-4 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl font-display">
             چند کلمه ای از مشتریان
             <span className="text-yellow-400">یاس</span>
           </h2>
         </header>
-        <div class="grid gap-8 mt-16 md:grid-cols-3">
-          <article class="relative px-8 pt-8 pb-4 transform bg-neutral-900 bg-opacity-50 shadow-xl md:translate-y-4 rounded-2xl">
+        <div className="grid gap-8 mt-16 md:grid-cols-3">
+          <article className="relative px-8 pt-8 pb-4 transform bg-neutral-900 bg-opacity-50 shadow-xl md:translate-y-4 rounded-2xl">
             <svg
-              class="text-yellow-600 absolute top-0 right-0 hidden w-24 h-24 -mt-12 -mr-12 md:block"
+              className="text-yellow-600 absolute top-0 right-0 hidden w-24 h-24 -mt-12 -mr-12 md:block"
               width="256"
               height="256"
               viewBox="0 0 256 256"
@@ -274,13 +274,13 @@ function App() {
                 stroke-width="8"
               ></path>
             </svg>
-            <blockquote class="space-y-1 text-base text-right">
+            <blockquote className="space-y-1 text-base text-right">
               <p>باسلام... من تجربه خرید حضوری واقساطی شما را دارم.</p>
               <p>بی نهایت هم از خریدم و کیفیت برخورد اعضا مجموعه راضی هستم</p>
-              <footer class="flex items-center pt-2 mt-7 space-x-2 space-x-reverse border-t border-white/10 mt-1">
-                <div class="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
+              <footer className="flex items-center pt-2 mt-7 space-x-2 space-x-reverse border-t border-white/10 mt-1">
+                <div className="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
                   <svg
-                    class="absolute w-12 h-12 text-yellow-400 -left-1"
+                    className="absolute w-12 h-12 text-yellow-400 -left-1"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -293,19 +293,19 @@ function App() {
                   </svg>
                 </div>
                 <div>
-                  <p class="text-lg font-bold font-display">بهنام اکبری</p>
+                  <p className="text-lg font-bold font-display">بهنام اکبری</p>
                 </div>
               </footer>
             </blockquote>
           </article>
-          <article class="relative px-8 pt-8 pb-4 transform bg-neutral-900 bg-opacity-50 shadow-xl md:translate-y-4 rounded-2xl -rotate-3">
-            <blockquote class="space-y-1 text-base text-right">
+          <article className="relative px-8 pt-8 pb-4 transform bg-neutral-900 bg-opacity-50 shadow-xl md:translate-y-4 rounded-2xl -rotate-3">
+            <blockquote className="space-y-1 text-base text-right">
               <p>باسلام... من تجربه خرید حضوری واقساطی شما را دارم.</p>
               <p>بی نهایت هم از خریدم و کیفیت برخورد اعضا مجموعه راضی هستم</p>
-              <footer class="flex items-center pt-2 mt-7 space-x-2 space-x-reverse border-t border-white/10 mt-1">
-                <div class="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
+              <footer className="flex items-center pt-2 mt-7 space-x-2 space-x-reverse border-t border-white/10 mt-1">
+                <div className="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
                   <svg
-                    class="absolute w-12 h-12 text-yellow-400 -left-1"
+                    className="absolute w-12 h-12 text-yellow-400 -left-1"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -318,19 +318,19 @@ function App() {
                   </svg>
                 </div>
                 <div>
-                  <p class="text-lg font-bold font-display">بهنام اکبری</p>
+                  <p className="text-lg font-bold font-display">بهنام اکبری</p>
                 </div>
               </footer>
             </blockquote>
           </article>
-          <article class="relative px-8 pt-8 pb-4 transform bg-neutral-900 bg-opacity-50 shadow-xl md:translate-y-4 rounded-2xl rotate-3">
-            <blockquote class="space-y-1 text-base text-right">
+          <article className="relative px-8 pt-8 pb-4 transform bg-neutral-900 bg-opacity-50 shadow-xl md:translate-y-4 rounded-2xl rotate-3">
+            <blockquote className="space-y-1 text-base text-right">
               <p>باسلام... من تجربه خرید حضوری واقساطی شما را دارم.</p>
               <p>بی نهایت هم از خریدم و کیفیت برخورد اعضا مجموعه راضی هستم</p>
-              <footer class="flex items-center pt-2 mt-7 space-x-2 space-x-reverse border-t border-white/10 mt-1">
-                <div class="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
+              <footer className="flex items-center pt-2 mt-7 space-x-2 space-x-reverse border-t border-white/10 mt-1">
+                <div className="relative w-10 h-10 overflow-hidden bg-neutral-700 rounded-full">
                   <svg
-                    class="absolute w-12 h-12 text-yellow-400 -left-1"
+                    className="absolute w-12 h-12 text-yellow-400 -left-1"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -343,7 +343,7 @@ function App() {
                   </svg>
                 </div>
                 <div>
-                  <p class="text-lg font-bold font-display">بهنام اکبری</p>
+                  <p className="text-lg font-bold font-display">بهنام اکبری</p>
                 </div>
               </footer>
             </blockquote>
@@ -351,16 +351,16 @@ function App() {
         </div>
       </div>
 
-      <section class="w-full !m-0">
-        <div class="grid grid-cols-2 mx-auto max-w-6xl">
-          <div class="p-5 py-20">
-            <div class="text-4xl font-extrabold">سوالات متداول کاربران</div>
-            <div class="pt-10">
-              <div class="flex items-center bg-neutral-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
+      <section className="w-full !m-0">
+        <div className="grid grid-cols-2 mx-auto max-w-6xl">
+          <div className="p-5 py-20">
+            <div className="text-4xl font-extrabold">سوالات متداول کاربران</div>
+            <div className="pt-10">
+              <div className="flex items-center bg-neutral-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
                 <div className="inline-flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="fill-current text-yellow-600 ml-1"
+                    className="fill-current text-yellow-600 ml-1"
                     viewBox="0 0 24 24"
                     width="24"
                     height="24"
@@ -370,7 +370,7 @@ function App() {
                   </svg>
                   لیط چارتر به بلیطی اطلاق می گردد که نرخ تعیین می‌شود
                 </div>
-                <div class="mr-auto">
+                <div className="mr-auto">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -381,18 +381,18 @@ function App() {
                     stroke-width="2"
                     stroke-linecap="round"
                     strokeLinejoin="round"
-                    class="feather feather-chevron-down"
+                    className="feather feather-chevron-down"
                   >
                     <polyline points="6 9 12 15 18 9"></polyline>
                   </svg>
                 </div>
               </div>
 
-              <div class="flex items-center bg-neutral-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
+              <div className="flex items-center bg-neutral-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
                 <div className="inline-flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="fill-current text-yellow-600 ml-1"
+                    className="fill-current text-yellow-600 ml-1"
                     viewBox="0 0 24 24"
                     width="24"
                     height="24"
@@ -402,7 +402,7 @@ function App() {
                   </svg>
                   پرواز سیستمی و شرایط جریمه کنسلی و استرداد
                 </div>
-                <div class="mr-auto">
+                <div className="mr-auto">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -413,18 +413,18 @@ function App() {
                     stroke-width="2"
                     stroke-linecap="round"
                     strokeLinejoin="round"
-                    class="feather feather-chevron-down"
+                    className="feather feather-chevron-down"
                   >
                     <polyline points="6 9 12 15 18 9"></polyline>
                   </svg>
                 </div>
               </div>
 
-              <div class="flex items-center bg-neutral-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
+              <div className="flex items-center bg-neutral-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
                 <div className="inline-flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="fill-current text-yellow-600 ml-1"
+                    className="fill-current text-yellow-600 ml-1"
                     viewBox="0 0 24 24"
                     width="24"
                     height="24"
@@ -434,7 +434,7 @@ function App() {
                   </svg>
                   پرواز سیستمی و شرایط جریمه کنسلی و استرداد
                 </div>
-                <div class="mr-auto">
+                <div className="mr-auto">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -445,18 +445,18 @@ function App() {
                     stroke-width="2"
                     stroke-linecap="round"
                     strokeLinejoin="round"
-                    class="feather feather-chevron-down"
+                    className="feather feather-chevron-down"
                   >
                     <polyline points="6 9 12 15 18 9"></polyline>
                   </svg>
                 </div>
               </div>
 
-              <div class="flex items-center bg-neutral-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
+              <div className="flex items-center bg-neutral-900 bg-opacity-50 rounded-lg px-2 py-5 m-2  shadow border border-transparent transition-all delay-100 hover:border-black">
                 <div className="inline-flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="fill-current text-yellow-600 ml-1"
+                    className="fill-current text-yellow-600 ml-1"
                     viewBox="0 0 24 24"
                     width="24"
                     height="24"
@@ -466,7 +466,7 @@ function App() {
                   </svg>
                   پرواز سیستمی و شرایط جریمه کنسلی و استرداد
                 </div>
-                <div class="mr-auto">
+                <div className="mr-auto">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -477,7 +477,7 @@ function App() {
                     stroke-width="2"
                     stroke-linecap="round"
                     strokeLinejoin="round"
-                    class="feather feather-chevron-down"
+                    className="feather feather-chevron-down"
                   >
                     <polyline points="6 9 12 15 18 9"></polyline>
                   </svg>
@@ -485,11 +485,11 @@ function App() {
               </div>
             </div>
           </div>
-          <div class="p-6 pr-10 py-20">
-            <div class="flex space-x-6 space-x-reverse">
+          <div className="p-6 pr-10 py-20">
+            <div className="flex space-x-6 space-x-reverse">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="w-12 h-12"
+                className="w-12 h-12"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -502,7 +502,7 @@ function App() {
 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="w-12 h-12"
+                className="w-12 h-12"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -516,7 +516,7 @@ function App() {
 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="w-12 h-12"
+                className="w-12 h-12"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -528,15 +528,15 @@ function App() {
                 <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
               </svg>
             </div>
-            <div class="pt-10 space-y-3">
-              <h2 class="text-xl font-bold">سوالی دارید؟ از یاس بپرسید</h2>
-              <p class="text-justify leading-9 text-lg">
+            <div className="pt-10 space-y-3">
+              <h2 className="text-xl font-bold">سوالی دارید؟ از یاس بپرسید</h2>
+              <p className="text-justify leading-9 text-lg">
                 جهت مشـورت با همکاران و بخش پشتیبانیِ شبانه‌روزی ما، مـی‌توانید
                 در هر لحظه، با شمـاره تلفن 91094000-۰۲۱ تمـاس بگیرید و یا از
                 طریق فرم تماس با ما، موضوع را با ما در میان بگذارید تا هرچه
                 زودتر به آن رسیدگی کنیم.{" "}
               </p>
-              <button class="px-3 py-2 rounded text-neutral-800 bg-yellow-400 font-semibold">
+              <button className="px-3 py-2 rounded text-neutral-800 bg-yellow-400 font-semibold">
                 پشتیبان آنلاین
               </button>
             </div>
@@ -549,7 +549,7 @@ function App() {
           <div className="w-1/3 whitespace-nowrap">
             <a
               href="#"
-              class="h-80 p-36 bg-red-600 text-white text-center text-4xl font-semibold block"
+              className="h-80 p-36 bg-red-600 text-white text-center text-4xl font-semibold block"
               href="#"
             >
               برند یک
@@ -558,7 +558,7 @@ function App() {
           <div className="w-1/3 whitespace-nowrap">
             <a
               href="#"
-              class="h-80 bg-yellow-400 text-white text-center text-4xl font-semibold p-36 block"
+              className="h-80 bg-yellow-400 text-white text-center text-4xl font-semibold p-36 block"
             >
               برند دو
             </a>
@@ -566,7 +566,7 @@ function App() {
           <div className="w-1/3 whitespace-nowrap">
             <a
               href="#"
-              class="h-80 bg-green-400 text-white text-center text-4xl font-semibold p-36 block"
+              className="h-80 bg-green-400 text-white text-center text-4xl font-semibold p-36 block"
             >
               برند سه
             </a>
@@ -574,7 +574,7 @@ function App() {
           <div className="w-1/3 whitespace-nowrap">
             <a
               href="#"
-              class="h-80 bg-blue-600 text-white text-center text-4xl font-semibold p-36 block"
+              className="h-80 bg-blue-600 text-white text-center text-4xl font-semibold p-36 block"
             >
               برند چهار
             </a>
@@ -585,11 +585,11 @@ function App() {
       <footer>
         <div className="bg-neutral-900">
           <div className="md:w-10/12 lg:w-8/12 m-auto py-8">
-            <ul class="flex flex-wrap items-center justify-between md:flex-nowrap list-disc list-inside">
+            <ul className="flex flex-wrap items-center justify-between md:flex-nowrap list-disc list-inside">
               <li>
                 <a
                   href="#"
-                  class="hover:text-sky-400 transition whitespace-nowrap"
+                  className="hover:text-sky-400 transition whitespace-nowrap"
                 >
                   صفحه اصلی
                 </a>
@@ -597,7 +597,7 @@ function App() {
               <li>
                 <a
                   href="#"
-                  class="hover:text-sky-400 transition whitespace-nowrap"
+                  className="hover:text-sky-400 transition whitespace-nowrap"
                 >
                   درباره ما
                 </a>
@@ -605,7 +605,7 @@ function App() {
               <li>
                 <a
                   href="#"
-                  class="hover:text-sky-400 transition whitespace-nowrap"
+                  className="hover:text-sky-400 transition whitespace-nowrap"
                 >
                   حریم شخصی
                 </a>
@@ -613,7 +613,7 @@ function App() {
               <li>
                 <a
                   href="#"
-                  class="hover:text-sky-400 transition whitespace-nowrap"
+                  className="hover:text-sky-400 transition whitespace-nowrap"
                 >
                   راهنمایی خرید
                 </a>
@@ -621,7 +621,7 @@ function App() {
               <li>
                 <a
                   href="#"
-                  class="hover:text-sky-400 transition whitespace-nowrap"
+                  className="hover:text-sky-400 transition whitespace-nowrap"
                 >
                   تماس با ما
                 </a>
@@ -632,19 +632,19 @@ function App() {
 
         <div className="bg-neutral-900/50">
           <div>
-            <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
-              <div class="w-full space-x-12 items-center space-x-reverse flex justify-center text-gray-300 py-5">
+            <div className="flex flex-wrap items-center justify-between md:flex-nowrap">
+              <div className="w-full space-x-12 items-center space-x-reverse flex justify-center text-gray-300 py-5">
                 <div>
                   جواهری یاس. آدرس: تهران - شهرری - دولت آباد - فلکه دوم - پاساژ
                   ولیعصر - پلاک 12.
                 </div>
 
-                <ul role="list" class="space-y-2">
+                <ul role="list" className="space-y-2">
                   <li className="bg-neutral-800 rounded-lg px-4 py-1">
                     <div className="inline-flex items-center space-x-2 space-x-reverse">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="fill-current"
+                        className="fill-current"
                         viewBox="0 0 24 24"
                         width="24"
                         height="24"
@@ -664,7 +664,7 @@ function App() {
                     <div className="inline-flex items-center space-x-2 space-x-reverse">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="fill-current"
+                        className="fill-current"
                         viewBox="0 0 24 24"
                         width="24"
                         height="24"

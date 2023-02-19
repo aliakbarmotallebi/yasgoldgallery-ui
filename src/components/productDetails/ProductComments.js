@@ -51,12 +51,12 @@ const ProductComments = ({ productId }) => {
   };
   return (
     <>
-      <form class="">
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <h2 class="px-4 pt-3 pb-2 text-white text-lg font-bold">
+      <form className="">
+        <div className="flex flex-wrap -mx-3 mb-6">
+          <h2 className="px-4 pt-3 pb-2 text-white text-lg font-bold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="inline ml-1 fill-current"
+              className="inline ml-1 fill-current"
               viewBox="0 0 24 24"
               width="24"
               height="24"
@@ -66,20 +66,20 @@ const ProductComments = ({ productId }) => {
             </svg>
             افزدون نظر جدید
           </h2>
-          <div class="w-full md:w-full px-3 mb-2 mt-2">
+          <div className="w-full md:w-full px-3 mb-2 mt-2">
             <textarea
               value={newComment}
               onChange={(e) => setNewComment(e.target.value)}
-              class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"
+              className="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"
               name="body"
             ></textarea>
           </div>
-          <div class="w-full md:w-full flex items-start md:w-full px-3">
-            <div class="-mr-1">
+          <div className="w-full md:w-full flex items-start md:w-full px-3">
+            <div className="-mr-1">
               <button
                 onClick={sendComment}
                 type="button"
-                class="bg-white flex items-center text-gray-700 font-medium py-1 px-4 border border-gray-400  text-xs rounded-lg tracking-wide mr-1 hover:bg-gray-100"
+                className="bg-white flex items-center text-gray-700 font-medium py-1 px-4 border border-gray-400  text-xs rounded-lg tracking-wide mr-1 hover:bg-gray-100"
               >
                 {loadSendComment && <Spinner classBox="w-6 mr-0 ml-2" />}
 
@@ -93,12 +93,12 @@ const ProductComments = ({ productId }) => {
       {loading ? (
         <Spinner />
       ) : (
-        <section class="pb-3 space-y-2">
+        <section className="pb-3 space-y-2">
           {productComments.length > 0 && (
-            <h2 class="px-4 pt-3 pb-2 text-white text-lg font-bold">
+            <h2 className="px-4 pt-3 pb-2 text-white text-lg font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="inline ml-1 fill-current"
+                className="inline ml-1 fill-current"
                 viewBox="0 0 24 24"
                 width="24"
                 height="24"
@@ -112,16 +112,16 @@ const ProductComments = ({ productId }) => {
           {productComments.map((comment) => (
             <div
               key={comment.id}
-              class="rounded-lg flex-col w-full py-4 mx-auto bg-white border-b-2 border-r-2 border-gray-100"
+              className="rounded-lg flex-col w-full py-4 mx-auto bg-white border-b-2 border-r-2 border-gray-100"
             >
-              <div class="flex-col mt-1">
-                <div class="flex items-center flex-1 px-4 font-bold leading-tight text-blue-500">
+              <div className="flex-col mt-1">
+                <div className="flex items-center flex-1 px-4 font-bold leading-tight text-blue-500">
                   {`${comment.user_name} ${comment.user_family}`}
-                  <span class="mr-2 text-xs font-normal text-gray-500">
+                  <span className="mr-2 text-xs font-normal text-gray-500">
                     {comment.publishedAgo}
                   </span>
                 </div>
-                <div class="flex-1 px-2 ml-2 text-sm font-medium leading-loose text-gray-600">
+                <div className="flex-1 px-2 ml-2 text-sm font-medium leading-loose text-gray-600">
                   {comment.comment}
                 </div>
               </div>

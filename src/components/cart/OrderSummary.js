@@ -88,9 +88,7 @@ const OrderSummary = ({ cart }) => {
                 onClick={handleCreateOrder}
                 className="bg-yellow-500 flex justify-center items-center disabled:bg-gray-300 font-semibold text-center hover:bg-yellow-600 py-3 text-sm text-black rounded-lg uppercase w-full"
               >
-                {loading && (
-                  <Spinner classNameBox="w-fit ml-4" classNameSvg="!w-4" />
-                )}
+                {loading && <Spinner classBox="w-fit ml-4" classSvg="!w-4" />}
                 <span>ادامه پرداخت</span>
               </button>
             ) : (
@@ -112,7 +110,7 @@ const OrderSummary = ({ cart }) => {
             className="bg-yellow-500 flex justify-center items-center font-semibold text-center hover:bg-yellow-600 py-3 text-sm text-black rounded-lg uppercase w-full print:hidden"
           >
             {paymentLoading && (
-              <Spinner classNameBox="w-fit ml-4" classNameSvg="!w-4" />
+              <Spinner classBox="w-fit ml-4" classSvg="!w-4" />
             )}
             پرداخت
           </button>

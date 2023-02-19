@@ -1,6 +1,7 @@
 const CartPage = () => {
   return (
-    <div class="container mx-auto mt-10">
+    <>
+      <div class="container mx-auto mt-10">
       <div class="flex shadow-md my-10">
         <div class="w-3/4 bg-white rounded-r-lg text-black overflow-hidden">
           <div class="flex items-center justify-between border-b border-gray-50 bg-gray-50/50 px-4 py-5">
@@ -107,7 +108,7 @@ const CartPage = () => {
           <h1 class="font-semibold text-lg border-b border-gray-50 bg-gray-50/50 px-4 py-5">
             خلاصه فاکتور
           </h1>
-          <div className="px-8 py-10">
+          <div class="px-8 py-10">
             <div class="flex justify-between mt-10 mb-5">
                 <span class="font-semibold text-sm uppercase">
                     تعداد سفارش
@@ -145,7 +146,7 @@ const CartPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

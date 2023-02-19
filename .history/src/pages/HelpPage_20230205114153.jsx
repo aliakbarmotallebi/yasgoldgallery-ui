@@ -1,9 +1,9 @@
 const HelpPage = () => {
   return (
     <>
-      <div className="bg-gray-100 px-4 xl:px-4 py-14">
-        <div className="mx-auto container text-center">
-          <h2 className="text-4xl font-bold text-gray-900">
+      <div class="bg-gray-100 px-4 xl:px-4 py-14">
+        <div class="mx-auto container text-center">
+          <h2 class="text-4xl font-bold text-gray-900">
             راهنمای خرید از فروشگاه یاس
           </h2>
         </div>

@@ -86,7 +86,7 @@ const EditProfile = ({ setLoading }) => {
                 }
                 className="bg-yellow-500 w-full sm:w-fit flex items-center justify-center hover:bg-yellow-600 text-black disabled:bg-gray-300 text-xs py-1.5 px-4 rounded focus:shadow-outline shadow"
               >
-                {loadingEdit && <Spinner classNameBox="w-6 ml-2" />}
+                {loadingEdit && <Spinner classBox="w-6 ml-2" />}
                 <span>ویرایش تغییرات</span>
               </button>
             </div>

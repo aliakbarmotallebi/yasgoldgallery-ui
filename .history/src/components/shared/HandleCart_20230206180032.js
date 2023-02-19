@@ -30,10 +30,10 @@ const HandleCart = ({ product, btnStyle, btnText, btnIcon }) => {
 
   return !!isProductInCart ? (
     <div class="w-full md:w-auto flex flex-wrap items-center gap-5 text-black ">
-      <div className="bg-white shadow-md rounded-md overflow-hidden flex items-center border">
+      <div class="bg-white shadow-md rounded-md overflow-hidden flex items-center border">
         <button
           onClick={increaseCounterProduct}
-          className="px-3 py-2 hover:bg-gray-100 hover:opacity-50"
+          class="px-3 py-2 hover:bg-gray-100 hover:opacity-50"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,10 +45,10 @@ const HandleCart = ({ product, btnStyle, btnText, btnIcon }) => {
             <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" />
           </svg>
         </button>
-        <div className="px-4 text-bold text-xs">{isProductInCart.qty}</div>
+        <div class="px-4 text-bold text-xs">{isProductInCart.qty}</div>
         <button
           onClick={decreaseCounterProduct}
-          className="px-3 py-2 hover:bg-gray-100 hover:opacity-50"
+          class="px-3 py-2 hover:bg-gray-100 hover:opacity-50"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -64,8 +64,8 @@ const HandleCart = ({ product, btnStyle, btnText, btnIcon }) => {
     </div>
   ) : (
     <div class="w-full md:w-auto flex flex-wrap items-center gap-5">
-      <span className="w-fit">
-        <button onClick={addProductInCart} className={btnStyle}>
+      <span class="w-fit">
+        <button onClick={addProductInCart} class={btnStyle}>
           {btnIcon}
           {btnText}
         </button>

@@ -6,9 +6,9 @@ import Image5 from "assets/images/brands/brand_5.jpg";
 
 const Brands = () => {
   return (
-    <section className="overflow-y-auto overflow-x-hidden w-full h-60">
-      <div className="flex flex-nowrap">
-        <div className="w-1/3 whitespace-nowrap">
+    <section class="overflow-y-auto overflow-x-hidden w-full h-60">
+      <div class="flex flex-nowrap">
+        <div class="w-1/3 whitespace-nowrap">
           <a
             href="#"
             class="h-60 text-center text-2xl font-semibold p-16 gap-2 flex flex-col items-center"
@@ -22,7 +22,7 @@ const Brands = () => {
             برند یک
           </a>
         </div>
-        <div className="w-1/3 whitespace-nowrap">
+        <div class="w-1/3 whitespace-nowrap">
           <a
             href="#"
             class="h-60 text-center text-2xl font-semibold p-16 gap-2 flex flex-col items-center"
@@ -36,7 +36,7 @@ const Brands = () => {
             برند دو
           </a>
         </div>
-        <div className="w-1/3 whitespace-nowrap">
+        <div class="w-1/3 whitespace-nowrap">
           <a
             href="#"
             class="h-60 text-center text-2xl font-semibold p-16 gap-2 flex flex-col items-center"
@@ -50,7 +50,7 @@ const Brands = () => {
             برند سه
           </a>
         </div>
-        <div className="w-1/3 whitespace-nowrap">
+        <div class="w-1/3 whitespace-nowrap">
           <a
             href="#"
             class="h-60 text-center text-2xl font-semibold p-16 gap-2 flex flex-col items-center"
@@ -64,7 +64,7 @@ const Brands = () => {
             برند چهار
           </a>
         </div>
-        <div className="w-1/3 whitespace-nowrap">
+        <div class="w-1/3 whitespace-nowrap">
           <a
             href="#"
             class="h-60 text-center text-2xl font-semibold p-16 gap-2 flex flex-col items-center"

@@ -1,19 +1,16 @@
 import Footer from "./Footer";
 import Header from "./Header";
 
-const Layout = ({children}) => {
-    return (
-        <>
-            <div 
-                className="flex flex-col mx-auto w-full min-h-screen bg-[#4d4845] text-neutral-300  justify-between">
-                <Header />
-                
-                <main className="min-h-full">
-                    {children}
-                </main>
-                <Footer />
-            </div>
-        </>
-    );
-}
+const Layout = ({ children }) => {
+  return (
+    <>
+      <div class="flex flex-col mx-auto w-full min-h-screen bg-[#4d4845] text-neutral-300  justify-between">
+        <Header />
+
+        <main class="min-h-full">{children}</main>
+        <Footer />
+      </div>
+    </>
+  );
+};
 export default Layout;
