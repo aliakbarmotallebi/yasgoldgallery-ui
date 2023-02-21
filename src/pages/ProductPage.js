@@ -6,12 +6,15 @@ import ProductComments from "components/productDetails/ProductComments";
 import RelatedProducts from "components/productDetails/RelatedProducts";
 import replaceWithBr from "helper/replaceWithBr";
 import { productWithId } from "services/products";
+import "swiper/css";
+import "swiper/css/thumbs";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Thumbs } from "swiper";
 
 const ProductPage = () => {
   const [product, setProduct] = useState({});
   const {
     barcode,
-    coverImage,
     description,
     images,
     installment_terms,
@@ -22,6 +25,7 @@ const ProductPage = () => {
     title,
     wages,
   } = product;
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
   useEffect(() => {
@@ -60,7 +64,7 @@ const ProductPage = () => {
                           <path d="M12 2a6 6 0 0 1 6 6v1h4v2h-1.167l-.757 9.083a1 1 0 0 1-.996.917H4.92a1 1 0 0 1-.996-.917L3.166 11H2V9h4V8a6 6 0 0 1 6-6zm6.826 9H5.173l.667 8h12.319l.667-8zM13 13v4h-2v-4h2zm-4 0v4H7v-4h2zm8 0v4h-2v-4h2zm-5-9a4 4 0 0 0-3.995 3.8L8 8v1h8V8a4 4 0 0 0-3.8-3.995L12 4z" />
                         </svg>
                       }
-                      btnStyle="inline-flex items-center shuffle-click mr-auto sm:flex py-2 px-3 bg-brand-blue hover:opacity-70 bg-yellow-500 text-black text-xs font-semibold rounded"
+                      btnStyle="inline-flex whitespace-nowrap items-center shuffle-click mr-auto sm:flex py-2 px-3 bg-brand-blue hover:opacity-70 bg-yellow-500 text-black text-xs font-semibold rounded"
                       btnText="افزودن به سبد خرید"
                     />
                   )}
@@ -71,16 +75,16 @@ const ProductPage = () => {
                     <Link
                       to={`/products/tag/${tag.id}/${tag.slug}`}
                       key={tag.id}
-                      className="block text-sm font-bold mb-5 text-blue-600 ml-4"
+                      className="block text-sm font-bold mb-5 text-yellow-600 ml-4"
                     >
                       {tag.name}
                     </Link>
                   ))}
                 </div>
 
-                <span className="block text-2xl font-black text-green-500 mb-4">
+                <span className="block text-2xl font-black text-yellow-500 mb-4">
                   {Number(price).toLocaleString()}
-                  <span className="mr-1">تومان</span>
+                  <span className="mr-1 text-white">تومان</span>
                 </span>
                 <ul className="list-inside font-medium mb-6 text-white">
                   <li>
@@ -147,12 +151,50 @@ const ProductPage = () => {
                   className="relative group block mb-6 h-96 w-full bg-blueGray-900 rounded-md mt-4 lg:mt-0"
                   href="#"
                 >
-                  <div className="absolute top-0 left-0 h-full w-full transform -translate-y-1 -translate-x-1 group-hover:translate-y-0 group-hover:translate-x-0 transition duration-300">
-                    <img
-                      className="img-fluid w-full h-full object-cover rounded-md border-2 border-black"
-                      src={coverImage}
-                      alt={title}
-                    />
+                  <div className="absolute top-0 left-0 h-full w-full transform group-hover:translate-x-0 transition duration-300">
+                    <Swiper
+                      loop={true}
+                      spaceBetween={10}
+                      modules={[Thumbs, Autoplay]}
+                      autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                      }}
+                      grabCursor={true}
+                      thumbs={{
+                        swiper:
+                          thumbsSwiper && !thumbsSwiper.destroyed
+                            ? thumbsSwiper
+                            : null,
+                      }}
+                      className="product-images-slider"
+                    >
+                      {images?.map((image, index) => (
+                        <SwiperSlide key={index}>
+                          <img className="rounded" src={image} alt={title} />
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
+                    <Swiper
+                      loop={false}
+                      spaceBetween={10}
+                      slidesPerView={5}
+                      modules={[Thumbs, Autoplay]}
+                      autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: true,
+                      }}
+                      onSwiper={setThumbsSwiper}
+                      className="product-images-slider-thumbs mt-2"
+                    >
+                      {images?.map((image, index) => (
+                        <SwiperSlide key={index}>
+                          <div className="product-images-slider-thumbs-wrapper">
+                            <img className="rounded" src={image} alt={title} />
+                          </div>
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
                   </div>
                 </div>
               </div>

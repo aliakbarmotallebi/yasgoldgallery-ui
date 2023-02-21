@@ -46,9 +46,32 @@ body.remove-scroll::-webkit-scrollbar {
   color: #fff !important;
 }
 
-.special-comments .swiper-button-next:after,
-.special-comments .swiper-button-prev:after {
+.dark-button-swiper .swiper-button-next:after,
+.dark-button-swiper .swiper-button-prev:after {
   color: #000 !important;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("../images/arrow-accordion.svg") !important;
+}
+/* .product-images-slider-thumbs .swiper-wrapper {
+  width: 100%;
+  padding-top: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.product-images-slider-thumbs .swiper-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+} */
+.product-images-slider-thumbs .swiper-slide {
+  cursor: pointer;
+  border-radius: 5px;
+  opacity: 0.5;
+}
+.product-images-slider-thumbs .swiper-slide.swiper-slide-thumb-active {
+  opacity: 1;
 }
 
 @media print {

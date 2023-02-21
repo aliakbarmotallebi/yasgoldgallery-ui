@@ -2,14 +2,7 @@ import { Link } from "react-router-dom";
 import HandleCart from "./HandleCart";
 
 const CardProduct = ({ product }) => {
-  const {
-    coverImage,
-    title,
-    price,
-    slug,
-    productId,
-    category: { name, id, slug: slugCategory },
-  } = product;
+  const { coverImage, title, price, slug, productId, category } = product;
   return (
     <div className="bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl w-full h-full border border-yellow-600">
       <div className="relative">
@@ -24,7 +17,7 @@ const CardProduct = ({ product }) => {
         <div className="flex w-full items-center justify-between flex-row-reverse bottom-5 right-5">
           <HandleCart
             product={product}
-            btnStyle="py-1 px-2 bg-yellow-300 hover:bg-yellow-400 text-black text-xs rounded active:bg-yellow-400 disabled:opacity-50 inline-flex items-center"
+            btnStyle="py-1 px-2 bg-yellow-300 whitespace-nowrap hover:bg-yellow-400 text-black text-xs rounded active:bg-yellow-400 disabled:opacity-50 inline-flex items-center"
             btnText="افزودن به سبد"
             btnIcon={
               <svg
@@ -39,9 +32,9 @@ const CardProduct = ({ product }) => {
               </svg>
             }
           />
-          <Link to={`/products/category/${id}/${slugCategory}`}>
+          <Link to={`/products/category/${category?.id}/${category?.slug}`}>
             <span className="text-gray-400 uppercase text-xs hover:underline">
-              {name}
+              {category?.name}
             </span>
           </Link>
         </div>

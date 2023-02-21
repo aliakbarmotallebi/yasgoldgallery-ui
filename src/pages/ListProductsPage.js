@@ -40,13 +40,15 @@ const ListProductsPage = () => {
   }, [categoryId, tagId, params]);
 
   useEffect(() => {
-    setCurrentItem(
-      sideBarItems.find(
-        (item) => item.id === (Number(categoryId) || Number(tagId))
-      )
-    );
+    categoryId
+      ? setCurrentItem(categorySlug)
+      : tagId
+      ? setCurrentItem(tagSlug)
+      : setCurrentItem(null);
   }, [sideBarItems]);
-
+  console.log(categoryId, categorySlug);
+  console.log(tagId, tagSlug);
+  console.log(sideBarItems);
   return (
     <div className="bg-gray-100 xl:px-4 py-14">
       <div className="mx-auto container">

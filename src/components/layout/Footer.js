@@ -3,7 +3,7 @@ import Logo from "../../assets/images/logo/logo.png";
 
 const Footer = () => {
   const map =
-    '<iframe className="w-full" src="https://balad.ir/embed?p=5359vQlqjxeM3d" title="مشاهده «خودپرداز بانک سپه» روی نقشه بلد" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabIndex="0"></iframe>';
+    '<iframe class="w-full" src="https://balad.ir/embed?p=5359vQlqjxeM3d" title="مشاهده «خودپرداز بانک سپه» روی نقشه بلد" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabIndex="0"></iframe>';
   return (
     <>
       <footer>

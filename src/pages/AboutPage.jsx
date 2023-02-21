@@ -4,14 +4,14 @@ const AboutPage = () => {
       <div className="bg-gray-100 py-14">
         <div className="mx-auto container text-center xl:max-w-6xl px-4 xl:px-0">
           <h2 className="text-4xl font-bold text-gray-900">
-            درباره گالری طلا یاس
+            درباره گالری طلا <span className="text-yellow-500">یاس</span>
           </h2>
           <div className="text-2xl text-black tracking-normal py-10 font-medium leading-loose">
-            <h3 className="font-medium text-4xl py-5 text-blue-700">
+            <h3 className="font-medium text-4xl py-5 text-gray-900">
               فسلفه ما
             </h3>
 
-            <p className="text-xl leading-loose">
+            <p className="text-xl leading-loose text-gray-700">
               من در یاس، سازه ای هنرمندانه با اصالتی ایرانی و قدمتی به اندازه
               تجسم و خیال هستم. اما اشتباه نکنید. قصد ندارم داستانی تخیلی برای
               شما تعریف کنم بلکه می خواهم داستان کسب و کارمان را برایتان بازگو

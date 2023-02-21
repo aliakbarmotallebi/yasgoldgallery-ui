@@ -15,7 +15,7 @@ const TermsAndConditions = () => {
               متعاقبا کاربر نیز موظف به رعایت قوانین مرتبط با کاربر است .
             </p>
             <div className="mt-6">
-              <h3 className="font-medium text-2xl pt-5 pb-2 text-blue-700">
+              <h3 className="font-medium text-2xl pt-5 pb-2 text-gray-700">
                 سیاست های رعایت حریم شخصی:
               </h3>
               <p className="text-base mb-4 text-gray-500 leading-loose">
@@ -34,7 +34,7 @@ const TermsAndConditions = () => {
               </p>
             </div>
             <div className="mt-6">
-              <h3 className="font-medium text-2xl pt-5 pb-2 text-blue-700">
+              <h3 className="font-medium text-2xl pt-5 pb-2 text-gray-700">
                 ثبت و ارسال سفارش:
               </h3>
               <p className="text-base mb-4 text-gray-500 leading-loose">
@@ -98,7 +98,7 @@ const TermsAndConditions = () => {
               </p>
             </div>
             <div className="mt-6">
-              <h3 className="font-medium text-2xl pt-5 pb-2 text-blue-700">
+              <h3 className="font-medium text-2xl pt-5 pb-2 text-gray-700">
                 خسارت در هنگام حمل ونقل:
               </h3>
               <p className="text-base mb-4 text-gray-500 leading-loose">
@@ -109,7 +109,7 @@ const TermsAndConditions = () => {
               </p>
             </div>
             <div className="mt-6">
-              <h3 className="font-medium text-2xl pt-5 pb-2 text-blue-700">
+              <h3 className="font-medium text-2xl pt-5 pb-2 text-gray-700">
                 سرویس مهلت تست سایت یاس:
               </h3>
               <p className="text-base mb-4 text-gray-500 leading-loose">
@@ -159,7 +159,7 @@ const TermsAndConditions = () => {
               </p>
             </div>
             <div className="mt-6">
-              <h3 className="font-medium text-2xl pt-5 pb-2 text-blue-700">
+              <h3 className="font-medium text-2xl pt-5 pb-2 text-gray-700">
                 محتوا:
               </h3>
               <p className="text-base mb-4 text-gray-500 leading-loose">
@@ -179,7 +179,7 @@ const TermsAndConditions = () => {
               </p>
             </div>
             <div className="mt-6">
-              <h3 className="font-medium text-2xl pt-5 pb-2 text-blue-700">
+              <h3 className="font-medium text-2xl pt-5 pb-2 text-gray-700">
                 سیاست قیمت گذاری:
               </h3>
               <p className="text-base mb-4 text-gray-500 leading-loose">

@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 
 const SpecialComments = () => {
   return (
-    <div className="w-full max-w-7xl px-4 mx-auto sm:px-8 my-20 special-comments">
+    <div className="w-full max-w-7xl px-4 mx-auto sm:px-8 my-20 dark-button-swiper">
       <header className="space-y-4 text-center">
         <h2 className="text-3xl flex flex-col sm:flex-row items-center justify-center font-bold tracking-tighter md:text-4xl font-display">
           <p>چند کلمه ای از مشتریان</p>

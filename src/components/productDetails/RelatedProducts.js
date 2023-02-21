@@ -3,8 +3,9 @@ import { productsWithCategory } from "../../services/products";
 import CardProduct from "../shared/CardProduct";
 import Spinner from "../shared/Spinner";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 import "swiper/css";
+import "swiper/css/navigation";
 
 const RelatedProducts = ({ category: { id } }) => {
   const [relatedProducts, setRelatedProducts] = useState([]);
@@ -48,13 +49,14 @@ const RelatedProducts = ({ category: { id } }) => {
               },
             }}
             slidesPerView={5}
-            spaceBetween={30}
-            modules={[Autoplay]}
+            spaceBetween={32}
+            navigation
+            modules={[Autoplay, Navigation]}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
             }}
-            className="col-span-5 !p-4"
+            className="col-span-5 !p-4 !px-8"
           >
             {relatedProducts.map((product) => (
               <SwiperSlide key={product.productId}>
