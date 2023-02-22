@@ -200,7 +200,7 @@ const ProductPage = () => {
               </div>
             </div>
           </div>
-          <div className="md:px-10">
+          <div className="md:px-10 md:pt-12">
             <div>
               <div className="border-b-2 border-yellow-400 text-lg text-yellow-500 pb-2 inline-flex items-center font-bold">
                 توضیحات

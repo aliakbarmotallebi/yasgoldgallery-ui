@@ -174,13 +174,13 @@ const Header = () => {
                             </Link>
                             {category.children.length > 0 && (
                               <ul className="py-1 pr-3 rounded lg:border lg:border-yellow-500 lg:pr-0 lg:m-0 m-2 relative lg:absolute right-0 lg:right-[90%] lg:w-full lg:top-0 hidden group-hover:block text-sm text-white text-right overflow-hidden p-0 bg-neutral-800 lg:bg-neutral-900">
-                                {category.children.map((category, index) => (
+                                {category.children.map((subCategory, index) => (
                                   <li key={index}>
                                     <Link
-                                      to={`/products/category/${category.id}/${category.slug}`}
+                                      to={`/products/category/${category?.id}/${category?.slug}/${subCategory?.id}/${subCategory?.slug}`}
                                       className="block px-2 lg:px-6 py-2 hover:bg-neutral-900 hover:text-yellow-500 lg:flex lg:justify-between lg:items-center group"
                                     >
-                                      {category.name}
+                                      {subCategory.name}
                                     </Link>
                                   </li>
                                 ))}

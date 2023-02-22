@@ -168,6 +168,22 @@ const Brands = () => {
               </div>
             </div>
           </SwiperSlide>
+          <SwiperSlide>
+            <div className="whitespace-nowrap p-5">
+              <div className="text-center text-2xl font-semibold gap-2 flex flex-col items-center">
+                <div
+                  tabIndex="0"
+                  className="focus:outline-none h-40 w-40 mb-4 lg:mb-0"
+                >
+                  <img
+                    src={Image1}
+                    className="h-full w-full rounded-full overflow-hidden shadow border-black border-2"
+                  />
+                </div>
+                Van Cleef & Arpels
+              </div>
+            </div>
+          </SwiperSlide>
         </Swiper>
       </div>
     </section>

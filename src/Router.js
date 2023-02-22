@@ -3,7 +3,7 @@ import Layout from "./components/layout/Layout";
 import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
-import ListProductsPage from "./pages/ListProductsPage";
+import ListProducts from "./pages/ListProducts";
 import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
 import ProfilePage from "./pages/ProfilePage";
@@ -22,16 +22,24 @@ function RouterFunction() {
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/payment" element={<PaymentCallback />} />
           <Route path="about" element={<AboutPage />} />
-          <Route path="products" element={<ListProductsPage />} />
           <Route
             path="products/tag/:tagId/:tagSlug"
-            element={<ListProductsPage />}
+            element={<ListProducts />}
+          />
+          <Route
+            path="products/tag/:tagId/:tagSlug/:subTagId/:subTagSlug"
+            element={<ListProducts />}
           />
           <Route
             path="products/category/:categoryId/:categorySlug"
-            element={<ListProductsPage />}
+            element={<ListProducts />}
+          />
+          <Route
+            path="products/category/:categoryId/:categorySlug/:subCategoryId/:subCategorySlug"
+            element={<ListProducts />}
           />
           <Route path="product/:id/:slug" element={<ProductPage />} />
+
           <Route path="cart" element={<CartPage />}>
             <Route index element={<Cart />} />
             <Route path="checkout" element={<Checkout />} />

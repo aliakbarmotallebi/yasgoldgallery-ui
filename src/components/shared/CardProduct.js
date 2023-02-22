@@ -32,7 +32,13 @@ const CardProduct = ({ product }) => {
               </svg>
             }
           />
-          <Link to={`/products/category/${category?.id}/${category?.slug}`}>
+          <Link
+            to={
+              category?.parentId
+                ? `/products/category/${category?.parentId}/${category?.slugParent}/${category?.id}/${category?.slug}`
+                : `/products/category/${category?.id}/${category?.slug}`
+            }
+          >
             <span className="text-gray-400 uppercase text-xs hover:underline">
               {category?.name}
             </span>

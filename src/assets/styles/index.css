@@ -53,18 +53,10 @@ body.remove-scroll::-webkit-scrollbar {
 .accordion-button:not(.collapsed)::after {
   background-image: url("../images/arrow-accordion.svg") !important;
 }
-/* .product-images-slider-thumbs .swiper-wrapper {
-  width: 100%;
-  padding-top: 1rem;
-  overflow: hidden;
-  position: relative;
+.accordion-button:not(.collapsed) {
+  color: #000 !important;
+  font-weight: bold !important;
 }
-.product-images-slider-thumbs .swiper-wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-} */
 .product-images-slider-thumbs .swiper-slide {
   cursor: pointer;
   border-radius: 5px;

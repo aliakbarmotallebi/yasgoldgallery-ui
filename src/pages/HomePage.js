@@ -52,7 +52,7 @@ const HomePage = () => {
                 <p className="mt-4 text-center font-bold">ضمانت اصالت</p>
               </div>
               <div className="flex flex-col flex-1 items-center  text-black font-bold justify-center z-[2] relative -top-1/2">
-                <div className="w-20 h-20">
+                <div className="w-24 h-20">
                   <img src={deliveryImage} alt="packing" />
                 </div>
                 <p className="mt-4 text-center font-bold">ارسال سریع</p>
